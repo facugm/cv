@@ -25,6 +25,7 @@
 <meta name="twitter:description" content="Comunicación · Desarrollo · Producción audiovisual.">
 <meta name="twitter:image" content="https://facugm.github.io/cv/og-image.png">
 
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap" rel="stylesheet">
@@ -90,7 +91,7 @@ body::before {
   z-index: 100;
 }
 /* Por defecto: solo btnToggleAll visible. Author-mode muestra todo. */
-.print-bar > *:not(#btnToggleAll):not(#linkPdf) { display: none; }
+.print-bar > *:not(#btnToggleAll):not(#linkPdf):not(#btnLang) { display: none; }
 .print-bar a.print-btn { text-decoration: none; display: inline-flex; align-items: center; }
 body.author-mode .print-bar > * { display: revert; }
 body.author-mode .print-bar { justify-content: flex-end; }
@@ -142,7 +143,7 @@ body.author-mode .print-bar { justify-content: flex-end; }
   border-top: 1.5px solid var(--ink);
   border-bottom: 0.5px solid var(--hair);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -226,7 +227,7 @@ body.author-mode .print-bar { justify-content: flex-end; }
 }
 .tagline {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10.5px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -239,11 +240,11 @@ body.author-mode .print-bar { justify-content: flex-end; }
   flex-wrap: wrap;
   align-items: center;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11.5px;
+  font-size: 14px;
   color: var(--ink-soft);
   margin-top: 4px;
 }
-.contact-item { font-size: 11.5px; color: var(--ink-soft); }
+.contact-item { font-size: 15px; color: var(--ink-soft); }
 .contact-item a {
   color: var(--ink);
   text-decoration: none;
@@ -252,7 +253,7 @@ body.author-mode .print-bar { justify-content: flex-end; }
   transition: color 0.18s, border-color 0.18s;
 }
 .contact-item a:hover { color: var(--plum); border-bottom-color: var(--coral); }
-.contact-sep { color: var(--ink-mute); font-size: 13px; line-height: 1; }
+.contact-sep { color: var(--ink-mute); font-size: 15px; line-height: 1; }
 
 /* PHOTO */
 .photo-circle {
@@ -321,7 +322,7 @@ body.author-mode .print-bar { justify-content: flex-end; }
 }
 .section-title {
   font-family: 'JetBrains Mono', monospace !important;
-  font-size: 11.5px !important;
+  font-size: 14px !important;
   font-weight: 700 !important;
   letter-spacing: 0.32em !important;
   text-transform: uppercase;
@@ -347,7 +348,7 @@ body.editing .section-body { display: block !important; }
 /* PERFIL */
 .perfil-text {
   font-family: 'Newsreader', serif;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.55;
   color: var(--ink);
   font-weight: 400;
@@ -374,7 +375,7 @@ body.editing .section-body { display: block !important; }
 }
 .exp-title {
   font-family: 'DM Serif Display', serif;
-  font-size: 24px;
+  font-size: 29px;
   font-weight: 400;
   color: var(--ink);
   letter-spacing: -0.4px;
@@ -382,7 +383,7 @@ body.editing .section-body { display: block !important; }
 }
 .exp-date {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10.5px;
+  font-size: 13px;
   color: var(--ink-mute);
   font-weight: 500;
   white-space: nowrap;
@@ -391,7 +392,7 @@ body.editing .section-body { display: block !important; }
 }
 .exp-org {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11.5px;
+  font-size: 14px;
   color: var(--plum);
   font-weight: 500;
   margin-bottom: 12px;
@@ -402,7 +403,7 @@ body.editing .section-body { display: block !important; }
 .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 7px; max-width: 86ch; }
 .exp-bullets li {
   font-family: 'Newsreader', serif;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.55;
   color: var(--ink);
   padding-left: 22px;
@@ -421,7 +422,7 @@ body.editing .section-body { display: block !important; }
 /* PROJECT — usa exp-header + exp-date + exp-org (mismo tratamiento que Experiencia) */
 .project-title {
   font-family: 'DM Serif Display', serif;
-  font-size: 24px;
+  font-size: 29px;
   font-weight: 400;
   color: var(--ink);
   letter-spacing: -0.4px;
@@ -429,7 +430,7 @@ body.editing .section-body { display: block !important; }
 }
 .project-meta {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10.5px;
+  font-size: 13px;
   color: var(--ink-mute);
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -438,7 +439,7 @@ body.editing .section-body { display: block !important; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 5px 6px; margin-bottom: 14px; }
 .tag {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9.5px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -450,8 +451,8 @@ body.editing .section-body { display: block !important; }
 }
 .project-desc {
   font-family: 'Newsreader', serif;
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 18px;
+  line-height: 1.7;
   color: var(--ink);
   max-width: 82ch;
 }
@@ -464,26 +465,26 @@ body.editing .section-body { display: block !important; }
 /* EDU */
 .edu-degree {
   font-family: 'DM Serif Display', serif;
-  font-size: 22px;
+  font-size: 29px;
   font-weight: 400;
   color: var(--ink);
   margin-bottom: 2px;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.4px;
   line-height: 1.1;
 }
 .edu-inst {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10.5px;
-  color: var(--ink-mute);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--plum);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
 }
 .edu-detail {
   font-family: 'Newsreader', serif;
-  font-size: 14px;
+  font-size: 18px;
   color: var(--ink);
-  line-height: 1.55;
+  line-height: 1.7;
   margin-bottom: 8px;
 }
 .edu-badge {
@@ -492,7 +493,7 @@ body.editing .section-body { display: block !important; }
   border: 1px solid var(--plum);
   color: var(--plum);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   padding: 4px 10px;
   border-radius: 0;
@@ -508,7 +509,7 @@ body.editing .section-body { display: block !important; }
 }
 .tool-group-label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9.5px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.26em;
@@ -518,7 +519,7 @@ body.editing .section-body { display: block !important; }
 .tool-tags { display: flex; flex-wrap: wrap; gap: 4px 5px; }
 .tool-tag {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--ink);
   background: transparent;
@@ -532,14 +533,14 @@ body.editing .section-body { display: block !important; }
 .lang-item { display: flex; flex-direction: column; gap: 2px; }
 .lang-name {
   font-family: 'DM Serif Display', serif;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--ink);
   letter-spacing: -0.2px;
 }
 .lang-level {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9.5px;
+  font-size: 12px;
   color: var(--ink-mute);
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -681,13 +682,14 @@ body.editing [contenteditable="true"]:focus {
 <body>
 
 <div class="print-bar">
-  <span class="print-note">Tus cambios se guardan en este navegador</span>
-  <button class="print-btn" id="btnEdit" type="button">✎ Editar texto</button>
+  <span class="print-note" data-i18n="ui.print-note">Tus cambios se guardan en este navegador</span>
+  <button class="print-btn" id="btnEdit" type="button" data-i18n="ui.edit">✎ Editar texto</button>
   <button class="print-btn" id="btnToggleAll" type="button">▾ Expandir todo</button>
-  <a class="print-btn" id="linkPdf" href="pdf.html">📄 Ver como PDF</a>
-  <button class="print-btn" id="btnSaveDefault" type="button" title="Fijar tu version editada como default del archivo">💾 Guardar</button>
-  <button class="print-btn" id="btnReset" type="button" title="Borrar cambios guardados y volver al original">↺ Restablecer</button>
-  <button class="print-btn" onclick="window.print()">↓ Exportar PDF</button>
+  <a class="print-btn" id="linkPdf" href="pdf.html" data-i18n="ui.view-pdf">📄 Ver como PDF</a>
+  <button class="print-btn" id="btnLang" type="button" title="Switch language">🌐 EN</button>
+  <button class="print-btn" id="btnSaveDefault" type="button" title="Fijar tu version editada como default del archivo" data-i18n="ui.save">💾 Guardar</button>
+  <button class="print-btn" id="btnReset" type="button" title="Borrar cambios guardados y volver al original" data-i18n="ui.reset">↺ Restablecer</button>
+  <button class="print-btn" onclick="window.print()" data-i18n="ui.export-pdf">↓ Exportar PDF</button>
 </div>
 
 
@@ -695,7 +697,7 @@ body.editing [contenteditable="true"]:focus {
 <!-- CONTENT_START -->
 
   <header class="editorial-slate">
-    <span class="left">FILE&nbsp;·&nbsp;001</span>
+    <span class="left">WEB&nbsp;·&nbsp;001</span>
     <span class="center">CV &mdash; Facundo I. Garc&iacute;a Mata <span class="dot"></span> MMXXVI</span>
     <span class="right">Rosario&nbsp;·&nbsp;AR</span>
   </header>
@@ -706,10 +708,10 @@ body.editing [contenteditable="true"]:focus {
       <div class="name">Facundo <em>Ignacio</em><br><span class="surname">García Mata</span></div>
       <div class="name-divider">
         <div class="name-line"></div>
-        <div class="tagline">Comunicación · Desarrollo · Producción audiovisual</div>
+        <div class="tagline" data-i18n="header.tagline">Comunicación · Desarrollo · Producción audiovisual</div>
       </div>
       <div class="contact-row">
-        <span class="contact-item">Rosario, Argentina</span>
+        <span class="contact-item" data-i18n="header.location">Rosario, Argentina</span>
         <span class="contact-sep">·</span>
         <span class="contact-item"><a href="mailto:figarciamata@gmail.com">figarciamata@gmail.com</a></span>
         <span class="contact-sep">·</span>
@@ -721,27 +723,25 @@ body.editing [contenteditable="true"]:focus {
 
   <!-- PERFIL -->
   <div class="section">
-    <div class="section-header"><div class="section-title">Perfil</div></div>
-    <p class="perfil-text">
-      Combino producción audiovisual, estrategia de contenidos y desarrollo web para llevar proyectos desde la idea a la implementación. Licenciado en Comunicación Social (UNR), casi cuatro años como desarrollador full stack, y experiencia en coordinación, redes y producción audiovisual.
-    </p>
+    <div class="section-header"><div class="section-title" data-i18n="sections.perfil">Perfil</div></div>
+    <p class="perfil-text" data-i18n="perfil.text">Combino producción audiovisual, estrategia de contenidos y desarrollo web para llevar proyectos desde la idea a la implementación. Licenciado en Comunicación Social (UNR), casi cuatro años como desarrollador full stack, y experiencia en coordinación, redes y producción audiovisual.</p>
   </div>
 
   <!-- EXPERIENCIA -->
   <div class="section col-main" data-id="experiencia-profesional">
-    <div class="section-header"><div class="section-title">Experiencia profesional</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
+    <div class="section-header"><div class="section-title" data-i18n="sections.experience">Experiencia profesional</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-title">Desarrollador Full Stack</div>
-        <div class="exp-date">Sep 2022 – actualidad</div>
+        <div class="exp-title" data-i18n="exp.educativa.title">Desarrollador Full Stack</div>
+        <div class="exp-date" data-i18n="exp.educativa.date">Sep 2022 – actualidad</div>
       </div>
       <div class="exp-org">e-ducativa S.A.</div>
       <ul class="exp-bullets">
-        <li>Desarrollo y mantengo features de un LMS multitenant con +2,5M de usuarios activos en 13 países y +600 clientes institucionales.</li>
-        <li>Coordino con áreas de comercial, soporte y producto para shippear features a producción en una plataforma con +7.000 instalaciones activas.</li>
-        <li>Diseño tooling interno que acelera flujos de gestión y comunicación interárea.</li>
-        <li>Aporto criterio entre tecnología y comunicación en proyectos de identidad institucional.</li>
+        <li data-i18n="exp.educativa.b1">Desarrollo y mantengo features de un LMS multitenant con +2,5M de usuarios activos en 13 países y +600 clientes institucionales.</li>
+        <li data-i18n="exp.educativa.b2">Coordino con áreas de comercial, soporte y producto para shippear features a producción en una plataforma con +7.000 instalaciones activas.</li>
+        <li data-i18n="exp.educativa.b3">Diseño tooling interno que acelera flujos de gestión y comunicación interárea.</li>
+        <li data-i18n="exp.educativa.b4">Aporto criterio entre tecnología y comunicación en proyectos de identidad institucional.</li>
       </ul>
       <div class="project-tags" style="margin-top: 12px;">
         <span class="tag">Perl</span>
@@ -753,39 +753,39 @@ body.editing [contenteditable="true"]:focus {
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-title">Coordinación y comunicación digital</div>
-        <div class="exp-date">Dic 2025 – actualidad</div>
+        <div class="exp-title" data-i18n="exp.3f.title">Coordinación y comunicación digital</div>
+        <div class="exp-date" data-i18n="exp.3f.date">Dic 2025 – actualidad</div>
       </div>
-      <div class="exp-org">3Factor Design — Emprendimiento de diseño y producción de objetos decorativos 3D · <a href="https://instagram.com/3factor.design" target="_blank">instagram.com/3factor.design</a></div>
+      <div class="exp-org"><span data-i18n="exp.3f.org">3Factor Design — Emprendimiento de diseño y producción de objetos decorativos 3D · </span><a href="https://instagram.com/3factor.design" target="_blank">instagram.com/3factor.design</a></div>
       <ul class="exp-bullets">
-        <li>Coordino contenidos y estrategia digital del emprendimiento, articulando criterio visual y objetivos comerciales.</li>
-        <li>Construyo el branding desde cero: identidad, tono de marca y presentación comercial del producto (cuenta creada en diciembre 2025).</li>
-        <li>Gestiono social media con tracción comprobable: +2.400 cuentas alcanzadas y +4.300 visualizaciones en los últimos 90 días, partiendo de cero.</li>
+        <li data-i18n="exp.3f.b1">Coordino contenidos y estrategia digital del emprendimiento, articulando criterio visual y objetivos comerciales.</li>
+        <li data-i18n="exp.3f.b2">Construyo el branding desde cero: identidad, tono de marca y presentación comercial del producto (cuenta creada en diciembre 2025).</li>
+        <li data-i18n="exp.3f.b3">Gestiono social media con tracción comprobable: +2.400 cuentas alcanzadas y +4.300 visualizaciones en los últimos 90 días, partiendo de cero.</li>
       </ul>
       <div class="project-tags" style="margin-top: 12px;">
-        <span class="tag">Branding</span>
-        <span class="tag">Social media</span>
-        <span class="tag">Estrategia de contenidos</span>
+        <span class="tag" data-i18n="exp.3f.pills.branding">Branding</span>
+        <span class="tag" data-i18n="exp.3f.pills.social">Social media</span>
+        <span class="tag" data-i18n="exp.3f.pills.strategy">Estrategia de contenidos</span>
       </div>
     </div>
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-title">Productor</div>
-        <div class="exp-date">Abr 2026 – actualidad</div>
+        <div class="exp-title" data-i18n="exp.ggwp.title">Productor</div>
+        <div class="exp-date" data-i18n="exp.ggwp.date">Abr 2026 – actualidad</div>
       </div>
-      <div class="exp-org">GGWP — Programa de streaming sobre videojuegos y cultura gaming · alojado por MargaTV · <a href="https://www.instagram.com/ggwp.stream/" target="_blank">instagram.com/ggwp.stream</a></div>
+      <div class="exp-org"><span data-i18n="exp.ggwp.org">GGWP — Programa de streaming sobre industria de videojuegos y cultura gaming · Alojado por MargaTV · </span><a href="https://www.instagram.com/ggwp.stream/" target="_blank">instagram.com/ggwp.stream</a></div>
       <ul class="exp-bullets">
-        <li>Escribo y reviso la escaleta semanal del vivo (1 h, sostenido sin interrupciones desde abril 2026) junto al conductor y coconductor.</li>
-        <li>Coordino al community manager (difusión pre y post emisión, publicación de clips) y al diseñador gráfico priorizando piezas de promo de cada transmisión.</li>
-        <li>Hago debrief de cada emisión: marco highlights, ajustes y momentos clipeables que paso a MargaTV (canal anfitrión) para que generen los clips finales.</li>
-        <li>Booking de entrevistas con referentes, desarrolladores e influencers gamer con mirada federal (visibilizo iniciativas locales) y actúo como enlace entre el equipo y el productor general del canal.</li>
+        <li data-i18n="exp.ggwp.b1">Escribo y reviso la escaleta semanal del vivo (1 h, sostenido sin interrupciones desde abril 2026) junto al conductor y coconductor.</li>
+        <li data-i18n="exp.ggwp.b2">Coordino al community manager (difusión pre y post emisión, publicación de clips) y al diseñador gráfico priorizando piezas de promo de cada transmisión.</li>
+        <li data-i18n="exp.ggwp.b3">Hago debrief de cada emisión: marco highlights, ajustes y momentos clipeables que paso a MargaTV (canal anfitrión) para que generen los clips finales.</li>
+        <li data-i18n="exp.ggwp.b4">Booking de entrevistas con referentes, desarrolladores e influencers gamer con mirada federal (visibilizo iniciativas locales) y actúo como enlace entre el equipo y el productor general del canal.</li>
       </ul>
       <div class="project-tags" style="margin-top: 12px;">
-        <span class="tag">Streaming en vivo</span>
-        <span class="tag">Escaleta</span>
-        <span class="tag">Booking</span>
-        <span class="tag">Coordinación de equipo</span>
+        <span class="tag" data-i18n="exp.ggwp.pills.streaming">Streaming en vivo</span>
+        <span class="tag" data-i18n="exp.ggwp.pills.rundown">Escaleta</span>
+        <span class="tag" data-i18n="exp.ggwp.pills.booking">Booking</span>
+        <span class="tag" data-i18n="exp.ggwp.pills.coord">Coordinación de equipo</span>
       </div>
     </div>
 
@@ -793,22 +793,20 @@ body.editing [contenteditable="true"]:focus {
 
   <!-- PROYECTOS DESTACADOS -->
   <div class="section col-main" data-id="proyectos-destacados">
-    <div class="section-header"><div class="section-title">Proyectos destacados</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
+    <div class="section-header"><div class="section-title" data-i18n="sections.projects">Proyectos destacados</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
 
     <div class="project-item">
       <div class="exp-header">
         <div class="project-title">Sie7e Memorias Desde La Sombra</div>
         <div class="exp-date">Feb 2025 – May 2026</div>
       </div>
-      <div class="exp-org">UNR · Laboratorio de Experimentación Tecnológica (LET) · Proyecto final de grado · <a href="sie7e/" target="_blank">Ver dossier</a></div>
-      <p class="project-desc">
-        Dispositivo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios. Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR. <span class="highlight-grade">Calificación: 10.</span>
-      </p>
+      <div class="exp-org"><span data-i18n="proj.sie7e.meta">UNR · Laboratorio de Experimentación Tecnológica (LET) · Proyecto final de grado · </span><a href="sie7e/" target="_blank" data-i18n="ui.view-dossier">Ver dossier</a></div>
+      <p class="project-desc" data-i18n="proj.sie7e.desc">Dispositivo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios. Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR. <span class="highlight-grade">Calificación: 10.</span></p>
       <div class="project-tags" style="margin-top: 12px;">
-        <span class="tag">Autor de la obra</span>
-        <span class="tag">Narrativa transmedia</span>
-        <span class="tag">Gestión de proyecto</span>
-        <span class="tag">Producción de contenidos</span>
+        <span class="tag" data-i18n="proj.sie7e.pills.author">Autor de la obra</span>
+        <span class="tag" data-i18n="proj.sie7e.pills.transmedia">Narrativa transmedia</span>
+        <span class="tag" data-i18n="proj.sie7e.pills.pm">Gestión de proyecto</span>
+        <span class="tag" data-i18n="proj.sie7e.pills.production">Producción de contenidos</span>
       </div>
     </div>
 
@@ -817,15 +815,13 @@ body.editing [contenteditable="true"]:focus {
         <div class="project-title">24 Veces Diciembre</div>
         <div class="exp-date">2025</div>
       </div>
-      <div class="exp-org">Universidad Nacional de Rosario · Formación Audiovisual Tecnológica · Documental · <a href="https://drive.google.com/file/d/1XkDQpEKSKytSNoVtcV10X7qrBtihRM9U/view?usp=sharing" target="_blank">Ver en Drive</a></div>
-      <p class="project-desc">
-        Documental sobre memorias, testimonios y marcas sociales vinculadas a diciembre de 2001 en Rosario, realizado en el marco de Formación Audiovisual Tecnológica de la UNR. Participación en el desarrollo narrativo, dirección, producción y edición del material.
-      </p>
+      <div class="exp-org"><span data-i18n="proj.24v.meta">Universidad Nacional de Rosario · Formación Audiovisual Tecnológica · Documental · </span><a href="https://drive.google.com/file/d/1XkDQpEKSKytSNoVtcV10X7qrBtihRM9U/view?usp=sharing" target="_blank" data-i18n="ui.view-drive">Ver en Drive</a></div>
+      <p class="project-desc" data-i18n="proj.24v.desc">Documental sobre memorias, testimonios y marcas sociales vinculadas a diciembre de 2001 en Rosario, realizado en el marco de Formación Audiovisual Tecnológica de la UNR. Participación en el desarrollo narrativo, dirección, producción y edición del material.</p>
       <div class="project-tags" style="margin-top: 12px;">
-        <span class="tag">Dirección</span>
-        <span class="tag">Producción</span>
-        <span class="tag">Guión</span>
-        <span class="tag">Edición</span>
+        <span class="tag" data-i18n="proj.24v.pills.direction">Dirección</span>
+        <span class="tag" data-i18n="proj.24v.pills.production">Producción</span>
+        <span class="tag" data-i18n="proj.24v.pills.script">Guión</span>
+        <span class="tag" data-i18n="proj.24v.pills.editing">Edición</span>
       </div>
     </div>
 
@@ -833,28 +829,30 @@ body.editing [contenteditable="true"]:focus {
 
   <!-- EDUCACIÓN -->
   <div class="section col-main" data-id="educacion">
-    <div class="section-header"><div class="section-title">Educación</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
+    <div class="section-header"><div class="section-title" data-i18n="sections.education">Educación</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
 
     <div class="edu-item">
-      <div class="edu-degree">Licenciatura en Comunicación Social</div>
-      <div class="edu-inst">Universidad Nacional de Rosario · 2020–2026</div>
-      <div class="edu-detail">
-        Orientación en Comunicación Estratégica y Producción Audiovisual<br>
-        Proyecto final: <em>Sie7e Memorias Desde La Sombra</em>
+      <div class="exp-header">
+        <div class="edu-degree" data-i18n="edu.lic.degree">Licenciatura en Comunicación Social</div>
+        <div class="exp-date">2020 – 2026</div>
       </div>
-      <span class="edu-badge">Promedio con y sin aplazos: 8,97</span>
+      <div class="edu-inst" data-i18n="edu.lic.inst">Universidad Nacional de Rosario</div>
+      <div class="edu-detail" data-i18n="edu.lic.detail">Orientación en Comunicación Estratégica y Producción Audiovisual<br>Proyecto final: <em>Sie7e Memorias Desde La Sombra</em></div>
+      <span class="edu-badge" data-i18n="edu.lic.badge">Promedio con y sin aplazos: 8,97</span>
     </div>
 
     <div class="edu-item">
-      <div class="edu-degree">Tecnicatura en Informática Profesional y Personal</div>
-      <div class="edu-inst">Instituto Politécnico Superior · 2013–2018</div>
-      <div class="edu-detail">
-        Formación técnica integral en sistemas, programación y producción digital.
+      <div class="exp-header">
+        <div class="edu-degree" data-i18n="edu.tec.degree">Tecnicatura en Informática Profesional y Personal</div>
+        <div class="exp-date">2013 – 2018</div>
+      </div>
+      <div class="edu-inst" data-i18n="edu.tec.inst">Instituto Politécnico Superior</div>
+      <div class="edu-detail"><span data-i18n="edu.tec.detail-intro">Formación técnica integral en sistemas, programación y producción digital.</span>
         <ul style="list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-direction: column; gap: 5px;">
-          <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--coral); font-family: 'JetBrains Mono', monospace; font-weight: 700;">—</span>Bases de programación en C, PHP, SQL, JavaScript, HTML, CSS y Haskell.</li>
-          <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--coral); font-family: 'JetBrains Mono', monospace; font-weight: 700;">—</span>Diseño, instalación y administración de redes informáticas.</li>
-          <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--coral); font-family: 'JetBrains Mono', monospace; font-weight: 700;">—</span>Administración de sistemas operativos y servicios.</li>
-          <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--coral); font-family: 'JetBrains Mono', monospace; font-weight: 700;">—</span>Edición de material audiovisual y gráfico.</li>
+          <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--coral); font-family: 'JetBrains Mono', monospace; font-weight: 700;">—</span><span data-i18n="edu.tec.b1">Bases de programación en C, PHP, SQL, JavaScript, HTML, CSS y Haskell.</span></li>
+          <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--coral); font-family: 'JetBrains Mono', monospace; font-weight: 700;">—</span><span data-i18n="edu.tec.b2">Diseño, instalación y administración de redes informáticas.</span></li>
+          <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--coral); font-family: 'JetBrains Mono', monospace; font-weight: 700;">—</span><span data-i18n="edu.tec.b3">Administración de sistemas operativos y servicios.</span></li>
+          <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--coral); font-family: 'JetBrains Mono', monospace; font-weight: 700;">—</span><span data-i18n="edu.tec.b4">Edición de material audiovisual y gráfico.</span></li>
         </ul>
       </div>
     </div>
@@ -863,10 +861,10 @@ body.editing [contenteditable="true"]:focus {
 
   <!-- HERRAMIENTAS -->
   <div class="section col-side" data-id="herramientas-y-conocimientos">
-    <div class="section-header"><div class="section-title">Herramientas y conocimientos</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
+    <div class="section-header"><div class="section-title" data-i18n="sections.tools">Herramientas y conocimientos</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
     <div class="tools-grid">
       <div>
-        <div class="tool-group-label">Diseño y audiovisual</div>
+        <div class="tool-group-label" data-i18n="tools.design">Diseño y audiovisual</div>
         <div class="tool-tags">
           <span class="tool-tag">Adobe Premiere</span>
           <span class="tool-tag">Illustrator</span>
@@ -878,7 +876,7 @@ body.editing [contenteditable="true"]:focus {
         </div>
       </div>
       <div>
-        <div class="tool-group-label">Gestión y comunicación</div>
+        <div class="tool-group-label" data-i18n="tools.management">Gestión y comunicación</div>
         <div class="tool-tags">
           <span class="tool-tag">Trello</span>
           <span class="tool-tag">Google Workspace</span>
@@ -886,7 +884,7 @@ body.editing [contenteditable="true"]:focus {
         </div>
       </div>
       <div>
-        <div class="tool-group-label">Redes y contenidos</div>
+        <div class="tool-group-label" data-i18n="tools.networks">Redes y contenidos</div>
         <div class="tool-tags">
           <span class="tool-tag">Instagram</span>
           <span class="tool-tag">LinkedIn</span>
@@ -899,23 +897,23 @@ body.editing [contenteditable="true"]:focus {
 
   <!-- IDIOMAS -->
   <div class="section col-side" data-id="idiomas">
-    <div class="section-header"><div class="section-title">Idiomas</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
+    <div class="section-header"><div class="section-title" data-i18n="sections.languages">Idiomas</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
     <div class="lang-row">
       <div class="lang-item">
-        <div class="lang-name">Español</div>
-        <div class="lang-level">Nativo</div>
+        <div class="lang-name" data-i18n="langs.es.name">Español</div>
+        <div class="lang-level" data-i18n="langs.es.level">Nativo</div>
       </div>
       <div class="lang-item">
-        <div class="lang-name">Inglés</div>
-        <div class="lang-level">Avanzado · C1</div>
+        <div class="lang-name" data-i18n="langs.en.name">Inglés</div>
+        <div class="lang-level" data-i18n="langs.en.level">Avanzado · C1</div>
       </div>
       <div class="lang-item">
-        <div class="lang-name">Francés</div>
-        <div class="lang-level">Básico</div>
+        <div class="lang-name" data-i18n="langs.fr.name">Francés</div>
+        <div class="lang-level" data-i18n="langs.fr.level">Básico</div>
       </div>
       <div class="lang-item">
-        <div class="lang-name">Alemán</div>
-        <div class="lang-level">Básico</div>
+        <div class="lang-name" data-i18n="langs.de.name">Alemán</div>
+        <div class="lang-level" data-i18n="langs.de.level">Básico</div>
       </div>
     </div>
   </div></div>
@@ -1133,7 +1131,13 @@ body.editing [contenteditable="true"]:focus {
     var all = page.querySelectorAll(':scope > .section');
     var openCount = page.querySelectorAll(':scope > .section.is-open').length;
     var allOpen = (openCount === all.length && all.length > 0);
-    btnToggleAll.textContent = allOpen ? '▴ Colapsar todo' : '▾ Expandir todo';
+    var lang = (document.body.dataset && document.body.dataset.lang) || 'es';
+    var dict = (typeof I18N !== 'undefined') ? (I18N[lang] || I18N.es) : null;
+    if (dict) {
+      btnToggleAll.textContent = allOpen ? dict['ui.collapse-all'] : dict['ui.expand-all'];
+    } else {
+      btnToggleAll.textContent = allOpen ? '▴ Colapsar todo' : '▾ Expandir todo';
+    }
   }
 
   // Click en header -> toggle (excepto en modo edicion)
@@ -1225,6 +1229,238 @@ body.editing [contenteditable="true"]:focus {
 
   // Editorial es modo web puro — limpiar localStorage de compact si quedo de antes
   try { localStorage.removeItem(K_COMPACT); } catch (err) {}
+
+  var I18N = {
+    es: {
+      'ui.expand-all': '▾ Expandir todo',
+      'ui.collapse-all': '▴ Colapsar todo',
+      'ui.view-pdf': '📄 Ver como PDF',
+      'ui.back': '← Volver',
+      'ui.export-pdf': '↓ Exportar PDF',
+      'ui.edit': '✎ Editar texto',
+      'ui.done': '✓ Listo',
+      'ui.save': '💾 Guardar',
+      'ui.reset': '↺ Restablecer',
+      'ui.lang-toggle': '🌐 EN',
+      'ui.view-dossier': 'Ver dossier',
+      'ui.view-drive': 'Ver en Drive',
+      'ui.print-note': 'Tus cambios se guardan en este navegador',
+      'ui.pdf-label': 'PDF Preview · A4',
+      'slate.center': 'CV — Facundo I. García Mata',
+
+      'header.tagline': 'Comunicación · Desarrollo · Producción audiovisual',
+      'header.location': 'Rosario, Argentina',
+
+      'sections.perfil': 'Perfil',
+      'sections.experience': 'Experiencia profesional',
+      'sections.projects': 'Proyectos destacados',
+      'sections.education': 'Educación',
+      'sections.tools': 'Herramientas y conocimientos',
+      'sections.languages': 'Idiomas',
+
+      'perfil.text': 'Combino producción audiovisual, estrategia de contenidos y desarrollo web para llevar proyectos desde la idea a la implementación. Licenciado en Comunicación Social (UNR), casi cuatro años como desarrollador full stack, y experiencia en coordinación, redes y producción audiovisual.',
+
+      'exp.educativa.title': 'Desarrollador Full Stack',
+      'exp.educativa.date': 'Sep 2022 – actualidad',
+      'exp.educativa.b1': 'Desarrollo y mantengo features de un LMS multitenant con +2,5M de usuarios activos en 13 países y +600 clientes institucionales.',
+      'exp.educativa.b2': 'Coordino con áreas de comercial, soporte y producto para shippear features a producción en una plataforma con +7.000 instalaciones activas.',
+      'exp.educativa.b3': 'Diseño tooling interno que acelera flujos de gestión y comunicación interárea.',
+      'exp.educativa.b4': 'Aporto criterio entre tecnología y comunicación en proyectos de identidad institucional.',
+
+      'exp.3f.title': 'Coordinación y comunicación digital',
+      'exp.3f.date': 'Dic 2025 – actualidad',
+      'exp.3f.org': '3Factor Design — Emprendimiento de diseño y producción de objetos decorativos 3D · ',
+      'exp.3f.b1': 'Coordino contenidos y estrategia digital del emprendimiento, articulando criterio visual y objetivos comerciales.',
+      'exp.3f.b2': 'Construyo el branding desde cero: identidad, tono de marca y presentación comercial del producto (cuenta creada en diciembre 2025).',
+      'exp.3f.b3': 'Gestiono social media con tracción comprobable: +2.400 cuentas alcanzadas y +4.300 visualizaciones en los últimos 90 días, partiendo de cero.',
+      'exp.3f.pills.branding': 'Branding',
+      'exp.3f.pills.social': 'Social media',
+      'exp.3f.pills.strategy': 'Estrategia de contenidos',
+
+      'exp.ggwp.title': 'Productor',
+      'exp.ggwp.date': 'Abr 2026 – actualidad',
+      'exp.ggwp.org': 'GGWP — Programa de streaming sobre industria de videojuegos y cultura gaming · Alojado por MargaTV · ',
+      'exp.ggwp.b1': 'Escribo y reviso la escaleta semanal del vivo (1 h, sostenido sin interrupciones desde abril 2026) junto al conductor y coconductor.',
+      'exp.ggwp.b2': 'Coordino al community manager (difusión pre y post emisión, publicación de clips) y al diseñador gráfico priorizando piezas de promo de cada transmisión.',
+      'exp.ggwp.b3': 'Hago debrief de cada emisión: marco highlights, ajustes y momentos clipeables que paso a MargaTV (canal anfitrión) para que generen los clips finales.',
+      'exp.ggwp.b4': 'Booking de entrevistas con referentes, desarrolladores e influencers gamer con mirada federal (visibilizo iniciativas locales) y actúo como enlace entre el equipo y el productor general del canal.',
+      'exp.ggwp.pills.streaming': 'Streaming en vivo',
+      'exp.ggwp.pills.rundown': 'Escaleta',
+      'exp.ggwp.pills.booking': 'Booking',
+      'exp.ggwp.pills.coord': 'Coordinación de equipo',
+
+      'proj.sie7e.meta': 'UNR · Laboratorio de Experimentación Tecnológica (LET) · Proyecto final de grado · ',
+      'proj.sie7e.desc': 'Dispositivo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios. Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR. <span class="highlight-grade">Calificación: 10.</span>',
+      'proj.sie7e.pills.author': 'Autor de la obra',
+      'proj.sie7e.pills.transmedia': 'Narrativa transmedia',
+      'proj.sie7e.pills.pm': 'Gestión de proyecto',
+      'proj.sie7e.pills.production': 'Producción de contenidos',
+
+      'proj.24v.meta': 'Universidad Nacional de Rosario · Formación Audiovisual Tecnológica · Documental · ',
+      'proj.24v.desc': 'Documental sobre memorias, testimonios y marcas sociales vinculadas a diciembre de 2001 en Rosario, realizado en el marco de Formación Audiovisual Tecnológica de la UNR. Participación en el desarrollo narrativo, dirección, producción y edición del material.',
+      'proj.24v.pills.direction': 'Dirección',
+      'proj.24v.pills.production': 'Producción',
+      'proj.24v.pills.script': 'Guión',
+      'proj.24v.pills.editing': 'Edición',
+
+      'edu.lic.degree': 'Licenciatura en Comunicación Social',
+      'edu.lic.inst': 'Universidad Nacional de Rosario',
+      'edu.lic.detail': 'Orientación en Comunicación Estratégica y Producción Audiovisual<br>Proyecto final: <em>Sie7e Memorias Desde La Sombra</em>',
+      'edu.lic.badge': 'Promedio con y sin aplazos: 8,97',
+
+      'edu.tec.degree': 'Tecnicatura en Informática Profesional y Personal',
+      'edu.tec.inst': 'Instituto Politécnico Superior',
+      'edu.tec.detail-intro': 'Formación técnica integral en sistemas, programación y producción digital.',
+      'edu.tec.b1': 'Bases de programación en C, PHP, SQL, JavaScript, HTML, CSS y Haskell.',
+      'edu.tec.b2': 'Diseño, instalación y administración de redes informáticas.',
+      'edu.tec.b3': 'Administración de sistemas operativos y servicios.',
+      'edu.tec.b4': 'Edición de material audiovisual y gráfico.',
+
+      'tools.design': 'Diseño y audiovisual',
+      'tools.management': 'Gestión y comunicación',
+      'tools.networks': 'Redes y contenidos',
+
+      'langs.es.name': 'Español',
+      'langs.es.level': 'Nativo',
+      'langs.en.name': 'Inglés',
+      'langs.en.level': 'Avanzado · C1',
+      'langs.fr.name': 'Francés',
+      'langs.fr.level': 'Básico',
+      'langs.de.name': 'Alemán',
+      'langs.de.level': 'Básico'
+    },
+    en: {
+      'ui.expand-all': '▾ Expand all',
+      'ui.collapse-all': '▴ Collapse all',
+      'ui.view-pdf': '📄 View as PDF',
+      'ui.back': '← Back',
+      'ui.export-pdf': '↓ Export PDF',
+      'ui.edit': '✎ Edit text',
+      'ui.done': '✓ Done',
+      'ui.save': '💾 Save',
+      'ui.reset': '↺ Reset',
+      'ui.lang-toggle': '🌐 ES',
+      'ui.view-dossier': 'View dossier',
+      'ui.view-drive': 'View on Drive',
+      'ui.print-note': 'Your changes are saved in this browser',
+      'ui.pdf-label': 'PDF Preview · A4',
+      'slate.center': 'CV — Facundo I. García Mata',
+
+      'header.tagline': 'Communication · Development · Audiovisual production',
+      'header.location': 'Rosario, Argentina',
+
+      'sections.perfil': 'Profile',
+      'sections.experience': 'Professional experience',
+      'sections.projects': 'Featured projects',
+      'sections.education': 'Education',
+      'sections.tools': 'Tools & skills',
+      'sections.languages': 'Languages',
+
+      'perfil.text': 'I combine audiovisual production, content strategy, and web development to take projects from idea to implementation. Bachelor in Social Communication (UNR), nearly four years as a full stack developer, plus experience in coordination, social media, and audiovisual production.',
+
+      'exp.educativa.title': 'Full Stack Developer',
+      'exp.educativa.date': 'Sep 2022 – present',
+      'exp.educativa.b1': 'Develop and maintain features for a multitenant LMS with +2.5M active users across 13 countries and +600 institutional clients.',
+      'exp.educativa.b2': 'Coordinate with sales, support, and product teams to ship features to production on a platform with +7,000 active installations.',
+      'exp.educativa.b3': 'Design internal tooling that accelerates cross-team management and communication workflows.',
+      'exp.educativa.b4': 'Bring a hybrid tech-and-communication perspective to institutional identity projects.',
+
+      'exp.3f.title': 'Digital coordination & communication',
+      'exp.3f.date': 'Dec 2025 – present',
+      'exp.3f.org': '3Factor Design — 3D-printed decorative objects design & production studio · ',
+      'exp.3f.b1': 'Coordinate content and digital strategy for the venture, aligning visual criteria with commercial goals.',
+      'exp.3f.b2': 'Built the brand from scratch: identity, brand voice, and commercial product presentation (account launched December 2025).',
+      'exp.3f.b3': 'Manage social media with measurable traction: +2,400 accounts reached and +4,300 views in the last 90 days, starting from zero.',
+      'exp.3f.pills.branding': 'Branding',
+      'exp.3f.pills.social': 'Social media',
+      'exp.3f.pills.strategy': 'Content strategy',
+
+      'exp.ggwp.title': 'Producer',
+      'exp.ggwp.date': 'Apr 2026 – present',
+      'exp.ggwp.org': 'GGWP — Streaming show on the video game industry and gaming culture · Hosted by MargaTV · ',
+      'exp.ggwp.b1': 'Write and review the weekly rundown for the live show (1 hour, broadcast uninterrupted since April 2026) with the host and co-host.',
+      'exp.ggwp.b2': 'Coordinate the community manager (pre and post-broadcast outreach, clip publishing) and the graphic designer, prioritizing promo pieces for each broadcast.',
+      'exp.ggwp.b3': 'Run debriefs after each broadcast: flag highlights, adjustments, and clippable moments which I pass to MargaTV (host channel) to produce the final clips.',
+      'exp.ggwp.b4': 'Book interviews with industry figures, developers, and gaming influencers with a regional focus (highlighting local initiatives), and act as liaison between the show team and the channel’s executive producer.',
+      'exp.ggwp.pills.streaming': 'Live streaming',
+      'exp.ggwp.pills.rundown': 'Rundown',
+      'exp.ggwp.pills.booking': 'Booking',
+      'exp.ggwp.pills.coord': 'Team coordination',
+
+      'proj.sie7e.meta': 'UNR · Technology Experimentation Lab (LET) · Final degree project · ',
+      'proj.sie7e.desc': 'Local memorial device and interactive augmented reality experience weaving transmedia narrative, archive, and testimonies. Author of the concept, content producer, and project manager in an interdisciplinary UNR open call. <span class="highlight-grade">Final grade: 10.</span>',
+      'proj.sie7e.pills.author': 'Original work',
+      'proj.sie7e.pills.transmedia': 'Transmedia narrative',
+      'proj.sie7e.pills.pm': 'Project management',
+      'proj.sie7e.pills.production': 'Content production',
+
+      'proj.24v.meta': 'Universidad Nacional de Rosario · Technological Audiovisual Training · Documentary · ',
+      'proj.24v.desc': 'Documentary on memories, testimonies, and social imprints linked to December 2001 in Rosario, produced within UNR’s Technological Audiovisual Training program. Contributed to narrative development, direction, production, and editing.',
+      'proj.24v.pills.direction': 'Direction',
+      'proj.24v.pills.production': 'Production',
+      'proj.24v.pills.script': 'Screenplay',
+      'proj.24v.pills.editing': 'Editing',
+
+      'edu.lic.degree': 'Bachelor in Social Communication',
+      'edu.lic.inst': 'Universidad Nacional de Rosario',
+      'edu.lic.detail': 'Major in Strategic Communication and Audiovisual Production<br>Final project: <em>Sie7e Memorias Desde La Sombra</em>',
+      'edu.lic.badge': 'GPA with and without retakes: 8.97 / 10',
+
+      'edu.tec.degree': 'Technical degree in Professional and Personal IT',
+      'edu.tec.inst': 'Instituto Politécnico Superior',
+      'edu.tec.detail-intro': 'Comprehensive technical training in systems, programming, and digital production.',
+      'edu.tec.b1': 'Programming fundamentals in C, PHP, SQL, JavaScript, HTML, CSS, and Haskell.',
+      'edu.tec.b2': 'Design, installation, and administration of computer networks.',
+      'edu.tec.b3': 'Operating systems and services administration.',
+      'edu.tec.b4': 'Audiovisual and graphic material editing.',
+
+      'tools.design': 'Design & audiovisual',
+      'tools.management': 'Management & communication',
+      'tools.networks': 'Networks & content',
+
+      'langs.es.name': 'Spanish',
+      'langs.es.level': 'Native',
+      'langs.en.name': 'English',
+      'langs.en.level': 'Advanced · C1',
+      'langs.fr.name': 'French',
+      'langs.fr.level': 'Basic',
+      'langs.de.name': 'German',
+      'langs.de.level': 'Basic'
+    }
+  };
+
+  var K_LANG = 'cv_lang';
+
+  function setLang(lang) {
+    if (lang !== 'en' && lang !== 'es') lang = 'es';
+    document.documentElement.setAttribute('lang', lang);
+    document.body.dataset.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.dataset.i18n;
+      var val = (I18N[lang] && I18N[lang][key]) || (I18N.es && I18N.es[key]);
+      if (val === undefined) return;
+      if (val.indexOf('<') !== -1) el.innerHTML = val;
+      else el.textContent = val;
+    });
+    var btn = document.getElementById('btnLang');
+    if (btn) btn.textContent = I18N[lang]['ui.lang-toggle'];
+    try { localStorage.setItem(K_LANG, lang); } catch (e) {}
+    if (typeof refreshToggleAllBtn === 'function') refreshToggleAllBtn();
+  }
+
+  function toggleLang() {
+    var current = document.body.dataset.lang || 'es';
+    setLang(current === 'es' ? 'en' : 'es');
+  }
+
+  document.getElementById('btnLang').addEventListener('click', toggleLang);
+
+  // Restaurar idioma guardado o default
+  try {
+    var savedLang = localStorage.getItem(K_LANG);
+    setLang(savedLang || 'es');
+  } catch (e) { setLang('es'); }
+
 })();
 </script>
 </body>

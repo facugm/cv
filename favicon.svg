@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#1A1620"/>
+  <g font-family="'JetBrains Mono', ui-monospace, 'Cascadia Mono', 'Segoe UI Mono', monospace"
+     font-size="28" font-weight="800" fill="#E8843A"
+     text-anchor="middle" letter-spacing="-1">
+    <text x="20" y="29">F</text>
+    <text x="44" y="29">i</text>
+    <text x="20" y="55">G</text>
+    <text x="44" y="55">M</text>
+  </g>
+</svg>
