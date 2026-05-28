@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Facundo Ignacio García Mata · Proyecto destacado: Sie7e Memorias Desde La Sombra</title>
+<meta name="description" content="Proyecto destacado de Facundo Ignacio García Mata. Productor de contenidos y gestor del proyecto Sie7e Memorias Desde La Sombra. XperienciaUNR 2025 · UNR.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta name="author" content="Facundo Ignacio García Mata">
+<meta name="theme-color" content="#c12026">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Facundo Ignacio García Mata · Portfolio">
+<meta property="og:locale" content="es_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://facugm.github.io/cv/sie7e/">
+<meta property="og:title" content="Facundo Ignacio García Mata · Proyecto destacado: Sie7e Memorias Desde La Sombra">
+<meta property="og:description" content="Productor de contenidos y gestor del proyecto. Una experiencia inmersiva en realidad aumentada sobre las víctimas relegadas del 19 y 20 de diciembre de 2001 en Rosario. XperienciaUNR 2025.">
+<meta property="og:image" content="https://facugm.github.io/cv/sie7e/assets/og-facundo.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Facundo Ignacio García Mata · Proyecto destacado">
+<meta name="twitter:description" content="Productor de contenidos y gestor del proyecto Sie7e Memorias Desde La Sombra. XperienciaUNR 2025.">
+<meta name="twitter:image" content="https://facugm.github.io/cv/sie7e/assets/og-facundo.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800;900&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf7ee;
+    --bg-paper:#f1ecdd;
+    --bg-deep:#e9e2cd;
+    --ink:#0c0d0b;
+    --ink-soft:#2a2e23;
+    --muted:#84877f;
+    --line:#d8d2c2;
+    --red:#c12026;
+    --red-bright:#d72229;
+    --red-deep:#952a2e;
+    --surface-dark:#0c0d0b;
+    --shadow:0 1px 0 rgba(12,13,11,.04),0 18px 36px -24px rgba(12,13,11,.40);
+    --maxw:1200px;
+    --pad:28px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Saira",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    font-weight:400;line-height:1.55;letter-spacing:.005em;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--red);color:#fff}
+  a{color:var(--red-deep);text-decoration:none;border-bottom:1px solid currentColor}
+  a:hover{color:var(--red)}
+  img{display:block;max-width:100%}
+
+  /* I18N — toggle ES/EN */
+  html[lang="es"] [lang="en"]{display:none !important}
+  html[lang="en"] [lang="es"]{display:none !important}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+
+  /* NAV */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,247,238,.92);backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:14px}
+  .nav-brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:15px;color:var(--ink);border:none}
+  .nav-brand .ico{
+    width:32px;height:32px;display:block;object-fit:contain;
+  }
+  .nav-brand .meta{display:flex;flex-direction:column;gap:0;line-height:1.15}
+  .nav-brand .meta .role{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.16em;font-weight:500;margin-top:2px}
+  .nav-right{display:flex;align-items:center;gap:14px}
+  .nav-links{display:flex;gap:20px;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.1em}
+  .nav-links a{color:var(--ink-soft);border:none}
+  .nav-links a:hover{color:var(--red)}
+  .lang-toggle{
+    background:transparent;border:1.5px solid var(--ink);
+    padding:6px 14px;border-radius:99px;font-size:10px;
+    font-weight:700;letter-spacing:.24em;color:var(--ink);
+    cursor:pointer;transition:all .15s;text-transform:uppercase;
+    font-family:inherit;line-height:1;
+  }
+  .lang-toggle:hover{background:var(--ink);color:var(--bg)}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--ink)}
+  .nav-toggle svg{width:24px;height:24px}
+  @media (max-width:900px){
+    .nav-links{
+      position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+      background:var(--bg);border-bottom:1px solid var(--line);padding:8px 0;display:none;
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{padding:14px var(--pad);width:100%;border-top:1px solid var(--line);font-size:14px}
+    .nav-toggle{display:block}
+  }
+
+  /* HERO */
+  .hero{
+    background:var(--bg);
+    border-bottom:1px solid var(--line);
+    padding:80px 0 90px;
+    position:relative;overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 88% 18%, rgba(193,32,38,.08), transparent 50%),
+      radial-gradient(circle at 8% 80%, rgba(42,46,35,.06), transparent 55%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative}
+  .hero-eyebrow{
+    font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink-soft);
+    display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-weight:600;margin-bottom:26px;
+  }
+  .hero-eyebrow .dot{width:5px;height:5px;background:var(--red);border-radius:50%;display:inline-block}
+  .hero-name{
+    font-family:"Saira Stencil One",sans-serif;font-weight:400;
+    font-size:clamp(38px,6.2vw,82px);line-height:1.02;letter-spacing:.015em;
+    margin:0 0 18px;color:var(--ink);text-transform:uppercase;
+  }
+  .hero-role{
+    font-size:clamp(19px,2.1vw,25px);font-weight:300;color:var(--ink-soft);
+    margin:0 0 36px;line-height:1.4;
+  }
+  .hero-role strong{color:var(--red);font-weight:600}
+  .hero-project{
+    margin-top:46px;padding-top:30px;border-top:1px solid var(--line);
+    display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:center;
+  }
+  @media (max-width:880px){
+    .hero-project{grid-template-columns:1fr;gap:28px}
+  }
+  .hero-project-logo{width:100%;max-width:420px;display:block}
+  .hero-project-info h4{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 10px}
+  .hero-project-info p{font-size:16px;color:var(--ink-soft);line-height:1.55;margin:0 0 8px}
+  .hero-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+  .hero-tags > span{
+    background:#fff;border:1px solid var(--line);
+    padding:5px 12px;border-radius:99px;font-size:12px;color:var(--ink-soft);
+  }
+
+  /* SECTION */
+  section{padding:90px 0;border-bottom:1px solid var(--line)}
+  section.dark{background:var(--surface-dark);color:#f0ebdc;border-color:#000}
+  section.dark p{color:#cfcab9}
+  section.dark h2{color:#fff}
+  section.dark h4{color:#a59c89}
+  section.dark .sec-eyebrow{color:var(--red-bright)}
+  section.paper{background:var(--bg-paper)}
+  section:last-of-type{border-bottom:none}
+  @media (max-width:760px){section{padding:56px 0}}
+
+  .sec-eyebrow{
+    font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);
+    font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:12px;
+  }
+  .sec-eyebrow::before{content:"";width:36px;height:2px;background:currentColor;display:inline-block}
+
+  h2{
+    font-family:"Saira Stencil One",sans-serif;font-weight:400;
+    font-size:clamp(28px,4vw,48px);line-height:1.1;margin:0 0 26px;letter-spacing:.014em;color:var(--ink);text-transform:uppercase;
+  }
+  h3{font-weight:600;font-size:22px;margin:0 0 12px;line-height:1.25}
+  h4{font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.18em;color:var(--ink-soft);margin:0 0 10px}
+  p{margin:0 0 16px;color:var(--ink-soft)}
+  .lead{font-size:19px;color:var(--ink);font-weight:400;line-height:1.5}
+  @media (max-width:760px){.lead{font-size:17px}}
+
+  .grid-2{display:grid;grid-template-columns:1.15fr 1fr;gap:54px;align-items:start}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media (max-width:920px){.grid-2,.grid-3{grid-template-columns:1fr;gap:28px}}
+
+  .card{
+    background:var(--bg-paper);border:1px solid var(--line);
+    padding:28px;border-radius:4px;box-shadow:var(--shadow);
+  }
+  section.dark .card{background:#1a1a17;border-color:#252320;color:#cfcab9}
+
+  /* PANELES */
+  .panels-feature{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px}
+  @media (max-width:880px){.panels-feature{grid-template-columns:1fr;gap:22px}}
+  .panel-card{
+    background:#fff;border:1px solid var(--line);padding:18px;
+    border-radius:4px;box-shadow:var(--shadow);
+    transition:transform .2s,box-shadow .2s;
+  }
+  .panel-card:hover{transform:translateY(-3px);box-shadow:0 1px 0 rgba(12,13,11,.04),0 28px 50px -28px rgba(12,13,11,.50)}
+  .panel-card .panel-frame{position:relative;background:#fff;border:1px solid var(--line);overflow:hidden;border-radius:2px;cursor:zoom-in}
+  .panel-card img{width:100%;display:block}
+  .panel-card .zoom-btn{
+    position:absolute;top:12px;right:12px;
+    background:rgba(255,255,255,.92);border:1px solid var(--line);
+    padding:7px 12px;border-radius:99px;display:inline-flex;align-items:center;gap:6px;
+    font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+    cursor:pointer;backdrop-filter:blur(6px);
+  }
+  .panel-card .zoom-btn img{width:14px;height:14px}
+  .panel-card:hover .zoom-btn{background:var(--red);color:#fff;border-color:var(--red)}
+  .panel-card:hover .zoom-btn img{filter:brightness(0) invert(1)}
+  .panel-card .panel-meta{margin-top:18px;display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .panel-card .panel-meta strong{font-size:15px;font-weight:600}
+  .panel-card .panel-meta span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.15em}
+
+  /* AR MINI CTA */
+  .ar-mini{
+    margin-top:22px;display:flex;align-items:center;justify-content:space-between;
+    gap:18px;flex-wrap:wrap;padding:14px 22px;
+    background:#fff;border:1px solid var(--line);border-radius:99px;
+    box-shadow:var(--shadow);font-size:14px;color:var(--ink-soft);
+  }
+  .ar-mini strong{color:var(--ink)}
+  .ar-mini a{
+    background:var(--red);color:#fff;padding:9px 20px;border-radius:99px;
+    font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    text-decoration:none;border:none;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;
+  }
+  .ar-mini a::after{content:"↗"}
+  .ar-mini a:hover{background:var(--red-bright)}
+  @media (max-width:680px){.ar-mini{border-radius:8px;flex-direction:column;align-items:flex-start;text-align:left}.ar-mini a{align-self:stretch;justify-content:center}}
+
+  /* MODAL pan+zoom */
+  .modal{
+    position:fixed;inset:0;z-index:100;
+    background:rgba(12,13,11,.94);backdrop-filter:blur(8px);
+    display:flex;align-items:center;justify-content:center;overflow:hidden;
+  }
+  .modal[hidden]{display:none}
+  .modal-stage{
+    width:100%;height:100%;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;cursor:zoom-in;touch-action:none;
+  }
+  .modal-stage.zoomed{cursor:grab}
+  .modal-stage.panning{cursor:grabbing}
+  .modal-img{
+    max-width:calc(100% - 60px);max-height:calc(100% - 140px);
+    box-shadow:0 30px 80px rgba(0,0,0,.5);border-radius:2px;
+    transform-origin:center center;transition:transform .12s ease-out;
+    user-select:none;-webkit-user-drag:none;pointer-events:none;
+  }
+  .modal-toolbar{
+    position:absolute;top:18px;left:50%;transform:translateX(-50%);
+    display:flex;gap:8px;align-items:center;
+    background:rgba(12,13,11,.85);border:1px solid rgba(244,241,234,.15);
+    padding:6px 8px;border-radius:99px;backdrop-filter:blur(8px);
+  }
+  .modal-toolbar button{
+    background:transparent;color:#f0ebdc;border:none;
+    width:36px;height:36px;border-radius:50%;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;font-weight:600;font-size:18px;
+    transition:background .2s;
+  }
+  .modal-toolbar button:hover{background:rgba(244,241,234,.12)}
+  .modal-toolbar .zoom-level{color:#cfcab9;font-size:11px;letter-spacing:.18em;font-weight:600;padding:0 14px;min-width:50px;text-align:center}
+  .modal-close{
+    position:absolute;top:18px;right:18px;
+    background:rgba(244,241,234,.10);color:#fff;border:1px solid rgba(244,241,234,.2);
+    width:42px;height:42px;border-radius:50%;font-size:22px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;transition:background .2s;backdrop-filter:blur(8px);
+  }
+  .modal-close:hover{background:var(--red);border-color:var(--red)}
+  .modal-caption{
+    position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
+    color:#cfcab9;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    background:rgba(12,13,11,.85);padding:8px 18px;border-radius:99px;
+    border:1px solid rgba(244,241,234,.15);backdrop-filter:blur(8px);font-weight:600;
+  }
+  .modal-hint{
+    position:absolute;bottom:24px;left:24px;
+    color:#84877f;font-size:11px;letter-spacing:.04em;max-width:200px;
+  }
+  @media (max-width:760px){
+    .modal-hint{display:none}
+    .modal-caption{font-size:10px;padding:6px 14px}
+  }
+
+  /* ROLES */
+  .roles{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+  .roles .role{padding:36px 32px;background:#fff;border-right:1px solid var(--line)}
+  .roles .role:last-child{border-right:none}
+  .roles .role-tag{
+    display:inline-block;font-family:"Saira Stencil One",sans-serif;font-weight:400;
+    font-size:40px;color:var(--red);line-height:1;margin-bottom:8px;letter-spacing:.04em;
+  }
+  .roles .role h3{margin-bottom:6px}
+  .roles .role .role-sub{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.16em;margin-bottom:18px;font-weight:600}
+  .roles .role ul{margin:14px 0 0;padding-left:18px}
+  .roles .role li{margin-bottom:8px;color:var(--ink-soft);font-size:15px;line-height:1.5}
+  @media (max-width:780px){.roles{grid-template-columns:1fr}.roles .role{border-right:none;border-bottom:1px solid var(--line)}.roles .role:last-child{border-bottom:none}}
+
+  /* SCHEMA */
+  .schema{margin-top:40px}
+  .schema-labels{
+    display:grid;grid-template-columns:1fr 1.2fr 1fr;
+    text-align:center;font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .schema-labels .particular{color:var(--red)}
+  .schema-labels span em{
+    display:block;font-style:normal;font-weight:400;text-transform:none;
+    letter-spacing:.02em;font-size:11px;color:var(--muted);margin-top:2px;
+  }
+  .schema-flow svg{position:absolute;inset:0;width:100%;height:100%}
+  .schema-nodes{
+    display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:20px;align-items:start;
+  }
+  .schema-node{
+    background:#fff;border:1px solid var(--line);border-radius:4px;
+    padding:24px 22px;text-align:center;position:relative;
+  }
+  .schema-node.particular{border-color:var(--red);background:#fffaf9}
+  .schema-node .stencil{
+    display:inline-block;font-family:"Saira Stencil One",sans-serif;font-weight:400;
+    font-size:22px;color:var(--red);background:#fff;
+    padding:6px 22px;border:2px solid var(--red);border-radius:99px;
+    margin:-50px auto 16px;position:relative;letter-spacing:.04em;text-transform:uppercase;
+  }
+  .schema-node.particular .stencil{background:#fffaf9;color:var(--red-deep)}
+  .schema-flow{height:140px;position:relative;margin:0 -20px 4px}
+  .schema-node p{font-size:13px;text-align:left;margin:0;color:var(--ink-soft);line-height:1.55}
+  @media (max-width:880px){
+    .schema-labels,.schema-nodes{grid-template-columns:1fr;gap:14px}
+    .schema-flow{display:none}
+    .schema-node{padding-top:20px}
+    .schema-node .stencil{margin-top:0}
+  }
+
+  /* FACTS */
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0}
+  .fact{background:#fff;border:1px solid var(--line);padding:30px 18px;border-radius:4px;text-align:center;box-shadow:var(--shadow)}
+  .fact .num{display:block;font-family:"Saira Stencil One",sans-serif;font-weight:400;font-size:54px;color:var(--red);line-height:1;margin-bottom:10px;letter-spacing:.02em}
+  .fact .label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-soft);font-weight:500}
+  @media (max-width:760px){.facts{grid-template-columns:repeat(2,1fr)}.fact .num{font-size:46px}}
+
+  /* QUOTE */
+  .quote-feature{
+    background:var(--surface-dark);color:#f0ebdc;padding:60px 50px;
+    border-left:6px solid var(--red);position:relative;border-radius:4px;margin:34px 0;
+  }
+  .quote-feature::before{
+    content:"\201C";font-family:"Saira Stencil One",serif;font-weight:400;
+    font-size:180px;line-height:0;position:absolute;top:80px;left:22px;color:var(--red);opacity:.3;
+  }
+  .quote-feature q{
+    quotes:none;font-size:clamp(20px,2.3vw,28px);line-height:1.35;
+    font-weight:300;font-style:italic;display:block;color:#fff;
+  }
+  @media (max-width:720px){.quote-feature{padding:46px 28px 46px 38px}.quote-feature::before{display:none}}
+
+  /* DECISIONS */
+  .decisions{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}
+  .decision{background:#fff;border:1px solid var(--line);padding:26px;border-radius:4px;border-top:4px solid var(--red)}
+  .decision h3{font-size:18px;margin-bottom:8px}
+  .decision .ctx{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-weight:600;margin-bottom:14px}
+  .decision p{font-size:14px;margin-bottom:0;line-height:1.55}
+  @media (max-width:780px){.decisions{grid-template-columns:1fr}}
+
+  /* STAKEHOLDERS */
+  .stakeholders{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
+  .stake{background:var(--bg-paper);border-left:3px solid var(--red);padding:20px 22px;border-radius:0 4px 4px 0}
+  .stake h4{color:var(--ink);font-size:14px;letter-spacing:.08em;margin-bottom:6px;text-transform:none;font-weight:600}
+  .stake p{font-size:13px;margin-bottom:0;color:var(--ink-soft);line-height:1.55}
+  @media (max-width:780px){.stakeholders{grid-template-columns:1fr}}
+
+  /* CITES */
+  .cites{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+  .cite{background:#fff;border-left:4px solid var(--red);padding:22px 26px;border-radius:0 4px 4px 0;font-style:italic;font-size:16px;color:var(--ink);line-height:1.5}
+  @media (max-width:760px){.cites{grid-template-columns:1fr}}
+
+  /* PILLS */
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .pill{background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:99px;font-size:13px;font-weight:500;color:var(--ink-soft)}
+
+  /* TEAM */
+  .team{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+  .team .member{padding:22px;background:#fff;border:1px solid var(--line);border-radius:4px}
+  .team .member.me{background:var(--surface-dark);border-color:var(--surface-dark);color:#f0ebdc}
+  .team .member.me .role-label{color:var(--red-bright)}
+  .team .member.me .name{color:#fff}
+  .team .role-label{font-size:11px;color:var(--red);text-transform:uppercase;letter-spacing:.18em;font-weight:600;margin-bottom:8px}
+  .team .name{font-weight:600;font-size:16px;color:var(--ink)}
+  .team .role-extra{font-size:12px;color:var(--muted);margin-top:6px}
+  .team .member.me .role-extra{color:#a59c89}
+  @media (max-width:760px){.team{grid-template-columns:1fr}}
+
+  /* DATA TABLE */
+  .data-table{margin-top:24px;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#fff}
+  .data-row{display:grid;grid-template-columns:220px 1fr;border-bottom:1px solid var(--line)}
+  .data-row:last-child{border-bottom:none}
+  .data-row dt{padding:18px 22px;background:var(--bg-paper);font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--ink-soft);font-weight:600;border-right:1px solid var(--line);margin:0;display:flex;align-items:center}
+  .data-row dd{padding:18px 22px;margin:0;font-size:15px;color:var(--ink);display:flex;align-items:center}
+  @media (max-width:680px){.data-row{grid-template-columns:1fr}.data-row dt{border-right:none;border-bottom:1px solid var(--line);padding:12px 18px}.data-row dd{padding:14px 18px}}
+
+  /* CONTACT */
+  .contact-block{
+    background:var(--surface-dark);color:#f0ebdc;padding:50px;border-radius:4px;
+    margin-top:30px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;
+  }
+  .contact-block h3{color:#fff;font-size:24px;margin-bottom:8px}
+  .contact-block p{color:#cfcab9;font-size:15px;margin-bottom:0}
+  .contact-block .mail{
+    display:block;color:var(--red-bright);font-size:18px;margin-top:14px;
+    border-bottom:1px solid currentColor;font-weight:500;
+  }
+  .contact-block .btn-primary{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--red);color:#fff;padding:14px 28px;border-radius:2px;
+    font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:13px;
+    text-decoration:none;border:none;justify-self:end;
+  }
+  .contact-block .btn-primary:hover{background:var(--red-bright)}
+  @media (max-width:780px){.contact-block{grid-template-columns:1fr;padding:36px 24px;text-align:left}.contact-block .btn-primary{justify-self:start}}
+
+  /* FOOTER */
+  footer.foot{background:var(--surface-dark);color:#a59c89;padding:60px 0 40px;text-align:center;border-top:6px solid var(--red)}
+  footer.foot .foot-name{
+    font-family:"Saira Stencil One",sans-serif;font-weight:400;
+    color:#fff;font-size:24px;letter-spacing:.04em;margin-bottom:6px;text-transform:uppercase;
+  }
+  footer.foot .foot-role{font-size:13px;color:#a59c89;text-transform:uppercase;letter-spacing:.18em;margin-bottom:30px}
+  footer.foot .foot-project{padding-top:24px;border-top:1px solid #252320;margin-top:24px;font-size:12px;color:#6e6757;letter-spacing:.08em}
+
+  @media print{
+    .nav,.zoom-btn,.modal,.contact-block,.nav-toggle,.lang-toggle{display:none}
+    section{padding:30px 0;page-break-inside:avoid;border-color:#ccc}
+    .quote-feature,.team .member.me{background:#f1ecdd;color:#000}
+    .quote-feature q{color:#000}
+    footer.foot{background:#fff;color:#000}
+    footer.foot .foot-name{color:#000}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-brand" href="#">
+      <img class="ico" src="assets/favicon.png" alt="Sie7e isotipo">
+      <span class="meta">
+        <span>Facundo Ignacio García Mata</span>
+        <span class="role"><span lang="es">Proyecto destacado</span><span lang="en">Featured project</span></span>
+      </span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#proyecto"><span lang="es">Proyecto</span><span lang="en">Project</span></a>
+      <a href="#rol"><span lang="es">Mi rol</span><span lang="en">My role</span></a>
+      <a href="#arquitectura"><span lang="es">Arquitectura</span><span lang="en">Architecture</span></a>
+      <a href="#convocatoria"><span lang="es">Convocatoria</span><span lang="en">Selection</span></a>
+      <a href="#decisiones"><span lang="es">Decisiones</span><span lang="en">Decisions</span></a>
+      <a href="#datos"><span lang="es">Datos</span><span lang="en">Details</span></a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">
+        <span lang="es">EN</span><span lang="en">ES</span>
+      </button>
+      <button class="nav-toggle" type="button" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-eyebrow">
+      <span class="dot"></span><span><span lang="es">Proyecto destacado · 2025–2026</span><span lang="en">Featured project · 2025–2026</span></span>
+      <span class="dot"></span><span><span lang="es">Comunicación · Gestión cultural</span><span lang="en">Communications · Cultural management</span></span>
+    </div>
+    <h1 class="hero-name">Facundo I. García Mata</h1>
+    <p class="hero-role" lang="es">Productor de contenidos y gestor de proyectos. Trabajé en el cruce entre <strong>investigación, narrativa y producción tecnológica</strong>, articulando un equipo interdisciplinario alrededor de una propuesta de memoria con impacto social.</p>
+    <p class="hero-role" lang="en">Content producer and project manager. I worked at the intersection of <strong>research, narrative and technology production</strong>, articulating an interdisciplinary team around a memory-focused proposal with social impact.</p>
+
+    <div class="hero-project">
+      <img class="hero-project-logo" src="assets/logo-full.png" alt="Sie7e Memorias Desde La Sombra">
+      <div class="hero-project-info">
+        <h4 lang="es">Proyecto presentado en este caso</h4>
+        <h4 lang="en">Project featured in this case</h4>
+        <p lang="es">Una experiencia inmersiva en realidad aumentada que recupera las historias de las siete víctimas relegadas del 19 y 20 de diciembre de 2001 en Rosario, desarrollada para XperienciaUNR 2025.</p>
+        <p lang="en">An immersive AR experience that recovers the stories of the seven overlooked victims of the December 19–20, 2001 uprising in Rosario, Argentina. Developed for XperienciaUNR 2025.</p>
+        <div class="hero-tags" aria-label="Palabras clave">
+          <span><strong>Project Manager</strong></span>
+          <span><strong>Content Producer</strong></span>
+          <span><strong>Narrative Designer</strong></span>
+          <span>Stakeholder Manager</span>
+          <span>UX Researcher</span>
+          <span>Documentary Researcher</span>
+          <span><span lang="es">Realidad aumentada</span><span lang="en">Augmented reality</span></span>
+          <span><span lang="es">Narrativa transmedia</span><span lang="en">Transmedia storytelling</span></span>
+          <span><span lang="es">Diseño de experiencia</span><span lang="en">Experience design</span></span>
+          <span><span lang="es">Memoria social</span><span lang="en">Social memory</span></span>
+          <span><span lang="es">Producción cultural</span><span lang="en">Cultural production</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="proyecto">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span lang="es">El proyecto en una mirada</span><span lang="en">The project at a glance</span></div>
+    <h2 lang="es">Una memoria que se inscribe sobre la ciudad</h2>
+    <h2 lang="en">A memory inscribed onto the city</h2>
+    <p class="lead" lang="es">Sie7e Memorias Desde La Sombra es una propuesta híbrida —analógica y digital— que combina un panel impreso de gran formato con una capa de realidad aumentada activable desde cualquier celular. Al escanear los marcadores stencil del mapa físico de Rosario, el visitante accede a la biografía multimedia de las víctimas del estallido de diciembre de 2001 que quedaron a la sombra del relato institucional.</p>
+    <p class="lead" lang="en">Sie7e Memorias Desde La Sombra <em>(Seven Memories From The Shadows)</em> is a hybrid proposal —analog and digital— that combines a large-format printed panel with an AR layer activated from any phone. By scanning the stencil markers on the physical map of Rosario, the visitor accesses a multimedia biography of the victims of the December 2001 uprising who were overshadowed by the institutional narrative.</p>
+
+    <div class="panels-feature">
+      <div class="panel-card" data-zoom="panel-1-info" data-caption-es="Panel 1 · Información" data-caption-en="Panel 1 · Information">
+        <div class="panel-frame">
+          <img src="assets/panel-1-thumb.jpg" alt="Panel 1">
+          <button class="zoom-btn" type="button"><img src="assets/icon-expand.png" alt=""> <span lang="es">Ampliar</span><span lang="en">Expand</span></button>
+        </div>
+        <div class="panel-meta">
+          <strong><span lang="es">Panel 1 · Información</span><span lang="en">Panel 1 · Information</span></strong>
+          <span><span lang="es">A0 · Impreso</span><span lang="en">A0 · Print</span></span>
+        </div>
+      </div>
+      <div class="panel-card" data-zoom="panel-2-mapa" data-caption-es="Panel 2 · Mapa" data-caption-en="Panel 2 · Map">
+        <div class="panel-frame">
+          <img src="assets/panel-2-thumb.jpg" alt="Panel 2">
+          <button class="zoom-btn" type="button"><img src="assets/icon-expand.png" alt=""> <span lang="es">Ampliar</span><span lang="en">Expand</span></button>
+        </div>
+        <div class="panel-meta">
+          <strong><span lang="es">Panel 2 · Mapa</span><span lang="en">Panel 2 · Map</span></strong>
+          <span><span lang="es">A0 · Marcadores AR</span><span lang="en">A0 · AR markers</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ar-mini">
+      <span lang="es">El prototipo funciona desde cualquier celular — <strong>la realidad aumentada se monta sobre los marcadores del Panel 2</strong>.</span>
+      <span lang="en">The prototype runs on any phone — <strong>augmented reality renders on top of the Panel 2 markers</strong>.</span>
+      <a href="https://matitab.github.io/siete-memorias-ar/" target="_blank" rel="noopener"><span lang="es">Abrir experiencia AR</span><span lang="en">Open AR experience</span></a>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><span class="num">39</span><span class="label"><span lang="es">Víctimas en el país</span><span lang="en">Victims nationwide</span></span></div>
+      <div class="fact"><span class="num">8</span><span class="label"><span lang="es">Víctimas en Rosario</span><span lang="en">Victims in Rosario</span></span></div>
+      <div class="fact"><span class="num">7</span><span class="label"><span lang="es">Historias a la sombra</span><span lang="en">Stories in the shadows</span></span></div>
+      <div class="fact"><span class="num">1</span><span class="label"><span lang="es">Biografiada en el prototipo</span><span lang="en">Biography in prototype</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="rol" class="dark">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span lang="es">Mi rol en el proyecto</span><span lang="en">My role in the project</span></div>
+    <h2 style="color:#fff" lang="es">Un rol doble: producción y articulación</h2>
+    <h2 style="color:#fff" lang="en">A dual role: production and articulation</h2>
+    <p class="lead" style="color:#cfcab9" lang="es">El área de Comunicación, de la que formé parte, operó con un <strong style="color:#fff">rol doble</strong>: la producción editorial del dispositivo y la articulación del trabajo de las áreas de Diseño y Desarrollo. Esto significó actuar como <em style="color:#fff;font-style:italic">arquitecto de sentido</em> y traductor entre disciplinas durante todo el ciclo del proyecto.</p>
+    <p class="lead" style="color:#cfcab9" lang="en">The Communications area, which I was part of, operated with a <strong style="color:#fff">dual role</strong>: the editorial production of the device and the articulation of the Design and Development areas' work. This meant acting as an <em style="color:#fff;font-style:italic">architect of meaning</em> and a translator between disciplines throughout the project cycle.</p>
+
+    <div class="roles">
+      <div class="role">
+        <span class="role-tag">01</span>
+        <div class="role-sub"><span lang="es">Producción de contenidos</span><span lang="en">Content production</span></div>
+        <h3 style="color:var(--ink)" lang="es">Lo que se cuenta y cómo se cuenta</h3>
+        <h3 style="color:var(--ink)" lang="en">What gets told and how it's told</h3>
+        <ul lang="es">
+          <li>Diseño de la arquitectura del dispositivo: definición de los elementos generales y particulares, y de la matriz narrativa que organiza el recorrido del visitante.</li>
+          <li>Investigación documental y trabajo de archivo: hemeroteca local, libro <em>20 Diciembre Impunes</em> de la Comisión Investigadora No Gubernamental, fotografías de prensa y registros audiovisuales.</li>
+          <li>Entrevista en profundidad con Lila Mansilla, madre de Yanina García. Construcción de rapport, escucha activa y registro del material que se convirtió en la columna vertebral del prototipo.</li>
+          <li>Curaduría y edición del material crudo: selección de fragmentos, articulación de texto, fotografía y video, definición del recorte narrativo.</li>
+          <li>Definición del tono editorial del dispositivo: crítico, reflexivo y humanizado.</li>
+        </ul>
+        <ul lang="en">
+          <li>Designed the architecture of the device: defining its general and particular elements, and the narrative matrix that organizes the visitor's journey.</li>
+          <li>Documentary research and archive work: local newspaper archives, the book <em>20 Diciembre Impunes</em> by the Non-Governmental Investigation Commission, press photographs and audiovisual records.</li>
+          <li>In-depth interview with Lila Mansilla, Yanina García's mother. Building rapport, active listening and recording the material that became the prototype's backbone.</li>
+          <li>Curation and editing of raw material: selecting fragments, articulating text, photography and video, defining the narrative angle.</li>
+          <li>Defined the device's editorial tone: critical, reflective and humanized.</li>
+        </ul>
+      </div>
+      <div class="role">
+        <span class="role-tag">02</span>
+        <div class="role-sub"><span lang="es">Gestión del proyecto</span><span lang="en">Project management</span></div>
+        <h3 style="color:var(--ink)" lang="es">Cómo se hace que pase</h3>
+        <h3 style="color:var(--ink)" lang="en">How it gets made</h3>
+        <ul lang="es">
+          <li>Backlog y planificación semanal de tareas, asignación de responsabilidades por área y seguimiento del avance.</li>
+          <li>Validación de entregables de las áreas de Diseño y Desarrollo, con criterios definidos en conjunto.</li>
+          <li>Gestión de vínculos externos: la Biblioteca Popular Pocho Lepratti como sede del proyecto, las familias de las víctimas como fuente, el LET-UNR como comitente institucional.</li>
+          <li>Decisiones estratégicas de scope y stack tecnológico que sostienen al dispositivo como pieza escalable y replicable.</li>
+          <li>Redacción de las entregas oficiales a la convocatoria y exposición pública de avances en cada instancia.</li>
+        </ul>
+        <ul lang="en">
+          <li>Backlog and weekly task planning, allocation of responsibilities by area and progress tracking.</li>
+          <li>Validation of Design and Development deliverables, with criteria defined together with both teams.</li>
+          <li>External stakeholder management: Biblioteca Popular Pocho Lepratti as the project's venue, the victims' families as primary source, the LET-UNR as institutional commissioner.</li>
+          <li>Strategic decisions on scope and tech stack that sustain the device as a scalable, replicable piece.</li>
+          <li>Writing all official deliverables for the program and presenting progress publicly at each milestone.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote-feature">
+      <q lang="es">El comunicador asume el papel de un arquitecto de sentido y un articulador de procesos complejos e interdisciplinares. Se consolida como traductor y articulador de saberes, custodiando la integridad del mundo narrativo y diseñando estratégicamente la arquitectura del dispositivo.</q>
+      <q lang="en">The communicator takes on the role of an architect of meaning and an articulator of complex, interdisciplinary processes. They consolidate as a translator and articulator of knowledge, safeguarding the integrity of the narrative world and strategically designing the architecture of the device.</q>
+    </div>
+  </div>
+</section>
+
+<section id="arquitectura">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span lang="es">La arquitectura que diseñé</span><span lang="en">The architecture I designed</span></div>
+    <h2 lang="es">Una matriz general con un núcleo particular</h2>
+    <h2 lang="en">A general matrix with a particular core</h2>
+    <p class="lead" lang="es">Una de las piezas centrales de mi rol fue diseñar la arquitectura del dispositivo. El sistema funciona con dos categorías de elementos: <strong>generales</strong> —replicables para cada víctima, sostienen la identidad del proyecto— y <strong>particulares</strong> —propios de cada historia, lo único que cambia caso por caso—. Esa decisión hace que el dispositivo sea escalable a las ocho víctimas sin tener que rediseñarlo.</p>
+    <p class="lead" lang="en">One of the central pieces of my role was designing the device's architecture. The system operates with two categories of elements: <strong>general</strong> —replicable for each victim, they sustain the project's identity— and <strong>particular</strong> —proper to each story, the only thing that changes case by case—. That decision makes the device scalable to all eight victims without needing redesign.</p>
+
+    <div class="schema">
+      <div class="schema-labels">
+        <span><span lang="es">General</span><span lang="en">General</span></span>
+        <span class="particular">
+          <span lang="es">Particular <em>variable por víctima</em></span>
+          <span lang="en">Particular <em>variable per victim</em></span>
+        </span>
+        <span><span lang="es">General</span><span lang="en">General</span></span>
+      </div>
+      <div class="schema-flow" aria-hidden="true">
+        <svg viewBox="0 0 800 140" preserveAspectRatio="none">
+          <path d="M 30 70 L 240 70" stroke="#2a2e23" stroke-width="2" fill="none"/>
+          <path d="M 240 70 C 340 8, 460 8, 560 70" stroke="#c12026" stroke-width="1.5" fill="none" opacity=".25"/>
+          <path d="M 240 70 C 340 28, 460 28, 560 70" stroke="#c12026" stroke-width="1.5" fill="none" opacity=".45"/>
+          <path d="M 240 70 C 340 48, 460 48, 560 70" stroke="#c12026" stroke-width="1.5" fill="none" opacity=".65"/>
+          <path d="M 240 70 L 560 70" stroke="#c12026" stroke-width="2" fill="none"/>
+          <path d="M 240 70 C 340 92, 460 92, 560 70" stroke="#c12026" stroke-width="1.5" fill="none" opacity=".65"/>
+          <path d="M 240 70 C 340 112, 460 112, 560 70" stroke="#c12026" stroke-width="1.5" fill="none" opacity=".45"/>
+          <path d="M 240 70 C 340 132, 460 132, 560 70" stroke="#c12026" stroke-width="1.5" fill="none" opacity=".25"/>
+          <path d="M 560 70 L 770 70" stroke="#2a2e23" stroke-width="2" fill="none"/>
+          <circle cx="240" cy="70" r="5" fill="#2a2e23"/>
+          <circle cx="560" cy="70" r="5" fill="#2a2e23"/>
+        </svg>
+      </div>
+      <div class="schema-nodes">
+        <div class="schema-node">
+          <span class="stencil"><span lang="es">Contexto</span><span lang="en">Context</span></span>
+          <p lang="es">Soporte físico. Da entrada al universo virtual. Comprende un gancho para atraer al espectador y contextualizarlo, preparándolo para lo que va a ver pero sin spoilear.</p>
+          <p lang="en">Physical support. Entry point to the virtual universe. Includes a hook to draw the viewer in and contextualize them, preparing for what's ahead without spoiling.</p>
+        </div>
+        <div class="schema-node particular">
+          <span class="stencil"><span lang="es">Biografía</span><span lang="en">Biography</span></span>
+          <p lang="es">Detalla la historia de una víctima, tanto su biografía personal como lo ocurrido el 19 y 20 de diciembre de 2001. Es la única pieza que cambia caso por caso.</p>
+          <p lang="en">Details the story of one victim, both her personal biography and what happened to her on December 19 and 20, 2001. The only piece that changes case by case.</p>
+        </div>
+        <div class="schema-node">
+          <span class="stencil"><span lang="es">Salida</span><span lang="en">Exit</span></span>
+          <p lang="es">Cierre contextual. Da pie a investigar más y deja la sensación de que hay más por ser indagado, de que no se trata de un caso aislado.</p>
+          <p lang="en">Contextual closing. Invites further research and leaves the sense that more remains to be uncovered, that this is not an isolated case.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="convocatoria" class="paper">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span lang="es">La convocatoria</span><span lang="en">The selection program</span></div>
+    <h2>XperienciaUNR 2025</h2>
+    <p class="lead" lang="es">XperienciaUNR es la convocatoria del <strong>Laboratorio de Experimentación Tecnológica (LET)</strong> de la Universidad Nacional de Rosario. Selecciona equipos universitarios para desarrollar prototipos culturales que combinen narrativa y tecnologías emergentes, con acompañamiento docente y <strong>plazos acotados</strong>.</p>
+    <p class="lead" lang="en">XperienciaUNR is the open call run by the <strong>Laboratory for Experimental Technology (LET)</strong> at the National University of Rosario. It selects university teams to develop cultural prototypes combining narrative and emerging technologies, with faculty mentorship and <strong>tight timeframes</strong>.</p>
+
+    <div class="facts">
+      <div class="fact"><span class="num">10+</span><span class="label"><span lang="es">Proyectos aplicantes</span><span lang="en">Project applications</span></span></div>
+      <div class="fact"><span class="num">5</span><span class="label"><span lang="es">Equipos seleccionados</span><span lang="en">Teams selected</span></span></div>
+      <div class="fact"><span class="num">4</span><span class="label"><span lang="es">Meses de trabajo</span><span lang="en">Months of work</span></span></div>
+      <div class="fact"><span class="num">6</span><span class="label"><span lang="es">Integrantes del equipo</span><span lang="en">Team members</span></span></div>
+    </div>
+
+    <div class="grid-2" style="margin-top:50px">
+      <div>
+        <h4 lang="es">Qué pidió el comité evaluador del LET</h4>
+        <h4 lang="en">What the LET evaluation committee asked for</h4>
+        <p lang="es">Un prototipo funcional —no una idea ni una maqueta— con identidad visual completa, fundamentación teórica, sistema escalable y posibilidad real de despliegue en territorio. La pieza debía ser defendible frente al comité de la convocatoria y, después, frente a un tribunal de tesina universitaria.</p>
+        <p lang="en">A functional prototype —not an idea or a mockup— with a complete visual identity, theoretical foundation, scalable system and real deployment potential on the ground. The piece had to be defensible before the program committee and, later, before a university thesis panel.</p>
+        <h4 style="margin-top:24px" lang="es">Acompañamiento</h4>
+        <h4 style="margin-top:24px" lang="en">Mentorship</h4>
+        <p lang="es">Seguimiento de aceleradores asignados por el LET, talleres en realidad aumentada, narrativas transmedia y tecnologías 360° (fotos y videos), además de un workshop sobre la <em>mirada ética en la representación de la violencia estatal</em> dictado por Ana María Longoni en el Museo de la Memoria.</p>
+        <p lang="en">Tracking by accelerators assigned by the LET, workshops on augmented reality, transmedia storytelling and 360° technologies (photo and video), plus a workshop on <em>the ethical gaze in representations of state violence</em> led by Ana María Longoni at the Museum of Memory.</p>
+      </div>
+      <div class="card">
+        <h4 lang="es">Restricciones que asumimos como ventaja</h4>
+        <h4 lang="en">Constraints we turned into advantages</h4>
+        <p lang="es">El plazo acotado y la diversidad del equipo —comunicadores, diseñadoras y un desarrollador— obligaron a tomar decisiones tempranas y a sostenerlas. En lugar de pelear contra la limitación, la convertimos en criterio editorial: hacer una sola víctima con profundidad antes que las ocho con superficie.</p>
+        <p lang="en">The tight timeline and the team's diversity —communicators, designers and one developer— forced early decisions that had to be sustained. Instead of fighting the constraint, we turned it into editorial criterion: one victim told in depth rather than all eight at the surface.</p>
+        <h4 style="margin-top:18px" lang="es">Resultado</h4>
+        <h4 style="margin-top:18px" lang="en">Outcome</h4>
+        <p lang="es">Un prototipo funcional que se puede usar hoy con cualquier celular, un sistema visual completo, un guion narrativo replicable y una tesina de grado producida sobre el mismo trabajo. La pieza terminó siendo, además, una propuesta concreta para presentar a museos y espacios de memoria interesados en el escalado.</p>
+        <p lang="en">A working prototype usable today on any phone, a complete visual system, a replicable narrative script and an undergraduate thesis written on the same work. The piece also became a concrete proposal to present to museums and memory spaces interested in scaling it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span lang="es">La experiencia diseñada</span><span lang="en">The experience I designed</span></div>
+    <h2 lang="es">Dos paneles físicos y una matriz narrativa</h2>
+    <h2 lang="en">Two physical panels and a narrative matrix</h2>
+    <p class="lead" lang="es">La pieza física es la puerta de entrada. Los paneles A0 funcionan como dispositivo autosuficiente —el visitante puede leerlos sin tocar el celular— y a la vez como puente a la capa digital. La estructura narrativa quedó en tres preguntas que se aplican igual a cada víctima.</p>
+    <p class="lead" lang="en">The physical piece is the entry point. The A0 panels work as a self-contained device —the visitor can read them without touching their phone— while also bridging to the digital layer. The narrative structure settled into three questions that apply equally to each victim.</p>
+
+    <h4 style="margin-top:50px" lang="es">La matriz narrativa</h4>
+    <h4 style="margin-top:50px" lang="en">The narrative matrix</h4>
+    <div class="grid-3" style="margin-top:14px">
+      <div class="card" style="background:#fff;border-top:4px solid var(--red)">
+        <span style="font-family:'Saira Stencil One',sans-serif;color:var(--red);font-size:18px;letter-spacing:.04em">01</span>
+        <h3 style="margin-top:8px" lang="es">¿Quién fue?</h3>
+        <h3 style="margin-top:8px" lang="en">Who was she?</h3>
+        <p style="font-size:14px" lang="es">Biografía íntima previa a la tragedia. La empatía como puerta de entrada al caso.</p>
+        <p style="font-size:14px" lang="en">Intimate biography before the tragedy. Empathy as the gateway into the case.</p>
+      </div>
+      <div class="card" style="background:#fff;border-top:4px solid var(--red)">
+        <span style="font-family:'Saira Stencil One',sans-serif;color:var(--red);font-size:18px;letter-spacing:.04em">02</span>
+        <h3 style="margin-top:8px" lang="es">¿Qué le pasó?</h3>
+        <h3 style="margin-top:8px" lang="en">What happened to her?</h3>
+        <p style="font-size:14px" lang="es">Reconstrucción documental de los hechos del 19 y 20 de diciembre.</p>
+        <p style="font-size:14px" lang="en">Documentary reconstruction of the events of December 19 and 20.</p>
+      </div>
+      <div class="card" style="background:#fff;border-top:4px solid var(--red)">
+        <span style="font-family:'Saira Stencil One',sans-serif;color:var(--red);font-size:18px;letter-spacing:.04em">03</span>
+        <h3 style="margin-top:8px" lang="es">¿Cómo está presente?</h3>
+        <h3 style="margin-top:8px" lang="en">How is she present?</h3>
+        <p style="font-size:14px" lang="es">Murales, marchas y testimonios actuales. La memoria viva, el reclamo abierto.</p>
+        <p style="font-size:14px" lang="en">Murals, marches and current testimonies. Living memory, an open demand.</p>
+      </div>
+    </div>
+
+    <h4 style="margin-top:60px" lang="es">El prototipo funciona hoy, desde cualquier celular</h4>
+    <h4 style="margin-top:60px" lang="en">The prototype works today, on any phone</h4>
+    <p lang="es">La pieza digital quedó hospedada en GitHub Pages. Cualquier visitante puede abrirla con su celular, autorizar la cámara y escanear los marcadores stencil del Panel 2 para ver la biografía de Yanina García en realidad aumentada.</p>
+    <p lang="en">The digital piece lives on GitHub Pages. Any visitor can open it on their phone, allow camera access and scan the Panel 2 stencil markers to see Yanina García's biography in augmented reality.</p>
+
+    <div class="ar-launch">
+      <div class="ar-launch-info">
+        <h4 lang="es">Cómo activar la experiencia</h4>
+        <h4 lang="en">How to launch the experience</h4>
+        <ol lang="es">
+          <li>Abrí el enlace desde el navegador del celular.</li>
+          <li>Tocá <em>Empezar recorrido</em> y autorizá la cámara.</li>
+          <li>Apuntá el celular a cada marcador stencil del Panel 2.</li>
+          <li>La biografía multimedia se monta sobre la imagen real, con voz de Lila Mansilla y material de archivo.</li>
+        </ol>
+        <ol lang="en">
+          <li>Open the link from your phone's browser.</li>
+          <li>Tap <em>Empezar recorrido</em> and allow camera access.</li>
+          <li>Point the phone at each Panel 2 stencil marker.</li>
+          <li>The multimedia biography overlays the real image, with Lila Mansilla's voice and archive material.</li>
+        </ol>
+      </div>
+      <a class="ar-launch-btn" href="https://matitab.github.io/siete-memorias-ar/" target="_blank" rel="noopener">
+        <span class="ar-launch-btn-label"><span lang="es">Abrir experiencia AR</span><span lang="en">Open AR experience</span></span>
+        <span class="ar-launch-btn-url">matitab.github.io/siete-memorias-ar</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="decisiones" class="paper">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span lang="es">Decisiones que tomé</span><span lang="en">Decisions I made</span></div>
+    <h2 lang="es">Cuatro puntos donde estuvo el peso del rol</h2>
+    <h2 lang="en">Four moments where the role mattered most</h2>
+    <p class="lead" lang="es">Estas son las decisiones del proyecto donde mi rol pesó —tomadas en conjunto con el equipo y validadas con Coordinación, Diseño y Desarrollo— que terminaron definiendo la viabilidad y el alcance de la pieza.</p>
+    <p class="lead" lang="en">These are the project decisions where my role had the most weight —taken together with the team and validated with Coordination, Design and Development— that ended up defining the piece's viability and scope.</p>
+
+    <div class="decisions">
+      <div class="decision">
+        <div class="ctx">Scope</div>
+        <h3 lang="es">Una víctima como MVP, sistema escalable a ocho</h3>
+        <h3 lang="en">One victim as MVP, system scalable to eight</h3>
+        <p lang="es">Frente al plazo y la disponibilidad de fuentes, propuse construir el prototipo con una sola biografía completa en lugar de las ocho con poca profundidad. La condición fue diseñar la arquitectura para que la replicación de las seis biografías restantes no requiriera rediseñar la pieza.</p>
+        <p lang="en">Faced with the timeline and source availability, I proposed building the prototype with a single complete biography rather than eight shallow ones. The condition was to design the architecture so that replicating the remaining six biographies would not require redesigning the piece.</p>
+      </div>
+      <div class="decision">
+        <div class="ctx"><span lang="es">Stack tecnológico</span><span lang="en">Tech stack</span></div>
+        <h3 lang="es">Web estática en lugar de app descargable</h3>
+        <h3 lang="en">Static web instead of downloadable app</h3>
+        <p lang="es">Junto a Desarrollo evaluamos opciones. La elección fue una web abierta con MindAR sobre A-Frame, hospedada en GitHub Pages: cero descarga, cero registro, funciona en gama baja. Criterio sostenido: la accesibilidad para el público objetivo manda sobre la sofisticación técnica.</p>
+        <p lang="en">Together with Development we evaluated options. The choice was an open web app with MindAR on A-Frame, hosted on GitHub Pages: zero downloads, zero sign-ups, works on low-end devices. Guiding principle: accessibility for the target audience trumps technical sophistication.</p>
+      </div>
+      <div class="decision">
+        <div class="ctx"><span lang="es">Arquitectura narrativa</span><span lang="en">Narrative architecture</span></div>
+        <h3 lang="es">Tres preguntas, no una línea de tiempo</h3>
+        <h3 lang="en">Three questions, not a timeline</h3>
+        <p lang="es">La biografía podría haberse contado en orden cronológico, pero eso reducía a Yanina al momento de su muerte. Propuse organizarla en tres ejes —¿Quién fue?, ¿Qué le pasó?, ¿Cómo está presente?— que el visitante recorre en el orden que quiera. La empatía va antes que la crudeza.</p>
+        <p lang="en">The biography could have been told in chronological order, but that reduced Yanina to the moment of her death. I proposed organizing it into three axes —Who was she? What happened to her? How is she present?— that the visitor traverses in any order. Empathy goes before crudeness.</p>
+      </div>
+      <div class="decision">
+        <div class="ctx"><span lang="es">Entrevista en profundidad</span><span lang="en">In-depth interview</span></div>
+        <h3 lang="es">Una sola fuente trabajada con cuidado</h3>
+        <h3 lang="en">A single source worked with care</h3>
+        <p lang="es">Decidimos concentrar el registro testimonial en Lila Mansilla, madre de Yanina, en lugar de hacer entrevistas breves a varias personas. Requirió construir rapport previo, preparar la guía como preguntas abiertas y dejar espacio a los silencios. La voz de Lila terminó siendo la columna vertebral de los tres marcadores.</p>
+        <p lang="en">We decided to concentrate the testimonial recording on Lila Mansilla, Yanina's mother, rather than doing brief interviews with multiple people. It required building rapport beforehand, preparing the guide as open questions and leaving space for silences. Lila's voice ended up being the backbone of all three markers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vinculos">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span lang="es">Vínculos gestionados</span><span lang="en">Stakeholders managed</span></div>
+    <h2 lang="es">Tejido humano del proyecto</h2>
+    <h2 lang="en">The project's human fabric</h2>
+    <p class="lead" lang="es">Más allá del equipo interno, el proyecto sostuvo relaciones con actores externos cuyo aporte fue determinante. Mantener vivos estos vínculos fue parte del rol.</p>
+    <p class="lead" lang="en">Beyond the internal team, the project sustained relationships with external actors whose input was decisive. Keeping these connections alive was part of the role.</p>
+
+    <div class="stakeholders">
+      <div class="stake">
+        <h4 lang="es">Lila Mansilla · Madre de Yanina García</h4>
+        <h4 lang="en">Lila Mansilla · Yanina García's mother</h4>
+        <p lang="es">Fuente testimonial principal. La entrevista en su casa de Azcuénaga Sur dio el material que estructura los tres marcadores del prototipo. Vínculo sostenido durante todo el proceso, no episódico.</p>
+        <p lang="en">Primary testimonial source. The interview at her home in Azcuénaga Sur produced the material that structures all three markers of the prototype. A sustained relationship across the whole process, not episodic.</p>
+      </div>
+      <div class="stake">
+        <h4>Biblioteca Popular Pocho Lepratti</h4>
+        <p lang="es">Puerta de entrada al territorio y al vínculo con las familias. Aportó material bibliográfico, ofreció el espacio como sede del despliegue inicial y validó la propuesta desde el lugar.</p>
+        <p lang="en">Gateway into the territory and into the link with the families. Provided bibliographic material, offered the venue for the initial deployment and validated the proposal from the ground.</p>
+      </div>
+      <div class="stake">
+        <h4 lang="es">LET-UNR · Comitente institucional</h4>
+        <h4 lang="en">LET-UNR · Institutional commissioner</h4>
+        <p lang="es">Articulación con la coordinación interna del equipo y con el Laboratorio de Experimentación Tecnológica, comitente de la convocatoria y referente académico de la propuesta.</p>
+        <p lang="en">Articulation with the team's internal coordination and with the Laboratory for Experimental Technology, the program's commissioner and academic reference for the proposal.</p>
+      </div>
+      <div class="stake">
+        <h4 lang="es">Áreas internas · Diseño y Desarrollo</h4>
+        <h4 lang="en">Internal areas · Design and Development</h4>
+        <p lang="es">Articulación continua con las áreas de Diseño y Desarrollo del equipo: validar el sistema visual y las decisiones tecnológicas en conjunto, no por silos.</p>
+        <p lang="en">Continuous articulation with the team's Design and Development areas: validating the visual system and technical decisions together, not in silos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reflexiones" class="paper">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span lang="es">Reflexiones del proceso</span><span lang="en">Process reflections</span></div>
+    <h2 lang="es">Lo que el proyecto me dejó</h2>
+    <h2 lang="en">What the project left me</h2>
+    <div class="cites" lang="es">
+      <blockquote class="cite">Aprendí que la viabilidad de un proyecto de esta magnitud no depende únicamente de una idea, sino de la capacidad para gestionarla en condiciones reales de desarrollo.</blockquote>
+      <blockquote class="cite">Comprendí que una idea comunicacional potente requiere una viabilidad técnica que la posibilite y la sostenga, y que los elementos visuales no son un decorado estético sino una construcción identitaria.</blockquote>
+      <blockquote class="cite">Articular mi visión con las áreas de Diseño y Desarrollo fue posible porque pude conversar, escuchar, abrirme y dejarme convencer por saberes que no eran los míos.</blockquote>
+      <blockquote class="cite">La comunicación puede ser una herramienta de intervención y restitución social: una disciplina capaz de enlazar fragmentos de dolor individual para construir un relato compartido.</blockquote>
+    </div>
+    <div class="cites" lang="en">
+      <blockquote class="cite">I learned that the viability of a project of this magnitude does not depend solely on an idea, but on the capacity to manage it under real development conditions.</blockquote>
+      <blockquote class="cite">I came to understand that a powerful communicational idea requires technical viability to enable and sustain it, and that visual elements are not aesthetic decoration but identity construction.</blockquote>
+      <blockquote class="cite">Articulating my vision with Design and Development was possible because I could converse, listen, open up and let myself be convinced by knowledge that was not my own.</blockquote>
+      <blockquote class="cite">Communication can be a tool for intervention and social restitution: a discipline capable of weaving fragments of individual pain into a shared narrative.</blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span lang="es">Equipo</span><span lang="en">Team</span></div>
+    <h2 lang="es">Seis personas, cuatro áreas</h2>
+    <h2 lang="en">Six people, four areas</h2>
+    <p class="lead" lang="es">El proyecto se sostuvo sobre cuatro áreas con responsabilidades específicas. El área de Comunicación —de la que formé parte— operó además como articulador interáreas junto a Coordinación.</p>
+    <p class="lead" lang="en">The project rested on four areas with specific responsibilities. The Communications area —which I was part of— also worked as a cross-area articulator together with Coordination.</p>
+
+    <div class="team">
+      <div class="member">
+        <div class="role-label"><span lang="es">Coordinación</span><span lang="en">Coordination</span></div>
+        <div class="name">Jorge Yunes</div>
+      </div>
+      <div class="member me">
+        <div class="role-label"><span lang="es">Idea y producción</span><span lang="en">Idea and production</span></div>
+        <div class="name">Facundo Ignacio García Mata</div>
+        <div class="role-extra"><span lang="es">Producción de contenidos · Gestión del proyecto</span><span lang="en">Content production · Project management</span></div>
+      </div>
+      <div class="member">
+        <div class="role-label"><span lang="es">Idea y producción</span><span lang="en">Idea and production</span></div>
+        <div class="name">Ariel Di Gerolamo</div>
+      </div>
+      <div class="member">
+        <div class="role-label"><span lang="es">Diseño</span><span lang="en">Design</span></div>
+        <div class="name">María Emilia Cachia</div>
+      </div>
+      <div class="member">
+        <div class="role-label"><span lang="es">Diseño</span><span lang="en">Design</span></div>
+        <div class="name">Camila Cammertoni</div>
+      </div>
+      <div class="member">
+        <div class="role-label"><span lang="es">Desarrollo</span><span lang="en">Development</span></div>
+        <div class="name">Matías Taborda</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="datos" class="paper">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span lang="es">Datos formales</span><span lang="en">Formal details</span></div>
+    <h2 lang="es">Marco institucional</h2>
+    <h2 lang="en">Institutional context</h2>
+    <dl class="data-table">
+      <div class="data-row">
+        <dt><span lang="es">Tipo de trabajo</span><span lang="en">Work type</span></dt>
+        <dd><span lang="es">Tesina de grado · Modalidad Producción</span><span lang="en">Undergraduate thesis · Production track</span></dd>
+      </div>
+      <div class="data-row">
+        <dt><span lang="es">Carrera</span><span lang="en">Degree</span></dt>
+        <dd><span lang="es">Licenciatura en Comunicación Social</span><span lang="en">B.A. in Social Communications</span></dd>
+      </div>
+      <div class="data-row">
+        <dt><span lang="es">Institución</span><span lang="en">Institution</span></dt>
+        <dd><span lang="es">Facultad de Ciencia Política y Relaciones Internacionales · Universidad Nacional de Rosario</span><span lang="en">Faculty of Political Science and International Relations · National University of Rosario</span></dd>
+      </div>
+      <div class="data-row">
+        <dt><span lang="es">Convocatoria</span><span lang="en">Open call</span></dt>
+        <dd><span lang="es">XperienciaUNR 2025 · Laboratorio de Experimentación Tecnológica (LET) · junio a octubre de 2025</span><span lang="en">XperienciaUNR 2025 · Laboratory for Experimental Technology (LET) · June to October 2025</span></dd>
+      </div>
+      <div class="data-row">
+        <dt><span lang="es">Idea inicial</span><span lang="en">Initial idea</span></dt>
+        <dd><span lang="es">Agosto de 2024</span><span lang="en">August 2024</span></dd>
+      </div>
+      <div class="data-row">
+        <dt><span lang="es">Entrega de la tesina</span><span lang="en">Thesis submission</span></dt>
+        <dd>2026</dd>
+      </div>
+      <div class="data-row">
+        <dt><span lang="es">Defensa</span><span lang="en">Defense</span></dt>
+        <dd><span lang="es">15 de mayo de 2026</span><span lang="en">May 15, 2026</span></dd>
+      </div>
+      <div class="data-row">
+        <dt><span lang="es">Despliegue previsto</span><span lang="en">Planned deployment</span></dt>
+        <dd>Biblioteca Popular Pocho Lepratti · Rosario</dd>
+      </div>
+    </dl>
+
+    <div class="contact-block">
+      <div>
+        <h3 lang="es">Hablemos</h3>
+        <h3 lang="en">Let's talk</h3>
+        <p lang="es">Este caso documenta cómo trabajo en proyectos interdisciplinarios. Si querés conversar sobre un equipo, una propuesta o un proceso similar, escribime.</p>
+        <p lang="en">This case documents how I work on interdisciplinary projects. If you want to talk about a team, a proposal or a similar process, drop me a line.</p>
+        <a class="mail" href="mailto:figarciamata@gmail.com">figarciamata@gmail.com</a>
+      </div>
+      <a href="mailto:figarciamata@gmail.com" class="btn-primary">
+        <span lang="es">Contactarme</span><span lang="en">Get in touch</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-name">Facundo Ignacio García Mata</div>
+    <div class="foot-role">Project Manager · Content Producer · Narrative Designer</div>
+    <div class="foot-project">
+      <span lang="es">Proyecto destacado · Sie7e Memorias Desde La Sombra · XperienciaUNR 2025</span>
+      <span lang="en">Featured project · Sie7e Memorias Desde La Sombra · XperienciaUNR 2025</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true">
+  <button class="modal-close" aria-label="Close">×</button>
+  <div class="modal-toolbar">
+    <button id="zoomOut" aria-label="Zoom out" title="Zoom out">−</button>
+    <span class="zoom-level" id="zoomLevel">100%</span>
+    <button id="zoomIn" aria-label="Zoom in" title="Zoom in">+</button>
+    <button id="zoomReset" aria-label="Reset" title="Reset" style="font-size:13px">⟲</button>
+  </div>
+  <div class="modal-stage" id="modalStage">
+    <img class="modal-img" id="modalImg" src="" alt="">
+  </div>
+  <span class="modal-hint">
+    <span lang="es">Doble clic, rueda o pellizco para ampliar. Arrastrar para mover.</span>
+    <span lang="en">Double-click, scroll or pinch to zoom. Drag to pan.</span>
+  </span>
+  <div class="modal-caption" id="modalCaption"></div>
+</div>
+
+<style>
+  .ar-launch{margin-top:24px;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:stretch}
+  .ar-launch-info{background:#fff;border:1px solid var(--line);border-radius:4px;padding:28px 30px;box-shadow:var(--shadow)}
+  .ar-launch-info h4{margin-bottom:12px}
+  .ar-launch-info ol{margin:0;padding-left:22px;color:var(--ink-soft);font-size:14.5px;line-height:1.6}
+  .ar-launch-info ol li{margin-bottom:10px}
+  .ar-launch-info ol li em{color:var(--red);font-style:normal;font-weight:600}
+  .ar-launch-btn{background:var(--surface-dark);color:#f0ebdc;border:1px solid var(--surface-dark);border-radius:4px;padding:34px 30px;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;gap:18px;transition:background .2s;position:relative;overflow:hidden}
+  .ar-launch-btn::after{content:"↗";position:absolute;top:22px;right:26px;font-size:26px;color:var(--red-bright);font-weight:400}
+  .ar-launch-btn:hover{background:var(--red-deep);border-color:var(--red-deep)}
+  .ar-launch-btn .ar-launch-btn-label{font-family:"Saira Stencil One",sans-serif;font-size:30px;color:#fff;line-height:1.05;letter-spacing:.02em;text-transform:uppercase;max-width:14ch}
+  .ar-launch-btn .ar-launch-btn-url{font-size:12px;color:#a59c89;letter-spacing:.06em;font-family:"Courier New",monospace}
+  @media (max-width:880px){.ar-launch{grid-template-columns:1fr;gap:16px}.ar-launch-btn{padding:24px 26px}.ar-launch-btn .ar-launch-btn-label{font-size:24px}}
+</style>
+
+<script>
+  // LANG TOGGLE
+  const langBtn = document.getElementById('langToggle');
+  const savedLang = localStorage.getItem('sie7e_lang') || 'es';
+  document.documentElement.lang = savedLang;
+  langBtn.addEventListener('click', () => {
+    const next = document.documentElement.lang === 'es' ? 'en' : 'es';
+    document.documentElement.lang = next;
+    localStorage.setItem('sie7e_lang', next);
+  });
+
+  // NAV mobile
+  document.querySelector(".nav-toggle").addEventListener("click", () => {
+    document.getElementById("navLinks").classList.toggle("open");
+  });
+  document.querySelectorAll(".nav-links a").forEach(a => {
+    a.addEventListener("click", () => document.getElementById("navLinks").classList.remove("open"));
+  });
+
+  // Modal pan+zoom
+  const modal = document.getElementById("modal");
+  const modalStage = document.getElementById("modalStage");
+  const modalImg = document.getElementById("modalImg");
+  const modalCaption = document.getElementById("modalCaption");
+  const zoomLevelEl = document.getElementById("zoomLevel");
+  let scale = 1, tx = 0, ty = 0;
+  let isPanning = false, lastX = 0, lastY = 0;
+  let pinchDist = 0;
+
+  function applyTransform(){
+    modalImg.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+    zoomLevelEl.textContent = Math.round(scale * 100) + "%";
+    modalStage.classList.toggle("zoomed", scale > 1);
+  }
+  function resetTransform(){ scale = 1; tx = 0; ty = 0; applyTransform(); }
+  function setZoom(newScale){
+    scale = Math.max(0.5, Math.min(5, newScale));
+    if (scale === 1) { tx = 0; ty = 0; }
+    applyTransform();
+  }
+  function openZoom(id, caption){
+    modalImg.src = `assets/${id}.jpg`;
+    modalImg.alt = caption || "";
+    modalCaption.textContent = caption || "";
+    resetTransform();
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+  function closeZoom(){
+    modal.hidden = true;
+    document.body.style.overflow = "";
+    modalImg.src = "";
+    resetTransform();
+  }
+  document.querySelectorAll(".panel-card").forEach(card => {
+    const id = card.dataset.zoom;
+    const captionEs = card.dataset.captionEs;
+    const captionEn = card.dataset.captionEn;
+    const getCaption = () => document.documentElement.lang === "en" ? captionEn : captionEs;
+    card.querySelector(".panel-frame").addEventListener("click", () => openZoom(id, getCaption()));
+    card.querySelector(".zoom-btn").addEventListener("click", e => { e.stopPropagation(); openZoom(id, getCaption()); });
+  });
+  document.querySelector(".modal-close").addEventListener("click", closeZoom);
+  document.addEventListener("keydown", e => {
+    if (modal.hidden) return;
+    if (e.key === "Escape") closeZoom();
+    if (e.key === "+" || e.key === "=") setZoom(scale * 1.2);
+    if (e.key === "-") setZoom(scale / 1.2);
+    if (e.key === "0") resetTransform();
+  });
+  document.getElementById("zoomIn").addEventListener("click", () => setZoom(scale * 1.3));
+  document.getElementById("zoomOut").addEventListener("click", () => setZoom(scale / 1.3));
+  document.getElementById("zoomReset").addEventListener("click", resetTransform);
+  modalStage.addEventListener("wheel", e => { if (modal.hidden) return; e.preventDefault(); setZoom(scale * (e.deltaY < 0 ? 1.15 : 1/1.15)); }, { passive: false });
+  modalStage.addEventListener("dblclick", () => { if (scale > 1) resetTransform(); else setZoom(2.5); });
+  modalStage.addEventListener("mousedown", e => { if (scale <= 1) return; isPanning = true; lastX = e.clientX; lastY = e.clientY; modalStage.classList.add("panning"); e.preventDefault(); });
+  window.addEventListener("mousemove", e => { if (!isPanning) return; tx += e.clientX - lastX; ty += e.clientY - lastY; lastX = e.clientX; lastY = e.clientY; applyTransform(); });
+  window.addEventListener("mouseup", () => { isPanning = false; modalStage.classList.remove("panning"); });
+  modalStage.addEventListener("touchstart", e => {
+    if (e.touches.length === 1 && scale > 1) { isPanning = true; lastX = e.touches[0].clientX; lastY = e.touches[0].clientY; }
+    else if (e.touches.length === 2) { isPanning = false; pinchDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY); }
+  }, { passive: true });
+  modalStage.addEventListener("touchmove", e => {
+    if (e.touches.length === 1 && isPanning) {
+      tx += e.touches[0].clientX - lastX; ty += e.touches[0].clientY - lastY;
+      lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
+      applyTransform(); e.preventDefault();
+    } else if (e.touches.length === 2) {
+      const newDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+      if (pinchDist > 0) setZoom(scale * (newDist / pinchDist));
+      pinchDist = newDist; e.preventDefault();
+    }
+  }, { passive: false });
+  modalStage.addEventListener("touchend", e => { if (e.touches.length === 0) { isPanning = false; pinchDist = 0; } }, { passive: true });
+</script>
+
+</body>
+</html>
