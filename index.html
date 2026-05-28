@@ -779,7 +779,7 @@ body.editing [contenteditable="true"]:focus {
         <div class="project-title">Sie7e Memorias Desde La Sombra</div>
         <div class="exp-date">Feb 2025 – May 2026</div>
       </div>
-      <div class="exp-org">UNR · Laboratorio de Experimentación Tecnológica (LET) · Proyecto final de grado</div>
+      <div class="exp-org">UNR · Laboratorio de Experimentación Tecnológica (LET) · Proyecto final de grado · <a href="sie7e/" target="_blank">Ver dossier</a></div>
       <p class="project-desc">
         Dispositivo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios. Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR. <span class="highlight-grade">Calificación: 10.</span>
       </p>
@@ -1087,11 +1087,15 @@ body.editing [contenteditable="true"]:focus {
       if (oldHandle) oldHandle.remove();
     });
 
-    // Restaurar abiertas (por defecto todas cerradas)
-    var open = [];
-    try { open = JSON.parse(localStorage.getItem(K_OPEN) || '[]'); } catch (e) {}
+    // Estado: primera visita -> todas abiertas. Visitas siguientes -> respetar K_OPEN.
+    var saved = null;
+    try { saved = localStorage.getItem(K_OPEN); } catch (e) {}
+    var open = null; // null = "abrir todas" (default primera visita)
+    if (saved !== null) {
+      try { open = JSON.parse(saved); } catch (e) { open = []; }
+    }
     page.querySelectorAll(':scope > .section').forEach(function (s) {
-      if (open.indexOf(s.dataset.id) !== -1) s.classList.add('is-open');
+      if (open === null || open.indexOf(s.dataset.id) !== -1) s.classList.add('is-open');
     });
     refreshToggleAllBtn();
   }
