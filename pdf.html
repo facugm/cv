@@ -500,9 +500,18 @@ body { padding: 28px 0 60px; min-height: 100vh; }
     box-shadow: none;
     width: 100%;
     min-height: 100vh;
+    transform: none !important;     /* anular zoom-to-fit de mobile */
     /* padding mantiene margenes built-in incluso con @page margin:0 */
   }
   .exp-item, .project-item, .edu-item { page-break-inside: avoid; }
+}
+
+/* MOBILE — la hoja A4 (210mm) excede el viewport; se escala para entrar.
+   El factor lo calcula fitPdfPage() en JS porque CSS no puede dividir vw/mm. */
+@media (max-width: 820px) {
+  body { overflow-x: hidden; }
+  .toolbar { padding: 10px 14px; gap: 8px; }
+  .page { transform-origin: top center; }
 }
 </style>
 </head>
@@ -1042,6 +1051,29 @@ body { padding: 28px 0 60px; min-height: 100vh; }
     var savedLang = localStorage.getItem(K_LANG);
     setLang(savedLang || 'es');
   } catch (e) { setLang('es'); }
+
+  // ── Mobile: escalar la hoja A4 para que entre en el viewport ───
+  // 210mm = 793.7px @96dpi. Escala = ancho disponible / ancho natural.
+  // Se compensa el alto sobrante con margin-bottom negativo (transform no
+  // reflota el layout). Sobre 820px no se toca; en print lo anula el @media.
+  function fitPdfPage() {
+    var page = document.querySelector('.page');
+    if (!page) return;
+    var natural = 793.7;
+    if (window.innerWidth <= 820) {
+      var scale = Math.min(1, (window.innerWidth - 16) / natural);
+      var offset = Math.max(0, (window.innerWidth - natural * scale) / 2);
+      page.style.transformOrigin = 'top left';
+      page.style.transform = 'translateX(' + offset + 'px) scale(' + scale + ')';
+      page.style.marginBottom = (page.offsetHeight * (scale - 1)) + 'px';
+    } else {
+      page.style.transform = '';
+      page.style.transformOrigin = '';
+      page.style.marginBottom = '';
+    }
+  }
+  fitPdfPage();
+  window.addEventListener('resize', fitPdfPage);
 
 })();
 </script>
