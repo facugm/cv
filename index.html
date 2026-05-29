@@ -331,14 +331,22 @@ body.author-mode .print-bar { justify-content: flex-end; }
 }
 .section-chevron {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--plum);
-  transition: transform 0.22s ease, color 0.18s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid var(--plum);
+  border-radius: 0;
+  flex-shrink: 0;
+  transition: transform 0.22s ease, color 0.18s, background 0.18s, border-color 0.18s;
   line-height: 1;
 }
-.section-header:hover .section-chevron { color: var(--coral); }
-.section.is-open > .section-header .section-chevron { transform: rotate(90deg); }
+.section-header:hover .section-chevron { color: var(--paper); background: var(--coral); border-color: var(--coral); }
+.section.is-open > .section-header .section-chevron { transform: rotate(90deg); color: var(--paper); background: var(--plum); }
 .section-body { display: none; margin-top: 0; }
 .section.is-open > .section-body { display: block; }
 
@@ -368,10 +376,18 @@ body.editing .section-body { display: block !important; }
 .exp-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-start;
   gap: 14px;
   flex-wrap: wrap;
   margin-bottom: 4px;
+}
+/* Columna derecha: rango de fecha + boton de link debajo */
+.exp-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
 }
 .exp-title {
   font-family: 'DM Serif Display', serif;
@@ -398,13 +414,32 @@ body.editing .section-body { display: block !important; }
   margin-bottom: 12px;
   letter-spacing: 0.04em;
 }
-.exp-org a { color: var(--plum); text-decoration: none; border-bottom: 1px dotted var(--mauve); }
+/* Boton de link — mismo lenguaje rectangular que los .tag */
+.exp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--plum);
+  text-decoration: none;
+  border: 1px solid var(--plum);
+  border-radius: 0;
+  padding: 4px 9px;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+.exp-link::after { content: '\2197'; font-size: 11px; line-height: 1; }
+.exp-link:hover { background: var(--plum); color: var(--paper); }
 
-.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 7px; max-width: 86ch; }
+.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 9px; max-width: 82ch; }
 .exp-bullets li {
   font-family: 'Newsreader', serif;
   font-size: 18px;
-  line-height: 1.55;
+  line-height: 1.7;
   color: var(--ink);
   padding-left: 22px;
   position: relative;
@@ -734,7 +769,10 @@ body.editing [contenteditable="true"]:focus {
     <div class="exp-item">
       <div class="exp-header">
         <div class="exp-title" data-i18n="exp.educativa.title">Desarrollador Full Stack</div>
-        <div class="exp-date" data-i18n="exp.educativa.date">Sep 2022 – actualidad</div>
+        <div class="exp-meta">
+          <div class="exp-date" data-i18n="exp.educativa.date">Sep 2022 – actualidad</div>
+          <a class="exp-link" href="https://www.educativa.com/" target="_blank">educativa.com</a>
+        </div>
       </div>
       <div class="exp-org">e-ducativa S.A.</div>
       <ul class="exp-bullets">
@@ -754,9 +792,12 @@ body.editing [contenteditable="true"]:focus {
     <div class="exp-item">
       <div class="exp-header">
         <div class="exp-title" data-i18n="exp.3f.title">Coordinación y comunicación digital</div>
-        <div class="exp-date" data-i18n="exp.3f.date">Dic 2025 – actualidad</div>
+        <div class="exp-meta">
+          <div class="exp-date" data-i18n="exp.3f.date">Dic 2025 – actualidad</div>
+          <a class="exp-link" href="https://instagram.com/3factor.design" target="_blank">instagram.com/3factor.design</a>
+        </div>
       </div>
-      <div class="exp-org"><span data-i18n="exp.3f.org">3Factor Design — Emprendimiento de diseño y producción de objetos decorativos 3D · </span><a href="https://instagram.com/3factor.design" target="_blank">instagram.com/3factor.design</a></div>
+      <div class="exp-org"><span data-i18n="exp.3f.org">3Factor Design — Emprendimiento de diseño y producción de objetos decorativos 3D</span></div>
       <ul class="exp-bullets">
         <li data-i18n="exp.3f.b1">Coordino contenidos y estrategia digital del emprendimiento, articulando criterio visual y objetivos comerciales.</li>
         <li data-i18n="exp.3f.b2">Construyo el branding desde cero: identidad, tono de marca y presentación comercial del producto (cuenta creada en diciembre 2025).</li>
@@ -772,9 +813,12 @@ body.editing [contenteditable="true"]:focus {
     <div class="exp-item">
       <div class="exp-header">
         <div class="exp-title" data-i18n="exp.ggwp.title">Productor</div>
-        <div class="exp-date" data-i18n="exp.ggwp.date">Abr 2026 – actualidad</div>
+        <div class="exp-meta">
+          <div class="exp-date" data-i18n="exp.ggwp.date">Abr 2026 – actualidad</div>
+          <a class="exp-link" href="https://www.instagram.com/ggwp.stream/" target="_blank">instagram.com/ggwp.stream</a>
+        </div>
       </div>
-      <div class="exp-org"><span data-i18n="exp.ggwp.org">GGWP — Programa de streaming sobre industria de videojuegos y cultura gaming · Alojado por MargaTV · </span><a href="https://www.instagram.com/ggwp.stream/" target="_blank">instagram.com/ggwp.stream</a></div>
+      <div class="exp-org"><span data-i18n="exp.ggwp.org">GGWP — Programa de streaming sobre industria de videojuegos y cultura gaming · Alojado por MargaTV</span></div>
       <ul class="exp-bullets">
         <li data-i18n="exp.ggwp.b1">Escribo y reviso la escaleta semanal del vivo (1 h, sostenido sin interrupciones desde abril 2026) junto al conductor y coconductor.</li>
         <li data-i18n="exp.ggwp.b2">Coordino al community manager (difusión pre y post emisión, publicación de clips) y al diseñador gráfico priorizando piezas de promo de cada transmisión.</li>
@@ -798,10 +842,17 @@ body.editing [contenteditable="true"]:focus {
     <div class="project-item">
       <div class="exp-header">
         <div class="project-title">Sie7e Memorias Desde La Sombra</div>
-        <div class="exp-date">Feb 2025 – May 2026</div>
+        <div class="exp-meta">
+          <div class="exp-date">Feb 2025 – May 2026</div>
+          <a class="exp-link" href="sie7e/" target="_blank" data-i18n="ui.view-dossier">Ver dossier</a>
+        </div>
       </div>
-      <div class="exp-org"><span data-i18n="proj.sie7e.meta">UNR · Laboratorio de Experimentación Tecnológica (LET) · Proyecto final de grado · </span><a href="sie7e/" target="_blank" data-i18n="ui.view-dossier">Ver dossier</a></div>
-      <p class="project-desc" data-i18n="proj.sie7e.desc">Dispositivo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios. Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR. <span class="highlight-grade">Calificación: 10.</span></p>
+      <div class="exp-org"><span data-i18n="proj.sie7e.meta">Proyecto final de grado · Convocatoria XperienciaUNR</span></div>
+      <ul class="exp-bullets">
+        <li data-i18n="proj.sie7e.b1">Dispositivo educativo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios.</li>
+        <li data-i18n="proj.sie7e.b2">Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR.</li>
+        <li data-i18n="proj.sie7e.b3"><span class="highlight-grade">Calificación: 10</span></li>
+      </ul>
       <div class="project-tags" style="margin-top: 12px;">
         <span class="tag" data-i18n="proj.sie7e.pills.author">Autor de la obra</span>
         <span class="tag" data-i18n="proj.sie7e.pills.transmedia">Narrativa transmedia</span>
@@ -812,11 +863,18 @@ body.editing [contenteditable="true"]:focus {
 
     <div class="project-item">
       <div class="exp-header">
-        <div class="project-title">24 Veces Diciembre</div>
-        <div class="exp-date">2025</div>
+        <div class="project-title">24 VECES DICIEMBRE</div>
+        <div class="exp-meta">
+          <div class="exp-date">2025</div>
+          <a class="exp-link" href="https://drive.google.com/file/d/1XkDQpEKSKytSNoVtcV10X7qrBtihRM9U/view?usp=sharing" target="_blank" data-i18n="ui.view-drive">Ver en Drive</a>
+        </div>
       </div>
-      <div class="exp-org"><span data-i18n="proj.24v.meta">Universidad Nacional de Rosario · Formación Audiovisual Tecnológica · Documental · </span><a href="https://drive.google.com/file/d/1XkDQpEKSKytSNoVtcV10X7qrBtihRM9U/view?usp=sharing" target="_blank" data-i18n="ui.view-drive">Ver en Drive</a></div>
-      <p class="project-desc" data-i18n="proj.24v.desc">Documental sobre memorias, testimonios y marcas sociales vinculadas a diciembre de 2001 en Rosario, realizado en el marco de Formación Audiovisual Tecnológica de la UNR. Participación en el desarrollo narrativo, dirección, producción y edición del material.</p>
+      <div class="exp-org"><span data-i18n="proj.24v.meta">Documental · Formación Audiovisual Tecnológica</span></div>
+      <ul class="exp-bullets">
+        <li data-i18n="proj.24v.b1">Documental sobre memorias, testimonios y huellas vinculadas al diciembre de 2001 en Rosario. Trabajo final de la materia electiva Formación Audiovisual Tecnológica de la Lic. en Comunicación Social de la UNR.</li>
+        <li data-i18n="proj.24v.b2">Participación en el desarrollo narrativo, dirección, producción y edición del material.</li>
+        <li data-i18n="proj.24v.b3"><span class="highlight-grade">Calificación: 10</span></li>
+      </ul>
       <div class="project-tags" style="margin-top: 12px;">
         <span class="tag" data-i18n="proj.24v.pills.direction">Dirección</span>
         <span class="tag" data-i18n="proj.24v.pills.production">Producción</span>
@@ -1106,14 +1164,20 @@ body.editing [contenteditable="true"]:focus {
       if (oldHandle) oldHandle.remove();
     });
 
-    // Estado: primera visita -> todas abiertas. Visitas siguientes -> respetar K_OPEN.
+    // Estado: primera visita -> todas abiertas (desktop) o todas cerradas en
+    // mobile, donde initScrollReveal las abre a medida que entran al viewport.
+    // Visitas siguientes -> respetar K_OPEN.
     var saved = null;
     try { saved = localStorage.getItem(K_OPEN); } catch (e) {}
-    var open = null; // null = "abrir todas" (default primera visita)
+    var open = null; // null = default primera visita
     if (saved !== null) {
       try { open = JSON.parse(saved); } catch (e) { open = []; }
     }
+    var mobileFirstVisit = open === null &&
+      window.matchMedia('(max-width: 720px)').matches &&
+      !document.body.classList.contains('editing');
     page.querySelectorAll(':scope > .section').forEach(function (s) {
+      if (mobileFirstVisit) return; // arrancan cerradas, scroll-reveal las abre
       if (open === null || open.indexOf(s.dataset.id) !== -1) s.classList.add('is-open');
     });
     refreshToggleAllBtn();
@@ -1227,6 +1291,33 @@ body.editing [contenteditable="true"]:focus {
 
   initSections();
 
+  // ── Mobile: abrir secciones a medida que entran al viewport ───
+  // Abre cada seccion una vez al scrollear hacia ella; luego deja de
+  // observarla para no pelear con el toggle manual del usuario.
+  function initScrollReveal() {
+    if (!('IntersectionObserver' in window)) return;
+    if (!window.matchMedia('(max-width: 720px)').matches) return;
+    if (document.body.classList.contains('editing')) return;
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var sec = entry.target;
+        if (!sec.classList.contains('is-open')) {
+          sec.classList.add('is-open');
+          refreshToggleAllBtn();
+        }
+        obs.unobserve(sec);
+      });
+    // Dead-zone chico abajo (-10%): las ultimas secciones colapsadas se
+    // agrupan al pie de pagina y con un margen grande quedaban sin abrirse
+    // porque el scroll no alcanza a subirlas por encima de la linea de trigger.
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0 });
+    page.querySelectorAll(':scope > .section').forEach(function (s) {
+      obs.observe(s);
+    });
+  }
+  initScrollReveal();
+
   // Editorial es modo web puro — limpiar localStorage de compact si quedo de antes
   try { localStorage.removeItem(K_COMPACT); } catch (err) {}
 
@@ -1269,7 +1360,7 @@ body.editing [contenteditable="true"]:focus {
 
       'exp.3f.title': 'Coordinación y comunicación digital',
       'exp.3f.date': 'Dic 2025 – actualidad',
-      'exp.3f.org': '3Factor Design — Emprendimiento de diseño y producción de objetos decorativos 3D · ',
+      'exp.3f.org': '3Factor Design — Emprendimiento de diseño y producción de objetos decorativos 3D',
       'exp.3f.b1': 'Coordino contenidos y estrategia digital del emprendimiento, articulando criterio visual y objetivos comerciales.',
       'exp.3f.b2': 'Construyo el branding desde cero: identidad, tono de marca y presentación comercial del producto (cuenta creada en diciembre 2025).',
       'exp.3f.b3': 'Gestiono social media con tracción comprobable: +2.400 cuentas alcanzadas y +4.300 visualizaciones en los últimos 90 días, partiendo de cero.',
@@ -1279,7 +1370,7 @@ body.editing [contenteditable="true"]:focus {
 
       'exp.ggwp.title': 'Productor',
       'exp.ggwp.date': 'Abr 2026 – actualidad',
-      'exp.ggwp.org': 'GGWP — Programa de streaming sobre industria de videojuegos y cultura gaming · Alojado por MargaTV · ',
+      'exp.ggwp.org': 'GGWP — Programa de streaming sobre industria de videojuegos y cultura gaming · Alojado por MargaTV',
       'exp.ggwp.b1': 'Escribo y reviso la escaleta semanal del vivo (1 h, sostenido sin interrupciones desde abril 2026) junto al conductor y coconductor.',
       'exp.ggwp.b2': 'Coordino al community manager (difusión pre y post emisión, publicación de clips) y al diseñador gráfico priorizando piezas de promo de cada transmisión.',
       'exp.ggwp.b3': 'Hago debrief de cada emisión: marco highlights, ajustes y momentos clipeables que paso a MargaTV (canal anfitrión) para que generen los clips finales.',
@@ -1289,15 +1380,19 @@ body.editing [contenteditable="true"]:focus {
       'exp.ggwp.pills.booking': 'Booking',
       'exp.ggwp.pills.coord': 'Coordinación de equipo',
 
-      'proj.sie7e.meta': 'UNR · Laboratorio de Experimentación Tecnológica (LET) · Proyecto final de grado · ',
-      'proj.sie7e.desc': 'Dispositivo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios. Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR. <span class="highlight-grade">Calificación: 10.</span>',
+      'proj.sie7e.meta': 'Proyecto final de grado · Convocatoria XperienciaUNR',
+      'proj.sie7e.b1': 'Dispositivo educativo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios.',
+      'proj.sie7e.b2': 'Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR.',
+      'proj.sie7e.b3': '<span class="highlight-grade">Calificación: 10</span>',
       'proj.sie7e.pills.author': 'Autor de la obra',
       'proj.sie7e.pills.transmedia': 'Narrativa transmedia',
       'proj.sie7e.pills.pm': 'Gestión de proyecto',
       'proj.sie7e.pills.production': 'Producción de contenidos',
 
-      'proj.24v.meta': 'Universidad Nacional de Rosario · Formación Audiovisual Tecnológica · Documental · ',
-      'proj.24v.desc': 'Documental sobre memorias, testimonios y marcas sociales vinculadas a diciembre de 2001 en Rosario, realizado en el marco de Formación Audiovisual Tecnológica de la UNR. Participación en el desarrollo narrativo, dirección, producción y edición del material.',
+      'proj.24v.meta': 'Documental · Formación Audiovisual Tecnológica',
+      'proj.24v.b1': 'Documental sobre memorias, testimonios y huellas vinculadas al diciembre de 2001 en Rosario. Trabajo final de la materia electiva Formación Audiovisual Tecnológica de la Lic. en Comunicación Social de la UNR.',
+      'proj.24v.b2': 'Participación en el desarrollo narrativo, dirección, producción y edición del material.',
+      'proj.24v.b3': '<span class="highlight-grade">Calificación: 10</span>',
       'proj.24v.pills.direction': 'Dirección',
       'proj.24v.pills.production': 'Producción',
       'proj.24v.pills.script': 'Guión',
@@ -1367,7 +1462,7 @@ body.editing [contenteditable="true"]:focus {
 
       'exp.3f.title': 'Digital coordination & communication',
       'exp.3f.date': 'Dec 2025 – present',
-      'exp.3f.org': '3Factor Design — 3D-printed decorative objects design & production studio · ',
+      'exp.3f.org': '3Factor Design — 3D-printed decorative objects design & production studio',
       'exp.3f.b1': 'Coordinate content and digital strategy for the venture, aligning visual criteria with commercial goals.',
       'exp.3f.b2': 'Built the brand from scratch: identity, brand voice, and commercial product presentation (account launched December 2025).',
       'exp.3f.b3': 'Manage social media with measurable traction: +2,400 accounts reached and +4,300 views in the last 90 days, starting from zero.',
@@ -1377,7 +1472,7 @@ body.editing [contenteditable="true"]:focus {
 
       'exp.ggwp.title': 'Producer',
       'exp.ggwp.date': 'Apr 2026 – present',
-      'exp.ggwp.org': 'GGWP — Streaming show on the video game industry and gaming culture · Hosted by MargaTV · ',
+      'exp.ggwp.org': 'GGWP — Streaming show on the video game industry and gaming culture · Hosted by MargaTV',
       'exp.ggwp.b1': 'Write and review the weekly rundown for the live show (1 hour, broadcast uninterrupted since April 2026) with the host and co-host.',
       'exp.ggwp.b2': 'Coordinate the community manager (pre and post-broadcast outreach, clip publishing) and the graphic designer, prioritizing promo pieces for each broadcast.',
       'exp.ggwp.b3': 'Run debriefs after each broadcast: flag highlights, adjustments, and clippable moments which I pass to MargaTV (host channel) to produce the final clips.',
@@ -1387,15 +1482,19 @@ body.editing [contenteditable="true"]:focus {
       'exp.ggwp.pills.booking': 'Booking',
       'exp.ggwp.pills.coord': 'Team coordination',
 
-      'proj.sie7e.meta': 'UNR · Technology Experimentation Lab (LET) · Final degree project · ',
-      'proj.sie7e.desc': 'Local memorial device and interactive augmented reality experience weaving transmedia narrative, archive, and testimonies. Author of the concept, content producer, and project manager in an interdisciplinary UNR open call. <span class="highlight-grade">Final grade: 10.</span>',
+      'proj.sie7e.meta': 'Final degree project · XperienciaUNR open call',
+      'proj.sie7e.b1': 'Educational local memorial device and interactive augmented reality experience weaving transmedia narrative, archive, and testimonies.',
+      'proj.sie7e.b2': 'Author of the concept, content producer, and project manager in an interdisciplinary UNR open call.',
+      'proj.sie7e.b3': '<span class="highlight-grade">Final grade: 10</span>',
       'proj.sie7e.pills.author': 'Original work',
       'proj.sie7e.pills.transmedia': 'Transmedia narrative',
       'proj.sie7e.pills.pm': 'Project management',
       'proj.sie7e.pills.production': 'Content production',
 
-      'proj.24v.meta': 'Universidad Nacional de Rosario · Technological Audiovisual Training · Documentary · ',
-      'proj.24v.desc': 'Documentary on memories, testimonies, and social imprints linked to December 2001 in Rosario, produced within UNR’s Technological Audiovisual Training program. Contributed to narrative development, direction, production, and editing.',
+      'proj.24v.meta': 'Documentary · Technological Audiovisual Training',
+      'proj.24v.b1': 'Documentary on memories, testimonies, and social imprints linked to December 2001 in Rosario. Final project of the elective course Technological Audiovisual Training of UNR’s BA in Social Communication.',
+      'proj.24v.b2': 'Contributed to narrative development, direction, production, and editing.',
+      'proj.24v.b3': '<span class="highlight-grade">Final grade: 10</span>',
       'proj.24v.pills.direction': 'Direction',
       'proj.24v.pills.production': 'Production',
       'proj.24v.pills.script': 'Screenplay',
