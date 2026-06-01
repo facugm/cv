@@ -598,6 +598,11 @@ body.editing .section-body { display: block !important; }
 
 /* LANGS */
 .lang-row { display: flex; gap: 32px; flex-wrap: wrap; }
+.contact-grid { display: flex; flex-direction: column; gap: 8px; }
+.contact-line { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink); display: flex; gap: 10px; flex-wrap: wrap; }
+.contact-line .contact-k { color: var(--plum); font-weight: 700; min-width: 84px; text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; }
+.contact-line a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--mauve); }
+.contact-line a:hover { color: var(--coral); }
 .lang-item { display: flex; flex-direction: column; gap: 2px; }
 .lang-name {
   font-family: 'DM Serif Display', serif;
@@ -785,7 +790,7 @@ body.editing [contenteditable="true"]:focus {
         <span class="contact-sep">·</span>
         <span class="contact-item"><a href="mailto:figarciamata@gmail.com">figarciamata@gmail.com</a></span>
         <span class="contact-sep">·</span>
-        <span class="contact-item"><a href="https://www.linkedin.com/in/facundogm/" target="_blank">LinkedIn</a></span>
+        <span class="contact-item"><a href="https://www.linkedin.com/in/facundogm/" target="_blank" rel="noopener">LinkedIn</a></span>
       </div>
     </div>
     <div class="photo-circle" id="photoCircle" contenteditable="false"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" overflow="visible"><defs><clipPath id="silhouetteClip"><circle cx="50" cy="56" r="44"/><rect x="22" y="-12" width="56" height="32"/></clipPath></defs><circle class="photo-bg" cx="50" cy="56" r="44"/><circle class="photo-ring" cx="50" cy="56" r="46.5"/><g clip-path="url(#silhouetteClip)"><image id="photoImg" class="photo-emerge" href="" x="-2" y="-4" width="104" height="104" preserveAspectRatio="xMidYMid slice"/></g></svg></div>
@@ -1041,6 +1046,16 @@ body.editing [contenteditable="true"]:focus {
     </div>
   </div></div>
 
+  <!-- CONTACTO -->
+  <div class="section col-side" data-id="contacto">
+    <div class="section-header"><div class="section-title" data-i18n="sections.contact">Contacto</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
+    <div class="contact-grid">
+      <div class="contact-line"><span class="contact-k" data-i18n="contact.email">Email</span><a href="mailto:figarciamata@gmail.com">figarciamata@gmail.com</a></div>
+      <div class="contact-line"><span class="contact-k">LinkedIn</span><a href="https://www.linkedin.com/in/facundogm/" target="_blank" rel="noopener">linkedin.com/in/facundogm</a></div>
+      <div class="contact-line"><span class="contact-k" data-i18n="contact.location">Ubicación</span><span data-i18n="contact.city">Rosario, Argentina</span></div>
+      <div class="contact-line"><span class="contact-k" data-i18n="contact.links">Links</span><a href="sie7e/" target="_blank" rel="noopener">Sie7e</a> · <a href="https://www.instagram.com/ggwp.stream/" target="_blank" rel="noopener">GGWP</a></div>
+    </div>
+  </div></div>
 
 <!-- CONTENT_END -->
 </div>
@@ -1197,7 +1212,7 @@ body.editing [contenteditable="true"]:focus {
   var btnToggleAll = document.getElementById('btnToggleAll');
 
   // Mapeo de secciones a columnas (compact = grid 70/30)
-  var COL_SIDE_IDS = ['herramientas-y-conocimientos', 'idiomas'];
+  var COL_SIDE_IDS = ['herramientas-y-conocimientos', 'idiomas', 'contacto'];
 
   function slugify(s) {
     return (s || '').toLowerCase()
@@ -1434,6 +1449,11 @@ body.editing [contenteditable="true"]:focus {
       'sections.education': 'Educación',
       'sections.tools': 'Herramientas y conocimientos',
       'sections.languages': 'Idiomas',
+      'sections.contact': 'Contacto',
+      'contact.email': 'Email',
+      'contact.location': 'Ubicación',
+      'contact.city': 'Rosario, Argentina',
+      'contact.links': 'Links',
 
       'perfil.text': 'Licenciado en Comunicación Social con experiencia en project management digital, producción audiovisual, estrategia de contenidos y desarrollo web. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación.',
 
@@ -1556,6 +1576,11 @@ body.editing [contenteditable="true"]:focus {
       'sections.education': 'Education',
       'sections.tools': 'Tools & skills',
       'sections.languages': 'Languages',
+      'sections.contact': 'Contact',
+      'contact.email': 'Email',
+      'contact.location': 'Location',
+      'contact.city': 'Rosario, Argentina',
+      'contact.links': 'Links',
 
       'perfil.text': 'Bachelor in Social Communication with experience in digital project management, audiovisual production, content strategy, and web development. I combine a communications mindset, narrative judgment, and technical capability to carry projects from idea to implementation.',
 
