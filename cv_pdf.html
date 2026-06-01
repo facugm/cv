@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>CV | Facundo I. García Mata</title>
-<meta name="description" content="CV PDF de Facundo Ignacio García Mata. Project Management · Producción audiovisual · Desarrollo web. Vista A4 imprimible.">
+<meta name="description" content="CV PDF de Facundo Ignacio García Mata. Comunicador · Project Manager Digital · Productor Audiovisual. Vista A4 imprimible.">
 <meta name="author" content="Facundo Ignacio García Mata">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://facugm.github.io/cv/pdf.html">
+<meta property="og:url" content="https://facugm.github.io/cv/cv_pdf.html">
 <meta property="og:title" content="CV — Facundo Ignacio García Mata (PDF)">
-<meta property="og:description" content="Project Management · Producción audiovisual · Desarrollo web. Versión A4 imprimible.">
+<meta property="og:description" content="Comunicador · Project Manager Digital · Productor Audiovisual. Versión A4 imprimible.">
 <meta property="og:image" content="https://facugm.github.io/cv/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,7 +23,7 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="CV — Facundo Ignacio García Mata (PDF)">
-<meta name="twitter:description" content="Project Management · Producción audiovisual · Desarrollo web.">
+<meta name="twitter:description" content="Comunicador · Project Manager Digital · Productor Audiovisual.">
 <meta name="twitter:image" content="https://facugm.github.io/cv/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -117,7 +118,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   min-height: 297mm;
   margin: 0 auto;
   background: var(--paper);
-  padding: 16mm 18mm;  /* margenes built-in — sobreviven a @page margin: 0 */
+  padding: 11mm 15mm;  /* margenes built-in — sobreviven a @page margin: 0 */
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
@@ -129,7 +130,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 24px;
-  padding: 12px 0 11px;
+  padding: 8px 0 7px;
   border-top: 1.5px solid var(--ink);
   border-bottom: 0.5px solid var(--hair);
   font-family: 'JetBrains Mono', monospace;
@@ -138,7 +139,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  margin-bottom: 22px;
+  margin-bottom: 10px;
 }
 .editorial-slate .center {
   text-align: center;
@@ -162,20 +163,20 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
-  padding-bottom: 20px;
-  margin-bottom: 18px;
+  gap: 20px;
+  padding-bottom: 12px;
+  margin-bottom: 10px;
   border-bottom: 1.5px solid var(--ink);
 }
 .header-main { flex: 0 1 auto; max-width: 105mm; }
 .name {
   font-family: 'DM Serif Display', serif;
   font-weight: 400;
-  font-size: 52px;
+  font-size: 42px;
   line-height: 0.88;
   letter-spacing: -0.025em;
   color: var(--ink);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   text-transform: none;
 }
 .name em {
@@ -251,14 +252,14 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 /* GRID 70/30 BODY */
 .cv-body {
   display: grid;
-  grid-template-columns: 1fr 0.45fr;
-  column-gap: 28px;
+  grid-template-columns: 1fr 0.42fr;
+  column-gap: 18px;
   align-items: start;
 }
 .main-col-wrap, .side-col-wrap {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
   min-width: 0;
 }
 
@@ -271,8 +272,8 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   background: transparent;
   border-top: 1.5px solid var(--ink);
   border-bottom: 0.5px solid var(--hair);
-  padding: 10px 0 9px;
-  margin-bottom: 16px;
+  padding: 7px 0 6px;
+  margin-bottom: 9px;
 }
 .cv-body { counter-reset: section-count; }
 .section { counter-increment: section-count; }
@@ -299,15 +300,15 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 /* PERFIL */
 .perfil-text {
   font-family: 'Newsreader', serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 12.5px;
+  line-height: 1.4;
   color: var(--ink);
 }
 
 /* EXP / PROJECT / EDU items */
 .exp-item, .project-item, .edu-item {
-  margin-bottom: 16px;
-  padding-bottom: 16px;
+  margin-bottom: 9px;
+  padding-bottom: 9px;
   border-bottom: 0.5px solid var(--hair);
   page-break-inside: avoid;
   break-inside: avoid;
@@ -327,10 +328,10 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 }
 .exp-title, .project-title {
   font-family: 'DM Serif Display', serif;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
   color: var(--ink);
-  letter-spacing: -0.4px;
+  letter-spacing: -0.3px;
   line-height: 1.1;
 }
 .exp-date {
@@ -344,22 +345,22 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 }
 .exp-org {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
+  font-size: 9.5px;
   color: var(--plum);
   font-weight: 500;
-  margin-bottom: 9px;
+  margin-bottom: 5px;
   letter-spacing: 0.04em;
   word-break: break-word;
 }
 .exp-org a { color: var(--plum); text-decoration: none; border-bottom: 1px dotted var(--mauve); }
 
-.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 3px; }
 .exp-bullets li {
   font-family: 'Newsreader', serif;
-  font-size: 12px;
-  line-height: 1.45;
+  font-size: 11.5px;
+  line-height: 1.35;
   color: var(--ink);
-  padding-left: 18px;
+  padding-left: 16px;
   position: relative;
 }
 .exp-bullets li::before {
@@ -406,27 +407,27 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 /* EDU */
 .edu-degree {
   font-family: 'DM Serif Display', serif;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--ink);
-  margin-bottom: 2px;
+  margin-bottom: 1px;
   letter-spacing: -0.3px;
   line-height: 1.1;
 }
 .edu-inst {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9.5px;
+  font-size: 9px;
   color: var(--plum);
   font-weight: 500;
   letter-spacing: 0.04em;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
 }
 .edu-detail {
   font-family: 'Newsreader', serif;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--ink);
-  line-height: 1.45;
-  margin-bottom: 7px;
+  line-height: 1.35;
+  margin-bottom: 4px;
 }
 .edu-badge {
   display: inline-block;
@@ -436,8 +437,8 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px;
   font-weight: 700;
-  padding: 3px 9px;
-  letter-spacing: 0.14em;
+  padding: 2px 6px;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
 }
 
@@ -445,30 +446,30 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 .tools-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 6px;
 }
 .tool-group-label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.18em;
   color: var(--ink-mute);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .tool-tags { display: flex; flex-wrap: wrap; gap: 4px; }
 .tool-tag {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9.5px;
+  font-size: 8.5px;
   font-weight: 400;
   color: var(--ink);
   background: transparent;
   border: 0.5px solid var(--ink);
-  padding: 2px 7px;
+  padding: 1px 5px;
 }
 
 /* LANGS */
-.lang-row { display: flex; gap: 18px; flex-wrap: wrap; }
+.lang-row { display: flex; gap: 12px; flex-wrap: wrap; }
 .lang-item { display: flex; flex-direction: column; gap: 1px; }
 .lang-name {
   font-family: 'DM Serif Display', serif;
@@ -540,7 +541,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       <div class="name">Facundo <em>Ignacio</em><br><span class="surname">García Mata</span></div>
       <div class="name-divider">
         <div class="name-line"></div>
-        <div class="tagline" data-i18n="header.tagline">Project Management · Producción audiovisual · Desarrollo web</div>
+        <div class="tagline" data-i18n="header.tagline">Project Management Digital · Comunicación · Producción Audiovisual</div>
       </div>
       <div class="contact-row">
         <span class="contact-item" data-i18n="header.location">Rosario, Argentina</span>
@@ -556,7 +557,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   <!-- PERFIL -->
   <div class="section">
     <div class="section-header"><div class="section-title" data-i18n="sections.perfil">Perfil</div></div>
-    <p class="perfil-text" data-i18n="perfil.text">Combino project management, comunicación estratégica, producción audiovisual y desarrollo web para llevar adelante proyectos desde la idea hasta la implementación. Licenciado en Comunicación Social (UNR), casi cuatro años como desarrollador full stack, y experiencia en coordinación, redes y producción audiovisual.</p>
+    <p class="perfil-text" data-i18n="perfil.text">Licenciado en Comunicación Social con experiencia en project management digital, producción audiovisual, estrategia de contenidos y desarrollo web. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación.</p>
   </div>
 
   <!-- EXPERIENCIA -->
@@ -571,61 +572,39 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       <div class="exp-org">e-ducativa S.A. · <a href="https://www.educativa.com/" target="_blank">educativa.com</a></div>
       <ul class="exp-bullets">
         <li data-i18n="exp.educativa.b1">Desarrollo y mantengo features de un LMS multitenant con +2,5M de usuarios activos en 13 países y +600 clientes institucionales.</li>
-        <li data-i18n="exp.educativa.b2">Coordino con áreas de comercial, soporte y producto para shippear features a producción en una plataforma con +7.000 instalaciones activas.</li>
         <li data-i18n="exp.educativa.b3">Diseño tooling interno que acelera flujos de gestión y comunicación interárea.</li>
-        <li data-i18n="exp.educativa.b4">Aporto criterio entre tecnología y comunicación en proyectos de identidad institucional.</li>
       </ul>
-      <div class="project-tags" style="margin-top: 12px;">
-        <span class="tag">Perl</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">HTML/CSS</span>
-        <span class="tag">SQL</span>
-      </div>
     </div>
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-title" data-i18n="exp.3f.title">Coordinación y comunicación digital</div>
+        <div class="exp-title" data-i18n="exp.3f.title">Coordinación y Project Management Digital</div>
         <div class="exp-date" data-i18n="exp.3f.date">Dic 2025 – actualidad</div>
       </div>
       <div class="exp-org"><span data-i18n="exp.3f.org">3Factor Design — Emprendimiento de diseño y producción de objetos decorativos 3D · </span><a href="https://instagram.com/3factor.design" target="_blank">instagram.com/3factor.design</a></div>
       <ul class="exp-bullets">
         <li data-i18n="exp.3f.b1">Coordino contenidos y estrategia digital del emprendimiento, articulando criterio visual y objetivos comerciales.</li>
-        <li data-i18n="exp.3f.b2">Construyo el branding desde cero: identidad, tono de marca y presentación comercial del producto (cuenta creada en diciembre 2025).</li>
         <li data-i18n="exp.3f.b3">Gestiono social media con tracción comprobable: +2.400 cuentas alcanzadas y +4.300 visualizaciones en los últimos 90 días, partiendo de cero.</li>
       </ul>
-      <div class="project-tags" style="margin-top: 12px;">
-        <span class="tag" data-i18n="exp.3f.pills.branding">Branding</span>
-        <span class="tag" data-i18n="exp.3f.pills.social">Social media</span>
-        <span class="tag" data-i18n="exp.3f.pills.strategy">Estrategia de contenidos</span>
-      </div>
     </div>
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-title" data-i18n="exp.ggwp.title">Productor</div>
+        <div class="exp-title" data-i18n="exp.ggwp.title">Productor de Streaming</div>
         <div class="exp-date" data-i18n="exp.ggwp.date">Abr 2026 – actualidad</div>
       </div>
       <div class="exp-org"><span data-i18n="exp.ggwp.org">GGWP — Programa de streaming sobre industria de videojuegos y cultura gaming · Alojado por MargaTV · </span><a href="https://www.instagram.com/ggwp.stream/" target="_blank">instagram.com/ggwp.stream</a></div>
       <ul class="exp-bullets">
         <li data-i18n="exp.ggwp.b1">Escribo y reviso la escaleta semanal del programa junto al conductor y coconductor.</li>
         <li data-i18n="exp.ggwp.b2">Coordino la planificación de contenidos, difusión previa y circulación posterior de clips junto al equipo de diseño y redes.</li>
-        <li data-i18n="exp.ggwp.b3">Realizo la revisión posterior de cada emisión, identificando highlights, ajustes y momentos clipeables.</li>
-        <li data-i18n="exp.ggwp.b4">Gestiono entrevistas con referentes, desarrolladores e iniciativas vinculadas a la cultura gamer local.</li>
       </ul>
-      <div class="project-tags" style="margin-top: 12px;">
-        <span class="tag" data-i18n="exp.ggwp.pills.streaming">Streaming en vivo</span>
-        <span class="tag" data-i18n="exp.ggwp.pills.rundown">Escaleta</span>
-        <span class="tag" data-i18n="exp.ggwp.pills.booking">Booking</span>
-        <span class="tag" data-i18n="exp.ggwp.pills.coord">Coordinación de equipo</span>
-      </div>
     </div>
 
   </div></div>
 
   <!-- PROYECTOS DESTACADOS -->
   <div class="section col-main" data-id="proyectos-destacados">
-    <div class="section-header"><div class="section-title" data-i18n="sections.projects">Proyectos destacados</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
+    <div class="section-header"><div class="section-title" data-i18n="sections.projects">Proyectos seleccionados</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
 
     <div class="project-item">
       <div class="exp-header">
@@ -634,15 +613,12 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       </div>
       <div class="exp-org"><span data-i18n="proj.sie7e.meta">Proyecto final de grado · Convocatoria XperienciaUNR</span> · <a href="https://facugm.github.io/cv/sie7e/" target="_blank" data-i18n="ui.view-dossier">Ver dossier</a></div>
       <ul class="exp-bullets">
-        <li data-i18n="proj.sie7e.b1">Dispositivo educativo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios.</li>
         <li data-i18n="proj.sie7e.b2">Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR.</li>
         <li data-i18n="proj.sie7e.b3"><span class="highlight-grade">Calificación: 10</span></li>
       </ul>
-      <div class="project-tags" style="margin-top: 12px;">
-        <span class="tag" data-i18n="proj.sie7e.pills.author">Autor de la obra</span>
+      <div class="project-tags" style="margin-top: 6px;">
         <span class="tag" data-i18n="proj.sie7e.pills.transmedia">Narrativa transmedia</span>
         <span class="tag" data-i18n="proj.sie7e.pills.pm">Gestión de proyecto</span>
-        <span class="tag" data-i18n="proj.sie7e.pills.production">Producción de contenidos</span>
       </div>
     </div>
 
@@ -653,14 +629,11 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       </div>
       <div class="exp-org"><span data-i18n="proj.24v.meta">Documental · Formación Audiovisual Tecnológica</span> · <a href="https://drive.google.com/file/d/1XkDQpEKSKytSNoVtcV10X7qrBtihRM9U/view?usp=sharing" target="_blank" data-i18n="ui.view-drive">Ver en Drive</a></div>
       <ul class="exp-bullets">
-        <li data-i18n="proj.24v.b1">Documental sobre memorias, testimonios y huellas vinculadas al diciembre de 2001 en Rosario. Trabajo final de la materia electiva Formación Audiovisual Tecnológica de la Lic. en Comunicación Social de la UNR.</li>
         <li data-i18n="proj.24v.b2">Participación en el desarrollo narrativo, dirección, producción y edición del material.</li>
         <li data-i18n="proj.24v.b3"><span class="highlight-grade">Calificación: 10</span></li>
       </ul>
-      <div class="project-tags" style="margin-top: 12px;">
+      <div class="project-tags" style="margin-top: 6px;">
         <span class="tag" data-i18n="proj.24v.pills.direction">Dirección</span>
-        <span class="tag" data-i18n="proj.24v.pills.production">Producción</span>
-        <span class="tag" data-i18n="proj.24v.pills.script">Guión</span>
         <span class="tag" data-i18n="proj.24v.pills.editing">Edición</span>
       </div>
     </div>
@@ -697,44 +670,49 @@ body { padding: 28px 0 60px; min-height: 100vh; }
     <div class="section-header"><div class="section-title" data-i18n="sections.tools">Herramientas y conocimientos</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
     <div class="tools-grid">
       <div>
-        <div class="tool-group-label" data-i18n="tools.web">Web y tecnología</div>
+        <div class="tool-group-label" data-i18n="tools.pm">Project Management y coordinación</div>
         <div class="tool-tags">
-          <span class="tool-tag">HTML/CSS</span>
-          <span class="tool-tag">JavaScript</span>
-          <span class="tool-tag">SQL</span>
-          <span class="tool-tag">Perl</span>
-          <span class="tool-tag">Wordpress</span>
-          <span class="tool-tag">Git</span>
-          <span class="tool-tag">GitHub</span>
+          <span class="tool-tag">Trello</span>
+          <span class="tool-tag" data-i18n="tools.tag.planning">Planificación</span>
         </div>
       </div>
       <div>
-        <div class="tool-group-label" data-i18n="tools.design">Diseño y Edición</div>
+        <div class="tool-group-label" data-i18n="tools.comms">Comunicación y contenidos</div>
+        <div class="tool-tags">
+          <span class="tool-tag" data-i18n="tools.tag.contentstrat">Estrategia de contenidos</span>
+          <span class="tool-tag" data-i18n="tools.tag.copy">Guión y escaleta</span>
+        </div>
+      </div>
+      <div>
+        <div class="tool-group-label" data-i18n="tools.av">Producción audiovisual</div>
         <div class="tool-tags">
           <span class="tool-tag">Adobe Premiere</span>
-          <span class="tool-tag">Illustrator</span>
+          <span class="tool-tag" data-i18n="tools.tag.livestream">Streaming en vivo</span>
+        </div>
+      </div>
+      <div>
+        <div class="tool-group-label" data-i18n="tools.design">Diseño y herramientas creativas</div>
+        <div class="tool-tags">
           <span class="tool-tag">Figma</span>
-          <span class="tool-tag">Photoshop</span>
-          <span class="tool-tag">InDesign</span>
-          <span class="tool-tag">Audition</span>
+          <span class="tool-tag">Illustrator</span>
           <span class="tool-tag">Canva</span>
         </div>
       </div>
       <div>
-        <div class="tool-group-label" data-i18n="tools.management">Gestión y comunicación</div>
+        <div class="tool-group-label" data-i18n="tools.web">Desarrollo web y tecnología</div>
         <div class="tool-tags">
-          <span class="tool-tag">Trello</span>
-          <span class="tool-tag">Google Workspace</span>
-          <span class="tool-tag">Meta Business Suite</span>
+          <span class="tool-tag">HTML/CSS</span>
+          <span class="tool-tag">JavaScript</span>
+          <span class="tool-tag">Git</span>
+          <span class="tool-tag">Perl</span>
         </div>
       </div>
       <div>
-        <div class="tool-group-label" data-i18n="tools.networks">Redes y contenidos</div>
+        <div class="tool-group-label" data-i18n="tools.social">Social media y plataformas</div>
         <div class="tool-tags">
           <span class="tool-tag">Instagram</span>
           <span class="tool-tag">LinkedIn</span>
           <span class="tool-tag">YouTube</span>
-          <span class="tool-tag">Streaming</span>
         </div>
       </div>
     </div>
@@ -855,17 +833,17 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'ui.pdf-label': 'PDF Preview · A4',
       'slate.center': 'CV — Facundo I. García Mata',
 
-      'header.tagline': 'Project Management · Producción audiovisual · Desarrollo web',
+      'header.tagline': 'Project Management Digital · Comunicación · Producción Audiovisual',
       'header.location': 'Rosario, Argentina',
 
       'sections.perfil': 'Perfil',
       'sections.experience': 'Experiencia profesional',
-      'sections.projects': 'Proyectos destacados',
+      'sections.projects': 'Proyectos seleccionados',
       'sections.education': 'Educación',
       'sections.tools': 'Herramientas y conocimientos',
       'sections.languages': 'Idiomas',
 
-      'perfil.text': 'Combino project management, comunicación estratégica, producción audiovisual y desarrollo web para llevar adelante proyectos desde la idea hasta la implementación. Licenciado en Comunicación Social (UNR), casi cuatro años como desarrollador full stack, y experiencia en coordinación, redes y producción audiovisual.',
+      'perfil.text': 'Licenciado en Comunicación Social con experiencia en project management digital, producción audiovisual, estrategia de contenidos y desarrollo web. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación.',
 
       'exp.educativa.title': 'Desarrollador Full Stack',
       'exp.educativa.date': 'Sep 2022 – actualidad',
@@ -874,7 +852,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'exp.educativa.b3': 'Diseño tooling interno que acelera flujos de gestión y comunicación interárea.',
       'exp.educativa.b4': 'Aporto criterio entre tecnología y comunicación en proyectos de identidad institucional.',
 
-      'exp.3f.title': 'Coordinación y comunicación digital',
+      'exp.3f.title': 'Coordinación y Project Management Digital',
       'exp.3f.date': 'Dic 2025 – actualidad',
       'exp.3f.org': '3Factor Design — Emprendimiento de diseño y producción de objetos decorativos 3D · ',
       'exp.3f.b1': 'Coordino contenidos y estrategia digital del emprendimiento, articulando criterio visual y objetivos comerciales.',
@@ -884,7 +862,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'exp.3f.pills.social': 'Social media',
       'exp.3f.pills.strategy': 'Estrategia de contenidos',
 
-      'exp.ggwp.title': 'Productor',
+      'exp.ggwp.title': 'Productor de Streaming',
       'exp.ggwp.date': 'Abr 2026 – actualidad',
       'exp.ggwp.org': 'GGWP — Programa de streaming sobre industria de videojuegos y cultura gaming · Alojado por MargaTV · ',
       'exp.ggwp.b1': 'Escribo y reviso la escaleta semanal del programa junto al conductor y coconductor.',
@@ -927,10 +905,19 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'edu.tec.b3': 'Administración de sistemas operativos y servicios.',
       'edu.tec.b4': 'Edición de material audiovisual y gráfico.',
 
-      'tools.web': 'Web y tecnología',
-      'tools.design': 'Diseño y Edición',
-      'tools.management': 'Gestión y comunicación',
-      'tools.networks': 'Redes y contenidos',
+      'tools.pm': 'Project Management y coordinación',
+      'tools.comms': 'Comunicación y contenidos',
+      'tools.av': 'Producción audiovisual',
+      'tools.design': 'Diseño y herramientas creativas',
+      'tools.web': 'Desarrollo web y tecnología',
+      'tools.social': 'Social media y plataformas',
+      'tools.tag.teams': 'Gestión de equipos',
+      'tools.tag.planning': 'Planificación',
+      'tools.tag.contentstrat': 'Estrategia de contenidos',
+      'tools.tag.branding': 'Branding',
+      'tools.tag.copy': 'Guión y escaleta',
+      'tools.tag.editing': 'Edición',
+      'tools.tag.livestream': 'Streaming en vivo',
 
       'langs.es.name': 'Español',
       'langs.es.level': 'Nativo',
@@ -958,17 +945,17 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'ui.pdf-label': 'PDF Preview · A4',
       'slate.center': 'CV — Facundo I. García Mata',
 
-      'header.tagline': 'Project Management · Audiovisual production · Web development',
+      'header.tagline': 'Digital Project Management · Communication · Audiovisual Production',
       'header.location': 'Rosario, Argentina',
 
       'sections.perfil': 'Profile',
       'sections.experience': 'Professional experience',
-      'sections.projects': 'Featured projects',
+      'sections.projects': 'Selected projects',
       'sections.education': 'Education',
       'sections.tools': 'Tools & skills',
       'sections.languages': 'Languages',
 
-      'perfil.text': 'I combine project management, strategic communication, audiovisual production, and web development to carry projects forward from idea to implementation. Bachelor in Social Communication (UNR), nearly four years as a full stack developer, plus experience in coordination, social media, and audiovisual production.',
+      'perfil.text': 'Bachelor in Social Communication with experience in digital project management, audiovisual production, content strategy, and web development. I combine a communications mindset, narrative judgment, and technical capability to carry projects from idea to implementation.',
 
       'exp.educativa.title': 'Full Stack Developer',
       'exp.educativa.date': 'Sep 2022 – present',
@@ -977,7 +964,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'exp.educativa.b3': 'Design internal tooling that accelerates cross-team management and communication workflows.',
       'exp.educativa.b4': 'Bring a hybrid tech-and-communication perspective to institutional identity projects.',
 
-      'exp.3f.title': 'Digital coordination & communication',
+      'exp.3f.title': 'Coordination & Digital Project Management',
       'exp.3f.date': 'Dec 2025 – present',
       'exp.3f.org': '3Factor Design — 3D-printed decorative objects design & production studio · ',
       'exp.3f.b1': 'Coordinate content and digital strategy for the venture, aligning visual criteria with commercial goals.',
@@ -987,7 +974,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'exp.3f.pills.social': 'Social media',
       'exp.3f.pills.strategy': 'Content strategy',
 
-      'exp.ggwp.title': 'Producer',
+      'exp.ggwp.title': 'Streaming Producer',
       'exp.ggwp.date': 'Apr 2026 – present',
       'exp.ggwp.org': 'GGWP — Streaming show on the video game industry and gaming culture · Hosted by MargaTV · ',
       'exp.ggwp.b1': 'I write and review the show’s weekly rundown with the host and co-host.',
@@ -1030,10 +1017,19 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'edu.tec.b3': 'Operating systems and services administration.',
       'edu.tec.b4': 'Audiovisual and graphic material editing.',
 
-      'tools.web': 'Web & technology',
-      'tools.design': 'Design & editing',
-      'tools.management': 'Management & communication',
-      'tools.networks': 'Networks & content',
+      'tools.pm': 'Project Management & coordination',
+      'tools.comms': 'Communication & content',
+      'tools.av': 'Audiovisual production',
+      'tools.design': 'Design & creative tools',
+      'tools.web': 'Web development & technology',
+      'tools.social': 'Social media & platforms',
+      'tools.tag.teams': 'Team management',
+      'tools.tag.planning': 'Planning',
+      'tools.tag.contentstrat': 'Content strategy',
+      'tools.tag.branding': 'Branding',
+      'tools.tag.copy': 'Scripting & rundown',
+      'tools.tag.editing': 'Editing',
+      'tools.tag.livestream': 'Live streaming',
 
       'langs.es.name': 'Spanish',
       'langs.es.level': 'Native',
