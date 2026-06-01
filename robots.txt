@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /cv_pdf.html
+Disallow: /cv_ats.html
+Allow: /
