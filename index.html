@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV | Facundo I. García Mata</title>
-<meta name="description" content="CV de Facundo Ignacio García Mata. Project Management · Producción audiovisual · Desarrollo web. Licenciado en Comunicación Social (UNR) y casi cuatro años como desarrollador full stack.">
+<title>CV interactivo expandido | Facundo García Mata</title>
+<meta name="description" content="CV interactivo expandido de Facundo García Mata. Comunicador, Project Manager Digital y Productor Audiovisual. Experiencia profesional, proyectos seleccionados y enlaces de trabajo.">
 <meta name="author" content="Facundo Ignacio García Mata">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://facugm.github.io/cv/">
-<meta property="og:title" content="CV — Facundo Ignacio García Mata">
-<meta property="og:description" content="Project Management · Producción audiovisual · Desarrollo web. Combino project management, comunicación estratégica, producción audiovisual y desarrollo web para llevar adelante proyectos desde la idea hasta la implementación.">
+<meta property="og:title" content="Facundo García Mata — CV interactivo expandido">
+<meta property="og:description" content="Comunicador · Project Manager Digital · Productor Audiovisual. CV interactivo expandido con experiencia, proyectos seleccionados y enlaces.">
 <meta property="og:image" content="https://facugm.github.io/cv/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -21,8 +21,8 @@
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CV — Facundo Ignacio García Mata">
-<meta name="twitter:description" content="Project Management · Producción audiovisual · Desarrollo web.">
+<meta name="twitter:title" content="Facundo García Mata — CV interactivo expandido">
+<meta name="twitter:description" content="Comunicador · Project Manager Digital · Productor Audiovisual. CV interactivo expandido.">
 <meta name="twitter:image" content="https://facugm.github.io/cv/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -232,6 +232,15 @@ body.author-mode .print-bar { justify-content: flex-end; }
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--ink-soft);
+}
+.hero-subtitle {
+  font-family: 'Newsreader', serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-mute);
+  margin-top: 8px;
+  max-width: 52ch;
+  font-style: italic;
 }
 
 .contact-row {
@@ -650,6 +659,7 @@ body.editing [contenteditable="true"]:focus {
   .name { font-size: clamp(42px, 12vw, 64px); }
 
   .section-header { padding: 10px 0 9px; }
+  .hero-subtitle { font-size: 13.5px; }
   .perfil-text { font-size: 14.5px; }
   .exp-title, .project-title { font-size: 20px; }
   .exp-bullets li, .project-desc { font-size: 13.5px; }
@@ -741,7 +751,8 @@ body.editing [contenteditable="true"]:focus {
       <div class="name">Facundo <em>Ignacio</em><br><span class="surname">García Mata</span></div>
       <div class="name-divider">
         <div class="name-line"></div>
-        <div class="tagline" data-i18n="header.tagline">Project Management · Producción audiovisual · Desarrollo web</div>
+        <div class="tagline" data-i18n="header.tagline">Project Management Digital · Comunicación · Producción Audiovisual</div>
+        <div class="hero-subtitle" data-i18n="header.subtitle">CV interactivo expandido con experiencia profesional, proyectos seleccionados y enlaces de trabajo.</div>
       </div>
       <div class="contact-row">
         <span class="contact-item" data-i18n="header.location">Rosario, Argentina</span>
@@ -757,7 +768,7 @@ body.editing [contenteditable="true"]:focus {
   <!-- PERFIL -->
   <div class="section">
     <div class="section-header"><div class="section-title" data-i18n="sections.perfil">Perfil</div></div>
-    <p class="perfil-text" data-i18n="perfil.text">Combino project management, comunicación estratégica, producción audiovisual y desarrollo web para llevar adelante proyectos desde la idea hasta la implementación. Licenciado en Comunicación Social (UNR), casi cuatro años como desarrollador full stack, y experiencia en coordinación, redes y producción audiovisual.</p>
+    <p class="perfil-text" data-i18n="perfil.text">Licenciado en Comunicación Social con experiencia en project management digital, producción audiovisual, estrategia de contenidos y desarrollo web. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación.</p>
   </div>
 
   <!-- EXPERIENCIA -->
@@ -1359,7 +1370,8 @@ body.editing [contenteditable="true"]:focus {
       'ui.pdf-label': 'PDF Preview · A4',
       'slate.center': 'CV — Facundo I. García Mata',
 
-      'header.tagline': 'Project Management · Producción audiovisual · Desarrollo web',
+      'header.tagline': 'Project Management Digital · Comunicación · Producción Audiovisual',
+      'header.subtitle': 'CV interactivo expandido con experiencia profesional, proyectos seleccionados y enlaces de trabajo.',
       'header.location': 'Rosario, Argentina',
 
       'sections.perfil': 'Perfil',
@@ -1369,7 +1381,7 @@ body.editing [contenteditable="true"]:focus {
       'sections.tools': 'Herramientas y conocimientos',
       'sections.languages': 'Idiomas',
 
-      'perfil.text': 'Combino project management, comunicación estratégica, producción audiovisual y desarrollo web para llevar adelante proyectos desde la idea hasta la implementación. Licenciado en Comunicación Social (UNR), casi cuatro años como desarrollador full stack, y experiencia en coordinación, redes y producción audiovisual.',
+      'perfil.text': 'Licenciado en Comunicación Social con experiencia en project management digital, producción audiovisual, estrategia de contenidos y desarrollo web. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación.',
 
       'exp.educativa.title': 'Desarrollador Full Stack',
       'exp.educativa.date': 'Sep 2022 – actualidad',
@@ -1462,7 +1474,8 @@ body.editing [contenteditable="true"]:focus {
       'ui.pdf-label': 'PDF Preview · A4',
       'slate.center': 'CV — Facundo I. García Mata',
 
-      'header.tagline': 'Project Management · Audiovisual production · Web development',
+      'header.tagline': 'Digital Project Management · Communication · Audiovisual Production',
+      'header.subtitle': 'Expanded interactive CV with professional experience, selected projects, and work links.',
       'header.location': 'Rosario, Argentina',
 
       'sections.perfil': 'Profile',
@@ -1472,7 +1485,7 @@ body.editing [contenteditable="true"]:focus {
       'sections.tools': 'Tools & skills',
       'sections.languages': 'Languages',
 
-      'perfil.text': 'I combine project management, strategic communication, audiovisual production, and web development to carry projects forward from idea to implementation. Bachelor in Social Communication (UNR), nearly four years as a full stack developer, plus experience in coordination, social media, and audiovisual production.',
+      'perfil.text': 'Bachelor in Social Communication with experience in digital project management, audiovisual production, content strategy, and web development. I combine a communications mindset, narrative judgment, and technical capability to carry projects from idea to implementation.',
 
       'exp.educativa.title': 'Full Stack Developer',
       'exp.educativa.date': 'Sep 2022 – present',
