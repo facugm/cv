@@ -242,6 +242,22 @@ body.author-mode .print-bar { justify-content: flex-end; }
   max-width: 52ch;
   font-style: italic;
 }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 4px; }
+.cta-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--plum);
+  text-decoration: none;
+  border: 1px solid var(--plum);
+  border-radius: 0;
+  padding: 9px 14px;
+  transition: background 0.15s, color 0.15s;
+}
+.cta-btn:hover { background: var(--plum); color: var(--paper); }
+.cta-primary { background: var(--plum); color: var(--paper); }
+.cta-primary:hover { background: var(--coral); border-color: var(--coral); }
+@media print { .hero-cta { display: none !important; } }
 
 .contact-row {
   display: flex;
@@ -764,6 +780,13 @@ body.editing [contenteditable="true"]:focus {
     </div>
     <div class="photo-circle" id="photoCircle" contenteditable="false"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" overflow="visible"><defs><clipPath id="silhouetteClip"><circle cx="50" cy="56" r="44"/><rect x="22" y="-12" width="56" height="32"/></clipPath></defs><circle class="photo-bg" cx="50" cy="56" r="44"/><circle class="photo-ring" cx="50" cy="56" r="46.5"/><g clip-path="url(#silhouetteClip)"><image id="photoImg" class="photo-emerge" href="" x="-2" y="-4" width="104" height="104" preserveAspectRatio="xMidYMid slice"/></g></svg></div>
   </div>
+
+  <!-- HERO CTAs (público) -->
+  <nav class="hero-cta" aria-label="Acciones principales">
+    <a class="cta-btn cta-primary" href="#proyectos-destacados" data-cta="proyectos-destacados" data-i18n="cta.projects">Ver proyectos seleccionados</a>
+    <a class="cta-btn" href="https://www.linkedin.com/in/facundogm/" target="_blank" rel="noopener" data-i18n="cta.linkedin">LinkedIn</a>
+    <a class="cta-btn" href="#contacto" data-cta="contacto" data-i18n="cta.contact">Contacto</a>
+  </nav>
 
   <!-- PERFIL -->
   <div class="section">
@@ -1354,6 +1377,9 @@ body.editing [contenteditable="true"]:focus {
 
   var I18N = {
     es: {
+      'cta.projects': 'Ver proyectos seleccionados',
+      'cta.linkedin': 'LinkedIn',
+      'cta.contact': 'Contacto',
       'ui.expand-all': '▾ Expandir todo',
       'ui.collapse-all': '▴ Colapsar todo',
       'ui.view-pdf': '📄 Vista PDF',
@@ -1458,6 +1484,9 @@ body.editing [contenteditable="true"]:focus {
       'langs.de.level': 'Básico'
     },
     en: {
+      'cta.projects': 'View selected projects',
+      'cta.linkedin': 'LinkedIn',
+      'cta.contact': 'Contact',
       'ui.expand-all': '▾ Expand all',
       'ui.collapse-all': '▴ Collapse all',
       'ui.view-pdf': '📄 PDF view',
@@ -1617,6 +1646,23 @@ body.editing [contenteditable="true"]:focus {
       document.body.appendChild(f);
     });
   }
+
+  // ── CTAs del hero: abrir la seccion destino y hacer scroll suave ──
+  Array.prototype.slice.call(document.querySelectorAll('.hero-cta a[data-cta]')).forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('data-cta');
+      var target = document.querySelector('.page > .section[data-id="' + id + '"]');
+      if (!target) return; // si no existe, dejar el anchor default
+      e.preventDefault();
+      if (!target.classList.contains('is-open')) {
+        target.classList.add('is-open');
+        if (typeof refreshToggleAllBtn === 'function') refreshToggleAllBtn();
+        if (typeof saveOpen === 'function') saveOpen();
+      }
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
 
   // Restaurar idioma guardado o default
   try {
