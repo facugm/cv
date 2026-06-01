@@ -478,6 +478,14 @@ body.editing .section-body { display: block !important; }
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
 }
+.proj-fields { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; max-width: 82ch; }
+.proj-field { font-family: 'Newsreader', serif; font-size: 16px; line-height: 1.55; color: var(--ink); }
+.proj-field .proj-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--plum); display: block; margin-bottom: 1px;
+}
 
 /* PROJECT — usa exp-header + exp-date + exp-org (mismo tratamiento que Experiencia) */
 .project-title {
@@ -636,6 +644,7 @@ body.compact .name { font-size: clamp(40px, 5vw, 64px); margin-bottom: 14px; }
 body.compact .perfil-text { font-size: 13.5px; line-height: 1.48; max-width: 100%; }
 body.compact .exp-title, body.compact .project-title { font-size: 18px; }
 body.compact .exp-bullets li, body.compact .project-desc { font-size: 12.5px; line-height: 1.45; max-width: 100%; }
+body.compact .proj-field { font-size: 12.5px; line-height: 1.45; }
 body.compact .edu-degree { font-size: 16px; }
 body.compact .edu-detail { font-size: 11.5px; }
 body.compact .exp-item, body.compact .project-item, body.compact .edu-item {
@@ -679,6 +688,7 @@ body.editing [contenteditable="true"]:focus {
   .perfil-text { font-size: 14.5px; }
   .exp-title, .project-title { font-size: 20px; }
   .exp-bullets li, .project-desc { font-size: 13.5px; }
+  .proj-field { font-size: 14.5px; }
 
   body.compact .page { padding: 26px 18px; }
   body.compact .cv-body { display: block; }
@@ -869,7 +879,7 @@ body.editing [contenteditable="true"]:focus {
 
   <!-- PROYECTOS DESTACADOS -->
   <div class="section col-main" data-id="proyectos-destacados">
-    <div class="section-header"><div class="section-title" data-i18n="sections.projects">Proyectos destacados</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
+    <div class="section-header"><div class="section-title" data-i18n="sections.projects">Proyectos seleccionados</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
 
     <div class="project-item">
       <div class="exp-header">
@@ -880,11 +890,12 @@ body.editing [contenteditable="true"]:focus {
         </div>
       </div>
       <div class="exp-org"><span data-i18n="proj.sie7e.meta">Proyecto final de grado · Convocatoria XperienciaUNR</span></div>
-      <ul class="exp-bullets">
-        <li data-i18n="proj.sie7e.b1">Dispositivo educativo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios.</li>
-        <li data-i18n="proj.sie7e.b2">Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR.</li>
-        <li data-i18n="proj.sie7e.b3"><span class="highlight-grade">Calificación: 10</span></li>
-      </ul>
+      <div class="proj-fields">
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.role">Rol</span><span data-i18n="proj.sie7e.role">Autor de la obra · Productor de contenidos · Gestión de proyecto</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.context">Contexto</span><span data-i18n="proj.sie7e.context">Proyecto final de grado en convocatoria interdisciplinar XperienciaUNR (UNR).</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.resp">Responsabilidades</span><span data-i18n="proj.sie7e.resp">Dispositivo educativo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios.</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.result">Resultado</span><span data-i18n="proj.sie7e.result"><span class="highlight-grade">Calificación: 10.</span> Obra finalizada y presentada.</span></div>
+      </div>
       <div class="project-tags" style="margin-top: 12px;">
         <span class="tag" data-i18n="proj.sie7e.pills.author">Autor de la obra</span>
         <span class="tag" data-i18n="proj.sie7e.pills.transmedia">Narrativa transmedia</span>
@@ -902,11 +913,12 @@ body.editing [contenteditable="true"]:focus {
         </div>
       </div>
       <div class="exp-org"><span data-i18n="proj.24v.meta">Documental · Formación Audiovisual Tecnológica</span></div>
-      <ul class="exp-bullets">
-        <li data-i18n="proj.24v.b1">Documental sobre memorias, testimonios y huellas vinculadas al diciembre de 2001 en Rosario. Trabajo final de la materia electiva Formación Audiovisual Tecnológica de la Lic. en Comunicación Social de la UNR.</li>
-        <li data-i18n="proj.24v.b2">Participación en el desarrollo narrativo, dirección, producción y edición del material.</li>
-        <li data-i18n="proj.24v.b3"><span class="highlight-grade">Calificación: 10</span></li>
-      </ul>
+      <div class="proj-fields">
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.role">Rol</span><span data-i18n="proj.24v.role">Dirección · Producción · Guión · Edición</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.context">Contexto</span><span data-i18n="proj.24v.context">Trabajo final de la materia electiva Formación Audiovisual Tecnológica (Lic. en Comunicación Social, UNR).</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.resp">Responsabilidades</span><span data-i18n="proj.24v.resp">Documental sobre memorias, testimonios y huellas vinculadas al diciembre de 2001 en Rosario. Participación en desarrollo narrativo, dirección, producción y edición.</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.result">Resultado</span><span data-i18n="proj.24v.result"><span class="highlight-grade">Calificación: 10.</span> Documental finalizado, disponible en Drive.</span></div>
+      </div>
       <div class="project-tags" style="margin-top: 12px;">
         <span class="tag" data-i18n="proj.24v.pills.direction">Dirección</span>
         <span class="tag" data-i18n="proj.24v.pills.production">Producción</span>
@@ -1402,7 +1414,7 @@ body.editing [contenteditable="true"]:focus {
 
       'sections.perfil': 'Perfil',
       'sections.experience': 'Experiencia profesional',
-      'sections.projects': 'Proyectos destacados',
+      'sections.projects': 'Proyectos seleccionados',
       'sections.education': 'Educación',
       'sections.tools': 'Herramientas y conocimientos',
       'sections.languages': 'Idiomas',
@@ -1438,19 +1450,25 @@ body.editing [contenteditable="true"]:focus {
       'exp.ggwp.pills.booking': 'Booking',
       'exp.ggwp.pills.coord': 'Coordinación de equipo',
 
+      'proj.lbl.role': 'Rol',
+      'proj.lbl.context': 'Contexto',
+      'proj.lbl.resp': 'Responsabilidades',
+      'proj.lbl.result': 'Resultado',
       'proj.sie7e.meta': 'Proyecto final de grado · Convocatoria XperienciaUNR',
-      'proj.sie7e.b1': 'Dispositivo educativo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios.',
-      'proj.sie7e.b2': 'Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR.',
-      'proj.sie7e.b3': '<span class="highlight-grade">Calificación: 10</span>',
+      'proj.sie7e.role': 'Autor de la obra · Productor de contenidos · Gestión de proyecto',
+      'proj.sie7e.context': 'Proyecto final de grado en convocatoria interdisciplinar XperienciaUNR (UNR).',
+      'proj.sie7e.resp': 'Dispositivo educativo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios.',
+      'proj.sie7e.result': '<span class="highlight-grade">Calificación: 10.</span> Obra finalizada y presentada.',
       'proj.sie7e.pills.author': 'Autor de la obra',
       'proj.sie7e.pills.transmedia': 'Narrativa transmedia',
       'proj.sie7e.pills.pm': 'Gestión de proyecto',
       'proj.sie7e.pills.production': 'Producción de contenidos',
 
       'proj.24v.meta': 'Documental · Formación Audiovisual Tecnológica',
-      'proj.24v.b1': 'Documental sobre memorias, testimonios y huellas vinculadas al diciembre de 2001 en Rosario. Trabajo final de la materia electiva Formación Audiovisual Tecnológica de la Lic. en Comunicación Social de la UNR.',
-      'proj.24v.b2': 'Participación en el desarrollo narrativo, dirección, producción y edición del material.',
-      'proj.24v.b3': '<span class="highlight-grade">Calificación: 10</span>',
+      'proj.24v.role': 'Dirección · Producción · Guión · Edición',
+      'proj.24v.context': 'Trabajo final de la materia electiva Formación Audiovisual Tecnológica (Lic. en Comunicación Social, UNR).',
+      'proj.24v.resp': 'Documental sobre memorias, testimonios y huellas vinculadas al diciembre de 2001 en Rosario. Participación en desarrollo narrativo, dirección, producción y edición.',
+      'proj.24v.result': '<span class="highlight-grade">Calificación: 10.</span> Documental finalizado, disponible en Drive.',
       'proj.24v.pills.direction': 'Dirección',
       'proj.24v.pills.production': 'Producción',
       'proj.24v.pills.script': 'Guión',
@@ -1509,7 +1527,7 @@ body.editing [contenteditable="true"]:focus {
 
       'sections.perfil': 'Profile',
       'sections.experience': 'Professional experience',
-      'sections.projects': 'Featured projects',
+      'sections.projects': 'Selected projects',
       'sections.education': 'Education',
       'sections.tools': 'Tools & skills',
       'sections.languages': 'Languages',
@@ -1545,23 +1563,29 @@ body.editing [contenteditable="true"]:focus {
       'exp.ggwp.pills.booking': 'Booking',
       'exp.ggwp.pills.coord': 'Team coordination',
 
-      'proj.sie7e.meta': 'Final degree project · XperienciaUNR open call',
-      'proj.sie7e.b1': 'Educational local memorial device and interactive augmented reality experience weaving transmedia narrative, archive, and testimonies.',
-      'proj.sie7e.b2': 'Author of the concept, content producer, and project manager in an interdisciplinary UNR open call.',
-      'proj.sie7e.b3': '<span class="highlight-grade">Final grade: 10</span>',
-      'proj.sie7e.pills.author': 'Original work',
-      'proj.sie7e.pills.transmedia': 'Transmedia narrative',
-      'proj.sie7e.pills.pm': 'Project management',
-      'proj.sie7e.pills.production': 'Content production',
+      ‘proj.lbl.role’: ‘Role’,
+      ‘proj.lbl.context’: ‘Context’,
+      ‘proj.lbl.resp’: ‘Responsibilities’,
+      ‘proj.lbl.result’: ‘Result’,
+      ‘proj.sie7e.meta’: ‘Final degree project · XperienciaUNR open call’,
+      ‘proj.sie7e.role’: ‘Author · Content producer · Project management’,
+      ‘proj.sie7e.context’: ‘Final degree project in the interdisciplinary XperienciaUNR open call (UNR).’,
+      ‘proj.sie7e.resp’: ‘Educational local memorial device and interactive augmented reality experience weaving transmedia narrative, archive, and testimonies.’,
+      ‘proj.sie7e.result’: ‘<span class="highlight-grade">Final grade: 10.</span> Work completed and presented.’,
+      ‘proj.sie7e.pills.author’: ‘Original work’,
+      ‘proj.sie7e.pills.transmedia’: ‘Transmedia narrative’,
+      ‘proj.sie7e.pills.pm’: ‘Project management’,
+      ‘proj.sie7e.pills.production’: ‘Content production’,
 
-      'proj.24v.meta': 'Documentary · Technological Audiovisual Training',
-      'proj.24v.b1': 'Documentary on memories, testimonies, and social imprints linked to December 2001 in Rosario. Final project of the elective course Technological Audiovisual Training of UNR’s BA in Social Communication.',
-      'proj.24v.b2': 'Contributed to narrative development, direction, production, and editing.',
-      'proj.24v.b3': '<span class="highlight-grade">Final grade: 10</span>',
-      'proj.24v.pills.direction': 'Direction',
-      'proj.24v.pills.production': 'Production',
-      'proj.24v.pills.script': 'Screenplay',
-      'proj.24v.pills.editing': 'Editing',
+      ‘proj.24v.meta’: ‘Documentary · Technological Audiovisual Training’,
+      ‘proj.24v.role’: ‘Direction · Production · Screenplay · Editing’,
+      ‘proj.24v.context’: ‘Final project for the elective course Technological Audiovisual Training (BA in Social Communication, UNR).’,
+      ‘proj.24v.resp’: ‘Documentary on memories, testimonies, and social imprints linked to December 2001 in Rosario. Contributed to narrative development, direction, production, and editing.’,
+      ‘proj.24v.result’: ‘<span class="highlight-grade">Final grade: 10.</span> Documentary completed, available on Drive.’,
+      ‘proj.24v.pills.direction’: ‘Direction’,
+      ‘proj.24v.pills.production’: ‘Production’,
+      ‘proj.24v.pills.script’: ‘Screenplay’,
+      ‘proj.24v.pills.editing’: ‘Editing’,
 
       'edu.lic.degree': 'Bachelor in Social Communication',
       'edu.lic.inst': 'Universidad Nacional de Rosario',
