@@ -91,7 +91,7 @@ body::before {
   z-index: 100;
 }
 /* Por defecto: solo btnToggleAll visible. Author-mode muestra todo. */
-.print-bar > *:not(#btnToggleAll):not(#linkPdf):not(#btnLang) { display: none; }
+.print-bar > *:not(#btnToggleAll):not(#btnLang) { display: none; }
 .print-bar a.print-btn { text-decoration: none; display: inline-flex; align-items: center; }
 body.author-mode .print-bar > * { display: revert; }
 body.author-mode .print-bar { justify-content: flex-end; }
@@ -762,7 +762,6 @@ body.editing [contenteditable="true"]:focus {
      HTML publico ni los leen scrapers/IAs. -->
 <div class="print-bar">
   <button class="print-btn" id="btnToggleAll" type="button">▾ Expandir todo</button>
-  <a class="print-btn" id="linkPdf" href="pdf.html" data-i18n="ui.view-pdf">📄 Vista PDF</a>
   <button class="print-btn" id="btnLang" type="button" title="Switch language">🌐 EN</button>
 </div>
 
@@ -1425,7 +1424,6 @@ body.editing [contenteditable="true"]:focus {
       'cta.contact': 'Contacto',
       'ui.expand-all': '▾ Expandir todo',
       'ui.collapse-all': '▴ Colapsar todo',
-      'ui.view-pdf': '📄 Vista PDF',
       'ui.back': '← Volver',
       'ui.export-pdf': '↓ Exportar PDF',
       'ui.edit': '✎ Editar texto',
@@ -1552,7 +1550,6 @@ body.editing [contenteditable="true"]:focus {
       'cta.contact': 'Contact',
       'ui.expand-all': '▾ Expand all',
       'ui.collapse-all': '▴ Collapse all',
-      'ui.view-pdf': '📄 PDF view',
       'ui.back': '← Back',
       'ui.export-pdf': '↓ Export PDF',
       'ui.edit': '✎ Edit text',
@@ -1700,35 +1697,6 @@ body.editing [contenteditable="true"]:focus {
   }
 
   document.getElementById('btnLang').addEventListener('click', toggleLang);
-
-  // ── Vista/Descarga PDF sin salir de index ─────────────
-  // Carga pdf.html (layout A4 imprimible) en un iframe oculto y dispara su
-  // print() -> el usuario obtiene el dialogo "Guardar como PDF" del navegador
-  // sin navegar. El idioma se sincroniza solo via localStorage (misma K_LANG).
-  var linkPdf = document.getElementById('linkPdf');
-  if (linkPdf) {
-    linkPdf.addEventListener('click', function (e) {
-      e.preventDefault();
-      var existing = document.getElementById('pdfFrame');
-      if (existing) {
-        existing.contentWindow.focus();
-        existing.contentWindow.print();
-        return;
-      }
-      var f = document.createElement('iframe');
-      f.id = 'pdfFrame';
-      f.setAttribute('aria-hidden', 'true');
-      f.style.cssText = 'position:fixed;left:-9999px;top:0;width:794px;height:1123px;border:0;';
-      f.src = 'pdf.html';
-      f.onload = function () {
-        // pequeño delay para que fuentes/layout asienten antes de imprimir
-        setTimeout(function () {
-          try { f.contentWindow.focus(); f.contentWindow.print(); } catch (err) {}
-        }, 350);
-      };
-      document.body.appendChild(f);
-    });
-  }
 
   // ── CTAs del hero: abrir la seccion destino y hacer scroll suave ──
   Array.prototype.slice.call(document.querySelectorAll('.hero-cta a[data-cta]')).forEach(function (a) {
