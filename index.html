@@ -234,6 +234,7 @@ body.author-mode .print-bar { justify-content: flex-end; }
   color: var(--ink-soft);
   white-space: nowrap;
 }
+.tagline .tag-sep { margin: 0 0.45em; }
 .hero-subtitle {
   font-family: 'Newsreader', serif;
   font-size: 15px;
@@ -529,6 +530,7 @@ body.editing .section-body { display: block !important; }
   border: 1px solid var(--plum);
   padding: 4px 9px;
   border-radius: 0;
+  white-space: nowrap;
 }
 .project-desc {
   font-family: 'Newsreader', serif;
@@ -607,6 +609,7 @@ body.editing .section-body { display: block !important; }
   border: 0.5px solid var(--ink);
   padding: 3px 8px;
   border-radius: 0;
+  white-space: nowrap;
 }
 
 /* LANGS */
@@ -697,19 +700,30 @@ body.editing [contenteditable="true"]:focus {
   .print-btn { padding: 7px 10px; font-size: 9px; }
 
   .page { padding: 28px 22px; margin: 12px 10px 24px; }
-  .editorial-slate { grid-template-columns: 1fr; gap: 4px; text-align: center; margin-bottom: 24px; }
+  .editorial-slate { grid-template-columns: 1fr; gap: 2px; text-align: center; margin-bottom: 18px; font-size: 9.5px; letter-spacing: 0.12em; padding: 8px 0; }
   .editorial-slate .center, .editorial-slate .right { text-align: center; }
 
-  .header { grid-template-columns: 1fr; gap: 22px; padding-bottom: 24px; margin-bottom: 22px; }
-  .photo-circle { width: 170px; height: 170px; justify-self: center; }
-  .name { font-size: clamp(42px, 12vw, 64px); }
+  /* Header: foto a la izquierda, nombre a la derecha */
+  .header { grid-template-columns: 130px 1fr; gap: 16px; align-items: center; padding-bottom: 20px; margin-bottom: 22px; }
+  .photo-circle { width: 130px; height: 130px; justify-self: start; }
+  .name { font-size: clamp(26px, 8vw, 38px); text-align: center; margin-bottom: 14px; }
+  .name-divider { justify-content: center; }
+  /* tagline y contacto: cada texto en su linea, sin separadores · */
+  .tagline { text-align: center; }
+  .tagline span[data-i18n] { display: block; }
+  .tagline .tag-sep { display: none; }
+  .contact-row { flex-direction: column; align-items: center; gap: 4px; }
+  .contact-item, .contact-item a { font-size: 12px; }
+  .contact-item a { overflow-wrap: anywhere; }
+  .contact-sep { display: none; }
+
+  /* Boton de link inmediatamente debajo del nombre de empresa / tipo de proyecto */
+  .exp-subrow { flex-direction: column; align-items: flex-start; gap: 7px; }
 
   .section-header { padding: 10px 0 9px; }
-  .hero-subtitle { font-size: 13.5px; }
-  .perfil-text { font-size: 14.5px; }
-  .exp-title, .project-title { font-size: 20px; }
-  .exp-bullets li, .project-desc { font-size: 13.5px; }
-  .proj-field { font-size: 14.5px; }
+  /* Pills de experiencia y proyectos mas chicas */
+  .tag { font-size: 10px; letter-spacing: 0.12em; padding: 3px 7px; }
+  /* Titulos y cuerpos de exp/proyectos igualados a educacion (caen al base) */
 
   body.compact .page { padding: 26px 18px; }
   body.compact .cv-body { display: block; }
@@ -797,7 +811,13 @@ body.editing [contenteditable="true"]:focus {
     <div class="header-main">
       <div class="name">Facundo <em>Ignacio</em><br><span class="surname">García Mata</span></div>
       <div class="name-divider">
-        <div class="tagline" data-i18n="header.tagline">Project Management · Comunicación Estratégica · Producción Audiovisual</div>
+        <div class="tagline">
+          <span data-i18n="header.tag1">Project Management</span>
+          <span class="tag-sep">·</span>
+          <span data-i18n="header.tag2">Comunicación Estratégica</span>
+          <span class="tag-sep">·</span>
+          <span data-i18n="header.tag3">Producción Audiovisual</span>
+        </div>
       </div>
       <div class="contact-row">
         <span class="contact-item" data-i18n="header.location">Rosario, Argentina</span>
@@ -1420,6 +1440,9 @@ body.editing [contenteditable="true"]:focus {
       'slate.center': 'CV — Facundo I. García Mata',
 
       'header.tagline': 'Project Management · Comunicación Estratégica · Producción Audiovisual',
+      'header.tag1': 'Project Management',
+      'header.tag2': 'Comunicación Estratégica',
+      'header.tag3': 'Producción Audiovisual',
       'header.subtitle': 'CV interactivo expandido con experiencia profesional, proyectos seleccionados y enlaces de trabajo.',
       'header.location': 'Rosario, Argentina',
 
@@ -1546,6 +1569,9 @@ body.editing [contenteditable="true"]:focus {
       'slate.center': 'CV — Facundo I. García Mata',
 
       'header.tagline': 'Project Management · Strategic Communication · Audiovisual Production',
+      'header.tag1': 'Project Management',
+      'header.tag2': 'Strategic Communication',
+      'header.tag3': 'Audiovisual Production',
       'header.subtitle': 'Expanded interactive CV with professional experience, selected projects, and work links.',
       'header.location': 'Rosario, Argentina',
 
