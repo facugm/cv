@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#1A1620; --ink:#F0EBE0; --ink-soft:#BCB5A8; --ink-mute:#807B70;
+    --plum:#E8843A; --mauve:#3D344E; --coral:#E8A445; --hair:#3A3640;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1200px;height:630px;}
+  .card{
+    width:1200px;height:630px;background:var(--paper);color:var(--ink);
+    padding:46px 64px 56px;display:flex;flex-direction:column;position:relative;overflow:hidden;
+    font-family:'JetBrains Mono',monospace;
+  }
+  /* editorial slate */
+  .slate{
+    display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;
+    padding:14px 0 14px;border-top:1.5px solid var(--ink);border-bottom:0.5px solid var(--hair);
+    font-size:17px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-soft);
+  }
+  .slate .ctr{text-align:center;}
+  .slate .r{text-align:right;}
+  .slate b{color:var(--plum);}
+  /* body */
+  .body{flex:1;display:grid;grid-template-columns:400px 1fr;gap:60px;align-items:center;}
+  /* photo */
+  .photo{
+    width:400px;height:400px;border-radius:50%;background:var(--mauve);
+    border:3px solid var(--coral);overflow:hidden;justify-self:start;
+    box-shadow:0 0 0 1px var(--hair);
+  }
+  .photo img{
+    width:100%;height:100%;object-fit:cover;object-position:center 16%;
+    transform:scaleX(-1);
+  }
+  /* info */
+  .label{
+    font-size:20px;letter-spacing:0.32em;text-transform:uppercase;color:var(--ink-mute);
+    margin-bottom:22px;display:flex;align-items:center;gap:16px;font-weight:500;
+  }
+  .dash{display:inline-block;width:42px;height:1.5px;background:var(--ink-mute);flex-shrink:0;}
+  .name{
+    font-family:'DM Serif Display',serif;font-weight:400;font-size:86px;line-height:0.92;
+    letter-spacing:-0.02em;color:var(--ink);
+  }
+  .name em{font-style:italic;color:var(--plum);font-size:0.74em;}
+  .name .sur{position:relative;display:inline-block;}
+  .name .sur::after{
+    content:'';position:absolute;left:0;right:-8px;bottom:0.07em;height:0.075em;
+    background:var(--coral);z-index:-1;opacity:0.85;transform:skewX(-4deg);
+  }
+  .tag{
+    margin-top:26px;font-size:19px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:500;line-height:1.5;display:flex;align-items:flex-start;gap:16px;
+  }
+  .tag .dash{margin-top:13px;}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="slate">
+      <span>FILE · 001</span>
+      <span class="ctr">CV — FACUNDO I. GARCÍA MATA <b>•</b> MMXXVI</span>
+      <span class="r">ROSARIO · AR</span>
+    </div>
+    <div class="body">
+      <div class="photo"><img src="CV_img_transparent_suit.png" alt=""></div>
+      <div class="info">
+        <div class="label"><span class="dash"></span> PORTFOLIO · 26</div>
+        <div class="name">Facundo <em>Ignacio</em><br><span class="sur">García Mata</span></div>
+        <div class="tag"><span class="dash"></span><span>Project Management · Comunicación Estratégica · Producción Audiovisual</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
