@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  :root{ --mauve:#3D344E; --purple:#E8843A; }
+  *{margin:0;padding:0;}
+  html,body{width:1254px;height:1254px;background:transparent;}
+  .avatar{width:1254px;height:1254px;}
+  .avatar svg{width:100%;height:100%;display:block;overflow:visible;}
+  .photo-bg{ fill:var(--mauve); }
+  .photo-ring{ fill:none; stroke:var(--purple); stroke-width:11; }
+  /* Espejada horizontalmente como en el CV */
+  #photoImg{ transform: scaleX(-1); transform-origin: 627px 627px; }
+</style>
+</head>
+<body>
+  <div class="avatar">
+    <svg viewBox="0 0 1254 1254" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="clip"><circle cx="627" cy="627" r="562"/></clipPath>
+      </defs>
+      <circle class="photo-bg" cx="627" cy="627" r="562"/>
+      <g clip-path="url(#clip)">
+        <image id="photoImg" href="CV_img_transparent_suit.png"
+               x="27" y="-13" width="1200" height="1200"
+               preserveAspectRatio="xMidYMid slice"/>
+      </g>
+      <circle class="photo-ring" cx="627" cy="627" r="568"/>
+    </svg>
+  </div>
+</body>
+</html>
