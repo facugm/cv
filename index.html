@@ -3,26 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV interactivo expandido | Facundo García Mata</title>
-<meta name="description" content="CV interactivo expandido de Facundo García Mata. Comunicador, Project Manager Digital y Productor Audiovisual. Experiencia profesional, proyectos seleccionados y enlaces de trabajo.">
-<meta name="author" content="Facundo Ignacio García Mata">
+<title>CV | Facundo I. García Mata</title>
+<meta name="description" content="CV de Facundo I. García Mata. Comunicador, Project Manager Digital y Productor Audiovisual. Experiencia profesional, proyectos seleccionados y enlaces de trabajo.">
+<meta name="author" content="Facundo I. García Mata">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://facugm.github.io/cv/">
-<meta property="og:title" content="Facundo García Mata — CV interactivo expandido">
-<meta property="og:description" content="Comunicador · Project Manager Digital · Productor Audiovisual. CV interactivo expandido con experiencia, proyectos seleccionados y enlaces.">
+<meta property="og:title" content="Facundo I. García Mata — CV">
+<meta property="og:description" content="Comunicador · Project Manager Digital · Productor Audiovisual. CV con experiencia, proyectos seleccionados y enlaces.">
 <meta property="og:image" content="https://facugm.github.io/cv/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="CV de Facundo Ignacio García Mata · Editorial Studio Dark">
+<meta property="og:image:alt" content="CV de Facundo I. García Mata · Editorial Studio Dark">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Facundo I. García Mata · CV">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Facundo García Mata — CV interactivo expandido">
-<meta name="twitter:description" content="Comunicador · Project Manager Digital · Productor Audiovisual. CV interactivo expandido.">
+<meta name="twitter:title" content="Facundo I. García Mata — CV">
+<meta name="twitter:description" content="Comunicador · Project Manager Digital · Productor Audiovisual.">
 <meta name="twitter:image" content="https://facugm.github.io/cv/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -206,7 +206,7 @@ body.author-mode .print-bar { justify-content: flex-end; }
   left: 0;
   right: -8px;
   bottom: 0.08em;
-  height: 7px;
+  height: 0.075em;
   background: var(--coral);
   z-index: -1;
   opacity: 0.85;
@@ -227,9 +227,9 @@ body.author-mode .print-bar { justify-content: flex-end; }
 }
 .tagline {
   font-family: 'JetBrains Mono', monospace;
-  font-size: clamp(11px, 1.1vw, 12.5px);
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--ink-soft);
   white-space: nowrap;
@@ -271,7 +271,7 @@ body.author-mode .print-bar { justify-content: flex-end; }
   color: var(--ink-soft);
   margin-top: 4px;
 }
-.contact-item { font-size: 15px; color: var(--ink-soft); }
+.contact-item { font-size: 12px; color: var(--ink-soft); }
 .contact-item a {
   color: var(--ink);
   text-decoration: none;
@@ -280,7 +280,7 @@ body.author-mode .print-bar { justify-content: flex-end; }
   transition: color 0.18s, border-color 0.18s;
 }
 .contact-item a:hover { color: var(--plum); border-bottom-color: var(--coral); }
-.contact-sep { color: var(--ink-mute); font-size: 15px; line-height: 1; }
+.contact-sep { color: var(--ink-mute); font-size: 12px; line-height: 1; }
 
 /* PHOTO */
 .photo-circle {
@@ -387,6 +387,8 @@ body.editing .section-body { display: block !important; }
   line-height: 1.55;
   color: var(--ink);
   font-weight: 400;
+  text-align: justify;
+  hyphens: auto;
 }
 
 /* EXP / PROJECT / EDU items */
@@ -691,8 +693,8 @@ body.editing [contenteditable="true"]:focus {
 }
 
 /* MOBILE */
-@media (max-width: 1040px) {
-  .tagline { white-space: normal; letter-spacing: 0.12em; }
+@media (max-width: 1120px) {
+  .tagline { white-space: normal; letter-spacing: 0.1em; }
 }
 @media (max-width: 720px) {
   .print-bar { padding: 8px 12px; gap: 6px; flex-wrap: wrap; justify-content: center; }
@@ -709,7 +711,7 @@ body.editing [contenteditable="true"]:focus {
   .name { font-size: clamp(26px, 8vw, 38px); text-align: center; margin-bottom: 14px; }
   .name-divider { justify-content: center; }
   /* tagline y contacto: cada texto en su linea, sin separadores · */
-  .tagline { text-align: center; }
+  .tagline { text-align: center; font-size: 11px; letter-spacing: 0.12em; }
   .tagline span[data-i18n] { display: block; }
   .tagline .tag-sep { display: none; }
   .contact-row { flex-direction: column; align-items: center; gap: 4px; }
