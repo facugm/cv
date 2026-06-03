@@ -390,13 +390,12 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
 /* FOOTER de 3 columnas: Educación · Herramientas · Idiomas */
 .cv-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  column-count: 3;
   column-gap: 18px;
-  align-items: start;
   margin-top: 2px;
 }
-.cv-footer .section { break-inside: avoid; }
+.cv-footer > * { break-inside: avoid; margin-bottom: 9px; }
+.cv-footer > .section { margin-bottom: 9px; }
 
 .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 2px; }
 .exp-bullets li {
@@ -729,6 +728,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
         <div class="tool-group-label" data-i18n="tools.pm">Project Management y coordinación</div>
         <div class="tool-tags">
           <span class="tool-tag">Trello</span>
+          <span class="tool-tag">Google Workspace</span>
           <span class="tool-tag">Metodología Kanban</span>
         </div>
       </div>
@@ -742,8 +742,10 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       <div>
         <div class="tool-group-label" data-i18n="tools.design">Diseño y herramientas creativas</div>
         <div class="tool-tags">
-          <span class="tool-tag">Figma</span>
           <span class="tool-tag">Illustrator</span>
+          <span class="tool-tag">Photoshop</span>
+          <span class="tool-tag">InDesign</span>
+          <span class="tool-tag">Figma</span>
           <span class="tool-tag">Canva</span>
         </div>
       </div>
@@ -754,6 +756,8 @@ body { padding: 28px 0 60px; min-height: 100vh; }
           <span class="tool-tag">JavaScript</span>
           <span class="tool-tag">HTML/CSS</span>
           <span class="tool-tag">SQL</span>
+          <span class="tool-tag">Wordpress</span>
+          <span class="tool-tag">Git</span>
         </div>
       </div>
       <div>
@@ -762,6 +766,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
           <span class="tool-tag">Instagram</span>
           <span class="tool-tag">LinkedIn</span>
           <span class="tool-tag">YouTube</span>
+          <span class="tool-tag">Meta Business Suite</span>
         </div>
       </div>
     </div>
@@ -850,13 +855,23 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
   // Perfil/Experiencia/Proyectos quedan full-width; Educación, Herramientas
   // e Idiomas van a un footer de 3 columnas al pie del documento.
-  var FOOTER_IDS = ['educacion', 'idiomas', 'herramientas-y-conocimientos'];
+  // Footer "masonry": 3 columnas auto-balanceadas por altura. Educación e
+  // Idiomas van como bloques enteros; Herramientas deja su título + 1er grupo
+  // juntos y el resto de los grupos fluye como items sueltos.
   var footer = document.createElement('div');
   footer.className = 'cv-footer';
-  FOOTER_IDS.forEach(function (id) {
+  ['educacion', 'idiomas'].forEach(function (id) {
     var sec = page.querySelector(':scope > .section[data-id="' + id + '"]');
     if (sec) footer.appendChild(sec);
   });
+  var tools = page.querySelector(':scope > .section[data-id="herramientas-y-conocimientos"]');
+  if (tools) {
+    var grid = tools.querySelector('.tools-grid');
+    var groups = grid ? Array.prototype.slice.call(grid.children) : [];
+    var extra = groups.slice(1); // todos menos el primero salen al flujo
+    footer.appendChild(tools);
+    extra.forEach(function (g) { footer.appendChild(g); });
+  }
   if (footer.children.length) page.appendChild(footer);
 
   var I18N = {
