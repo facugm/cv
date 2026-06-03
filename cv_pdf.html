@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>CV | Facundo I. García Mata</title>
+<title>CV_Facundo I. García Mata</title>
 <meta name="description" content="CV PDF de Facundo Ignacio García Mata. Comunicador · Project Manager Digital · Productor Audiovisual. Vista A4 imprimible.">
 <meta name="author" content="Facundo Ignacio García Mata">
 
@@ -118,7 +118,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   min-height: 297mm;
   margin: 0 auto;
   background: var(--paper);
-  padding: 11mm 15mm;  /* margenes built-in — sobreviven a @page margin: 0 */
+  padding: 8mm 15mm;  /* margenes built-in — sobreviven a @page margin: 0 */
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
@@ -130,7 +130,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 24px;
-  padding: 8px 0 7px;
+  padding: 7px 0 6px;
   border-top: 1.5px solid var(--ink);
   border-bottom: 0.5px solid var(--hair);
   font-family: 'JetBrains Mono', monospace;
@@ -139,7 +139,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .editorial-slate .center {
   text-align: center;
@@ -163,9 +163,9 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 24px;
-  padding-bottom: 12px;
-  margin-bottom: 10px;
+  gap: 42px;
+  padding-bottom: 10px;
+  margin-bottom: 6px;
   border-bottom: 1.5px solid var(--ink);
 }
 .header-main { flex: 1 1 auto; min-width: 0; }
@@ -214,9 +214,9 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 }
 .tagline {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-soft);
   white-space: nowrap;
@@ -239,8 +239,8 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 .contact-sep { color: var(--ink-mute); }
 
 .photo-circle {
-  width: 190px;
-  height: 190px;
+  width: 150px;
+  height: 150px;
   flex-shrink: 0;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
@@ -273,10 +273,10 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   background: transparent;
   border-top: 1.5px solid var(--ink);
   border-bottom: 0.5px solid var(--hair);
-  padding: 7px 0 6px;
-  margin-bottom: 9px;
+  padding: 5px 0 4px;
+  margin-bottom: 6px;
 }
-.cv-body { counter-reset: section-count; }
+.page { counter-reset: section-count; }
 .section { counter-increment: section-count; }
 .section-header::before {
   content: counter(section-count, decimal-leading-zero);
@@ -301,8 +301,8 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 /* PERFIL */
 .perfil-text {
   font-family: 'Newsreader', serif;
-  font-size: 12.5px;
-  line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.32;
   color: var(--ink);
   text-align: justify;
   hyphens: auto;
@@ -310,8 +310,8 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
 /* EXP / PROJECT / EDU items */
 .exp-item, .project-item, .edu-item {
-  margin-bottom: 9px;
-  padding-bottom: 9px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
   border-bottom: 0.5px solid var(--hair);
   page-break-inside: avoid;
   break-inside: avoid;
@@ -357,11 +357,48 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 }
 .exp-org a { color: var(--plum); text-decoration: none; border-bottom: 1px dotted var(--mauve); }
 
-.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 3px; }
+/* Fila org + boton de link (alineado a la derecha), estilo web */
+.exp-subrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 5px;
+}
+.exp-subrow .exp-org { margin-bottom: 0; }
+.exp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--plum);
+  text-decoration: none;
+  border: 1px solid var(--plum);
+  padding: 3px 7px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.exp-link::after { content: '\2197'; font-size: 8px; line-height: 1; }
+
+/* FOOTER de 3 columnas: Educación · Herramientas · Idiomas */
+.cv-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 18px;
+  align-items: start;
+  margin-top: 8px;
+}
+.cv-footer .section { break-inside: avoid; }
+
+.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 2px; }
 .exp-bullets li {
   font-family: 'Newsreader', serif;
   font-size: 11.5px;
-  line-height: 1.35;
+  line-height: 1.3;
   color: var(--ink);
   padding-left: 16px;
   position: relative;
@@ -499,13 +536,17 @@ body { padding: 28px 0 60px; min-height: 100vh; }
     print-color-adjust: exact !important;
     color-adjust: exact !important;
     background: var(--paper);
+    margin: 0;
+    padding: 0;
   }
   .toolbar { display: none !important; }
   .page {
     margin: 0;
     box-shadow: none;
-    width: 100%;
-    min-height: 100vh;
+    width: 210mm;
+    height: 297mm;
+    min-height: 0;
+    overflow: hidden;
     transform: none !important;     /* anular zoom-to-fit de mobile */
     /* padding mantiene margenes built-in incluso con @page margin:0 */
   }
@@ -573,10 +614,14 @@ body { padding: 28px 0 60px; min-height: 100vh; }
         <div class="exp-title" data-i18n="exp.educativa.title">Desarrollador Full Stack</div>
         <div class="exp-date" data-i18n="exp.educativa.date">Sep 2022 – actualidad</div>
       </div>
-      <div class="exp-org"><strong>e-ducativa S.A.</strong> · <a href="https://www.educativa.com/" target="_blank">sitio oficial</a></div>
+      <div class="exp-subrow">
+        <div class="exp-org"><strong>e-ducativa S.A.</strong></div>
+        <a class="exp-link" href="https://www.educativa.com/" target="_blank">sitio oficial</a>
+      </div>
       <ul class="exp-bullets">
-        <li data-i18n="exp.educativa.b1">Desarrollo y mantengo features de un LMS multitenant con +2,5M de usuarios activos en 13 países y +600 clientes institucionales.</li>
-        <li data-i18n="exp.educativa.b3">Diseño tooling interno que acelera flujos de gestión y comunicación interárea.</li>
+        <li data-i18n="exp.educativa.b1">Desarrollo y mantengo features de un LMS multitenant.</li>
+        <li data-i18n="exp.educativa.b3">Diseño herramientas internas que aceleran flujos de gestión y comunicación interárea.</li>
+        <li data-i18n="exp.educativa.b4">Aporto criterio de tecnología y comunicación en proyectos y features.</li>
       </ul>
     </div>
 
@@ -585,10 +630,13 @@ body { padding: 28px 0 60px; min-height: 100vh; }
         <div class="exp-title" data-i18n="exp.3f.title">Coordinación y Project Management Digital</div>
         <div class="exp-date" data-i18n="exp.3f.date">Dic 2025 – actualidad</div>
       </div>
-      <div class="exp-org"><span data-i18n="exp.3f.org"><strong>3Factor Design</strong></span> · <a href="https://instagram.com/3factor.design" target="_blank">ver perfil de instagram</a></div>
+      <div class="exp-subrow">
+        <div class="exp-org"><span data-i18n="exp.3f.org"><strong>3Factor Design</strong></span></div>
+        <a class="exp-link" href="https://instagram.com/3factor.design" target="_blank">ver perfil de instagram</a>
+      </div>
       <ul class="exp-bullets">
-        <li data-i18n="exp.3f.b1">Coordino contenidos y estrategia digital del emprendimiento, articulando criterio visual y objetivos comerciales.</li>
-        <li data-i18n="exp.3f.b3">Gestiono social media con tracción comprobable: +2.400 cuentas alcanzadas y +4.300 visualizaciones en los últimos 90 días, partiendo de cero.</li>
+        <li data-i18n="exp.3f.b1">Diseño la estrategia de comunicación y planifico la creación de los contenidos.</li>
+        <li data-i18n="exp.3f.b2">Gestiono las redes sociales y construyo el branding.</li>
       </ul>
     </div>
 
@@ -597,10 +645,14 @@ body { padding: 28px 0 60px; min-height: 100vh; }
         <div class="exp-title" data-i18n="exp.ggwp.title">Productor de Streaming</div>
         <div class="exp-date" data-i18n="exp.ggwp.date">Abr 2026 – actualidad</div>
       </div>
-      <div class="exp-org"><span data-i18n="exp.ggwp.org"><strong>GGWP</strong></span> · <a href="https://www.instagram.com/ggwp.stream/" target="_blank">ver perfil de instagram</a></div>
+      <div class="exp-subrow">
+        <div class="exp-org"><span data-i18n="exp.ggwp.org"><strong>GGWP</strong></span></div>
+        <a class="exp-link" href="https://www.instagram.com/ggwp.stream/" target="_blank">ver perfil de instagram</a>
+      </div>
       <ul class="exp-bullets">
-        <li data-i18n="exp.ggwp.b1">Escribo y reviso la escaleta semanal del programa junto al conductor y coconductor.</li>
-        <li data-i18n="exp.ggwp.b2">Coordino la planificación de contenidos, difusión previa y circulación posterior de clips junto al equipo de diseño y redes.</li>
+        <li data-i18n="exp.ggwp.b1">Desarrollo y organizo la escaleta semanal del programa, definiendo bloques, temas, tiempos y dinámica del vivo junto al equipo de conducción.</li>
+        <li data-i18n="exp.ggwp.b2">Coordino la planificación de contenidos, recortes del programa y difusión de cada emisión junto a los equipos de redes y de diseño.</li>
+        <li data-i18n="exp.ggwp.b4">Gestiono entrevistas con referentes, desarrolladores e iniciativas vinculadas a la cultura gamer local.</li>
       </ul>
     </div>
 
@@ -615,15 +667,14 @@ body { padding: 28px 0 60px; min-height: 100vh; }
         <div class="project-title">Sie7e Memorias Desde La Sombra</div>
         <div class="exp-date">Feb 2025 – May 2026</div>
       </div>
-      <div class="exp-org"><span data-i18n="proj.sie7e.meta">Proyecto final de grado · Convocatoria XperienciaUNR</span> · <a href="https://facugm.github.io/cv/sie7e/" target="_blank" data-i18n="ui.view-dossier">Ver dossier</a></div>
+      <div class="exp-subrow">
+        <div class="exp-org"><span data-i18n="proj.sie7e.meta">Proyecto final de grado · Convocatoria XperienciaUNR</span></div>
+        <a class="exp-link" href="https://facugm.github.io/cv/sie7e/" target="_blank" data-i18n="ui.view-dossier">Ver dossier</a>
+      </div>
       <ul class="exp-bullets">
         <li data-i18n="proj.sie7e.b2">Autor de la idea, productor de contenidos y gestor del proyecto en convocatoria interdisciplinar de la UNR.</li>
         <li data-i18n="proj.sie7e.b3"><span class="highlight-grade">Calificación: 10</span></li>
       </ul>
-      <div class="project-tags" style="margin-top: 6px;">
-        <span class="tag" data-i18n="proj.sie7e.pills.transmedia">Narrativa transmedia</span>
-        <span class="tag" data-i18n="proj.sie7e.pills.pm">Gestión de proyecto</span>
-      </div>
     </div>
 
     <div class="project-item">
@@ -631,15 +682,14 @@ body { padding: 28px 0 60px; min-height: 100vh; }
         <div class="project-title">24 VECES DICIEMBRE</div>
         <div class="exp-date">2025</div>
       </div>
-      <div class="exp-org"><span data-i18n="proj.24v.meta">Documental · Formación Audiovisual Tecnológica</span> · <a href="https://drive.google.com/file/d/1XkDQpEKSKytSNoVtcV10X7qrBtihRM9U/view?usp=sharing" target="_blank" data-i18n="ui.view-drive">Ver en Drive</a></div>
+      <div class="exp-subrow">
+        <div class="exp-org"><span data-i18n="proj.24v.meta">Documental · Formación Audiovisual Tecnológica</span></div>
+        <a class="exp-link" href="https://drive.google.com/file/d/1XkDQpEKSKytSNoVtcV10X7qrBtihRM9U/view?usp=sharing" target="_blank" data-i18n="ui.view-drive">Ver en Drive</a>
+      </div>
       <ul class="exp-bullets">
         <li data-i18n="proj.24v.b2">Participación en el desarrollo narrativo, dirección, producción y edición del material.</li>
         <li data-i18n="proj.24v.b3"><span class="highlight-grade">Calificación: 10</span></li>
       </ul>
-      <div class="project-tags" style="margin-top: 6px;">
-        <span class="tag" data-i18n="proj.24v.pills.direction">Dirección</span>
-        <span class="tag" data-i18n="proj.24v.pills.editing">Edición</span>
-      </div>
     </div>
 
   </div></div>
@@ -794,21 +844,15 @@ body { padding: 28px 0 60px; min-height: 100vh; }
     if (handle) handle.remove();
   });
 
-  // Wrappear en cv-body con main/side cols
-  var sections = Array.prototype.slice.call(page.querySelectorAll(':scope > .section'));
-  var mainWrap = document.createElement('div');
-  mainWrap.className = 'main-col-wrap';
-  var sideWrap = document.createElement('div');
-  sideWrap.className = 'side-col-wrap';
-  sections.forEach(function (sec) {
-    if (sec.classList.contains('col-side')) sideWrap.appendChild(sec);
-    else mainWrap.appendChild(sec);
+  // Perfil/Experiencia/Proyectos quedan full-width; Educación, Herramientas
+  // e Idiomas van a un footer de 3 columnas al pie del documento.
+  var FOOTER_IDS = ['educacion', 'herramientas-y-conocimientos', 'idiomas'];
+  var footer = document.createElement('div');
+  footer.className = 'cv-footer';
+  Array.prototype.slice.call(page.querySelectorAll(':scope > .section')).forEach(function (sec) {
+    if (FOOTER_IDS.indexOf(sec.dataset.id) !== -1) footer.appendChild(sec);
   });
-  var body = document.createElement('div');
-  body.className = 'cv-body';
-  body.appendChild(mainWrap);
-  body.appendChild(sideWrap);
-  page.appendChild(body);
+  if (footer.children.length) page.appendChild(footer);
 
   var I18N = {
     es: {
@@ -842,16 +886,16 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
       'exp.educativa.title': 'Desarrollador Full Stack',
       'exp.educativa.date': 'Sep 2022 – actualidad',
-      'exp.educativa.b1': 'Desarrollo y mantengo features de un LMS multitenant con +2,5M de usuarios activos en 13 países y +600 clientes institucionales.',
+      'exp.educativa.b1': 'Desarrollo y mantengo features de un LMS multitenant.',
       'exp.educativa.b2': 'Coordino con áreas de comercial, soporte y producto para shippear features a producción en una plataforma con +7.000 instalaciones activas.',
-      'exp.educativa.b3': 'Diseño tooling interno que acelera flujos de gestión y comunicación interárea.',
-      'exp.educativa.b4': 'Aporto criterio entre tecnología y comunicación en proyectos de identidad institucional.',
+      'exp.educativa.b3': 'Diseño herramientas internas que aceleran flujos de gestión y comunicación interárea.',
+      'exp.educativa.b4': 'Aporto criterio de tecnología y comunicación en proyectos y features.',
 
       'exp.3f.title': 'Gestor de Comunicación',
       'exp.3f.date': 'Dic 2025 – actualidad',
       'exp.3f.org': '<strong>3Factor Design</strong>',
-      'exp.3f.b1': 'Diseño la estrategia de comunicación y planifico la creación de los contenidos a partir de la marca y sus objetivos comerciales.',
-      'exp.3f.b2': 'Gestiono las redes sociales: publico contenido, analizo su impacto y respondo consultas de clientes.',
+      'exp.3f.b1': 'Diseño la estrategia de comunicación y planifico la creación de los contenidos.',
+      'exp.3f.b2': 'Gestiono las redes sociales y construyo el branding.',
       'exp.3f.b3': 'Construyo el branding: nombre, identidad visual y tono de la marca.',
       'exp.3f.pills.branding': 'Branding',
       'exp.3f.pills.social': 'Social media',
@@ -954,16 +998,16 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
       'exp.educativa.title': 'Full Stack Developer',
       'exp.educativa.date': 'Sep 2022 – present',
-      'exp.educativa.b1': 'Develop and maintain features for a multitenant LMS with +2.5M active users across 13 countries and +600 institutional clients.',
+      'exp.educativa.b1': 'Develop and maintain features for a multitenant LMS.',
       'exp.educativa.b2': 'Coordinate with sales, support, and product teams to ship features to production on a platform with +7,000 active installations.',
-      'exp.educativa.b3': 'Design internal tooling that accelerates cross-team management and communication workflows.',
-      'exp.educativa.b4': 'Bring a hybrid tech-and-communication perspective to institutional identity projects.',
+      'exp.educativa.b3': 'Design internal tools that accelerate cross-team management and communication workflows.',
+      'exp.educativa.b4': 'Bring a tech-and-communication perspective to projects and features.',
 
       'exp.3f.title': 'Communication Manager',
       'exp.3f.date': 'Dec 2025 – present',
       'exp.3f.org': '<strong>3Factor Design</strong>',
-      'exp.3f.b1': 'I design the communication strategy and plan content creation based on the brand and its commercial goals.',
-      'exp.3f.b2': 'I manage social media: I publish content, analyze its impact, and respond to client inquiries.',
+      'exp.3f.b1': 'I design the communication strategy and plan content creation.',
+      'exp.3f.b2': 'I manage social media and build the branding.',
       'exp.3f.b3': 'I build the branding: name, visual identity, and brand voice.',
       'exp.3f.pills.branding': 'Branding',
       'exp.3f.pills.social': 'Social media',
