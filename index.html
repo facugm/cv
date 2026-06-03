@@ -170,7 +170,7 @@ body.author-mode .print-bar { justify-content: flex-end; }
 /* HEADER */
 .header {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: 280px 1fr;
   gap: 56px;
   align-items: end;
   padding-bottom: 36px;
@@ -227,11 +227,12 @@ body.author-mode .print-bar { justify-content: flex-end; }
 }
 .tagline {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  font-size: clamp(11px, 1.1vw, 12.5px);
   font-weight: 500;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--ink-soft);
+  white-space: nowrap;
 }
 .hero-subtitle {
   font-family: 'Newsreader', serif;
@@ -286,12 +287,12 @@ body.author-mode .print-bar { justify-content: flex-end; }
   height: 250px;
   flex-shrink: 0;
   margin-top: 0;
-  justify-self: end;
+  justify-self: start;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
   color-adjust: exact;
 }
-.photo-circle svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.photo-circle svg { width: 100%; height: 100%; display: block; overflow: visible; transform: scaleX(-1); }
 .photo-circle .photo-bg   { fill: var(--mauve); }
 .photo-circle .photo-ring { fill: none; stroke: var(--purple); stroke-width: 1.0; }
 
@@ -419,6 +420,7 @@ body.editing .section-body { display: block !important; }
   font-size: 29px;
   font-weight: 400;
   color: var(--ink);
+  margin-bottom: 2px;
   letter-spacing: -0.4px;
   line-height: 1.1;
 }
@@ -460,6 +462,17 @@ body.editing .section-body { display: block !important; }
 .exp-link::after { content: '\2197'; font-size: 11px; line-height: 1; }
 .exp-link:hover { background: var(--plum); color: var(--paper); }
 
+/* Fila: nombre de empresa (izq) + boton de link (der) en la misma linea */
+.exp-subrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.exp-subrow .exp-org { margin-bottom: 0; }
+
 .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 9px; max-width: 82ch; }
 .exp-bullets li {
   font-family: 'Newsreader', serif;
@@ -479,7 +492,7 @@ body.editing .section-body { display: block !important; }
   font-weight: 700;
 }
 .proj-fields { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; max-width: 82ch; }
-.proj-field { font-family: 'Newsreader', serif; font-size: 16px; line-height: 1.55; color: var(--ink); }
+.proj-field { font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.7; color: var(--ink); }
 .proj-field .proj-label {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10.5px; font-weight: 700;
@@ -675,6 +688,9 @@ body.editing [contenteditable="true"]:focus {
 }
 
 /* MOBILE */
+@media (max-width: 1040px) {
+  .tagline { white-space: normal; letter-spacing: 0.12em; }
+}
 @media (max-width: 720px) {
   .print-bar { padding: 8px 12px; gap: 6px; flex-wrap: wrap; justify-content: center; }
   .print-note { width: 100%; text-align: center; }
@@ -777,12 +793,11 @@ body.editing [contenteditable="true"]:focus {
 
   <!-- HEADER -->
   <div class="header">
+    <div class="photo-circle" id="photoCircle" contenteditable="false"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" overflow="visible"><defs><clipPath id="silhouetteClip"><circle cx="50" cy="56" r="44"/><rect x="22" y="-12" width="56" height="32"/></clipPath></defs><circle class="photo-bg" cx="50" cy="56" r="44"/><circle class="photo-ring" cx="50" cy="56" r="46.5"/><g clip-path="url(#silhouetteClip)"><image id="photoImg" class="photo-emerge" href="" x="-2" y="-4" width="104" height="104" preserveAspectRatio="xMidYMid slice"/></g></svg></div>
     <div class="header-main">
       <div class="name">Facundo <em>Ignacio</em><br><span class="surname">García Mata</span></div>
       <div class="name-divider">
-        <div class="name-line"></div>
-        <div class="tagline" data-i18n="header.tagline">Project Management Digital · Comunicación · Producción Audiovisual</div>
-        <div class="hero-subtitle" data-i18n="header.subtitle">CV interactivo expandido con experiencia profesional, proyectos seleccionados y enlaces de trabajo.</div>
+        <div class="tagline" data-i18n="header.tagline">Project Management · Comunicación Estratégica · Producción Audiovisual</div>
       </div>
       <div class="contact-row">
         <span class="contact-item" data-i18n="header.location">Rosario, Argentina</span>
@@ -792,20 +807,12 @@ body.editing [contenteditable="true"]:focus {
         <span class="contact-item"><a href="https://www.linkedin.com/in/facundogm/" target="_blank" rel="noopener">LinkedIn</a></span>
       </div>
     </div>
-    <div class="photo-circle" id="photoCircle" contenteditable="false"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" overflow="visible"><defs><clipPath id="silhouetteClip"><circle cx="50" cy="56" r="44"/><rect x="22" y="-12" width="56" height="32"/></clipPath></defs><circle class="photo-bg" cx="50" cy="56" r="44"/><circle class="photo-ring" cx="50" cy="56" r="46.5"/><g clip-path="url(#silhouetteClip)"><image id="photoImg" class="photo-emerge" href="" x="-2" y="-4" width="104" height="104" preserveAspectRatio="xMidYMid slice"/></g></svg></div>
   </div>
-
-  <!-- HERO CTAs (público) -->
-  <nav class="hero-cta" aria-label="Acciones principales">
-    <a class="cta-btn cta-primary" href="#proyectos-seleccionados" data-cta="proyectos-seleccionados" data-i18n="cta.projects">Ver proyectos seleccionados</a>
-    <a class="cta-btn" href="https://www.linkedin.com/in/facundogm/" target="_blank" rel="noopener" data-i18n="cta.linkedin">LinkedIn</a>
-    <a class="cta-btn" href="#contacto" data-cta="contacto" data-i18n="cta.contact">Contacto</a>
-  </nav>
 
   <!-- PERFIL -->
   <div class="section">
     <div class="section-header"><div class="section-title" data-i18n="sections.perfil">Perfil</div></div>
-    <p class="perfil-text" data-i18n="perfil.text">Licenciado en Comunicación Social con experiencia en project management digital, producción audiovisual, estrategia de contenidos y desarrollo web. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación.</p>
+    <p class="perfil-text" data-i18n="perfil.text">Soy Licenciado en Comunicación Social por la Universidad Nacional de Rosario (UNR) con experiencia en gestión de proyectos, planificación y producción estratégica de contenidos y desarrollo web full stack. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación. Fiel creyente de que los proyectos más ricos nacen en el cruce de lo interdisciplinar y lo colectivo.</p>
   </div>
 
   <!-- EXPERIENCIA -->
@@ -815,17 +822,17 @@ body.editing [contenteditable="true"]:focus {
     <div class="exp-item">
       <div class="exp-header">
         <div class="exp-title" data-i18n="exp.educativa.title">Desarrollador Full Stack</div>
-        <div class="exp-meta">
-          <div class="exp-date" data-i18n="exp.educativa.date">Sep 2022 – actualidad</div>
-          <a class="exp-link" href="https://www.educativa.com/" target="_blank">educativa.com</a>
-        </div>
+        <div class="exp-date" data-i18n="exp.educativa.date">Sep 2022 – actualidad</div>
       </div>
-      <div class="exp-org">e-ducativa S.A.</div>
+      <div class="exp-subrow">
+        <div class="exp-org"><strong>e-ducativa S.A.</strong></div>
+        <a class="exp-link" href="https://www.educativa.com/" target="_blank">sitio oficial</a>
+      </div>
       <ul class="exp-bullets">
         <li data-i18n="exp.educativa.b1">Desarrollo y mantengo features de un LMS multitenant con +2,5M de usuarios activos en 13 países y +600 clientes institucionales.</li>
         <li data-i18n="exp.educativa.b2">Coordino con áreas de comercial, soporte y producto para shippear features a producción en una plataforma con +7.000 instalaciones activas.</li>
         <li data-i18n="exp.educativa.b3">Diseño tooling interno que acelera flujos de gestión y comunicación interárea.</li>
-        <li data-i18n="exp.educativa.b4">Aporto criterio entre tecnología y comunicación en proyectos de identidad institucional.</li>
+        <li data-i18n="exp.educativa.b4">Aporto criterio entre tecnología y comunicación en proyectos y features.</li>
       </ul>
       <div class="project-tags" style="margin-top: 12px;">
         <span class="tag">Perl</span>
@@ -837,45 +844,45 @@ body.editing [contenteditable="true"]:focus {
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-title" data-i18n="exp.3f.title">Coordinación y Project Management Digital</div>
-        <div class="exp-meta">
-          <div class="exp-date" data-i18n="exp.3f.date">Dic 2025 – actualidad</div>
-          <a class="exp-link" href="https://instagram.com/3factor.design" target="_blank">instagram.com/3factor.design</a>
-        </div>
+        <div class="exp-title" data-i18n="exp.3f.title">Gestor de Comunicación</div>
+        <div class="exp-date" data-i18n="exp.3f.date">Dic 2025 – actualidad</div>
       </div>
-      <div class="exp-org"><span data-i18n="exp.3f.org">3Factor Design — Emprendimiento de diseño y producción de objetos decorativos 3D</span></div>
+      <div class="exp-subrow">
+        <div class="exp-org"><span data-i18n="exp.3f.org"><strong>3Factor Design</strong></span></div>
+        <a class="exp-link" href="https://instagram.com/3factor.design" target="_blank">ver perfil de instagram</a>
+      </div>
       <ul class="exp-bullets">
-        <li data-i18n="exp.3f.b1">Coordino contenidos y estrategia digital del emprendimiento, articulando criterio visual y objetivos comerciales.</li>
-        <li data-i18n="exp.3f.b2">Construyo el branding desde cero: identidad, tono de marca y presentación comercial del producto (cuenta creada en diciembre 2025).</li>
-        <li data-i18n="exp.3f.b3">Gestiono social media con tracción comprobable: +2.400 cuentas alcanzadas y +4.300 visualizaciones en los últimos 90 días, partiendo de cero.</li>
+        <li data-i18n="exp.3f.b1">Diseño la estrategia de comunicación y planifico la creación de los contenidos a partir de la marca y sus objetivos comerciales.</li>
+        <li data-i18n="exp.3f.b2">Gestiono las redes sociales: publico contenido, analizo su impacto y respondo consultas de clientes.</li>
+        <li data-i18n="exp.3f.b3">Construyo el branding: nombre, identidad visual y tono de la marca.</li>
       </ul>
       <div class="project-tags" style="margin-top: 12px;">
-        <span class="tag" data-i18n="exp.3f.pills.branding">Branding</span>
-        <span class="tag" data-i18n="exp.3f.pills.social">Social media</span>
         <span class="tag" data-i18n="exp.3f.pills.strategy">Estrategia de contenidos</span>
+        <span class="tag" data-i18n="exp.3f.pills.social">Social media</span>
+        <span class="tag" data-i18n="exp.3f.pills.branding">Branding</span>
       </div>
     </div>
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-title" data-i18n="exp.ggwp.title">Productor de Streaming</div>
-        <div class="exp-meta">
-          <div class="exp-date" data-i18n="exp.ggwp.date">Abr 2026 – actualidad</div>
-          <a class="exp-link" href="https://www.instagram.com/ggwp.stream/" target="_blank">instagram.com/ggwp.stream</a>
-        </div>
+        <div class="exp-title" data-i18n="exp.ggwp.title">Productor</div>
+        <div class="exp-date" data-i18n="exp.ggwp.date">Abr 2026 – actualidad</div>
       </div>
-      <div class="exp-org"><span data-i18n="exp.ggwp.org">GGWP — Programa de streaming sobre industria de videojuegos y cultura gaming · Alojado por MargaTV</span></div>
+      <div class="exp-subrow">
+        <div class="exp-org"><span data-i18n="exp.ggwp.org"><strong>GGWP</strong></span></div>
+        <a class="exp-link" href="https://www.instagram.com/ggwp.stream/" target="_blank">ver perfil de instagram</a>
+      </div>
       <ul class="exp-bullets">
-        <li data-i18n="exp.ggwp.b1">Escribo y reviso la escaleta semanal del programa junto al conductor y coconductor.</li>
-        <li data-i18n="exp.ggwp.b2">Coordino la planificación de contenidos, difusión previa y circulación posterior de clips junto al equipo de diseño y redes.</li>
+        <li data-i18n="exp.ggwp.b1">Desarrollo y organizo la escaleta semanal del programa, definiendo bloques, temas, tiempos y dinámica del vivo junto al equipo de conducción.</li>
+        <li data-i18n="exp.ggwp.b2">Coordino la planificación de contenidos, recortes del programa y difusión de cada emisión junto a los equipos de redes y de diseño.</li>
         <li data-i18n="exp.ggwp.b3">Realizo la revisión posterior de cada emisión, identificando highlights, ajustes y momentos clipeables.</li>
         <li data-i18n="exp.ggwp.b4">Gestiono entrevistas con referentes, desarrolladores e iniciativas vinculadas a la cultura gamer local.</li>
       </ul>
       <div class="project-tags" style="margin-top: 12px;">
         <span class="tag" data-i18n="exp.ggwp.pills.streaming">Streaming en vivo</span>
+        <span class="tag" data-i18n="exp.ggwp.pills.coord">Gestión de equipo</span>
         <span class="tag" data-i18n="exp.ggwp.pills.rundown">Escaleta</span>
         <span class="tag" data-i18n="exp.ggwp.pills.booking">Booking</span>
-        <span class="tag" data-i18n="exp.ggwp.pills.coord">Coordinación de equipo</span>
       </div>
     </div>
 
@@ -888,21 +895,21 @@ body.editing [contenteditable="true"]:focus {
     <div class="project-item">
       <div class="exp-header">
         <div class="project-title">Sie7e Memorias Desde La Sombra</div>
-        <div class="exp-meta">
-          <div class="exp-date">Feb 2025 – May 2026</div>
-          <a class="exp-link" href="sie7e/" target="_blank" data-i18n="ui.view-dossier">Ver dossier</a>
-        </div>
+        <div class="exp-date">Feb 2025 – May 2026</div>
       </div>
-      <div class="exp-org"><span data-i18n="proj.sie7e.meta">Proyecto final de grado · Convocatoria XperienciaUNR</span></div>
+      <div class="exp-subrow">
+        <div class="exp-org"><span data-i18n="proj.sie7e.meta"><strong>Proyecto final de grado</strong> · Convocatoria XperienciaUNR</span></div>
+        <a class="exp-link" href="sie7e/" target="_blank" data-i18n="ui.view-dossier">Ver dossier</a>
+      </div>
       <div class="proj-fields">
-        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.role">Rol</span><span data-i18n="proj.sie7e.role">Autor de la obra · Productor de contenidos · Gestión de proyecto</span></div>
-        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.context">Contexto</span><span data-i18n="proj.sie7e.context">Proyecto final de grado en convocatoria interdisciplinar XperienciaUNR (UNR).</span></div>
-        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.resp">Responsabilidades</span><span data-i18n="proj.sie7e.resp">Dispositivo educativo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios.</span></div>
-        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.result">Resultado</span><span data-i18n="proj.sie7e.result"><span class="highlight-grade">Calificación: 10.</span> Obra finalizada y presentada.</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.role">Rol</span><span data-i18n="proj.sie7e.role">Autor de la obra · Gestor del proyecto · Productor de contenidos</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.context">Contexto</span><span data-i18n="proj.sie7e.context">Proyecto final de grado en convocatoria interdisciplinar XperienciaUNR.</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.resp">Acerca de</span><span data-i18n="proj.sie7e.resp">Dispositivo educativo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios.</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.result">Resultado</span><span data-i18n="proj.sie7e.result"><span class="highlight-grade">Calificación: 10.</span> Prototipo funcional finalizado y presentado.</span></div>
       </div>
       <div class="project-tags" style="margin-top: 12px;">
         <span class="tag" data-i18n="proj.sie7e.pills.author">Autor de la obra</span>
-        <span class="tag" data-i18n="proj.sie7e.pills.transmedia">Narrativa transmedia</span>
+        <span class="tag" data-i18n="proj.sie7e.pills.transmedia">Realidad aumentada</span>
         <span class="tag" data-i18n="proj.sie7e.pills.pm">Gestión de proyecto</span>
         <span class="tag" data-i18n="proj.sie7e.pills.production">Producción de contenidos</span>
       </div>
@@ -911,17 +918,17 @@ body.editing [contenteditable="true"]:focus {
     <div class="project-item">
       <div class="exp-header">
         <div class="project-title">24 VECES DICIEMBRE</div>
-        <div class="exp-meta">
-          <div class="exp-date">2025</div>
-          <a class="exp-link" href="https://drive.google.com/file/d/1XkDQpEKSKytSNoVtcV10X7qrBtihRM9U/view?usp=sharing" target="_blank" data-i18n="ui.view-drive">Ver en Drive</a>
-        </div>
+        <div class="exp-date">2025</div>
       </div>
-      <div class="exp-org"><span data-i18n="proj.24v.meta">Documental · Formación Audiovisual Tecnológica</span></div>
+      <div class="exp-subrow">
+        <div class="exp-org"><span data-i18n="proj.24v.meta"><strong>Documental</strong> · Electiva Formación Audiovisual Tecnológica</span></div>
+        <a class="exp-link" href="https://drive.google.com/file/d/1XkDQpEKSKytSNoVtcV10X7qrBtihRM9U/view?usp=sharing" target="_blank" data-i18n="ui.view-drive">Ver en Drive</a>
+      </div>
       <div class="proj-fields">
-        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.role">Rol</span><span data-i18n="proj.24v.role">Dirección · Producción · Guión · Edición</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.role">Rol</span><span data-i18n="proj.24v.role">Director · Productor · Guionista · Editor</span></div>
         <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.context">Contexto</span><span data-i18n="proj.24v.context">Trabajo final de la materia electiva Formación Audiovisual Tecnológica (Lic. en Comunicación Social, UNR).</span></div>
-        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.resp">Responsabilidades</span><span data-i18n="proj.24v.resp">Documental sobre memorias, testimonios y huellas vinculadas al diciembre de 2001 en Rosario. Participación en desarrollo narrativo, dirección, producción y edición.</span></div>
-        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.result">Resultado</span><span data-i18n="proj.24v.result"><span class="highlight-grade">Calificación: 10.</span> Documental finalizado, disponible en Drive.</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.resp">Acerca de</span><span data-i18n="proj.24v.resp">Documental sobre memorias, testimonios y huellas vinculadas al diciembre de 2001 en Rosario.</span></div>
+        <div class="proj-field"><span class="proj-label" data-i18n="proj.lbl.result">Resultado</span><span data-i18n="proj.24v.result"><span class="highlight-grade">Calificación: 10.</span> Documental finalizado y presentado.</span></div>
       </div>
       <div class="project-tags" style="margin-top: 12px;">
         <span class="tag" data-i18n="proj.24v.pills.direction">Dirección</span>
@@ -943,8 +950,7 @@ body.editing [contenteditable="true"]:focus {
         <div class="exp-date">2020 – 2026</div>
       </div>
       <div class="edu-inst" data-i18n="edu.lic.inst">Universidad Nacional de Rosario</div>
-      <div class="edu-detail" data-i18n="edu.lic.detail">Orientación en Comunicación Estratégica y Producción Audiovisual<br>Proyecto final: <em>Sie7e Memorias Desde La Sombra</em></div>
-      <span class="edu-badge" data-i18n="edu.lic.badge">Promedio con y sin aplazos: 8,97</span>
+      <div class="edu-detail" data-i18n="edu.lic.detail">Promedio con y sin aplazos: 8,97</div>
     </div>
 
     <div class="edu-item">
@@ -952,8 +958,7 @@ body.editing [contenteditable="true"]:focus {
         <div class="edu-degree" data-i18n="edu.tec.degree">Tecnicatura en Informática Profesional y Personal</div>
         <div class="exp-date">2013 – 2018</div>
       </div>
-      <div class="edu-inst" data-i18n="edu.tec.inst">Instituto Politécnico Superior</div>
-      <div class="edu-detail"><span data-i18n="edu.tec.detail-intro">Formación técnica en programación, redes, sistemas, administración de servicios y producción digital.</span></div>
+      <div class="edu-inst" data-i18n="edu.tec.inst">Instituto Politécnico Superior "General San Martín"</div>
     </div>
 
   </div></div>
@@ -967,25 +972,14 @@ body.editing [contenteditable="true"]:focus {
         <div class="tool-tags">
           <span class="tool-tag">Trello</span>
           <span class="tool-tag">Google Workspace</span>
-          <span class="tool-tag" data-i18n="tools.tag.teams">Gestión de equipos</span>
-          <span class="tool-tag" data-i18n="tools.tag.planning">Planificación</span>
-        </div>
-      </div>
-      <div>
-        <div class="tool-group-label" data-i18n="tools.comms">Comunicación y contenidos</div>
-        <div class="tool-tags">
-          <span class="tool-tag" data-i18n="tools.tag.contentstrat">Estrategia de contenidos</span>
-          <span class="tool-tag" data-i18n="tools.tag.branding">Branding</span>
-          <span class="tool-tag" data-i18n="tools.tag.copy">Guión y escaleta</span>
+          <span class="tool-tag">Metodología Kanban</span>
         </div>
       </div>
       <div>
         <div class="tool-group-label" data-i18n="tools.av">Producción audiovisual</div>
         <div class="tool-tags">
           <span class="tool-tag">Adobe Premiere</span>
-          <span class="tool-tag">Audition</span>
-          <span class="tool-tag" data-i18n="tools.tag.editing">Edición</span>
-          <span class="tool-tag" data-i18n="tools.tag.livestream">Streaming en vivo</span>
+          <span class="tool-tag">Adobe Audition</span>
         </div>
       </div>
       <div>
@@ -1001,13 +995,12 @@ body.editing [contenteditable="true"]:focus {
       <div>
         <div class="tool-group-label" data-i18n="tools.web">Desarrollo web y tecnología</div>
         <div class="tool-tags">
-          <span class="tool-tag">HTML/CSS</span>
-          <span class="tool-tag">JavaScript</span>
-          <span class="tool-tag">SQL</span>
           <span class="tool-tag">Perl</span>
+          <span class="tool-tag">JavaScript</span>
+          <span class="tool-tag">HTML/CSS</span>
+          <span class="tool-tag">SQL</span>
           <span class="tool-tag">Wordpress</span>
           <span class="tool-tag">Git</span>
-          <span class="tool-tag">GitHub</span>
         </div>
       </div>
       <div>
@@ -1042,17 +1035,6 @@ body.editing [contenteditable="true"]:focus {
         <div class="lang-name" data-i18n="langs.de.name">Alemán</div>
         <div class="lang-level" data-i18n="langs.de.level">Básico</div>
       </div>
-    </div>
-  </div></div>
-
-  <!-- CONTACTO -->
-  <div class="section col-side" data-id="contacto">
-    <div class="section-header"><div class="section-title" data-i18n="sections.contact">Contacto</div><span class="section-chevron" contenteditable="false">▸</span></div><div class="section-body">
-    <div class="contact-grid">
-      <div class="contact-line"><span class="contact-k" data-i18n="contact.email">Email</span><a href="mailto:figarciamata@gmail.com">figarciamata@gmail.com</a></div>
-      <div class="contact-line"><span class="contact-k">LinkedIn</span><a href="https://www.linkedin.com/in/facundogm/" target="_blank" rel="noopener">linkedin.com/in/facundogm</a></div>
-      <div class="contact-line"><span class="contact-k" data-i18n="contact.location">Ubicación</span><span data-i18n="contact.city">Rosario, Argentina</span></div>
-      <div class="contact-line"><span class="contact-k" data-i18n="contact.links">Links</span><a href="sie7e/" target="_blank" rel="noopener">Sie7e</a> · <a href="https://www.instagram.com/ggwp.stream/" target="_blank" rel="noopener">GGWP</a></div>
     </div>
   </div></div>
 
@@ -1437,7 +1419,7 @@ body.editing [contenteditable="true"]:focus {
       'ui.pdf-label': 'PDF Preview · A4',
       'slate.center': 'CV — Facundo I. García Mata',
 
-      'header.tagline': 'Project Management Digital · Comunicación · Producción Audiovisual',
+      'header.tagline': 'Project Management · Comunicación Estratégica · Producción Audiovisual',
       'header.subtitle': 'CV interactivo expandido con experiencia profesional, proyectos seleccionados y enlaces de trabajo.',
       'header.location': 'Rosario, Argentina',
 
@@ -1453,56 +1435,56 @@ body.editing [contenteditable="true"]:focus {
       'contact.city': 'Rosario, Argentina',
       'contact.links': 'Links',
 
-      'perfil.text': 'Licenciado en Comunicación Social con experiencia en project management digital, producción audiovisual, estrategia de contenidos y desarrollo web. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación.',
+      'perfil.text': 'Soy Licenciado en Comunicación Social por la Universidad Nacional de Rosario (UNR) con experiencia en gestión de proyectos, planificación y producción estratégica de contenidos y desarrollo web full stack. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación. Fiel creyente de que los proyectos más ricos nacen en el cruce de lo interdisciplinar y lo colectivo.',
 
       'exp.educativa.title': 'Desarrollador Full Stack',
       'exp.educativa.date': 'Sep 2022 – actualidad',
       'exp.educativa.b1': 'Desarrollo y mantengo features de un LMS multitenant con +2,5M de usuarios activos en 13 países y +600 clientes institucionales.',
       'exp.educativa.b2': 'Coordino con áreas de comercial, soporte y producto para shippear features a producción en una plataforma con +7.000 instalaciones activas.',
       'exp.educativa.b3': 'Diseño tooling interno que acelera flujos de gestión y comunicación interárea.',
-      'exp.educativa.b4': 'Aporto criterio entre tecnología y comunicación en proyectos de identidad institucional.',
+      'exp.educativa.b4': 'Aporto criterio entre tecnología y comunicación en proyectos y features.',
 
-      'exp.3f.title': 'Coordinación y Project Management Digital',
+      'exp.3f.title': 'Gestor de Comunicación',
       'exp.3f.date': 'Dic 2025 – actualidad',
-      'exp.3f.org': '3Factor Design — Emprendimiento de diseño y producción de objetos decorativos 3D',
-      'exp.3f.b1': 'Coordino contenidos y estrategia digital del emprendimiento, articulando criterio visual y objetivos comerciales.',
-      'exp.3f.b2': 'Construyo el branding desde cero: identidad, tono de marca y presentación comercial del producto (cuenta creada en diciembre 2025).',
-      'exp.3f.b3': 'Gestiono social media con tracción comprobable: +2.400 cuentas alcanzadas y +4.300 visualizaciones en los últimos 90 días, partiendo de cero.',
+      'exp.3f.org': '<strong>3Factor Design</strong>',
+      'exp.3f.b1': 'Diseño la estrategia de comunicación y planifico la creación de los contenidos a partir de la marca y sus objetivos comerciales.',
+      'exp.3f.b2': 'Gestiono las redes sociales: publico contenido, analizo su impacto y respondo consultas de clientes.',
+      'exp.3f.b3': 'Construyo el branding: nombre, identidad visual y tono de la marca.',
       'exp.3f.pills.branding': 'Branding',
       'exp.3f.pills.social': 'Social media',
       'exp.3f.pills.strategy': 'Estrategia de contenidos',
 
-      'exp.ggwp.title': 'Productor de Streaming',
+      'exp.ggwp.title': 'Productor',
       'exp.ggwp.date': 'Abr 2026 – actualidad',
-      'exp.ggwp.org': 'GGWP — Programa de streaming sobre industria de videojuegos y cultura gaming · Alojado por MargaTV',
-      'exp.ggwp.b1': 'Escribo y reviso la escaleta semanal del programa junto al conductor y coconductor.',
-      'exp.ggwp.b2': 'Coordino la planificación de contenidos, difusión previa y circulación posterior de clips junto al equipo de diseño y redes.',
+      'exp.ggwp.org': '<strong>GGWP</strong>',
+      'exp.ggwp.b1': 'Desarrollo y organizo la escaleta semanal del programa, definiendo bloques, temas, tiempos y dinámica del vivo junto al equipo de conducción.',
+      'exp.ggwp.b2': 'Coordino la planificación de contenidos, recortes del programa y difusión de cada emisión junto a los equipos de redes y de diseño.',
       'exp.ggwp.b3': 'Realizo la revisión posterior de cada emisión, identificando highlights, ajustes y momentos clipeables.',
       'exp.ggwp.b4': 'Gestiono entrevistas con referentes, desarrolladores e iniciativas vinculadas a la cultura gamer local.',
       'exp.ggwp.pills.streaming': 'Streaming en vivo',
       'exp.ggwp.pills.rundown': 'Escaleta',
       'exp.ggwp.pills.booking': 'Booking',
-      'exp.ggwp.pills.coord': 'Coordinación de equipo',
+      'exp.ggwp.pills.coord': 'Gestión de equipo',
 
       'proj.lbl.role': 'Rol',
       'proj.lbl.context': 'Contexto',
-      'proj.lbl.resp': 'Responsabilidades',
+      'proj.lbl.resp': 'Acerca de',
       'proj.lbl.result': 'Resultado',
-      'proj.sie7e.meta': 'Proyecto final de grado · Convocatoria XperienciaUNR',
-      'proj.sie7e.role': 'Autor de la obra · Productor de contenidos · Gestión de proyecto',
-      'proj.sie7e.context': 'Proyecto final de grado en convocatoria interdisciplinar XperienciaUNR (UNR).',
+      'proj.sie7e.meta': '<strong>Proyecto final de grado</strong> · Convocatoria XperienciaUNR',
+      'proj.sie7e.role': 'Autor de la obra · Gestor del proyecto · Productor de contenidos',
+      'proj.sie7e.context': 'Proyecto final de grado en convocatoria interdisciplinar XperienciaUNR.',
       'proj.sie7e.resp': 'Dispositivo educativo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios.',
-      'proj.sie7e.result': '<span class="highlight-grade">Calificación: 10.</span> Obra finalizada y presentada.',
+      'proj.sie7e.result': '<span class="highlight-grade">Calificación: 10.</span> Prototipo funcional finalizado y presentado.',
       'proj.sie7e.pills.author': 'Autor de la obra',
-      'proj.sie7e.pills.transmedia': 'Narrativa transmedia',
+      'proj.sie7e.pills.transmedia': 'Realidad aumentada',
       'proj.sie7e.pills.pm': 'Gestión de proyecto',
       'proj.sie7e.pills.production': 'Producción de contenidos',
 
-      'proj.24v.meta': 'Documental · Formación Audiovisual Tecnológica',
-      'proj.24v.role': 'Dirección · Producción · Guión · Edición',
+      'proj.24v.meta': '<strong>Documental</strong> · Electiva Formación Audiovisual Tecnológica',
+      'proj.24v.role': 'Director · Productor · Guionista · Editor',
       'proj.24v.context': 'Trabajo final de la materia electiva Formación Audiovisual Tecnológica (Lic. en Comunicación Social, UNR).',
-      'proj.24v.resp': 'Documental sobre memorias, testimonios y huellas vinculadas al diciembre de 2001 en Rosario. Participación en desarrollo narrativo, dirección, producción y edición.',
-      'proj.24v.result': '<span class="highlight-grade">Calificación: 10.</span> Documental finalizado, disponible en Drive.',
+      'proj.24v.resp': 'Documental sobre memorias, testimonios y huellas vinculadas al diciembre de 2001 en Rosario.',
+      'proj.24v.result': '<span class="highlight-grade">Calificación: 10.</span> Documental finalizado y presentado.',
       'proj.24v.pills.direction': 'Dirección',
       'proj.24v.pills.production': 'Producción',
       'proj.24v.pills.script': 'Guión',
@@ -1510,11 +1492,11 @@ body.editing [contenteditable="true"]:focus {
 
       'edu.lic.degree': 'Licenciatura en Comunicación Social',
       'edu.lic.inst': 'Universidad Nacional de Rosario',
-      'edu.lic.detail': 'Orientación en Comunicación Estratégica y Producción Audiovisual<br>Proyecto final: <em>Sie7e Memorias Desde La Sombra</em>',
+      'edu.lic.detail': 'Promedio con y sin aplazos: 8,97',
       'edu.lic.badge': 'Promedio con y sin aplazos: 8,97',
 
       'edu.tec.degree': 'Tecnicatura en Informática Profesional y Personal',
-      'edu.tec.inst': 'Instituto Politécnico Superior',
+      'edu.tec.inst': 'Instituto Politécnico Superior "General San Martín"',
       'edu.tec.detail-intro': 'Formación técnica en programación, redes, sistemas, administración de servicios y producción digital.',
       'edu.tec.b1': 'Bases de programación en C, PHP, SQL, JavaScript, HTML, CSS y Haskell.',
       'edu.tec.b2': 'Diseño, instalación y administración de redes informáticas.',
@@ -1563,7 +1545,7 @@ body.editing [contenteditable="true"]:focus {
       'ui.pdf-label': 'PDF Preview · A4',
       'slate.center': 'CV — Facundo I. García Mata',
 
-      'header.tagline': 'Digital Project Management · Communication · Audiovisual Production',
+      'header.tagline': 'Project Management · Strategic Communication · Audiovisual Production',
       'header.subtitle': 'Expanded interactive CV with professional experience, selected projects, and work links.',
       'header.location': 'Rosario, Argentina',
 
@@ -1579,56 +1561,56 @@ body.editing [contenteditable="true"]:focus {
       'contact.city': 'Rosario, Argentina',
       'contact.links': 'Links',
 
-      'perfil.text': 'Bachelor in Social Communication with experience in digital project management, audiovisual production, content strategy, and web development. I combine a communications mindset, narrative judgment, and technical capability to carry projects from idea to implementation.',
+      'perfil.text': 'I hold a degree in Social Communication from the National University of Rosario (UNR), with experience in project management, planning and strategic content production, and full stack web development. I combine a communications mindset, narrative judgment, and technical capability to carry projects from idea to implementation. A firm believer that the richest projects are born at the intersection of the interdisciplinary and the collective.',
 
       'exp.educativa.title': 'Full Stack Developer',
       'exp.educativa.date': 'Sep 2022 – present',
       'exp.educativa.b1': 'Develop and maintain features for a multitenant LMS with +2.5M active users across 13 countries and +600 institutional clients.',
       'exp.educativa.b2': 'Coordinate with sales, support, and product teams to ship features to production on a platform with +7,000 active installations.',
       'exp.educativa.b3': 'Design internal tooling that accelerates cross-team management and communication workflows.',
-      'exp.educativa.b4': 'Bring a hybrid tech-and-communication perspective to institutional identity projects.',
+      'exp.educativa.b4': 'Bring a hybrid tech-and-communication perspective to projects and features.',
 
-      'exp.3f.title': 'Coordination & Digital Project Management',
+      'exp.3f.title': 'Communication Manager',
       'exp.3f.date': 'Dec 2025 – present',
-      'exp.3f.org': '3Factor Design — 3D-printed decorative objects design & production studio',
-      'exp.3f.b1': 'Coordinate content and digital strategy for the venture, aligning visual criteria with commercial goals.',
-      'exp.3f.b2': 'Built the brand from scratch: identity, brand voice, and commercial product presentation (account launched December 2025).',
-      'exp.3f.b3': 'Manage social media with measurable traction: +2,400 accounts reached and +4,300 views in the last 90 days, starting from zero.',
+      'exp.3f.org': '<strong>3Factor Design</strong>',
+      'exp.3f.b1': 'I design the communication strategy and plan content creation based on the brand and its commercial goals.',
+      'exp.3f.b2': 'I manage social media: I publish content, analyze its impact, and respond to client inquiries.',
+      'exp.3f.b3': 'I build the branding: name, visual identity, and brand voice.',
       'exp.3f.pills.branding': 'Branding',
       'exp.3f.pills.social': 'Social media',
       'exp.3f.pills.strategy': 'Content strategy',
 
-      'exp.ggwp.title': 'Streaming Producer',
+      'exp.ggwp.title': 'Producer',
       'exp.ggwp.date': 'Apr 2026 – present',
-      'exp.ggwp.org': 'GGWP — Streaming show on the video game industry and gaming culture · Hosted by MargaTV',
-      'exp.ggwp.b1': 'I write and review the show’s weekly rundown with the host and co-host.',
-      'exp.ggwp.b2': 'I coordinate content planning, pre-broadcast outreach, and post-broadcast clip circulation with the design and social media team.',
+      'exp.ggwp.org': '<strong>GGWP</strong>',
+      'exp.ggwp.b1': 'I develop and organize the show’s weekly rundown, defining blocks, topics, timing, and the live dynamic together with the hosting team.',
+      'exp.ggwp.b2': 'I coordinate content planning, show clips, and the promotion of each broadcast together with the social media and design teams.',
       'exp.ggwp.b3': 'I run the post-broadcast review of each episode, identifying highlights, adjustments, and clippable moments.',
       'exp.ggwp.b4': 'I manage interviews with industry figures, developers, and initiatives tied to the local gaming culture.',
       'exp.ggwp.pills.streaming': 'Live streaming',
       'exp.ggwp.pills.rundown': 'Rundown',
       'exp.ggwp.pills.booking': 'Booking',
-      'exp.ggwp.pills.coord': 'Team coordination',
+      'exp.ggwp.pills.coord': 'Team management',
 
       'proj.lbl.role': 'Role',
       'proj.lbl.context': 'Context',
-      'proj.lbl.resp': 'Responsibilities',
+      'proj.lbl.resp': 'About',
       'proj.lbl.result': 'Result',
-      'proj.sie7e.meta': 'Final degree project · XperienciaUNR open call',
-      'proj.sie7e.role': 'Author · Content producer · Project management',
-      'proj.sie7e.context': 'Final degree project in the interdisciplinary XperienciaUNR open call (UNR).',
+      'proj.sie7e.meta': '<strong>Final degree project</strong> · XperienciaUNR open call',
+      'proj.sie7e.role': 'Author · Project manager · Content producer',
+      'proj.sie7e.context': 'Final degree project in the interdisciplinary XperienciaUNR open call.',
       'proj.sie7e.resp': 'Educational local memorial device and interactive augmented reality experience weaving transmedia narrative, archive, and testimonies.',
-      'proj.sie7e.result': '<span class="highlight-grade">Final grade: 10.</span> Work completed and presented.',
+      'proj.sie7e.result': '<span class="highlight-grade">Final grade: 10.</span> Functional prototype completed and presented.',
       'proj.sie7e.pills.author': 'Original work',
-      'proj.sie7e.pills.transmedia': 'Transmedia narrative',
+      'proj.sie7e.pills.transmedia': 'Augmented reality',
       'proj.sie7e.pills.pm': 'Project management',
       'proj.sie7e.pills.production': 'Content production',
 
-      'proj.24v.meta': 'Documentary · Technological Audiovisual Training',
-      'proj.24v.role': 'Direction · Production · Screenplay · Editing',
+      'proj.24v.meta': '<strong>Documentary</strong> · Elective Technological Audiovisual Training',
+      'proj.24v.role': 'Director · Producer · Screenwriter · Editor',
       'proj.24v.context': 'Final project for the elective course Technological Audiovisual Training (BA in Social Communication, UNR).',
-      'proj.24v.resp': 'Documentary on memories, testimonies, and social imprints linked to December 2001 in Rosario. Contributed to narrative development, direction, production, and editing.',
-      'proj.24v.result': '<span class="highlight-grade">Final grade: 10.</span> Documentary completed, available on Drive.',
+      'proj.24v.resp': 'Documentary on memories, testimonies, and social imprints linked to December 2001 in Rosario.',
+      'proj.24v.result': '<span class="highlight-grade">Final grade: 10.</span> Documentary completed and presented.',
       'proj.24v.pills.direction': 'Direction',
       'proj.24v.pills.production': 'Production',
       'proj.24v.pills.script': 'Screenplay',
@@ -1636,11 +1618,11 @@ body.editing [contenteditable="true"]:focus {
 
       'edu.lic.degree': 'Bachelor in Social Communication',
       'edu.lic.inst': 'Universidad Nacional de Rosario',
-      'edu.lic.detail': 'Major in Strategic Communication and Audiovisual Production<br>Final project: <em>Sie7e Memorias Desde La Sombra</em>',
+      'edu.lic.detail': 'GPA with and without retakes: 8.97 / 10',
       'edu.lic.badge': 'GPA with and without retakes: 8.97 / 10',
 
       'edu.tec.degree': 'Technical degree in Professional and Personal IT',
-      'edu.tec.inst': 'Instituto Politécnico Superior',
+      'edu.tec.inst': 'Instituto Politécnico Superior "General San Martín"',
       'edu.tec.detail-intro': 'Technical training in programming, networks, systems, service administration, and digital production.',
       'edu.tec.b1': 'Programming fundamentals in C, PHP, SQL, JavaScript, HTML, CSS, and Haskell.',
       'edu.tec.b2': 'Design, installation, and administration of computer networks.',
