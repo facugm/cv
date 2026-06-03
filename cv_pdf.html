@@ -118,7 +118,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   min-height: 297mm;
   margin: 0 auto;
   background: var(--paper);
-  padding: 7mm 15mm;  /* margenes built-in — sobreviven a @page margin: 0 */
+  padding: 6mm 15mm;  /* margenes built-in — sobreviven a @page margin: 0 */
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
@@ -168,7 +168,9 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   margin-bottom: 6px;
   border-bottom: 1.5px solid var(--ink);
 }
-.header-main { flex: 0 1 auto; min-width: 0; }
+.header-main { flex: 0 1 auto; min-width: 0; text-align: center; }
+.header-main .name-divider { justify-content: center; }
+.header-main .contact-row { justify-content: center; }
 .name {
   font-family: 'DM Serif Display', serif;
   font-weight: 400;
@@ -239,8 +241,8 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 .contact-sep { color: var(--ink-mute); }
 
 .photo-circle {
-  width: 130px;
-  height: 130px;
+  width: 158px;
+  height: 158px;
   flex-shrink: 0;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
@@ -267,7 +269,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 /* SECTIONS — always open */
 .section { position: relative; margin-bottom: 0; }
 /* Aire entre el final de una sección y la línea divisoria de la siguiente */
-.page > .section { margin-bottom: 13px; }
+.page > .section { margin-bottom: 11px; }
 .section-header {
   display: flex;
   align-items: center;
@@ -312,8 +314,8 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
 /* EXP / PROJECT / EDU items */
 .exp-item, .project-item, .edu-item {
-  margin-bottom: 5px;
-  padding-bottom: 5px;
+  margin-bottom: 3px;
+  padding-bottom: 3px;
   border-bottom: 0.5px solid var(--hair);
   page-break-inside: avoid;
   break-inside: avoid;
@@ -848,11 +850,12 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
   // Perfil/Experiencia/Proyectos quedan full-width; Educación, Herramientas
   // e Idiomas van a un footer de 3 columnas al pie del documento.
-  var FOOTER_IDS = ['educacion', 'herramientas-y-conocimientos', 'idiomas'];
+  var FOOTER_IDS = ['educacion', 'idiomas', 'herramientas-y-conocimientos'];
   var footer = document.createElement('div');
   footer.className = 'cv-footer';
-  Array.prototype.slice.call(page.querySelectorAll(':scope > .section')).forEach(function (sec) {
-    if (FOOTER_IDS.indexOf(sec.dataset.id) !== -1) footer.appendChild(sec);
+  FOOTER_IDS.forEach(function (id) {
+    var sec = page.querySelector(':scope > .section[data-id="' + id + '"]');
+    if (sec) footer.appendChild(sec);
   });
   if (footer.children.length) page.appendChild(footer);
 
