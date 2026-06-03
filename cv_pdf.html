@@ -96,6 +96,20 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   text-transform: uppercase;
 }
 .toolbar button:hover { background: var(--plum); }
+.toolbar .dl-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--plum);
+  background: transparent;
+  border: 1.5px solid var(--plum);
+  padding: 8px 14px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.toolbar .dl-link:hover { background: var(--plum); color: var(--paper); }
 .toolbar .back-link {
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
@@ -572,6 +586,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 <div class="toolbar">
   <a href="index.html" class="back-link" title="Volver al CV web" data-i18n="ui.back">← Volver</a>
   <span class="label" data-i18n="ui.pdf-label">PDF Preview · A4</span>
+  <a class="dl-link" href="cv.pdf" download="CV_Facundo I. García Mata.pdf" data-i18n="ui.download">↓ Descargar</a>
   <button onclick="window.print()" data-i18n="ui.export-pdf">↓ Exportar PDF</button>
   <button id="btnLang" type="button" title="Switch language" data-i18n="ui.lang-toggle">🌐 EN</button>
 </div>
@@ -881,6 +896,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'ui.view-pdf': '📄 Ver como PDF',
       'ui.back': '← Volver',
       'ui.export-pdf': '↓ Exportar PDF',
+      'ui.download': '↓ Descargar',
       'ui.edit': '✎ Editar texto',
       'ui.done': '✓ Listo',
       'ui.save': '💾 Guardar',
@@ -993,6 +1009,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'ui.view-pdf': '📄 View as PDF',
       'ui.back': '← Back',
       'ui.export-pdf': '↓ Export PDF',
+      'ui.download': '↓ Download',
       'ui.edit': '✎ Edit text',
       'ui.done': '✓ Done',
       'ui.save': '💾 Save',
