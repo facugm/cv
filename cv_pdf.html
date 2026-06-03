@@ -118,7 +118,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   min-height: 297mm;
   margin: 0 auto;
   background: var(--paper);
-  padding: 8mm 15mm;  /* margenes built-in — sobreviven a @page margin: 0 */
+  padding: 7mm 15mm;  /* margenes built-in — sobreviven a @page margin: 0 */
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
@@ -162,13 +162,13 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 .header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 42px;
+  justify-content: center;
+  gap: 36px;
   padding-bottom: 10px;
   margin-bottom: 6px;
   border-bottom: 1.5px solid var(--ink);
 }
-.header-main { flex: 1 1 auto; min-width: 0; }
+.header-main { flex: 0 1 auto; min-width: 0; }
 .name {
   font-family: 'DM Serif Display', serif;
   font-weight: 400;
@@ -239,8 +239,8 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 .contact-sep { color: var(--ink-mute); }
 
 .photo-circle {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   flex-shrink: 0;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
@@ -266,6 +266,8 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
 /* SECTIONS — always open */
 .section { position: relative; margin-bottom: 0; }
+/* Aire entre el final de una sección y la línea divisoria de la siguiente */
+.page > .section { margin-bottom: 13px; }
 .section-header {
   display: flex;
   align-items: center;
@@ -390,7 +392,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   grid-template-columns: repeat(3, 1fr);
   column-gap: 18px;
   align-items: start;
-  margin-top: 8px;
+  margin-top: 2px;
 }
 .cv-footer .section { break-inside: avoid; }
 
@@ -503,9 +505,9 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   font-family: 'JetBrains Mono', monospace;
   font-size: 8.5px;
   font-weight: 400;
-  color: var(--ink);
+  color: var(--ink-soft);
   background: transparent;
-  border: 0.5px solid var(--ink);
+  border: 0.5px solid var(--ink-mute);
   padding: 1px 5px;
   white-space: nowrap;
 }
