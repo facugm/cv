@@ -558,14 +558,22 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   }
   .toolbar { display: none !important; }
   .page {
-    margin: 0;
     box-shadow: none;
     width: 210mm;
-    height: 297mm;
     min-height: 0;
     overflow: hidden;
-    transform: none !important;     /* anular zoom-to-fit de mobile */
     /* padding mantiene margenes built-in incluso con @page margin:0 */
+    /* Colchón anti-recorte: el contenido queda al ras de 297mm y la
+       métrica de fuente varía entre navegadores/SO (una línea que
+       rinda 1-2px más alta recorta el pie). Caja local de 306mm con
+       zoom 0.97 = 296.8mm reales en papel: sigue siendo una sola
+       página, pero el contenido tiene 9mm de headroom antes de que
+       el overflow hidden lo recorte. */
+    height: 306mm;
+    zoom: 0.97;
+    margin: 0 auto;
+    overflow: hidden;
+    transform: none !important;     /* anular zoom-to-fit de mobile */
   }
   .exp-item, .project-item, .edu-item { page-break-inside: avoid; }
 }
@@ -629,7 +637,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-title" data-i18n="exp.educativa.title">Desarrollador Full Stack</div>
+        <div class="exp-title" data-i18n="exp.educativa.title">Desarrollador Full Stack · Coordinador de proyectos digitales</div>
         <div class="exp-date" data-i18n="exp.educativa.date">Sep 2022 – actualidad</div>
       </div>
       <div class="exp-subrow">
@@ -637,9 +645,11 @@ body { padding: 28px 0 60px; min-height: 100vh; }
         <a class="exp-link" href="https://www.educativa.com/" target="_blank">sitio oficial</a>
       </div>
       <ul class="exp-bullets">
-        <li data-i18n="exp.educativa.b1">Desarrollo y mantengo features de un LMS multitenant.</li>
-        <li data-i18n="exp.educativa.b3">Diseño y desarrollo herramientas internas para acelerar flujos de gestión y comunicación interárea.</li>
-        <li data-i18n="exp.educativa.b4">Aporto criterio de tecnología y comunicación en proyectos y features.</li>
+        <li data-i18n="exp.educativa.b1">Desarrollo y mantengo funcionalidades de uno de los productos insignia de una plataforma EdTech internacional.</li>
+        <li data-i18n="exp.educativa.b2">Coordino el seguimiento semanal del producto con Tecnología, Servicios y Product Owner: avances, prioridades y bloqueos.</li>
+        <li data-i18n="exp.educativa.b3">Gestiono el tablero de trabajo en Trello, asegurando consistencia entre responsables, estados, tags y avance real de las tareas.</li>
+        <li data-i18n="exp.educativa.b4">Facilito la comunicación y la revisión de procesos entre áreas para ordenar consultas y sostener la continuidad del producto.</li>
+        <li data-i18n="exp.educativa.b5">Desarrollo mejoras internas para el uso de Claude y Claude Code en flujos de desarrollo y documentación funcional.</li>
       </ul>
     </div>
 
@@ -773,6 +783,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
           <span class="tool-tag">SQL</span>
           <span class="tool-tag">Wordpress</span>
           <span class="tool-tag">Git</span>
+          <span class="tool-tag">Claude Code</span>
         </div>
       </div>
       <div>
@@ -920,12 +931,13 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
       'perfil.text': 'Soy Licenciado en Comunicación Social por la Universidad Nacional de Rosario (UNR) con experiencia en gestión de proyectos, planificación y producción estratégica de contenidos y desarrollo web full stack. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación. Fiel creyente de que los proyectos más ricos nacen en el cruce de lo interdisciplinar y lo colectivo.',
 
-      'exp.educativa.title': 'Desarrollador Full Stack',
+      'exp.educativa.title': 'Desarrollador Full Stack · Coordinador de proyectos digitales',
       'exp.educativa.date': 'Sep 2022 – actualidad',
-      'exp.educativa.b1': 'Desarrollo y mantengo features de un LMS multitenant.',
-      'exp.educativa.b2': 'Coordino con áreas de comercial, soporte y producto para shippear features a producción en una plataforma con +7.000 instalaciones activas.',
-      'exp.educativa.b3': 'Diseño y desarrollo herramientas internas para acelerar flujos de gestión y comunicación interárea.',
-      'exp.educativa.b4': 'Aporto criterio de tecnología y comunicación en proyectos y features.',
+      'exp.educativa.b1': 'Desarrollo y mantengo funcionalidades de uno de los productos insignia de una plataforma EdTech internacional.',
+      'exp.educativa.b2': 'Coordino el seguimiento semanal del producto con Tecnología, Servicios y Product Owner: avances, prioridades y bloqueos.',
+      'exp.educativa.b3': 'Gestiono el tablero de trabajo en Trello, asegurando consistencia entre responsables, estados, tags y avance real de las tareas.',
+      'exp.educativa.b4': 'Facilito la comunicación y la revisión de procesos entre áreas para ordenar consultas y sostener la continuidad del producto.',
+      'exp.educativa.b5': 'Desarrollo mejoras internas para el uso de Claude y Claude Code en flujos de desarrollo y documentación funcional.',
 
       'exp.3f.title': 'Gestor de Comunicación',
       'exp.3f.date': 'Dic 2025 – actualidad',
@@ -1033,12 +1045,13 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
       'perfil.text': 'I hold a degree in Social Communication from the National University of Rosario (UNR), with experience in project management, planning and strategic content production, and full stack web development. I combine a communications mindset, narrative judgment, and technical capability to carry projects from idea to implementation. A firm believer that the richest projects are born at the intersection of the interdisciplinary and the collective.',
 
-      'exp.educativa.title': 'Full Stack Developer',
+      'exp.educativa.title': 'Full Stack Developer · Digital Project Coordinator',
       'exp.educativa.date': 'Sep 2022 – present',
-      'exp.educativa.b1': 'Develop and maintain features for a multitenant LMS.',
-      'exp.educativa.b2': 'Coordinate with sales, support, and product teams to ship features to production on a platform with +7,000 active installations.',
-      'exp.educativa.b3': 'Design and develop internal tools to accelerate cross-team management and communication workflows.',
-      'exp.educativa.b4': 'Bring a tech-and-communication perspective to projects and features.',
+      'exp.educativa.b1': 'Build and maintain features for one of the flagship products of an international EdTech platform.',
+      'exp.educativa.b2': 'Coordinate weekly product follow-up with Technology, Services and the Product Owner: progress, priorities and blockers.',
+      'exp.educativa.b3': 'Manage Trello workflow tracking, ensuring consistency across owners, statuses, tags and actual task progress.',
+      'exp.educativa.b4': 'Facilitate cross-functional communication and process review to organize requests and support product continuity.',
+      'exp.educativa.b5': 'Develop internal improvements for the use of Claude and Claude Code in development workflows and documentation.',
 
       'exp.3f.title': 'Communication Manager',
       'exp.3f.date': 'Dec 2025 – present',
