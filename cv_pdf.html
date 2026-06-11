@@ -558,14 +558,22 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   }
   .toolbar { display: none !important; }
   .page {
-    margin: 0;
     box-shadow: none;
     width: 210mm;
-    height: 297mm;
     min-height: 0;
     overflow: hidden;
-    transform: none !important;     /* anular zoom-to-fit de mobile */
     /* padding mantiene margenes built-in incluso con @page margin:0 */
+    /* Colchón anti-recorte: el contenido queda al ras de 297mm y la
+       métrica de fuente varía entre navegadores/SO (una línea que
+       rinda 1-2px más alta recorta el pie). Caja local de 306mm con
+       zoom 0.97 = 296.8mm reales en papel: sigue siendo una sola
+       página, pero el contenido tiene 9mm de headroom antes de que
+       el overflow hidden lo recorte. */
+    height: 306mm;
+    zoom: 0.97;
+    margin: 0 auto;
+    overflow: hidden;
+    transform: none !important;     /* anular zoom-to-fit de mobile */
   }
   .exp-item, .project-item, .edu-item { page-break-inside: avoid; }
 }
