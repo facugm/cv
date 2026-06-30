@@ -15,7 +15,7 @@ const EXEC = process.env.PW_CHROME || '/var/www/educativa/.cache/ms-playwright/c
 const BASE = process.env.ATS_URL || 'http://localhost:8731/cv_ats.html';
 const OUT = process.env.ATS_OUT || path.resolve(__dirname, '..');
 
-const VARIANTS = [['marketing', 'Marketing'], ['project', 'Project']];
+const VARIANTS = [['marketing', 'Marketing'], ['project', 'Project'], ['moonpay', 'MoonPay']];
 const LANGS = [['es', 'ES'], ['en', 'EN']];
 
 (async () => {
