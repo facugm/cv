@@ -314,13 +314,30 @@
                   en: 'For project management, operations, and product roles' },
       roles: ['Digital Project Manager', 'Project Coordinator', 'Product Operations', 'Product Coordinator',
               'Implementation Specialist', 'Technical Project Manager', 'Customer Success', 'Solutions Consultant', 'Operations Coordinator'],
-      roleLine: { es: 'Project Management Digital · Coordinación Interdisciplinaria · Gestión de Stakeholders · Operaciones Digitales',
-                  en: 'Digital Project Management · Cross-functional Coordination · Stakeholder Management · Digital Operations' },
-      summary: { es: 'Licenciado en Comunicación Social por la Universidad Nacional de Rosario, orientado a project management digital, coordinación interdisciplinaria y gestión de stakeholders. Coordino proyectos digitales de principio a fin, articulando equipos de Producto, Tecnología, Diseño y Servicios, ordenando flujos de trabajo y mejorando procesos. Mi formación técnica y experiencia en desarrollo full-stack me permiten dialogar con equipos técnicos y traducir necesidades entre negocio, producto y tecnología.',
-                 en: 'Bachelor in Social Communication from the National University of Rosario, focused on digital project management, cross-functional coordination, and stakeholder management. I coordinate digital projects end to end, aligning Product, Technology, Design, and Services teams, organizing workflows, and improving processes. My technical background and hands-on full-stack development experience let me engage technical teams and translate needs between business, product, and technology.' },
+      roleLine: { es: 'Project Management Digital · Coordinación Interdisciplinaria · Gestión de Stakeholders · Comunicación',
+                  en: 'Digital Project Management · Cross-functional Coordination · Stakeholder Management · Communication' },
+      summary: { es: 'Licenciado en Comunicación Social por la Universidad Nacional de Rosario, orientado a project management digital, coordinación interdisciplinaria y gestión de stakeholders. Coordino proyectos digitales y creativos de principio a fin, articulando equipos de Producto, Tecnología, Diseño y Servicios, ordenando flujos de trabajo y mejorando procesos. Mi formación técnica y experiencia en desarrollo full-stack me permiten dialogar con equipos técnicos y traducir necesidades entre negocio, producto y tecnología.',
+                 en: 'Bachelor in Social Communication from the National University of Rosario, focused on digital project management, cross-functional coordination, and stakeholder management. I coordinate digital and creative projects end to end, aligning Product, Technology, Design, and Services teams, organizing workflows, and improving processes. My technical background and hands-on full-stack development experience let me engage technical teams and translate needs between business, product, and technology.' },
       sections: ['profile', 'experience', 'skills', 'projects', 'education', 'languages'],
       skillsOrder: ['pm', 'web', 'mkt', 'content', 'design', 'social'],
-      bulletOrder: { educativa: ['b4', 'b3', 'b5', 'b7', 'b1', 'b2', 'b6'] }
+      bulletOrder: { educativa: ['b4', 'b3', 'b5', 'b7', 'b1', 'b2', 'b6'] },
+      titleOverride: {
+        educativa: { es: 'Coordinación de Proyectos Digitales / Project Management — e-ducativa S.A.',
+                     en: 'Digital Project Coordination / Project Management — e-ducativa S.A.' }
+      },
+      // Copy of DATA.skills.pm with "metodología Kanban" widened to "metodologías ágiles (Kanban)".
+      // Keep in sync if DATA.skills.pm changes.
+      skillsOverride: {
+        pm: { label: { es: 'Project management y operaciones', en: 'Project management & operations' },
+              items: { es: 'coordinación de proyectos, gestión de stakeholders, colaboración interdisciplinaria, mejora de procesos, metodologías ágiles (Kanban), planificación, Trello, Google Workspace.',
+                       en: 'project coordination, stakeholder management, cross-functional collaboration, process improvement, Agile methodologies (Kanban), planning, Trello, Google Workspace.' } }
+      },
+      bulletsOverride: {
+        '3factor': {
+          b3: { es: 'Analicé métricas de alcance e interacción para optimizar el contenido y gestioné consultas comerciales y necesidades de clientes, articulando sus requerimientos con los objetivos de comunicación y negocio de la marca.',
+                en: 'Analyzed reach and engagement metrics to optimize content, and handled client commercial inquiries and needs, aligning their requirements with the brand’s communication and business goals.' }
+        }
+      }
     }
   };
 
@@ -371,7 +388,9 @@
   }
 
   function renderSkills(variant, lang) {
-    var list = variant.skillsCustom || variant.skillsOrder.map(function (key) { return DATA.skills[key]; });
+    var list = variant.skillsCustom || variant.skillsOrder.map(function (key) {
+      return (variant.skillsOverride && variant.skillsOverride[key]) || DATA.skills[key];
+    });
     return list.map(function (c) {
       return '<p class="skills-cat"><strong>' + esc(L(c.label, lang)) + ':</strong> ' + esc(L(c.items, lang)) + '</p>';
     }).join('');
