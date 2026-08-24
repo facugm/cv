@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>CV_Facundo I. García Mata</title>
-<meta name="description" content="CV PDF de Facundo Ignacio García Mata. Comunicador · Project Manager Digital · Productor Audiovisual. Vista A4 imprimible.">
+<meta name="description" content="CV PDF de Facundo Ignacio García Mata. Comunicador · Project Manager · Productor de contenidos audiovisuales. Vista A4 imprimible.">
 <meta name="author" content="Facundo Ignacio García Mata">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://facugm.github.io/cv/cv_pdf.html">
 <meta property="og:title" content="CV — Facundo Ignacio García Mata (PDF)">
-<meta property="og:description" content="Comunicador · Project Manager Digital · Productor Audiovisual. Versión A4 imprimible.">
+<meta property="og:description" content="Comunicador · Project Manager · Productor de contenidos audiovisuales. Versión A4 imprimible.">
 <meta property="og:image" content="https://facugm.github.io/cv/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,7 +23,7 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="CV — Facundo Ignacio García Mata (PDF)">
-<meta name="twitter:description" content="Comunicador · Project Manager Digital · Productor Audiovisual.">
+<meta name="twitter:description" content="Comunicador · Project Manager · Productor de contenidos audiovisuales.">
 <meta name="twitter:image" content="https://facugm.github.io/cv/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -559,23 +559,31 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   .toolbar { display: none !important; }
   .page {
     box-shadow: none;
+    /* El contenido ya no entra en una hoja: se pagina. Los margenes los
+       da @page (13mm/15mm) en TODAS las hojas; el padding built-in del
+       .page solo aplicaria en la primera, por eso se anula aca.
+       overflow visible: con height fija + hidden el pie se recortaba
+       en vez de pasar a la hoja siguiente. */
     width: 210mm;
     min-height: 0;
-    overflow: hidden;
-    /* padding mantiene margenes built-in incluso con @page margin:0 */
-    /* Colchón anti-recorte: el contenido queda al ras de 297mm y la
-       métrica de fuente varía entre navegadores/SO (una línea que
-       rinda 1-2px más alta recorta el pie). Caja local de 306mm con
-       zoom 0.97 = 296.8mm reales en papel: sigue siendo una sola
-       página, pero el contenido tiene 9mm de headroom antes de que
-       el overflow hidden lo recorte. */
-    height: 306mm;
+    height: auto;
+    padding: 6mm 15mm 13mm;   /* margenes built-in: @page va en margin:0 */
+    overflow: visible;
     zoom: 0.97;
-    margin: 0 auto;
-    overflow: hidden;
+    margin: 0;
     transform: none !important;     /* anular zoom-to-fit de mobile */
   }
   .exp-item, .project-item, .edu-item { page-break-inside: avoid; }
+  .section-header { break-after: avoid; page-break-after: avoid; }
+  .cv-footer { break-inside: auto; }
+  /* Corte de hoja explicito: con @page margin:0 el borde superior de la
+     hoja 2 no tiene margen propio, asi que se fuerza el salto en una
+     seccion conocida y se le da el aire arriba a mano. */
+  .section[data-id="proyectos-destacados"] {
+    break-before: page;
+    page-break-before: always;
+    padding-top: 13mm;
+  }
 }
 
 /* MOBILE — la hoja A4 (210mm) excede el viewport; se escala para entrar.
@@ -628,7 +636,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
   <!-- PERFIL -->
   <div class="section">
     <div class="section-header"><div class="section-title" data-i18n="sections.perfil">Perfil</div></div>
-    <p class="perfil-text" data-i18n="perfil.text">Licenciado en Comunicación Social con experiencia en project management digital, producción audiovisual, estrategia de contenidos y desarrollo web. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación.</p>
+    <p class="perfil-text" data-i18n="perfil.text">Soy Licenciado en Comunicación Social por la Universidad Nacional de Rosario (UNR). Gestiono proyectos, coordino equipos y áreas, y transformo ideas en contenidos y productos concretos: escaletas y programas en vivo, piezas audiovisuales, estrategias de comunicación y desarrollos digitales. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar cada proyecto desde la idea hasta la implementación. Fiel creyente de que los proyectos más ricos nacen en el cruce de lo interdisciplinar y lo colectivo.</p>
   </div>
 
   <!-- EXPERIENCIA -->
@@ -637,7 +645,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-title" data-i18n="exp.ggwp.title">Productor de Streaming</div>
+        <div class="exp-title" data-i18n="exp.ggwp.title">Productor de contenidos y streaming</div>
         <div class="exp-date" data-i18n="exp.ggwp.date">Abr 2026 – actualidad</div>
       </div>
       <div class="exp-subrow">
@@ -645,15 +653,18 @@ body { padding: 28px 0 60px; min-height: 100vh; }
         <a class="exp-link" href="https://www.instagram.com/ggwp.stream/" target="_blank">ver perfil de instagram</a>
       </div>
       <ul class="exp-bullets">
-        <li data-i18n="exp.ggwp.b1">Desarrollo y organizo la escaleta semanal del programa, definiendo bloques, temas, tiempos y dinámica del vivo junto al equipo de conducción.</li>
-        <li data-i18n="exp.ggwp.b2">Coordino la planificación de contenidos, recortes del programa y difusión de cada emisión junto a los equipos de redes y de diseño.</li>
-        <li data-i18n="exp.ggwp.b4">Gestiono entrevistas con referentes, desarrolladores e iniciativas vinculadas a la cultura gamer local.</li>
+        <li data-i18n="exp.ggwp.b1">Produzco y coordino un programa semanal de streaming sobre gaming y cultura digital: desarrollo la escaleta y defino bloques, temas, tiempos y dinámica del vivo junto al equipo de conducción.</li>
+        <li data-i18n="exp.ggwp.b2">Planifico los contenidos de cada emisión y coordino con los equipos de redes y de diseño el seguimiento de los recortes y piezas derivadas.</li>
+        <li data-i18n="exp.ggwp.b3">Reviso cada emisión al cierre para detectar highlights, ajustes de producción y oportunidades de contenido.</li>
+        <li data-i18n="exp.ggwp.b4">Gestiono entrevistas con desarrolladores, referentes e iniciativas de la cultura gamer: investigación previa, definición de temas y preguntas, y coordinación de la logística comunicacional.</li>
+        <li data-i18n="exp.ggwp.b5">Participo en la estrategia de comunicación y contenidos del proyecto y en coberturas de eventos del sector, coordinando las necesidades de producción para que cada cobertura se transforme después en contenidos para redes.</li>
+        <li data-i18n="exp.ggwp.b6">Trabajo sobre las emisiones y las piezas derivadas que alimentan la cuenta de Instagram del proyecto, que superó las 121.000 visualizaciones en los últimos 90 días.</li>
       </ul>
     </div>
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-title" data-i18n="exp.3f.title">Coordinación y Project Management Digital</div>
+        <div class="exp-title" data-i18n="exp.3f.title">Gestor de Comunicación</div>
         <div class="exp-date" data-i18n="exp.3f.date">Dic 2025 – actualidad</div>
       </div>
       <div class="exp-subrow">
@@ -661,14 +672,15 @@ body { padding: 28px 0 60px; min-height: 100vh; }
         <a class="exp-link" href="https://instagram.com/3factor.design" target="_blank">ver perfil de instagram</a>
       </div>
       <ul class="exp-bullets">
-        <li data-i18n="exp.3f.b1">Diseño la estrategia de comunicación y planifico la creación de los contenidos.</li>
-        <li data-i18n="exp.3f.b2">Gestiono las redes sociales y construyo el branding.</li>
+        <li data-i18n="exp.3f.b1">Diseño la estrategia de comunicación de la marca y planifico el calendario editorial a partir de sus objetivos comerciales.</li>
+        <li data-i18n="exp.3f.b2">Gestiono las redes sociales: produzco y publico contenido, analizo métricas de rendimiento y respondo consultas de clientes.</li>
+        <li data-i18n="exp.3f.b3">Construyo el branding: nombre, identidad visual y tono de la marca.</li>
       </ul>
     </div>
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-title" data-i18n="exp.educativa.title">Desarrollador Full Stack · Coordinador de proyectos digitales</div>
+        <div class="exp-title" data-i18n="exp.educativa.title">Coordinador de proyectos digitales · Desarrollador Full Stack</div>
         <div class="exp-date" data-i18n="exp.educativa.date">Sep 2022 – actualidad</div>
       </div>
       <div class="exp-subrow">
@@ -676,11 +688,11 @@ body { padding: 28px 0 60px; min-height: 100vh; }
         <a class="exp-link" href="https://www.educativa.com/" target="_blank">sitio oficial</a>
       </div>
       <ul class="exp-bullets">
-        <li data-i18n="exp.educativa.b4">Facilito la comunicación y la revisión de procesos entre áreas para ordenar consultas y sostener la continuidad del producto.</li>
-        <li data-i18n="exp.educativa.b2">Coordino el seguimiento semanal del producto con Tecnología, Servicios y Product Owner: avances, prioridades y bloqueos.</li>
-        <li data-i18n="exp.educativa.b5">Desarrollo mejoras internas para el uso de Claude y Claude Code en flujos de desarrollo y documentación funcional.</li>
-        <li data-i18n="exp.educativa.b3">Gestiono el tablero de trabajo en Trello, asegurando consistencia entre responsables, estados, tags y avance real de las tareas.</li>
-        <li data-i18n="exp.educativa.b1">Desarrollo y mantengo funcionalidades de uno de los productos insignia de una plataforma EdTech internacional.</li>
+        <li data-i18n="exp.educativa.b2">Asumo la coordinación operativa del producto: modero reuniones semanales con Tecnología, Servicios y Product Owner para revisar avances, prioridades, bloqueos y próximos pasos.</li>
+        <li data-i18n="exp.educativa.b4">Facilito la comunicación entre áreas para alinear criterios de trabajo, ordenar consultas y sostener la continuidad del producto durante una reorganización interna hacia flujos de trabajo asistidos por IA.</li>
+        <li data-i18n="exp.educativa.b3">Gestiono el seguimiento del flujo de trabajo en Trello y reviso procesos operativos junto a referentes de cada equipo, transformando fricciones entre áreas en criterios de acción compartidos.</li>
+        <li data-i18n="exp.educativa.b7">Actualizo la documentación funcional del producto y comunico mejoras internas para el uso de Claude y Claude Code en el equipo.</li>
+        <li data-i18n="exp.educativa.b1">Desarrollo y mantengo funcionalidades de uno de los productos insignia de una plataforma LMS multi-tenant con +2,5M de usuarios activos en 13 países y +600 clientes institucionales.</li>
       </ul>
     </div>
 
@@ -755,11 +767,28 @@ body { padding: 28px 0 60px; min-height: 100vh; }
           <span class="tool-tag">Trello</span>
           <span class="tool-tag">Google Workspace</span>
           <span class="tool-tag">Metodología Kanban</span>
+          <span class="tool-tag" data-i18n="tools.tag.projcoord">Coordinación de proyectos</span>
+          <span class="tool-tag" data-i18n="tools.tag.planning">Planificación</span>
+        </div>
+      </div>
+      <div>
+        <div class="tool-group-label" data-i18n="tools.comms">Comunicación y contenidos</div>
+        <div class="tool-tags">
+          <span class="tool-tag" data-i18n="tools.tag.commstrat">Comunicación estratégica</span>
+          <span class="tool-tag" data-i18n="tools.tag.digitalcomms">Comunicación digital</span>
+          <span class="tool-tag" data-i18n="tools.tag.contentstrat">Estrategia de contenidos</span>
+          <span class="tool-tag" data-i18n="tools.tag.contentprod">Producción de contenidos</span>
+          <span class="tool-tag" data-i18n="tools.tag.social">Social media</span>
+          <span class="tool-tag" data-i18n="tools.tag.branding">Branding</span>
+          <span class="tool-tag" data-i18n="tools.tag.script">Guion</span>
+          <span class="tool-tag" data-i18n="tools.tag.rundown">Escaleta</span>
+          <span class="tool-tag" data-i18n="tools.tag.interviews">Gestión de entrevistas</span>
         </div>
       </div>
       <div>
         <div class="tool-group-label" data-i18n="tools.av">Producción audiovisual</div>
         <div class="tool-tags">
+          <span class="tool-tag" data-i18n="tools.tag.streamprod">Producción de streaming</span>
           <span class="tool-tag">Adobe Premiere</span>
           <span class="tool-tag">Adobe Audition</span>
         </div>
@@ -775,24 +804,24 @@ body { padding: 28px 0 60px; min-height: 100vh; }
         </div>
       </div>
       <div>
-        <div class="tool-group-label" data-i18n="tools.web">Desarrollo web y tecnología</div>
-        <div class="tool-tags">
-          <span class="tool-tag">Perl</span>
-          <span class="tool-tag">JavaScript</span>
-          <span class="tool-tag">HTML/CSS</span>
-          <span class="tool-tag">SQL</span>
-          <span class="tool-tag">Wordpress</span>
-          <span class="tool-tag">Git</span>
-          <span class="tool-tag">Claude Code</span>
-        </div>
-      </div>
-      <div>
         <div class="tool-group-label" data-i18n="tools.social">Social media y plataformas</div>
         <div class="tool-tags">
           <span class="tool-tag">Instagram</span>
           <span class="tool-tag">LinkedIn</span>
           <span class="tool-tag">YouTube</span>
           <span class="tool-tag">Meta Business Suite</span>
+        </div>
+      </div>
+      <div>
+        <div class="tool-group-label" data-i18n="tools.web">Desarrollo web y tecnología</div>
+        <div class="tool-tags">
+          <span class="tool-tag">JavaScript</span>
+          <span class="tool-tag">HTML/CSS</span>
+          <span class="tool-tag">SQL</span>
+          <span class="tool-tag">Perl</span>
+          <span class="tool-tag">WordPress</span>
+          <span class="tool-tag">Git</span>
+          <span class="tool-tag">Claude Code</span>
         </div>
       </div>
     </div>
@@ -919,7 +948,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'ui.pdf-label': 'PDF Preview · A4',
       'slate.center': 'CV — Facundo I. García Mata',
 
-      'header.tagline': 'Project Management · Comunicación Estratégica · Producción Audiovisual',
+      'header.tagline': 'Project Management · Comunicación Estratégica · Contenidos Audiovisuales',
       'header.location': 'Rosario, Argentina',
 
       'sections.perfil': 'Perfil',
@@ -929,37 +958,36 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'sections.tools': 'Herramientas y conocimientos',
       'sections.languages': 'Idiomas',
 
-      'perfil.text': 'Soy Licenciado en Comunicación Social por la Universidad Nacional de Rosario (UNR) con experiencia en gestión de proyectos, planificación y producción estratégica de contenidos y desarrollo web full stack. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar proyectos desde la idea hasta la implementación. Fiel creyente de que los proyectos más ricos nacen en el cruce de lo interdisciplinar y lo colectivo.',
+      'perfil.text': 'Soy Licenciado en Comunicación Social por la Universidad Nacional de Rosario (UNR). Gestiono proyectos, coordino equipos y áreas, y transformo ideas en contenidos y productos concretos: escaletas y programas en vivo, piezas audiovisuales, estrategias de comunicación y desarrollos digitales. Combino mirada comunicacional, criterio narrativo y capacidad técnica para llevar cada proyecto desde la idea hasta la implementación. Fiel creyente de que los proyectos más ricos nacen en el cruce de lo interdisciplinar y lo colectivo.',
 
-      'exp.educativa.title': 'Desarrollador Full Stack · Coordinador de proyectos digitales',
+      'exp.educativa.title': 'Coordinador de proyectos digitales · Desarrollador Full Stack',
       'exp.educativa.date': 'Sep 2022 – actualidad',
-      'exp.educativa.b1': 'Desarrollo y mantengo funcionalidades de uno de los productos insignia de una plataforma EdTech internacional.',
-      'exp.educativa.b2': 'Coordino el seguimiento semanal del producto con Tecnología, Servicios y Product Owner: avances, prioridades y bloqueos.',
-      'exp.educativa.b3': 'Gestiono el tablero de trabajo en Trello, asegurando consistencia entre responsables, estados, tags y avance real de las tareas.',
-      'exp.educativa.b4': 'Facilito la comunicación y la revisión de procesos entre áreas para ordenar consultas y sostener la continuidad del producto.',
-      'exp.educativa.b5': 'Desarrollo mejoras internas para el uso de Claude y Claude Code en flujos de desarrollo y documentación funcional.',
+      'exp.educativa.b1': 'Desarrollo y mantengo funcionalidades de uno de los productos insignia de una plataforma LMS multi-tenant con +2,5M de usuarios activos en 13 países y +600 clientes institucionales.',
+      'exp.educativa.b2': 'Asumo la coordinación operativa del producto: modero reuniones semanales con Tecnología, Servicios y Product Owner para revisar avances, prioridades, bloqueos y próximos pasos.',
+      'exp.educativa.b3': 'Gestiono el seguimiento del flujo de trabajo en Trello y reviso procesos operativos junto a referentes de cada equipo, transformando fricciones entre áreas en criterios de acción compartidos.',
+      'exp.educativa.b4': 'Facilito la comunicación entre áreas para alinear criterios de trabajo, ordenar consultas y sostener la continuidad del producto durante una reorganización interna hacia flujos de trabajo asistidos por IA.',
 
       'exp.3f.title': 'Gestor de Comunicación',
       'exp.3f.date': 'Dic 2025 – actualidad',
       'exp.3f.org': '<strong>3Factor Design</strong>',
-      'exp.3f.b1': 'Diseño la estrategia de comunicación y planifico la creación de los contenidos.',
-      'exp.3f.b2': 'Gestiono las redes sociales y construyo el branding.',
+      'exp.3f.b1': 'Diseño la estrategia de comunicación de la marca y planifico el calendario editorial a partir de sus objetivos comerciales.',
+      'exp.3f.b2': 'Gestiono las redes sociales: produzco y publico contenido, analizo métricas de rendimiento y respondo consultas de clientes.',
       'exp.3f.b3': 'Construyo el branding: nombre, identidad visual y tono de la marca.',
       'exp.3f.pills.branding': 'Branding',
       'exp.3f.pills.social': 'Social media',
       'exp.3f.pills.strategy': 'Estrategia de contenidos',
 
-      'exp.ggwp.title': 'Productor',
+      'exp.ggwp.title': 'Productor de contenidos y streaming',
       'exp.ggwp.date': 'Abr 2026 – actualidad',
       'exp.ggwp.org': '<strong>GGWP</strong>',
-      'exp.ggwp.b1': 'Desarrollo y organizo la escaleta semanal del programa, definiendo bloques, temas, tiempos y dinámica del vivo junto al equipo de conducción.',
-      'exp.ggwp.b2': 'Coordino la planificación de contenidos, recortes del programa y difusión de cada emisión junto a los equipos de redes y de diseño.',
-      'exp.ggwp.b3': 'Realizo la revisión posterior de cada emisión, identificando highlights, ajustes y momentos clipeables.',
-      'exp.ggwp.b4': 'Gestiono entrevistas con referentes, desarrolladores e iniciativas vinculadas a la cultura gamer local.',
+      'exp.ggwp.b1': 'Produzco y coordino un programa semanal de streaming sobre gaming y cultura digital: desarrollo la escaleta y defino bloques, temas, tiempos y dinámica del vivo junto al equipo de conducción.',
+      'exp.ggwp.b2': 'Planifico los contenidos de cada emisión y coordino con los equipos de redes y de diseño el seguimiento de los recortes y piezas derivadas.',
+      'exp.ggwp.b3': 'Reviso cada emisión al cierre para detectar highlights, ajustes de producción y oportunidades de contenido.',
+      'exp.ggwp.b4': 'Gestiono entrevistas con desarrolladores, referentes e iniciativas de la cultura gamer: investigación previa, definición de temas y preguntas, y coordinación de la logística comunicacional.',
       'exp.ggwp.pills.streaming': 'Streaming en vivo',
       'exp.ggwp.pills.rundown': 'Escaleta',
-      'exp.ggwp.pills.booking': 'Booking',
-      'exp.ggwp.pills.coord': 'Coordinación de equipo',
+      'exp.ggwp.pills.booking': 'Entrevistas',
+      'exp.ggwp.pills.coord': 'Coordinación de producción',
 
       'proj.sie7e.meta': '<strong>Proyecto final de grado</strong> · Convocatoria XperienciaUNR',
       'proj.sie7e.b1': 'Dispositivo educativo de memorial local y experiencia interactiva de realidad aumentada que articula narrativa transmedia, archivo y testimonios.',
@@ -1013,7 +1041,21 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'langs.fr.name': 'Francés',
       'langs.fr.level': 'Básico',
       'langs.de.name': 'Alemán',
-      'langs.de.level': 'Básico'
+      'langs.de.level': 'Básico',
+      'exp.ggwp.b5': 'Participo en la estrategia de comunicación y contenidos del proyecto y en coberturas de eventos del sector, coordinando las necesidades de producción para que cada cobertura se transforme después en contenidos para redes.',
+      'exp.ggwp.b6': 'Trabajo sobre las emisiones y las piezas derivadas que alimentan la cuenta de Instagram del proyecto, que superó las 121.000 visualizaciones en los últimos 90 días.',
+      'exp.ggwp.pills.content': 'Planificación de contenidos',
+      'exp.3f.pills.editorial': 'Planificación editorial',
+      'exp.educativa.b7': 'Actualizo la documentación funcional del producto y comunico mejoras internas para el uso de Claude y Claude Code en el equipo.',
+      'tools.tag.projcoord': 'Coordinación de proyectos',
+      'tools.tag.commstrat': 'Comunicación estratégica',
+      'tools.tag.digitalcomms': 'Comunicación digital',
+      'tools.tag.contentprod': 'Producción de contenidos',
+      'tools.tag.social': 'Social media',
+      'tools.tag.script': 'Guion',
+      'tools.tag.rundown': 'Escaleta',
+      'tools.tag.interviews': 'Gestión de entrevistas',
+      'tools.tag.streamprod': 'Producción de streaming',
     },
     en: {
       'ui.expand-all': '▾ Expand all',
@@ -1033,7 +1075,7 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'ui.pdf-label': 'PDF Preview · A4',
       'slate.center': 'CV — Facundo I. García Mata',
 
-      'header.tagline': 'Project Management · Strategic Communication · Audiovisual Production',
+      'header.tagline': 'Project Management · Strategic Communication · Audiovisual Content',
       'header.location': 'Rosario, Argentina',
 
       'sections.perfil': 'Profile',
@@ -1043,37 +1085,36 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'sections.tools': 'Tools & skills',
       'sections.languages': 'Languages',
 
-      'perfil.text': 'I hold a degree in Social Communication from the National University of Rosario (UNR), with experience in project management, planning and strategic content production, and full stack web development. I combine a communications mindset, narrative judgment, and technical capability to carry projects from idea to implementation. A firm believer that the richest projects are born at the intersection of the interdisciplinary and the collective.',
+      'perfil.text': 'I hold a degree in Social Communication from the National University of Rosario (UNR). I manage projects, coordinate teams and areas, and turn ideas into concrete content and products: rundowns and live shows, audiovisual pieces, communication strategies, and digital builds. I combine a communications mindset, narrative judgment, and technical capability to carry each project from idea to implementation. A firm believer that the richest projects are born at the intersection of the interdisciplinary and the collective.',
 
-      'exp.educativa.title': 'Full Stack Developer · Digital Project Coordinator',
+      'exp.educativa.title': 'Digital Project Coordinator · Full Stack Developer',
       'exp.educativa.date': 'Sep 2022 – present',
-      'exp.educativa.b1': 'Build and maintain features for one of the flagship products of an international EdTech platform.',
-      'exp.educativa.b2': 'Coordinate weekly product follow-up with Technology, Services and the Product Owner: progress, priorities and blockers.',
-      'exp.educativa.b3': 'Manage Trello workflow tracking, ensuring consistency across owners, statuses, tags and actual task progress.',
-      'exp.educativa.b4': 'Facilitate cross-functional communication and process review to organize requests and support product continuity.',
-      'exp.educativa.b5': 'Develop internal improvements for the use of Claude and Claude Code in development workflows and documentation.',
+      'exp.educativa.b1': 'Build and maintain features for one of the flagship products of a multi-tenant LMS platform with +2.5M active users across 13 countries and +600 institutional clients.',
+      'exp.educativa.b2': 'I take on operational coordination of the product: I facilitate weekly meetings with Technology, Services and the Product Owner to review progress, priorities, blockers and next steps.',
+      'exp.educativa.b3': 'I manage workflow tracking in Trello and review operational processes with each team’s stakeholders, turning cross-area friction into clearer shared action criteria.',
+      'exp.educativa.b4': 'Facilitate cross-functional communication to align working criteria, organize product-related requests and support continuity during an internal shift toward AI-assisted workflows.',
 
       'exp.3f.title': 'Communication Manager',
       'exp.3f.date': 'Dec 2025 – present',
       'exp.3f.org': '<strong>3Factor Design</strong>',
-      'exp.3f.b1': 'I design the communication strategy and plan content creation.',
-      'exp.3f.b2': 'I manage social media and build the branding.',
+      'exp.3f.b1': 'I design the brand’s communication strategy and plan the editorial calendar based on its commercial goals.',
+      'exp.3f.b2': 'I manage social media: I produce and publish content, analyze performance metrics, and respond to client inquiries.',
       'exp.3f.b3': 'I build the branding: name, visual identity, and brand voice.',
       'exp.3f.pills.branding': 'Branding',
       'exp.3f.pills.social': 'Social media',
       'exp.3f.pills.strategy': 'Content strategy',
 
-      'exp.ggwp.title': 'Producer',
+      'exp.ggwp.title': 'Content & Streaming Producer',
       'exp.ggwp.date': 'Apr 2026 – present',
       'exp.ggwp.org': '<strong>GGWP</strong>',
-      'exp.ggwp.b1': 'I develop and organize the show’s weekly rundown, defining blocks, topics, timing, and the live dynamic together with the hosting team.',
-      'exp.ggwp.b2': 'I coordinate content planning, show clips, and the promotion of each broadcast together with the social media and design teams.',
-      'exp.ggwp.b3': 'I run the post-broadcast review of each episode, identifying highlights, adjustments, and clippable moments.',
-      'exp.ggwp.b4': 'I manage interviews with industry figures, developers, and initiatives tied to the local gaming culture.',
+      'exp.ggwp.b1': 'I produce and coordinate a weekly streaming show on gaming and digital culture: I build the rundown and define blocks, topics, timing, and the live dynamic together with the hosting team.',
+      'exp.ggwp.b2': 'I plan the content for each broadcast and coordinate the follow-up of clips and derivative pieces with the social media and design teams.',
+      'exp.ggwp.b3': 'I review each broadcast afterwards to spot highlights, production adjustments, and content opportunities.',
+      'exp.ggwp.b4': 'I manage interviews with developers, industry figures, and gaming-culture initiatives: background research, topic and question design, and communication logistics.',
       'exp.ggwp.pills.streaming': 'Live streaming',
       'exp.ggwp.pills.rundown': 'Rundown',
-      'exp.ggwp.pills.booking': 'Booking',
-      'exp.ggwp.pills.coord': 'Team coordination',
+      'exp.ggwp.pills.booking': 'Interviews',
+      'exp.ggwp.pills.coord': 'Production coordination',
 
       'proj.sie7e.meta': '<strong>Final degree project</strong> · XperienciaUNR open call',
       'proj.sie7e.b1': 'Educational local memorial device and interactive augmented reality experience weaving transmedia narrative, archive, and testimonies.',
@@ -1127,7 +1168,21 @@ body { padding: 28px 0 60px; min-height: 100vh; }
       'langs.fr.name': 'French',
       'langs.fr.level': 'Basic',
       'langs.de.name': 'German',
-      'langs.de.level': 'Basic'
+      'langs.de.level': 'Basic',
+      'exp.ggwp.b5': 'I take part in the project’s communication and content strategy and in coverage of industry events, coordinating production needs so each coverage can later become social media content.',
+      'exp.ggwp.b6': 'I work on the broadcasts and derivative pieces that feed the project’s Instagram account, which passed 121,000 views over the last 90 days.',
+      'exp.ggwp.pills.content': 'Content planning',
+      'exp.3f.pills.editorial': 'Editorial planning',
+      'exp.educativa.b7': 'I update the product’s functional documentation and share internal improvements for the team’s use of Claude and Claude Code.',
+      'tools.tag.projcoord': 'Project coordination',
+      'tools.tag.commstrat': 'Strategic communication',
+      'tools.tag.digitalcomms': 'Digital communication',
+      'tools.tag.contentprod': 'Content production',
+      'tools.tag.social': 'Social media',
+      'tools.tag.script': 'Scriptwriting',
+      'tools.tag.rundown': 'Rundown',
+      'tools.tag.interviews': 'Interview management',
+      'tools.tag.streamprod': 'Stream production',
     }
   };
 
