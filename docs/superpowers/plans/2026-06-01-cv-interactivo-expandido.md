@@ -569,7 +569,7 @@ Después del cierre `</div></div>` de la sección `idiomas` (~979) y antes de `<
       <div class="contact-line"><span class="contact-k" data-i18n="contact.email">Email</span><a href="mailto:figarciamata@gmail.com">figarciamata@gmail.com</a></div>
       <div class="contact-line"><span class="contact-k">LinkedIn</span><a href="https://www.linkedin.com/in/facundogm/" target="_blank" rel="noopener">linkedin.com/in/facundogm</a></div>
       <div class="contact-line"><span class="contact-k" data-i18n="contact.location">Ubicación</span><span data-i18n="contact.city">Rosario, Argentina</span></div>
-      <div class="contact-line"><span class="contact-k" data-i18n="contact.links">Links</span><a href="sie7e/" target="_blank" rel="noopener">Sie7e</a> · <a href="https://www.instagram.com/ggwp.stream/" target="_blank" rel="noopener">GGWP</a></div>
+      <div class="contact-line"><span class="contact-k" data-i18n="contact.links">Links</span><a href="sie7e/" target="_blank" rel="noopener">Sie7e</a> · <a href="https://www.instagram.com/ggwpstream/" target="_blank" rel="noopener">GGWP</a></div>
     </div>
   </div></div>
 ```
