@@ -326,6 +326,69 @@
                 en: 'Analyzed reach and engagement metrics to optimize content, and handled client commercial inquiries and needs, aligning their requirements with the brand’s communication and business goals.' }
         }
       }
+    },
+    // Adaptación quirúrgica de `project` para Alma (Project Manager Digital, agencia / pauta).
+    // Misma experiencia y skills; sólo cambia perfil, orden de bullets y redacción de algunos.
+    // NO agrega paid media / Ads / performance: no hay experiencia real que lo respalde.
+    alma: {
+      pdfBase: 'Alma',
+      name: { es: 'Project Manager Digital (Alma)', en: 'Digital Project Manager (Alma)' },
+      forRoles: { es: 'Adaptación del ATS Project para la búsqueda Project Manager Digital — Alma',
+                  en: 'ATS Project adaptation for the Digital Project Manager role at Alma' },
+      roles: ['Project Manager Digital', 'Coordinación de Proyectos', 'Gestión de Clientes', 'Marketing Digital', 'Comunicación Digital'],
+      roleLine: { es: 'Project Manager Digital · Coordinación de Proyectos · Gestión de Clientes y Stakeholders · Comunicación',
+                  en: 'Digital Project Manager · Project Coordination · Client & Stakeholder Management · Communication' },
+      summary: { es: 'Licenciado en Comunicación Social por la Universidad Nacional de Rosario, con experiencia en project management digital, coordinación interdisciplinaria y gestión de clientes y stakeholders. Coordino proyectos digitales y creativos de principio a fin: planifico, organizo tareas, hago seguimiento de prioridades, avances y bloqueos, y articulo equipos de Producto, Tecnología, Diseño y Servicios para cumplir objetivos y mejorar procesos. Trabajo con calendarios editoriales, contenidos, métricas e indicadores para optimizar la comunicación digital según las necesidades de cada cliente. Mi formación técnica es un diferencial para entender entornos digitales y conectar negocio, comunicación y tecnología.',
+                 en: 'Bachelor in Social Communication from the National University of Rosario, with experience in digital project management, cross-functional coordination, and client and stakeholder management. I coordinate digital and creative projects end to end: planning, organizing tasks, tracking priorities, progress, and blockers, and aligning Product, Technology, Design, and Services teams to meet goals and improve processes. I work with editorial calendars, content, metrics, and KPIs to optimize digital communication around each client’s needs. My technical background is a differentiator for understanding digital environments and connecting business, communication, and technology.' },
+      sections: ['profile', 'experience', 'skills', 'projects', 'education', 'languages'],
+      skillsOrder: ['pm', 'comms', 'av', 'design', 'social', 'web'],
+      bulletOrder: {
+        educativa: ['b4', 'b5', 'b3', 'b1', 'b2', 'b6', 'b7'],
+        '3factor': ['b1', 'b3', 'b2', 'b4'],
+        ggwp: ['b1', 'b2', 'b4', 'b3', 'b5', 'b6']
+      },
+      titleOverride: {
+        educativa: { es: 'Coordinación de Proyectos Digitales / Project Management — e-ducativa S.A.',
+                     en: 'Digital Project Coordination / Project Management — e-ducativa S.A.' }
+      },
+      skillsOverride: {
+        pm: { label: { es: 'Project management y coordinación', en: 'Project management & coordination' },
+              items: { es: 'coordinación de proyectos digitales, planificación, seguimiento de tareas y prioridades, gestión de clientes y stakeholders, colaboración interdisciplinaria, mejora de procesos, metodologías ágiles (Kanban), Trello, Google Workspace.',
+                       en: 'digital project coordination, planning, task and priority tracking, client and stakeholder management, cross-functional collaboration, process improvement, Agile methodologies (Kanban), Trello, Google Workspace.' } },
+        comms: { label: { es: 'Comunicación y contenidos', en: 'Communication & content' },
+                 items: { es: 'comunicación estratégica, comunicación digital, marketing digital, estrategia de contenidos, producción de contenidos, calendario editorial, análisis de métricas e indicadores, social media, branding, gestión de marca, guion, escaleta, gestión de entrevistas, community management, email marketing, newsletter.',
+                          en: 'strategic communication, digital communication, digital marketing, content strategy, content production, editorial calendar, metrics and KPI analysis, social media, branding, brand management, scriptwriting, rundown, interview management, community management, email marketing, newsletter.' } }
+      },
+      bulletsOverride: {
+        educativa: {
+          b4: { es: 'Coordiné y moderé reuniones semanales de seguimiento con Tecnología, Servicios y Product Owner: revisión de avances, prioridades, bloqueos y próximos pasos.',
+                en: 'Coordinated and facilitated weekly follow-up meetings with Technology, Services, and the Product Owner: reviewing progress, priorities, blockers, and next steps.' },
+          b5: { es: 'Gestioné el flujo de trabajo y el seguimiento de tareas en Trello (Kanban) para equipos multidisciplinarios —responsables, estados y prioridades— y revisé y mejoré procesos operativos junto a referentes de cada equipo.',
+                en: 'Managed workflow and task tracking in Trello (Kanban) for cross-functional teams —owners, statuses, and priorities— and reviewed and improved operational processes with each team’s stakeholders.' },
+          b3: { es: 'Articulé la coordinación entre Producto, Tecnología, Diseño y Servicios, traduciendo necesidades entre equipos y manteniendo las iniciativas alineadas con los objetivos.',
+                en: 'Coordinated across Product, Technology, Design, and Services, translating needs between teams and keeping initiatives aligned with goals.' },
+          b1: { es: 'Coordiné el rediseño y lanzamiento del sitio web corporativo (WordPress) junto a una diseñadora gráfica, articulando comunicación, estructura de contenidos e implementación desde la idea hasta la entrega.',
+                en: 'Coordinated the redesign and launch of the corporate website (WordPress) alongside a graphic designer, aligning communication, content structure, and implementation from idea to delivery.' },
+          b7: { es: 'Actualicé documentación funcional y wikis de producto y participé en el desarrollo de funcionalidades de la plataforma EdTech (2,5M+ usuarios, 13 países, 600+ clientes institucionales), además de mejoras internas para el uso de Claude Code en el equipo.',
+                en: 'Updated functional documentation and product wikis and took part in feature development on the EdTech platform (2.5M+ users, 13 countries, 600+ institutional clients), plus internal improvements for the team’s use of Claude Code.' }
+        },
+        '3factor': {
+          b1: { es: 'Planifiqué la estrategia de comunicación digital de la marca, articulando identidad, calendario editorial, contenidos y objetivos comerciales.',
+                en: 'Planned the brand’s digital communication strategy, aligning identity, editorial calendar, content, and commercial goals.' },
+          b3: { es: 'Analicé métricas de alcance e interacción como indicadores de rendimiento y propuse ajustes para mejorarlos; gestioné consultas comerciales y necesidades de clientes, alineando sus requerimientos con los objetivos de comunicación y negocio.',
+                en: 'Analyzed reach and engagement metrics as performance indicators and proposed adjustments to improve them; handled client commercial inquiries and needs, aligning their requirements with communication and business goals.' },
+          b2: { es: 'Gestioné las redes sociales: produje contenido, definí y cumplí el calendario de publicaciones y dinamicé la comunidad.',
+                en: 'Managed social media: produced content, set and delivered on the publishing calendar, and grew community engagement.' }
+        },
+        ggwp: {
+          b2: { es: 'Planifiqué los contenidos de cada emisión sobre una planificación semanal y coordiné con los equipos de redes y diseño el seguimiento de los recortes y piezas derivadas.',
+                en: 'Planned the content for each broadcast on a weekly schedule and coordinated the follow-up of clips and derivative pieces with the social media and design teams.' },
+          b4: { es: 'Gestioné entrevistas con desarrolladores, referentes e iniciativas de la cultura gamer: investigación previa, definición de temas y preguntas, y coordinación con invitados y stakeholders.',
+                en: 'Managed interviews with developers, industry figures, and gaming-culture initiatives: background research, topic and question design, and coordination with guests and stakeholders.' },
+          b6: { es: 'Trabajé sobre las emisiones y las piezas derivadas que alimentan la cuenta de Instagram del proyecto, siguiendo sus métricas: superó las 121.000 visualizaciones en los últimos 90 días.',
+                en: 'Worked on the broadcasts and derivative pieces that feed the project’s Instagram account, tracking its metrics: it passed 121,000 views over the last 90 days.' }
+        }
+      }
     }
   };
 
