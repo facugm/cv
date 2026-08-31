@@ -15,7 +15,7 @@ const EXEC = process.env.PW_CHROME || '/var/www/educativa/.cache/ms-playwright/c
 const BASE = process.env.ATS_URL || 'http://localhost:8731/cv_ats.html';
 const OUT = process.env.ATS_OUT || path.resolve(__dirname, '..');
 
-const ALL = [['marketing', 'Marketing'], ['project', 'Project'], ['moonpay', 'MoonPay'], ['alma', 'Alma']];
+const ALL = [['marketing', 'Marketing'], ['project', 'Project'], ['moonpay', 'MoonPay'], ['alma', 'Alma'], ['canonical', 'Canonical']];
 // ATS_ONLY=alma,project → sólo esas variantes
 const VARIANTS = process.env.ATS_ONLY ? ALL.filter(v => process.env.ATS_ONLY.split(',').includes(v[0])) : ALL;
 const LANGS = [['es', 'ES'], ['en', 'EN']];
