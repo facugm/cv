@@ -31,6 +31,14 @@ Todo vive en el bloque `<script>` de `cv_ats.html`:
   - `skillsOrder` — orden de las categorías de skills (las categorías no cambian, sólo el orden)
   - `bulletOrder` — orden de los bullets **por puesto** (mismos bullets, distinto orden)
   - `roles`, `name`, `forRoles`, `pdfBase` — metadatos para el selector y el nombre del PDF
+  - Opcionales (overrides de redacción, nunca de hechos):
+    - `titleOverride` / `bulletsOverride` / `skillsOverride` / `skillsCustom` — reescriben textos por puesto o categoría
+    - `langs` — idiomas disponibles (ej. `['en']`); el router fuerza el primero y el selector sólo muestra esos botones
+    - `contact` — línea de contacto propia
+    - `headings` — renombra secciones (ej. `skills` → "Tools")
+    - `competencies` + sección `'competencies'` en `sections` — bloque de competencias clave
+    - `expContext` — línea de contexto en cursiva bajo un puesto (ej. descripción de la empresa)
+    - `projectsCustom` — reemplaza la lista de proyectos de `DATA`
 
 > Regla de oro: la experiencia subyacente es **la misma**. Una variante nunca inventa,
 > agrega ni quita responsabilidades — sólo cambia qué se muestra primero.
@@ -52,6 +60,10 @@ Sin `?v` → selector. `lang` cae a `localStorage.cv_lang` y luego a `es`.
 - **`project`** — Project Management & Operations. Prioridad: project management →
   coordinación interdisciplinaria → stakeholders → procesos → producto → tecnología →
   comunicación. La tecnología sube como diferencial sin volverse un CV de developer.
+- **`moonpay`**, **`alma`**, **`canonical`** — adaptaciones por búsqueda (ver comentarios en `VARIANTS`).
+- **`scrl`** — Creative Producer (Freelance Creative Producer LATAM, SCRL). Sólo EN. Creative/Content
+  Producer primero; SaaS y coordinación como diferenciales. Sin paid social, Meta Ads, UGC,
+  influencers, After Effects, portugués ni mercado mexicano. Métrica de Instagram marcada orgánica.
 
 ## Agregar una variante nueva (ej. Audiovisual, Customer Success)
 

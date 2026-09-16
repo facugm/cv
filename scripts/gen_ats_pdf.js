@@ -15,7 +15,8 @@ const EXEC = process.env.PW_CHROME || '/var/www/educativa/.cache/ms-playwright/c
 const BASE = process.env.ATS_URL || 'http://localhost:8731/cv_ats.html';
 const OUT = process.env.ATS_OUT || path.resolve(__dirname, '..');
 
-const ALL = [['marketing', 'Marketing'], ['project', 'Project'], ['moonpay', 'MoonPay'], ['alma', 'Alma'], ['canonical', 'Canonical']];
+// Tercer elemento opcional: idiomas de la variante (debe coincidir con `langs` en cv_ats.html).
+const ALL = [['marketing', 'Marketing'], ['project', 'Project'], ['moonpay', 'MoonPay'], ['alma', 'Alma'], ['canonical', 'Canonical'], ['scrl', 'SCRL', ['en']]];
 // ATS_ONLY=alma,project → sólo esas variantes
 const VARIANTS = process.env.ATS_ONLY ? ALL.filter(v => process.env.ATS_ONLY.split(',').includes(v[0])) : ALL;
 const LANGS = [['es', 'ES'], ['en', 'EN']];
@@ -23,8 +24,8 @@ const LANGS = [['es', 'ES'], ['en', 'EN']];
 (async () => {
   const browser = await chromium.launch({ executablePath: EXEC });
   const page = await (await browser.newContext()).newPage();
-  for (const [v, vName] of VARIANTS) {
-    for (const [lang, lName] of LANGS) {
+  for (const [v, vName, only] of VARIANTS) {
+    for (const [lang, lName] of LANGS.filter(l => !only || only.includes(l[0]))) {
       await page.goto(`${BASE}?v=${v}&lang=${lang}`, { waitUntil: 'networkidle' });
       await page.emulateMedia({ media: 'print' });
       const name = `ATS ${vName} ${lName}.pdf`;
