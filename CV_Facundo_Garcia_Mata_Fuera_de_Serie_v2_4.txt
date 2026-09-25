@@ -1,0 +1,250 @@
+Facundo Ignacio
+García Mata
+
+COMUNICACIÓN · TECNOLOGÍA · PRODUCTO · PROJECT MANAGEMENT · IA
+
+Rosario, Argentina · figarciamata@gmail.com · linkedin.com/in/facundogm · Disponibilidad full time
+
+PERFIL
+
+Técnico en Informática y Licenciado en Comunicación Social (UNR). Trabajo entre tecnología, producto, gestión de proyectos y comunicación. En e-ducativa, un LMS con más de 2,5 millones de usuarios, coordino áreas y desarrollo funcionalidades; en paralelo produzco un programa semanal de streaming y gestiono la comunicación de un estudio de diseño. Mi proyecto final de grado, una experiencia de realidad aumentada sobre memoria local, fue seleccionado en XperienciaUNR 2025. Integro IA de forma cotidiana para investigar, construir, verificar y mejorar procesos.
+
+RECORRIDO
+
+2013
+
+INFORMÁTICA
+
+Tecnicatura: programación, redes y sistemas.
+
+2020
+
+COMUNICACIÓN
+
+Licenciatura en la UNR.
+
+2022
+
+DESARROLLO
+
+Full stack sobre un LMS en producción.
+
+2022
+
+GESTIÓN
+
+Coordinación entre Tecnología, Servicios y Producto.
+
+2025
+
+AUDIOVISUAL
+
+Documental: dirección, guion y edición.
+
+2025
+
+TRANSMEDIA
+
+Archivo, testimonios y realidad aumentada.
+
+2026
+
+STREAMING
+
+Producción semanal en vivo.
+
+2026
+
+IA
+
+Herramientas y workflows para el equipo.
+
+No fui cambiando de perfil: fui acumulando capacidades.
+
+TRES DECISIONES QUE TOMÉ
+Diseñar la verificación, no confiar en la primera respuesta
+
+Para diagnosticar bugs de producción, diseñé un workflow donde distintas instancias generan, cuestionan y contrastan hipótesis antes de validar una causa raíz. Empezó con dos agentes que discutían hasta coincidir; hoy son 7 hipótesis en paralelo con perspectivas escépticas, disponibles como comando del equipo.
+
+e-ducativa · 2026
+
+El cuello de botella era mi lectura
+
+Al validar especificaciones con cientos de ítems, la herramienta proponía sumar agentes. El límite real era mi capacidad de revisar los resultados con criterio. No agregué complejidad: incorporé una herramienta para releer sólo lo que cambió.
+
+Reingeniería del LMS · 2026
+
+Una historia con profundidad antes que ocho en superficie
+
+Con plazo corto y fuentes escasas, propuse un prototipo con una sola biografía completa y una arquitectura que permitiera sumar las demás sin rediseñar la pieza.
+
+Sie7e Memorias Desde La Sombra · 2025
+
+Facundo Ignacio García Mata
+CV · Programa de Talento Digital 2026
+1 / 4
+
+EXPERIENCIA PROFESIONAL
+e-ducativa S.A.
+
+Coordinación de proyectos digitales + Desarrollo Full Stack
+
+Sep 2022 – actualidad · Rosario, Argentina
+
+Plataforma LMS multi-tenant: +2,5 millones de usuarios, 13 países, +600 clientes institucionales.
+
+Coordino proyectos digitales: seguimiento semanal entre Tecnología, Servicios y Product Owner, con prioridades, bloqueos, próximos pasos y flujo de trabajo en Trello.
+Acompaño la continuidad del producto durante una reorganización interna hacia flujos de trabajo asistidos por IA, revisando procesos con referentes de cada área.
+Coordino la comunicación de producto: newsletter mensual con novedades de Producto, Tecnología y Servicios, documentación funcional y wikis. Coordiné el rediseño del sitio web corporativo junto a una diseñadora gráfica.
+Diseñé y mantengo la capa de herramientas de IA del equipo de desarrollo: skills, 6 agentes especializados y comandos para diagnosticar y validar bugs.
+Desarrollo y mantengo funcionalidades de uno de los productos insignia, sobre un sistema legado en producción: base de datos, backend y frontend (Perl, SQL, JavaScript, HTML/CSS).
+CASOS DESTACADOS
+Sección análisis de espacio en disco: reporte de almacenamiento para clientes, de punta a punta: planificación, implementación con el feedback del diseñador, verificación visual y wiki funcional.
+Tutor IA: migración del asistente del producto de la API Assistants de OpenAI a Responses, con control de deprecación y avisos en 19 idiomas.
+Reingeniería del LMS: validación de especificaciones de un módulo legado con agentes y revisión humana (detalle en Proyectos).
+3Factor Design
+
+Gestor de Comunicación
+
+Dic 2025 – actualidad · Rosario, Argentina
+
+Coordiné el desarrollo de la marca desde su lanzamiento, articulando identidad, tono comunicacional y presentación comercial.
+Diseño la estrategia de comunicación y el calendario editorial a partir de los objetivos comerciales del estudio.
+Produzco y publico contenido, analizo métricas de alcance e interacción para ajustarlo y atiendo consultas de clientes.
+GGWP (MargaTV)
+
+Productor de contenidos y streaming
+
+Abr 2026 – actualidad · Rosario, Argentina
+
+Instagram (orgánico): 139.000+ espectadores · 237.000+ reproducciones de reels · 3.400+ compartidos
+
+Produzco y coordino un programa semanal en vivo sobre gaming y cultura digital: escaleta, bloques, tiempos, dinámica del vivo y coordinación de piezas derivadas con redes y diseño.
+Preparo entrevistas con desarrolladores y referentes de la industria: investigación previa, temas, preguntas y logística.
+Coordino las necesidades de producción de coberturas de eventos del sector para convertirlas en contenido, y reviso cada emisión al cierre para ajustar la siguiente.
+Facundo Ignacio García Mata
+Experiencia
+2 / 4
+
+PROYECTOS QUE CRUZAN DISCIPLINAS
+Sie7e Memorias Desde La Sombra
+Feb 2025 – May 2026
+
+Narrativa transmedia y realidad aumentada · XperienciaUNR 2025 (LET-UNR)
+
+PROBLEMA
+Las historias de siete víctimas del 19 y 20 de diciembre de 2001 en Rosario quedaron a la sombra del relato institucional.
+SOLUCIÓN
+Un dispositivo híbrido de memoria local: paneles impresos y una capa de realidad aumentada que se activa desde cualquier celular y abre la biografía multimedia de cada víctima, con archivo y testimonios.
+MI ROL
+Autor de la obra, gestión del proyecto y producción de contenidos, en un equipo de seis personas de comunicación, diseño y desarrollo.
+Planificación semanal, responsabilidades por área y validación de los entregables de Diseño y Desarrollo.
+Vínculo con la Biblioteca Popular Pocho Lepratti, las familias de las víctimas y el LET-UNR.
+Investigación de archivo, entrevista en profundidad y edición del material.
+DECISIONES
+Alcance: propuse una biografía completa como prototipo, con una arquitectura escalable a todas las víctimas.
+Tecnología: junto a Desarrollo, elegimos una web abierta (MindAR / A-Frame) en lugar de una app: sin descarga ni registro.
+RESULTADO
+Prototipo funcional, usable desde cualquier celular y listo para presentar a espacios de memoria. Seleccionado en XperienciaUNR 2025 (uno de 5 equipos entre más de 10 proyectos). También fue mi proyecto final de grado: calificación 10.
+24 Veces Diciembre
+2025
+
+Documental · Electiva Formación Audiovisual Tecnológica (UNR)
+
+ROL
+Dirección, producción, guion y edición.
+DESCRIPCIÓN
+Documental sobre memorias, testimonios y huellas de diciembre de 2001 en Rosario. Calificación: 10.
+Reingeniería de un LMS: especificaciones validadas con agentes
+Ago 2026 – actualidad
+
+e-ducativa · Proyecto técnico sobre un sistema legado
+
+PROBLEMA
+Especificar un módulo legado con la precisión necesaria para reimplementarlo en un stack nuevo, sin dar la especificación por válida.
+VALIDACIÓN
+Un agente valida leyendo el código, un revisor ciego lo contradice y un ejecutor corre cada caso contra una instalación congelada del sistema.
+DECISIÓN HUMANA
+Leo cada ítem, dicto los veredictos y fijo el criterio de paridad con el sistema original.
+ESTADO
+Proyecto en curso: la validación avanza ítem por ítem, con herramientas propias para leer y decidir sobre las especificaciones. La decisión final sobre cada ítem es humana.
+Facundo Ignacio García Mata
+Proyectos
+3 / 4
+
+CÓMO TRABAJO
+
+Del problema al entregable: investigo, planifico, coordino, produzco y valido.
+
+Tecnología
+
+Informática · desarrollo · producto digital
+
+Formación técnica formal y desarrollo full stack sobre un sistema en producción.
+Antes de modificar un sistema, relevo dónde se usa cada pieza y qué depende de ella.
+Gestión
+
+Project Management · planificación · stakeholders
+
+Planificación, seguimiento y validación de entregables entre áreas y disciplinas.
+Ajusto el alcance para entregar sin cerrar el crecimiento del proyecto.
+Comunicación
+
+Estrategia · contenidos · narrativa · audiovisual
+
+Estrategia editorial ligada a objetivos; guion, escaleta, entrevistas y edición.
+Traduzco lo técnico para equipos que no lo son.
+IA
+
+Investigación · agentes · automatización · workflows
+
+Construyo herramientas para trabajar con IA: skills, agentes y controles.
+La IA propone y ejecuta; la validación y las decisiones son mías.
+MÉTODO DE TRABAJO CON IA
+01
+Relevar
+
+Contexto con archivos, código y fuentes reales, no con descripciones.
+
+02
+Delegar
+
+Agentes con un rol fijo leen, miden y ejecutan casos.
+
+03
+Contrastar
+
+Roles que se contradicen: revisor ciego, abogado del diablo.
+
+04
+Decidir
+
+Leo los resultados y tomo las decisiones con criterio propio.
+
+05
+Convertir errores en controles
+
+Cada retrospectiva termina en un hook, un check o un test.
+
+Complejidad necesaria: más agentes no siempre significan una mejor solución.
+
+FORMACIÓN
+Licenciatura en Comunicación Social
+
+Universidad Nacional de Rosario · 2020 – 2026
+
+Promedio 8,97. Proyecto final: Sie7e Memorias Desde La Sombra · calificación 10.
+
+Técnico en Informática Profesional y Personal
+
+Instituto Politécnico Superior «General San Martín» · 2013 – 2018
+
+Programación, redes, sistemas, administración de servicios y producción digital.
+
+IDIOMAS
+
+Español · nativo  /  Inglés · C1  /  Francés · A2
+
+Facundo Ignacio García Mata
+figarciamata@gmail.com
+4 / 4
