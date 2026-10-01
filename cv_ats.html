@@ -138,6 +138,27 @@
       }
     ],
 
+    // Experiencias opt-in: NO se renderizan por defecto. Sólo aparecen en variantes que las
+    // listen en `expOrder` (ej. canonical). Así se agrega experiencia a un CV sin tocar los demás.
+    extraExperiences: {
+      tuestudio: {
+        id: 'tuestudio',
+        title: { es: 'Estratega de Comunicación y Contenidos — Tu Estudio Amigo',
+                 en: 'Communication & Content Strategist — Tu Estudio Amigo' },
+        date: '06/2026 – Presente', dateEn: '06/2026 – Present', location: 'Rosario, Argentina',
+        bullets: {
+          b1: { es: 'Participo en la planificación de estrategias mensuales de comunicación para las marcas y clientes del estudio, trabajando junto a sus dueñas y a la responsable de marketing digital (enfocada en pauta) y asumiendo progresivamente mayor responsabilidad sobre la estrategia de comunicación.',
+                en: 'Take part in planning monthly communication strategies for the studio’s brands and clients, working with the owners and the digital marketing lead (focused on paid media) and progressively taking on more responsibility for communication strategy.' },
+          b2: { es: 'Participo en conversaciones y reuniones semanales con los clientes: escucho sus necesidades, objetivos y problemas de comunicación y los traduzco en estrategias, campañas y contenidos concretos.',
+                en: 'Join weekly conversations and meetings with clients, listening to their needs, goals, and communication challenges and translating them into concrete strategies, campaigns, and content.' },
+          b3: { es: 'Pienso campañas y acciones de comunicación y armo calendarios de contenidos para marcas de distintos rubros y públicos, entre ellas una marca de peluquerías con presencia en Argentina, Uruguay y Estados Unidos, una marca gastronómica y un espacio de coworking.',
+                en: 'Plan campaigns and communication actions and build content calendars for brands with different audiences and contexts, including a hair salon brand present in Argentina, Uruguay, and the United States, a food and gastronomy brand, and a coworking space.' },
+          b4: { es: 'Guiono Reels y otras piezas de contenido. Empecé guionando Reels (incluido contenido para una formación en Inteligencia Artificial) y luego pasé a trabajar en la estrategia de comunicación de un espacio de coworking y, progresivamente, de otros clientes.',
+                en: 'Script Reels and other content pieces. Started with Reels scripting (including content for an AI training program), then moved on to the communication strategy for a coworking space and, progressively, other clients.' }
+        }
+      }
+    },
+
     projects: [
       {
         title: { es: 'Sie7e Memorias Desde La Sombra', en: 'Sie7e Memorias Desde La Sombra' },
@@ -392,78 +413,77 @@
       }
     },
     // Adaptación del ATS Marketing para Canonical — Graduate Partner Marketing Manager (remote, Americas).
-    // Posicionamiento: Technology Marketing + Content Strategy + Cross-functional Project Coordination.
+    // Posicionamiento (oct 2026): Technology Marketing + Communication Strategy + Cross-functional Project
+    // Coordination. Perfil híbrido comunicación + tecnología + coordinación; es graduate, no senior.
+    // Única variante que muestra `tuestudio` (DATA.extraExperiences) vía `expOrder`.
     // NO afirma experiencia formal en partner marketing / go-to-market / B2B / integrated campaigns /
-    // marketing automation / CRM / paid media: no hay experiencia real que lo respalde. Sólo reencuadra.
+    // marketing automation / CRM / paid media / analytics / performance: no hay experiencia real. Sólo reencuadra.
     canonical: {
       pdfBase: 'Canonical',
       name: { es: 'Technology Marketing (Canonical)', en: 'Technology Marketing (Canonical)' },
       forRoles: { es: 'Adaptación del ATS Marketing para Graduate Partner Marketing Manager — Canonical',
                   en: 'ATS Marketing adaptation for the Graduate Partner Marketing Manager role at Canonical' },
-      roles: ['Graduate Partner Marketing', 'Technology Marketing', 'Content Strategy', 'Marketing Communications', 'Product Communication'],
-      roleLine: { es: 'Marketing Tecnológico · Estrategia de Contenidos · Coordinación de Proyectos Interdisciplinarios',
-                  en: 'Technology Marketing · Content Strategy · Cross-functional Project Coordination' },
-      summary: { es: 'Profesional de la comunicación con experiencia práctica en marketing digital y comunicación de producto dentro de una empresa tecnológica, orientado a crecer hacia technology y partner marketing. Licenciado en Comunicación Social (Universidad Nacional de Rosario) con formación técnica en informática. En e-ducativa —plataforma EdTech con 2,5M+ de usuarios en 13 países y 600+ clientes institucionales— coordino iniciativas entre Producto, Tecnología, Diseño y Servicios y traduzco funcionalidades complejas en comunicación clara: newsletters de producto, sitio web corporativo y documentación. Experiencia en estrategia de contenidos, planificación editorial, storytelling y uso de métricas de audiencia para mejorar el contenido. Inglés avanzado (C1); habituado a trabajar con autonomía en equipos distribuidos.',
-                 en: 'Communications professional with hands-on experience in digital marketing and product communications inside a technology company, looking to grow into technology and partner marketing. Bachelor in Social Communication (Universidad Nacional de Rosario) with a technical background in IT. At e-ducativa —an EdTech platform with 2.5M+ users across 13 countries and 600+ institutional clients— I coordinate initiatives across Product, Technology, Design, and Services and translate complex product features into clear communication: product newsletters, the corporate website, and documentation. Experienced in content strategy, editorial planning, storytelling, and using audience metrics to improve content. Advanced English (C1); used to working autonomously in distributed teams.' },
+      roles: ['Graduate Partner Marketing', 'Technology Marketing', 'Communication Strategy', 'Marketing Communications', 'Product Communication'],
+      roleLine: { es: 'Marketing Tecnológico · Estrategia de Comunicación · Coordinación de Proyectos Interdisciplinarios',
+                  en: 'Technology Marketing · Communication Strategy · Cross-functional Project Coordination' },
+      summary: { es: 'Profesional de la comunicación que trabaja en el cruce entre tecnología, marketing y contenidos. Licenciado en Comunicación Social (Universidad Nacional de Rosario) con formación técnica en informática. En Tu Estudio Amigo participo en la planificación de estrategias mensuales de comunicación para distintas marcas, en contacto directo con los clientes, traduciendo sus objetivos en campañas, calendarios y contenidos. En e-ducativa —plataforma EdTech con 2,5M+ de usuarios en 13 países— coordino iniciativas entre Producto, Tecnología, Diseño y Servicios, desarrollo funcionalidades y traduzco novedades técnicas y de producto en comunicación clara. Busco crecer hacia technology y partner marketing. Inglés avanzado (C1).',
+                 en: 'Communications professional working at the intersection of technology, marketing, and content. Bachelor in Social Communication (Universidad Nacional de Rosario) with a technical degree in IT. At Tu Estudio Amigo I take part in planning monthly communication strategies for different brands, in direct contact with clients, turning their goals into campaigns, content calendars, and content. At e-ducativa —an EdTech platform with 2.5M+ users across 13 countries— I coordinate initiatives across Product, Technology, Design, and Services, develop product features, and translate technical and product updates into clear communication. Looking to grow into technology and partner marketing. Advanced English (C1).' },
       sections: ['profile', 'experience', 'projects', 'skills', 'education', 'languages'],
-      skillsOrder: ['comms', 'pm', 'social', 'design', 'av', 'web'],
+      expOrder: ['tuestudio', 'educativa', '3factor', 'ggwp'],
       bulletOrder: {
-        educativa: ['b3', 'b2', 'b1', 'b7', 'b4', 'b5', 'b6'],
-        ggwp: ['b1', 'b2', 'b4', 'b6', 'b5', 'b3'],
-        '3factor': ['b1', 'b3', 'b2', 'b4']
+        tuestudio: ['b1', 'b2', 'b3', 'b4'],
+        educativa: ['b3', 'b2', 'b1', 'b7', 'b4'],
+        '3factor': ['b1', 'b2', 'b4'],
+        ggwp: ['b1', 'b4', 'b5', 'b6']
       },
-      titleOverride: {
-        educativa: { es: 'Coordinador de Proyectos Digitales y Comunicación de Producto — e-ducativa S.A.',
-                     en: 'Digital Project Coordinator & Product Communications — e-ducativa S.A.' }
+      expContext: {
+        educativa: { es: 'Plataforma EdTech (LMS) con 2,5M+ de usuarios activos en 13 países y 600+ clientes institucionales.',
+                     en: 'EdTech (LMS) platform with 2.5M+ active users across 13 countries and 600+ institutional clients.' }
       },
-      skillsOverride: {
-        comms: { label: { es: 'Marketing y comunicación', en: 'Marketing & communications' },
-                 items: { es: 'comunicación de marketing, estrategia de contenidos, storytelling, comunicación digital, producción de contenidos, planificación editorial, comunicación de producto, gestión de marca, email marketing, newsletters, community management, análisis de métricas de audiencia y rendimiento.',
-                          en: 'marketing communications, content strategy, storytelling, digital communications, content production, editorial planning, product communication, brand management, email marketing, newsletters, community management, audience and performance metrics analysis.' } },
-        pm:    { label: { es: 'Coordinación de proyectos y stakeholders', en: 'Project & stakeholder coordination' },
-                 items: { es: 'coordinación de proyectos interdisciplinarios, gestión de stakeholders, planificación y priorización, mejora de procesos, metodología Kanban, Trello, Google Workspace.',
-                          en: 'cross-functional project coordination, stakeholder management, planning and prioritization, process improvement, Kanban methodology, Trello, Google Workspace.' } }
-      },
+      skillsCustom: [
+        { label: { es: 'Marketing y comunicación', en: 'Marketing & communication' },
+          items: { es: 'estrategia de comunicación, estrategia de marketing, estrategia de contenidos, planificación de campañas, comunicación con clientes, gestión de marca, storytelling, planificación editorial, social media, producción de contenidos, comunicación de producto, newsletters.',
+                   en: 'communication strategy, marketing strategy, content strategy, campaign planning, client communication, brand management, storytelling, editorial planning, social media, content production, product communication, newsletters.' } },
+        { label: { es: 'Project management', en: 'Project management' },
+          items: { es: 'coordinación interdisciplinaria, gestión de stakeholders, planificación, Kanban, Trello, Google Workspace.',
+                   en: 'cross-functional coordination, stakeholder management, planning, Kanban, Trello, Google Workspace.' } },
+        { label: { es: 'Tecnología', en: 'Technology' },
+          items: { es: 'LMS, JavaScript, HTML, CSS, SQL, Perl, WordPress, Git, Claude Code.',
+                   en: 'LMS, JavaScript, HTML, CSS, SQL, Perl, WordPress, Git, Claude Code.' } },
+        { label: { es: 'Creatividad y audiovisual', en: 'Creative & audiovisual' },
+          items: { es: 'Adobe Premiere, Adobe Audition, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Figma, Canva.',
+                   en: 'Adobe Premiere, Adobe Audition, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Figma, Canva.' } }
+      ],
       bulletsOverride: {
         educativa: {
-          b3: { es: 'Coordiné iniciativas interdisciplinarias entre Producto, Tecnología, Diseño y Servicios, traduciendo necesidades técnicas en comunicación clara y manteniendo a los stakeholders alineados en las prioridades.',
-                en: 'Coordinated cross-functional initiatives across Product, Technology, Design, and Services, translating technical needs into clear communication and keeping stakeholders aligned on priorities.' },
-          b2: { es: 'A cargo de punta a punta del newsletter mensual de producto: convertí novedades de Producto, Tecnología y Servicios en un único canal centralizado que reforzó el conocimiento del producto en toda la empresa.',
-                en: 'Owned the monthly product newsletter end to end, turning updates from Product, Technology, and Services into a single centralized channel that reinforced product awareness across the company.' },
+          b3: { es: 'Coordiné iniciativas interdisciplinarias entre Producto, Tecnología, Diseño y Servicios, traduciendo necesidades técnicas y de negocio en comunicación clara y manteniendo a los stakeholders alineados en las prioridades.',
+                en: 'Coordinated cross-functional initiatives across Product, Technology, Design, and Services, translating technical and business needs into clear communication and keeping stakeholders aligned on priorities.' },
+          b2: { es: 'Planifiqué y coordiné el newsletter mensual de producto, convirtiendo novedades de Producto, Tecnología y Servicios en un único canal que reforzó el conocimiento del producto en toda la empresa.',
+                en: 'Planned and coordinated the monthly product newsletter, turning updates from Product, Technology, and Services into a single channel that reinforced product awareness across the company.' },
           b1: { es: 'Co-lideré el rediseño y lanzamiento del sitio web corporativo (WordPress) junto a una diseñadora gráfica, llevando mensajes, arquitectura de contenidos e implementación desde el concepto hasta la entrega.',
                 en: 'Co-led the redesign and launch of the corporate website (WordPress) with a graphic designer, taking messaging, content architecture, and implementation from concept to delivery.' },
-          b7: { es: 'Mantuve documentación funcional y wikis de producto de la plataforma, participé en el desarrollo de funcionalidades junto al equipo de ingeniería e impulsé la adopción interna de flujos asistidos por IA (Claude / Claude Code).',
-                en: 'Maintained functional documentation and product wikis for the platform, contributed hands-on to feature development with the engineering team, and drove internal adoption of AI-assisted workflows (Claude / Claude Code).' },
-          b4: { es: 'Coordiné y moderé reuniones semanales interdisciplinarias con Tecnología, Servicios y Product Owner, siguiendo avances, prioridades, bloqueos y próximos pasos.',
-                en: 'Facilitated weekly cross-functional meetings with Technology, Services, and the Product Owner, tracking progress, priorities, blockers, and next steps.' },
-          b5: { es: 'Gestioné flujos de trabajo y seguimiento de tareas en Trello para equipos multidisciplinarios, manteniendo visibles responsables, prioridades y estado de entrega.',
-                en: 'Managed workflow and task tracking in Trello for cross-functional teams, keeping owners, priorities, and delivery status visible.' },
-          b6: { es: 'Reforcé la consistencia de marca en el sitio web rediseñado y el newsletter de producto, consolidando una voz editorial y visual unificada.',
-                en: 'Strengthened brand consistency across the redesigned website and the product newsletter, consolidating a unified editorial and visual voice.' }
-        },
-        ggwp: {
-          b1: { es: 'Definí la estrategia editorial y el plan de contenidos semanal de un programa de streaming en vivo sobre gaming y cultura digital, fijando temas, estructura y prioridades de mensaje.',
-                en: 'Defined the editorial strategy and weekly content plan for a live streaming show on gaming and digital culture, setting topics, structure, and messaging priorities.' },
-          b2: { es: 'Planifiqué los contenidos de cada emisión y coordiné su difusión con los equipos de redes y diseño, convirtiendo cada programa en piezas derivadas para canales digitales.',
-                en: 'Planned each episode’s content and coordinated its promotion with the social media and design teams, turning every broadcast into derivative pieces for digital channels.' },
-          b4: { es: 'Preparé entrevistas con desarrolladores de videojuegos y referentes de la industria: investigación previa, definición de temas y preguntas, coordinación de invitados y logística de comunicación con stakeholders.',
-                en: 'Prepared interviews with game developers and industry figures: background research, topic and question design, guest coordination, and stakeholder communication logistics.' },
-          b6: { es: 'Trabajé sobre las emisiones y las piezas derivadas que alimentan la cuenta de Instagram del proyecto y seguí sus métricas de audiencia: 139.000+ espectadores y 237.000+ reproducciones de reels en los últimos 90 días.',
-                en: 'Worked on the broadcasts and derivative pieces feeding the project’s Instagram account and followed their audience metrics: 139,000+ viewers and 237,000+ Reel plays over the last 90 days.' },
-          b5: { es: 'Participé en la estrategia de comunicación y contenidos del proyecto y en coberturas de eventos del sector, coordinando la producción para que cada cobertura se transformara en contenido para redes.',
-                en: 'Took part in the project’s communication and content strategy and in industry event coverage, coordinating production so each coverage became social media content.' },
-          b3: { es: 'Revisé cada emisión al cierre para detectar highlights, ajustes de producción y oportunidades de contenido para las siguientes ediciones.',
-                en: 'Reviewed each broadcast afterwards to identify highlights, production adjustments, and content opportunities for the following episodes.' }
+          b7: { es: 'Desarrollé funcionalidades de la plataforma junto al equipo de ingeniería (JavaScript, HTML/CSS, SQL, Perl), mantuve documentación funcional y wikis de producto e impulsé la adopción interna de flujos asistidos por IA (Claude / Claude Code).',
+                en: 'Developed platform features with the engineering team (JavaScript, HTML/CSS, SQL, Perl), maintained functional documentation and product wikis, and drove internal adoption of AI-assisted workflows (Claude / Claude Code).' },
+          b4: { es: 'Coordiné y moderé reuniones semanales interdisciplinarias con Tecnología, Servicios y Product Owner, siguiendo avances, prioridades, bloqueos y próximos pasos, con seguimiento de tareas en Trello.',
+                en: 'Facilitated weekly cross-functional meetings with Technology, Services, and the Product Owner, tracking progress, priorities, blockers, and next steps, with task tracking in Trello.' }
         },
         '3factor': {
-          b1: { es: 'Planifiqué la estrategia de comunicación digital de un estudio de diseño desde su lanzamiento, articulando identidad de marca, calendario editorial y objetivos comerciales.',
-                en: 'Planned the digital communication strategy for a design studio from launch, aligning brand identity, editorial calendar, and commercial goals.' },
-          b3: { es: 'Analicé métricas de alcance e interacción para iterar el contenido y mejorar su rendimiento, y atendí consultas comerciales de clientes.',
-                en: 'Analyzed reach and engagement metrics to iterate on content and improve its performance, and handled commercial inquiries from clients.' },
-          b2: { es: 'Produje contenido y gestioné los canales sociales sobre un calendario de publicaciones consistente.',
-                en: 'Produced content and managed the social channels on a consistent publishing calendar.' },
+          b1: { es: 'Planifiqué la estrategia de comunicación digital de un estudio de diseño desde su lanzamiento, articulando posicionamiento de marca, calendario editorial y objetivos comerciales.',
+                en: 'Planned the digital communication strategy for a design studio from launch, aligning brand positioning, editorial calendar, and commercial goals.' },
+          b2: { es: 'Produje contenido para redes sociales, gestioné la interacción con la audiencia y las consultas comerciales de clientes, y usé métricas de alcance e interacción para ajustar el contenido.',
+                en: 'Produced social media content, handled audience interaction and client commercial inquiries, and used reach and engagement metrics to adjust content.' },
           b4: { es: 'Construí la identidad de marca desde cero: nombre, sistema visual, tono de voz y presentación comercial.',
                 en: 'Built the brand identity from scratch: name, visual system, tone of voice, and commercial presentation.' }
+        },
+        ggwp: {
+          b1: { es: 'Produje un programa semanal de streaming sobre gaming y cultura digital: planificación editorial, escaleta, temas y dinámica del vivo junto al equipo de conducción.',
+                en: 'Produced a weekly streaming show on gaming and digital culture: editorial planning, rundown, topics, and live dynamics with the hosting team.' },
+          b4: { es: 'Preparé entrevistas con desarrolladores de videojuegos y referentes de la industria tecnológica y gamer: investigación previa, definición de temas y preguntas y coordinación de invitados.',
+                en: 'Prepared interviews with game developers and figures from the technology and gaming industry: background research, topic and question design, and guest coordination.' },
+          b5: { es: 'Participé en coberturas de eventos del sector y coordiné con los equipos de redes y diseño las piezas derivadas de cada emisión y cobertura.',
+                en: 'Took part in industry event coverage and coordinated the derivative pieces from each broadcast and coverage with the social media and design teams.' },
+          b6: { es: 'Trabajé sobre las emisiones y las piezas derivadas que alimentan la cuenta de Instagram del proyecto: 139.000+ espectadores y 237.000+ reproducciones de reels en los últimos 90 días (orgánico).',
+                en: 'Worked on the broadcasts and derivative pieces feeding the project’s Instagram account: 139,000+ viewers and 237,000+ Reel plays over the last 90 days (organic).' }
         }
       }
     },
@@ -557,9 +577,14 @@
   function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
   function L(obj, lang) { return obj[lang] !== undefined ? obj[lang] : obj.es; }
 
+  function expById(id) {
+    return DATA.extraExperiences[id] || DATA.experiences.filter(function (e) { return e.id === id; })[0];
+  }
+
   function renderExperience(variant, lang) {
     var html = '';
-    DATA.experiences.forEach(function (exp) {
+    var list = variant.expOrder ? variant.expOrder.map(expById) : DATA.experiences;
+    list.forEach(function (exp) {
       var order = (variant.bulletOrder && variant.bulletOrder[exp.id]) || Object.keys(exp.bullets);
       var date = lang === 'en' && exp.dateEn ? exp.dateEn : exp.date;
       var title = (variant.titleOverride && variant.titleOverride[exp.id]) || exp.title;

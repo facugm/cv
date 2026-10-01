@@ -39,6 +39,8 @@ Todo vive en el bloque `<script>` de `cv_ats.html`:
     - `competencies` + sección `'competencies'` en `sections` — bloque de competencias clave
     - `expContext` — línea de contexto en cursiva bajo un puesto (ej. descripción de la empresa)
     - `projectsCustom` — reemplaza la lista de proyectos de `DATA`
+    - `expOrder` — lista de ids de experiencia a mostrar y su orden; puede incluir ids de
+      `DATA.extraExperiences` (experiencias opt-in que NO aparecen en las demás variantes; ej. `tuestudio` en canonical)
 
 > Regla de oro: la experiencia subyacente es **la misma**. Una variante nunca inventa,
 > agrega ni quita responsabilidades — sólo cambia qué se muestra primero.
