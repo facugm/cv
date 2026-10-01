@@ -39,8 +39,15 @@ Todo vive en el bloque `<script>` de `cv_ats.html`:
     - `competencies` + sección `'competencies'` en `sections` — bloque de competencias clave
     - `expContext` — línea de contexto en cursiva bajo un puesto (ej. descripción de la empresa)
     - `projectsCustom` — reemplaza la lista de proyectos de `DATA`
-    - `expOrder` — lista de ids de experiencia a mostrar y su orden; puede incluir ids de
-      `DATA.extraExperiences` (experiencias opt-in que NO aparecen en las demás variantes; ej. `tuestudio` en canonical)
+    - `expOrder` — lista de ids de experiencia a mostrar y su orden (ej. canonical pone `tuestudio` y
+      luego `educativa`); puede incluir ids de `DATA.extraExperiences` (experiencias opt-in que NO
+      aparecen en las demás variantes; vacío desde oct 2026)
+
+Tu Estudio Amigo (`tuestudio`, 06/2026–presente) vive en `DATA.experiences` y sale en todas las
+variantes. Cada una elige/reescribe sus bullets: `TUESTUDIO_PM` (constante compartida por `project` y
+`alma`: stakeholders, planificación, seguimiento), override propio en `canonical` (texto aprobado
+para esa candidatura) y en `scrl` (contenidos/guiones). Nunca paid media, analytics, performance
+ni resultados: no hay evidencia. Clientes descritos por rubro, sin nombre (pedido del user).
 
 > Regla de oro: la experiencia subyacente es **la misma**. Una variante nunca inventa,
 > agrega ni quita responsabilidades — sólo cambia qué se muestra primero.

@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap" rel="stylesheet">
 <!--
-  CV para la convocatoria 2026 del Programa de Talento Digital — v2.4 (v2.3 + jerarquía de experiencia y orden de lectura ATS).
-  Versiones anteriores intactas (v1, v2, v2_1, v2_2, v2_3).
+  CV para la convocatoria 2026 del Programa de Talento Digital — v2.5 (v2.4 + experiencia Tu Estudio Amigo).
+  Versiones anteriores (v1–v2.4) eliminadas del repo el 2026-10-01.
   Fuente editable: 4 hojas A4 fijas (.page). Regenerar PDF + TXT:
     python3 -m http.server 8731 --bind 127.0.0.1   (en /var/www/educativa/cv)
     node scripts/gen_fds_pdf.js
@@ -95,7 +95,7 @@ h1 .surname { background: linear-gradient(rgba(232,132,58,.85), rgba(232,132,58,
 .contact a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--orange); }
 .profile { font-size: 10.6pt; line-height: 1.48; }
 
-.path { display: grid; grid-template-columns: repeat(8, 1fr); gap: 2mm; margin-top: 1mm; }
+.path { display: grid; grid-template-columns: repeat(9, 1fr); gap: 2mm; margin-top: 1mm; }
 .step { display: flex; flex-direction: column; }
 .stack { height: 21mm; display: flex; flex-direction: column-reverse; gap: .5mm; }
 .stack i { display: block; height: 2.1mm; background: #CFC6D8; border-radius: .4mm; }
@@ -117,8 +117,8 @@ h1 .surname { background: linear-gradient(rgba(232,132,58,.85), rgba(232,132,58,
 .case .src { margin-top: 1.6mm; font: 400 6.8pt 'JetBrains Mono', monospace; color: var(--ink-mute); }
 
 /* ---------- experiencia / proyectos ---------- */
-.job + .job { margin-top: 6mm; padding-top: 5mm; border-top: 1px solid var(--hair); }
-.co { font-size: 15pt; }
+.job + .job { margin-top: 3.5mm; padding-top: 3mm; border-top: 1px solid var(--hair); }
+.co { font-size: 14pt; }
 .pos { font: 700 10.4pt/1.3 'Newsreader', serif; color: var(--ink); margin-top: .8mm; }
 .job-h { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
 .job-h .meta { white-space: nowrap; }
@@ -129,10 +129,10 @@ h1 .surname { background: linear-gradient(rgba(232,132,58,.85), rgba(232,132,58,
   .contact a, .org a { transition: color .18s, border-color .18s, background-color .18s; }
   .contact a:hover, .org a:hover { color: var(--plum); border-bottom-color: var(--plum); background: rgba(232,132,58,.18); }
 }
-.ctx { margin-top: 1.6mm; font-size: 9.4pt; color: var(--ink-soft); font-style: italic; }
-.job > ul li { font-size: 9.9pt; line-height: 1.4; margin-top: 1.3mm; }
-.hl { margin-top: 3mm; background: var(--paper-2); padding: 2.6mm 3.6mm 3mm; }
-.hl li { font-size: 9.2pt; line-height: 1.36; }
+.ctx { margin-top: 1.2mm; font-size: 9.4pt; color: var(--ink-soft); font-style: italic; }
+.job > ul li { font-size: 9.6pt; line-height: 1.34; margin-top: 1mm; }
+.hl { margin-top: 2.4mm; background: var(--paper-2); padding: 2.2mm 3.6mm 2.4mm; }
+.hl li { font-size: 9pt; line-height: 1.32; }
 .kpi { margin-top: 1.6mm; font: 400 7pt "JetBrains Mono", monospace; color: var(--plum); letter-spacing: 0; }
 .kpi b { font-weight: 700; }
 
@@ -184,7 +184,7 @@ h1 .surname { background: linear-gradient(rgba(232,132,58,.85), rgba(232,132,58,
 
   <section>
     <h2>Perfil</h2>
-    <p class="profile">Licenciado en Comunicación Social (UNR) y Técnico en Informática. Trabajo entre tecnología, producto, gestión de proyectos y comunicación. En e-ducativa, un LMS con más de 2,5 millones de usuarios, coordino áreas y desarrollo funcionalidades; en paralelo produzco un programa semanal de streaming y gestiono la comunicación de un estudio de diseño. Mi proyecto final de grado, una experiencia de realidad aumentada sobre memoria local, fue seleccionado en XperienciaUNR 2025. Integro IA de forma cotidiana para investigar, construir, verificar y mejorar procesos.</p>
+    <p class="profile">Licenciado en Comunicación Social (UNR) y Técnico en Informática. Trabajo entre tecnología, producto, gestión de proyectos y comunicación. En e-ducativa, un LMS con más de 2,5 millones de usuarios, coordino áreas y desarrollo funcionalidades; en paralelo produzco un programa semanal de streaming, gestiono la comunicación de un estudio de diseño y participo en estrategias de comunicación y contenidos para los clientes de un estudio de comunicación. Mi proyecto final de grado, una experiencia de realidad aumentada sobre memoria local, fue seleccionado en XperienciaUNR 2025. Integro IA de forma cotidiana para investigar, construir, verificar y mejorar procesos.</p>
   </section>
 
   <section>
@@ -205,6 +205,8 @@ h1 .surname { background: linear-gradient(rgba(232,132,58,.85), rgba(232,132,58,
       <div class="step"><div class="stack"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <p class="yr">2026</p><p class="nm">Streaming</p><p class="ds">Producción semanal en vivo.</p></div>
       <div class="step"><div class="stack"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="yr">2026</p><p class="nm">Estrategia</p><p class="ds">Comunicación y contenidos para clientes.</p></div>
+      <div class="step"><div class="stack"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <p class="yr">2026</p><p class="nm">IA</p><p class="ds">Herramientas y workflows para el equipo.</p></div>
     </div>
     <p class="path-note">No fui cambiando de perfil: fui acumulando capacidades.</p>
@@ -282,6 +284,16 @@ h1 .surname { background: linear-gradient(rgba(232,132,58,.85), rgba(232,132,58,
         <li>Produzco y coordino un programa semanal en vivo sobre gaming y cultura digital: escaleta, bloques, tiempos, dinámica del vivo y coordinación de piezas derivadas con redes y diseño.</li>
         <li>Preparo entrevistas con desarrolladores y referentes de la industria: investigación previa, temas, preguntas y logística.</li>
         <li>Coordino las necesidades de producción de coberturas de eventos del sector para convertirlas en contenido, y reviso cada emisión al cierre para ajustar la siguiente.</li>
+      </ul>
+    </article>
+    <article class="job">
+      <h3 class="co">Tu Estudio Amigo</h3>
+      <p class="pos">Estrategia de Comunicación y Contenidos</p>
+      <p class="org">Jun 2026 – actualidad · Rosario, Argentina</p>
+      <ul>
+        <li>Participo junto a las dueñas del estudio y al equipo de marketing digital en estrategias mensuales de comunicación y contenidos para clientes: calendarios editoriales, campañas, guiones y Reels.</li>
+        <li>Mantengo reuniones semanales con clientes: relevo sus necesidades y las traduzco en estrategias, campañas y piezas concretas junto al equipo interno.</li>
+        <li>Participé en la estrategia de comunicación de un espacio híbrido de coworking, cafetería, eventos y podcast: estrategia mensual y calendario editorial con contenidos de coworking, gastronómicos, educativos y de eventos.</li>
       </ul>
     </article>
   </section>

@@ -43,8 +43,11 @@
 
   @media print {
     .bar { display: none !important; }
-    body { max-width: none; padding: 0; font-size: 11px; color: #000; background: #fff; }
-    @page { size: A4; margin: 16mm 16mm; }
+    body { max-width: none; padding: 0; font-size: 11px; line-height: 1.4; color: #000; background: #fff; }
+    @page { size: A4; margin: 14mm 15mm; }
+    h2 { margin: 16px 0 8px; }
+    ul { margin: 3px 0 8px; }
+    li { margin: 1px 0; }
     h2 { page-break-after: avoid; break-after: avoid; }
     h3 { page-break-after: avoid; break-after: avoid; }
     h3, li, p { page-break-inside: avoid; break-inside: avoid; }
@@ -78,6 +81,30 @@
     roleLabel: { es: 'Rol:', en: 'Role:' },
 
     experiences: [
+      {
+        // Tu Estudio Amigo (06/2026–presente). Rol: estrategia de comunicación y contenidos, planificación,
+        // coordinación y relación con clientes. NO paid media / analytics / performance / resultados (no hay
+        // evidencia; la pauta la lleva la responsable de marketing digital del estudio). Clientes sin nombre:
+        // se describen por rubro a pedido del user (coworking, gastronomía, peluquerías AR/UY/US).
+        id: 'tuestudio',
+        title: { es: 'Estrategia de Comunicación y Contenidos — Tu Estudio Amigo',
+                 en: 'Communication & Content Strategist — Tu Estudio Amigo' },
+        date: '06/2026 – Presente', dateEn: '06/2026 – Present', location: 'Rosario, Argentina',
+        bullets: {
+          b1: { es: 'Participo junto a las dueñas del estudio y al equipo de marketing digital en el armado de estrategias mensuales de comunicación y contenidos para los clientes, asumiendo progresivamente mayor responsabilidad sobre la estrategia de comunicación.',
+                en: 'Work with the studio’s owners and digital marketing team on monthly communication and content strategies for clients, progressively taking on more responsibility for communication strategy.' },
+          b2: { es: 'Mantengo reuniones semanales con clientes: relevo sus necesidades y objetivos de comunicación y los traduzco en estrategias, campañas, calendarios y piezas concretas, articulándolos con el equipo interno.',
+                en: 'Hold weekly client meetings: gather their communication needs and goals and translate them into concrete strategies, campaigns, calendars, and content, coordinating delivery with the internal team.' },
+          b3: { es: 'Desarrollo calendarios editoriales y planes de contenido según los objetivos de cada marca y participo en la definición de campañas y acciones de comunicación.',
+                en: 'Develop editorial calendars and content plans around each brand’s goals, and take part in defining campaigns and communication actions.' },
+          b4: { es: 'Desarrollo guiones y conceptos para piezas de contenido —especialmente video y Reels— y participo en la planificación y organización de contenidos para redes sociales.',
+                en: 'Develop scripts and concepts for content pieces —especially video and Reels— and take part in planning and organizing social media content.' },
+          b5: { es: 'Participé en la estrategia de comunicación y contenidos de un espacio híbrido de coworking, cafetería, eventos y podcast: estrategia mensual, calendario editorial y planificación de publicaciones con contenidos de coworking, gastronómicos, educativos, de eventos y humanizados, orientados al posicionamiento, las visitas al espacio y las consultas digitales.',
+                en: 'Took part in the communication and content strategy of a hybrid coworking, café, events, and podcast space: monthly strategy, editorial calendar, and publishing plan with coworking, food, educational, event, and people-centered content aimed at positioning, on-site visits, and digital inquiries.' },
+          b6: { es: 'Trabajo con marcas de distintos rubros y públicos —entre ellas una marca gastronómica y una marca de peluquerías con presencia en Argentina, Uruguay y Estados Unidos—. Empecé guionando Reels (incluido contenido para una formación en Inteligencia Artificial) y pasé a participar de forma transversal en los proyectos y estrategias del estudio.',
+                en: 'Work with brands across sectors and audiences —including a food brand and a hair salon brand present in Argentina, Uruguay, and the United States—. Started with Reels scripting (including content for an AI training program) and moved on to a cross-cutting role in the studio’s projects and strategies.' }
+        }
+      },
       {
         id: 'ggwp',
         title: { es: 'Productor de contenidos y streaming — GGWP (MargaTV)',
@@ -139,25 +166,8 @@
     ],
 
     // Experiencias opt-in: NO se renderizan por defecto. Sólo aparecen en variantes que las
-    // listen en `expOrder` (ej. canonical). Así se agrega experiencia a un CV sin tocar los demás.
-    extraExperiences: {
-      tuestudio: {
-        id: 'tuestudio',
-        title: { es: 'Estratega de Comunicación y Contenidos — Tu Estudio Amigo',
-                 en: 'Communication & Content Strategist — Tu Estudio Amigo' },
-        date: '06/2026 – Presente', dateEn: '06/2026 – Present', location: 'Rosario, Argentina',
-        bullets: {
-          b1: { es: 'Participo en la planificación de estrategias mensuales de comunicación para las marcas y clientes del estudio, trabajando junto a sus dueñas y a la responsable de marketing digital (enfocada en pauta) y asumiendo progresivamente mayor responsabilidad sobre la estrategia de comunicación.',
-                en: 'Take part in planning monthly communication strategies for the studio’s brands and clients, working with the owners and the digital marketing lead (focused on paid media) and progressively taking on more responsibility for communication strategy.' },
-          b2: { es: 'Participo en conversaciones y reuniones semanales con los clientes: escucho sus necesidades, objetivos y problemas de comunicación y los traduzco en estrategias, campañas y contenidos concretos.',
-                en: 'Join weekly conversations and meetings with clients, listening to their needs, goals, and communication challenges and translating them into concrete strategies, campaigns, and content.' },
-          b3: { es: 'Pienso campañas y acciones de comunicación y armo calendarios de contenidos para marcas de distintos rubros y públicos, entre ellas una marca de peluquerías con presencia en Argentina, Uruguay y Estados Unidos, una marca gastronómica y un espacio de coworking.',
-                en: 'Plan campaigns and communication actions and build content calendars for brands with different audiences and contexts, including a hair salon brand present in Argentina, Uruguay, and the United States, a food and gastronomy brand, and a coworking space.' },
-          b4: { es: 'Guiono Reels y otras piezas de contenido. Empecé guionando Reels (incluido contenido para una formación en Inteligencia Artificial) y luego pasé a trabajar en la estrategia de comunicación de un espacio de coworking y, progresivamente, de otros clientes.',
-                en: 'Script Reels and other content pieces. Started with Reels scripting (including content for an AI training program), then moved on to the communication strategy for a coworking space and, progressively, other clients.' }
-        }
-      }
-    },
+    // listen en `expOrder`. Vacío desde oct 2026 (tuestudio pasó a `experiences`); el mecanismo queda.
+    extraExperiences: {},
 
     projects: [
       {
@@ -243,6 +253,19 @@
   // ============================================================
   var DEFAULT_SECTIONS = ['profile', 'experience', 'projects', 'education', 'skills', 'languages'];
 
+  // Tu Estudio Amigo reescrito para perfiles de project management (project, alma): planificación,
+  // stakeholders, seguimiento y traducción de necesidades en planes; sin sobredimensionar lo creativo.
+  var TUESTUDIO_PM = {
+    b2: { es: 'Mantengo reuniones semanales con clientes: relevo necesidades y objetivos de comunicación, los traduzco en planes accionables (estrategias, campañas, calendarios y piezas) y articulo su ejecución con el equipo interno.',
+          en: 'Hold weekly client meetings: gather communication needs and goals, translate them into actionable plans (strategies, campaigns, calendars, and content), and coordinate execution with the internal team.' },
+    b1: { es: 'Participo junto a las dueñas del estudio y al equipo de marketing digital en la planificación mensual de estrategias de comunicación y contenidos para distintos clientes, usando calendarios editoriales y campañas como herramientas de planificación.',
+          en: 'Work with the studio’s owners and digital marketing team on monthly communication and content planning for multiple clients, using editorial calendars and campaigns as planning tools.' },
+    b3: { es: 'Participo en la gestión y seguimiento de proyectos de comunicación de diferentes clientes, articulando sus necesidades con el equipo interno para convertirlas en estrategias, campañas, calendarios y piezas.',
+          en: 'Take part in managing and tracking communication projects for different clients, bridging their needs with the internal team to turn them into strategies, campaigns, calendars, and deliverables.' },
+    b5: { es: 'Participé en la planificación de comunicación de un espacio híbrido de coworking, cafetería, eventos y podcast: estrategia mensual, calendario editorial y planificación de publicaciones alineadas a objetivos de posicionamiento, visitas al espacio y consultas digitales.',
+          en: 'Took part in communication planning for a hybrid coworking, café, events, and podcast space: monthly strategy, editorial calendar, and publishing plan aligned with positioning, on-site visit, and digital inquiry goals.' }
+  };
+
   var VARIANTS = {
     marketing: {
       pdfBase: 'Marketing',
@@ -253,11 +276,11 @@
               'Community Manager', 'Brand Communication', 'Content Strategist', 'Growth Marketing', 'Marketing Operations'],
       roleLine: { es: 'Comunicación Estratégica · Marketing Digital · Social Media · Coordinación de Proyectos',
                   en: 'Strategic Communication · Digital Marketing · Social Media · Project Coordination' },
-      summary: { es: 'Licenciado en Comunicación Social por la Universidad Nacional de Rosario, especializado en comunicación estratégica, marketing digital, estrategia de contenidos y social media. Coordino proyectos de comunicación y marketing articulando identidad de marca, contenidos y objetivos comerciales entre los equipos de comunicación, diseño y tecnología. Mi formación técnica, la gestión de sitios web en WordPress y la producción de contenido audiovisual son un diferencial que me permite llevar la estrategia desde la idea hasta la implementación.',
-                 en: 'Bachelor in Social Communication from the National University of Rosario, specialized in strategic communication, digital marketing, content strategy, and social media. I coordinate communication and marketing projects, aligning brand identity, content, and commercial goals across communication, design, and technology teams. My technical background, hands-on WordPress website management, and audiovisual content production are a competitive advantage that lets me carry strategy from idea to implementation.' },
+      summary: { es: 'Licenciado en Comunicación Social por la Universidad Nacional de Rosario, especializado en comunicación estratégica, marketing digital, estrategia de contenidos y social media. En Tu Estudio Amigo participo en estrategias mensuales de comunicación y contenidos para distintas marcas, en contacto directo con los clientes, traduciendo sus objetivos en campañas, calendarios editoriales y piezas. Coordino proyectos de comunicación y marketing articulando identidad de marca, contenidos y objetivos comerciales entre los equipos de comunicación, diseño y tecnología. Mi formación técnica, la gestión de sitios web en WordPress y la producción de contenido audiovisual son un diferencial que me permite llevar la estrategia desde la idea hasta la implementación.',
+                 en: 'Bachelor in Social Communication from the National University of Rosario, specialized in strategic communication, digital marketing, content strategy, and social media. At Tu Estudio Amigo I take part in monthly communication and content strategies for different brands, in direct contact with clients, turning their goals into campaigns, editorial calendars, and content. I coordinate communication and marketing projects, aligning brand identity, content, and commercial goals across communication, design, and technology teams. My technical background, hands-on WordPress website management, and audiovisual content production are a competitive advantage that lets me carry strategy from idea to implementation.' },
       sections: DEFAULT_SECTIONS,
       skillsOrder: ['pm', 'comms', 'av', 'design', 'social', 'web'],
-      bulletOrder: { educativa: ['b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7'] }
+      bulletOrder: { tuestudio: ['b1', 'b3', 'b4', 'b5', 'b2'], educativa: ['b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7'] }
     },
     moonpay: {
       pdfBase: 'MoonPay',
@@ -269,11 +292,11 @@
               'Technical Communication', 'Content Marketing', 'Storytelling'],
       roleLine: { es: 'Comunicación · Comunicación de Producto · Estrategia de Contenidos · Coordinación Interdisciplinaria · Traducción Tecnológica',
                   en: 'Communications · Product Communications · Content Strategy · Cross-functional Coordination · Technology Translation' },
-      summary: { es: 'Profesional de la comunicación que conecta tecnología, productos y personas a través de comunicaciones estratégicas, storytelling y colaboración interdisciplinaria. Licenciado en Comunicación Social (UNR) con formación técnica y experiencia de producto dentro de una plataforma EdTech de gran escala (2,5M+ usuarios, 13 países, 600+ clientes institucionales). Coordino proyectos digitales de punta a punta —alineando a Producto, Tecnología, Diseño y Servicios— y traduzco tecnologías complejas en comunicación clara orientada al cliente: mensajes de producto, newsletters, sitios web y storytelling de marca. Cómodo en entornos remotos, async y Agile.',
-                 en: 'Communications professional who connects technology, products, and people through strategic communications, storytelling, and cross-functional collaboration. Bachelor in Social Communication (UNR) with a technical background and product experience inside a high-scale EdTech platform (2.5M+ users, 13 countries, 600+ institutional clients). I coordinate digital projects end to end —aligning Product, Technology, Design, and Services— and translate complex technologies into clear, customer-facing communication: product messaging, newsletters, websites, and brand storytelling. Comfortable in remote, async, and Agile environments.' },
+      summary: { es: 'Profesional de la comunicación que conecta tecnología, productos y personas a través de comunicaciones estratégicas, storytelling y colaboración interdisciplinaria. Licenciado en Comunicación Social (UNR) con formación técnica y experiencia de producto dentro de una plataforma EdTech de gran escala (2,5M+ usuarios, 13 países, 600+ clientes institucionales). Coordino proyectos digitales de punta a punta —alineando a Producto, Tecnología, Diseño y Servicios— y traduzco tecnologías complejas en comunicación clara orientada al cliente: mensajes de producto, newsletters, sitios web y storytelling de marca. En Tu Estudio Amigo participo en estrategias mensuales de comunicación para distintas marcas, en contacto directo con los clientes. Cómodo en entornos remotos, async y Agile.',
+                 en: 'Communications professional who connects technology, products, and people through strategic communications, storytelling, and cross-functional collaboration. Bachelor in Social Communication (UNR) with a technical background and product experience inside a high-scale EdTech platform (2.5M+ users, 13 countries, 600+ institutional clients). I coordinate digital projects end to end —aligning Product, Technology, Design, and Services— and translate complex technologies into clear, customer-facing communication: product messaging, newsletters, websites, and brand storytelling. At Tu Estudio Amigo I take part in monthly communication strategies for different brands, in direct contact with clients. Comfortable in remote, async, and Agile environments.' },
       sections: ['profile', 'experience', 'skills', 'projects', 'education', 'languages'],
       skillsOrder: ['pm', 'comms', 'av', 'design', 'social', 'web'],
-      bulletOrder: { educativa: ['b3', 'b2', 'b1', 'b4', 'b6', 'b7', 'b5'] },
+      bulletOrder: { tuestudio: ['b1', 'b2', 'b3', 'b5'], educativa: ['b3', 'b2', 'b1', 'b4', 'b6', 'b7', 'b5'] },
       titleOverride: {
         educativa: { es: 'Coordinador de Proyectos Digitales y Comunicación de Producto — e-ducativa S.A.',
                      en: 'Digital Project Coordinator & Product Communications — e-ducativa S.A.' }
@@ -326,11 +349,11 @@
               'Implementation Specialist', 'Technical Project Manager', 'Customer Success', 'Solutions Consultant', 'Operations Coordinator'],
       roleLine: { es: 'Project Management Digital · Coordinación Interdisciplinaria · Gestión de Stakeholders · Comunicación',
                   en: 'Digital Project Management · Cross-functional Coordination · Stakeholder Management · Communication' },
-      summary: { es: 'Licenciado en Comunicación Social por la Universidad Nacional de Rosario, orientado a project management digital, coordinación interdisciplinaria y gestión de stakeholders. Coordino proyectos digitales y creativos de principio a fin, articulando equipos de Producto, Tecnología, Diseño y Servicios, ordenando flujos de trabajo y mejorando procesos. Mi formación técnica y experiencia en desarrollo full-stack me permiten dialogar con equipos técnicos y traducir necesidades entre negocio, producto y tecnología.',
-                 en: 'Bachelor in Social Communication from the National University of Rosario, focused on digital project management, cross-functional coordination, and stakeholder management. I coordinate digital and creative projects end to end, aligning Product, Technology, Design, and Services teams, organizing workflows, and improving processes. My technical background and hands-on full-stack development experience let me engage technical teams and translate needs between business, product, and technology.' },
+      summary: { es: 'Licenciado en Comunicación Social por la Universidad Nacional de Rosario, orientado a project management digital, coordinación interdisciplinaria y gestión de stakeholders. Coordino proyectos digitales y creativos de principio a fin, articulando equipos de Producto, Tecnología, Diseño y Servicios, ordenando flujos de trabajo y mejorando procesos. En Tu Estudio Amigo trabajo con múltiples clientes y stakeholders: relevo necesidades en reuniones semanales y las convierto en planes accionables junto al equipo interno. Mi formación técnica y experiencia en desarrollo full-stack me permiten dialogar con equipos técnicos y traducir necesidades entre negocio, producto y tecnología.',
+                 en: 'Bachelor in Social Communication from the National University of Rosario, focused on digital project management, cross-functional coordination, and stakeholder management. I coordinate digital and creative projects end to end, aligning Product, Technology, Design, and Services teams, organizing workflows, and improving processes. At Tu Estudio Amigo I work with multiple clients and stakeholders: I gather needs in weekly meetings and turn them into actionable plans with the internal team. My technical background and hands-on full-stack development experience let me engage technical teams and translate needs between business, product, and technology.' },
       sections: ['profile', 'experience', 'skills', 'projects', 'education', 'languages'],
       skillsOrder: ['pm', 'comms', 'av', 'design', 'social', 'web'],
-      bulletOrder: { educativa: ['b4', 'b3', 'b5', 'b7', 'b1', 'b2', 'b6'] },
+      bulletOrder: { tuestudio: ['b2', 'b1', 'b3', 'b5'], educativa: ['b4', 'b3', 'b5', 'b7', 'b1', 'b2', 'b6'] },
       titleOverride: {
         educativa: { es: 'Coordinación de Proyectos Digitales / Project Management — e-ducativa S.A.',
                      en: 'Digital Project Coordination / Project Management — e-ducativa S.A.' }
@@ -343,6 +366,7 @@
                        en: 'project coordination, planning, stakeholder management, cross-functional collaboration, process improvement, Agile methodologies (Kanban), Trello, Google Workspace.' } }
       },
       bulletsOverride: {
+        tuestudio: TUESTUDIO_PM,
         '3factor': {
           b3: { es: 'Analicé métricas de alcance e interacción para optimizar el contenido y gestioné consultas comerciales y necesidades de clientes, articulando sus requerimientos con los objetivos de comunicación y negocio de la marca.',
                 en: 'Analyzed reach and engagement metrics to optimize content, and handled client commercial inquiries and needs, aligning their requirements with the brand’s communication and business goals.' }
@@ -360,11 +384,12 @@
       roles: ['Project Manager Digital', 'Coordinación de Proyectos', 'Gestión de Clientes', 'Marketing Digital', 'Comunicación Digital'],
       roleLine: { es: 'Project Manager Digital · Coordinación de Proyectos · Gestión de Clientes y Stakeholders · Comunicación',
                   en: 'Digital Project Manager · Project Coordination · Client & Stakeholder Management · Communication' },
-      summary: { es: 'Licenciado en Comunicación Social por la Universidad Nacional de Rosario, con experiencia en project management digital, coordinación interdisciplinaria y gestión de clientes y stakeholders. Coordino proyectos digitales y creativos de principio a fin: planifico, organizo tareas, hago seguimiento de prioridades, avances y bloqueos, y articulo equipos de Producto, Tecnología, Diseño y Servicios para cumplir objetivos y mejorar procesos. Trabajo con calendarios editoriales, contenidos, métricas e indicadores para optimizar la comunicación digital según las necesidades de cada cliente. Mi formación técnica es un diferencial para entender entornos digitales y conectar negocio, comunicación y tecnología.',
-                 en: 'Bachelor in Social Communication from the National University of Rosario, with experience in digital project management, cross-functional coordination, and client and stakeholder management. I coordinate digital and creative projects end to end: planning, organizing tasks, tracking priorities, progress, and blockers, and aligning Product, Technology, Design, and Services teams to meet goals and improve processes. I work with editorial calendars, content, metrics, and KPIs to optimize digital communication around each client’s needs. My technical background is a differentiator for understanding digital environments and connecting business, communication, and technology.' },
+      summary: { es: 'Licenciado en Comunicación Social por la Universidad Nacional de Rosario, con experiencia en project management digital, coordinación interdisciplinaria y gestión de clientes y stakeholders. Coordino proyectos digitales y creativos de principio a fin: planifico, organizo tareas, hago seguimiento de prioridades, avances y bloqueos, y articulo equipos de Producto, Tecnología, Diseño y Servicios para cumplir objetivos y mejorar procesos. Trabajo con calendarios editoriales, contenidos, métricas e indicadores para optimizar la comunicación digital según las necesidades de cada cliente. En Tu Estudio Amigo mantengo reuniones semanales con clientes y traduzco sus necesidades en estrategias, campañas y calendarios junto al equipo de marketing digital. Mi formación técnica es un diferencial para entender entornos digitales y conectar negocio, comunicación y tecnología.',
+                 en: 'Bachelor in Social Communication from the National University of Rosario, with experience in digital project management, cross-functional coordination, and client and stakeholder management. I coordinate digital and creative projects end to end: planning, organizing tasks, tracking priorities, progress, and blockers, and aligning Product, Technology, Design, and Services teams to meet goals and improve processes. I work with editorial calendars, content, metrics, and KPIs to optimize digital communication around each client’s needs. At Tu Estudio Amigo I hold weekly client meetings and translate their needs into strategies, campaigns, and calendars with the digital marketing team. My technical background is a differentiator for understanding digital environments and connecting business, communication, and technology.' },
       sections: ['profile', 'experience', 'skills', 'projects', 'education', 'languages'],
       skillsOrder: ['pm', 'comms', 'av', 'design', 'social', 'web'],
       bulletOrder: {
+        tuestudio: ['b2', 'b1', 'b3', 'b5'],
         educativa: ['b4', 'b5', 'b3', 'b1', 'b2', 'b6', 'b7'],
         '3factor': ['b1', 'b3', 'b2', 'b4'],
         ggwp: ['b1', 'b2', 'b4', 'b3', 'b5', 'b6']
@@ -382,6 +407,7 @@
                           en: 'strategic communication, digital communication, digital marketing, content strategy, content production, editorial calendar, metrics and KPI analysis, social media, branding, brand management, scriptwriting, rundown, interview management, community management, email marketing, newsletter.' } }
       },
       bulletsOverride: {
+        tuestudio: TUESTUDIO_PM,
         educativa: {
           b4: { es: 'Coordiné y moderé reuniones semanales de seguimiento con Tecnología, Servicios y Product Owner: revisión de avances, prioridades, bloqueos y próximos pasos.',
                 en: 'Coordinated and facilitated weekly follow-up meetings with Technology, Services, and the Product Owner: reviewing progress, priorities, blockers, and next steps.' },
@@ -415,7 +441,8 @@
     // Adaptación del ATS Marketing para Canonical — Graduate Partner Marketing Manager (remote, Americas).
     // Posicionamiento (oct 2026): Technology Marketing + Communication Strategy + Cross-functional Project
     // Coordination. Perfil híbrido comunicación + tecnología + coordinación; es graduate, no senior.
-    // Única variante que muestra `tuestudio` (DATA.extraExperiences) vía `expOrder`.
+    // `expOrder` pone Tu Estudio Amigo primero y e-ducativa segundo (tech depth); los bullets de
+    // tuestudio son los aprobados para esta candidatura (override), no los genéricos de DATA.
     // NO afirma experiencia formal en partner marketing / go-to-market / B2B / integrated campaigns /
     // marketing automation / CRM / paid media / analytics / performance: no hay experiencia real. Sólo reencuadra.
     canonical: {
@@ -455,6 +482,16 @@
                    en: 'Adobe Premiere, Adobe Audition, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Figma, Canva.' } }
       ],
       bulletsOverride: {
+        tuestudio: {
+          b1: { es: 'Participo en la planificación de estrategias mensuales de comunicación para las marcas y clientes del estudio, trabajando junto a sus dueñas y a la responsable de marketing digital (enfocada en pauta) y asumiendo progresivamente mayor responsabilidad sobre la estrategia de comunicación.',
+                en: 'Take part in planning monthly communication strategies for the studio’s brands and clients, working with the owners and the digital marketing lead (focused on paid media) and progressively taking on more responsibility for communication strategy.' },
+          b2: { es: 'Participo en conversaciones y reuniones semanales con los clientes: escucho sus necesidades, objetivos y problemas de comunicación y los traduzco en estrategias, campañas y contenidos concretos.',
+                en: 'Join weekly conversations and meetings with clients, listening to their needs, goals, and communication challenges and translating them into concrete strategies, campaigns, and content.' },
+          b3: { es: 'Pienso campañas y acciones de comunicación y armo calendarios de contenidos para marcas de distintos rubros y públicos, entre ellas una marca de peluquerías con presencia en Argentina, Uruguay y Estados Unidos, una marca gastronómica y un espacio de coworking.',
+                en: 'Plan campaigns and communication actions and build content calendars for brands with different audiences and contexts, including a hair salon brand present in Argentina, Uruguay, and the United States, a food and gastronomy brand, and a coworking space.' },
+          b4: { es: 'Guiono Reels y otras piezas de contenido. Empecé guionando Reels (incluido contenido para una formación en Inteligencia Artificial) y luego pasé a trabajar en la estrategia de comunicación de un espacio de coworking y, progresivamente, de otros clientes.',
+                en: 'Script Reels and other content pieces. Started with Reels scripting (including content for an AI training program), then moved on to the communication strategy for a coworking space and, progressively, other clients.' }
+        },
         educativa: {
           b3: { es: 'Coordiné iniciativas interdisciplinarias entre Producto, Tecnología, Diseño y Servicios, traduciendo necesidades técnicas y de negocio en comunicación clara y manteniendo a los stakeholders alineados en las prioridades.',
                 en: 'Coordinated cross-functional initiatives across Product, Technology, Design, and Services, translating technical and business needs into clear communication and keeping stakeholders aligned on priorities.' },
@@ -505,8 +542,8 @@
         projects: { en: 'Selected projects' },
         skills:   { en: 'Tools' }
       },
-      summary: { en: 'Creative producer working across content, social media, and audiovisual production. I produce a weekly live show on gaming and digital culture, work with the social media and design teams to turn each episode into Instagram content, and run social media and brand communication for a design studio. Four years at e-ducativa, a multi-tenant EdTech platform (2.5M+ users, 13 countries), give me a working knowledge of digital products, SaaS, and AI-assisted workflows. Social Communication degree; native Spanish, English C1.' },
-      competencies: { en: 'Creative & content production · Video production & editing · Social media content · Content strategy & editorial planning · Scriptwriting & rundowns · Interview research & guest briefing · Brand identity & tone of voice · Product communication (SaaS/EdTech) · Organic reach & engagement analysis · Cross-functional coordination · AI-assisted workflows' },
+      summary: { en: 'Creative producer working across content strategy, social media, and audiovisual production. I produce a weekly live show on gaming and digital culture, work with the social media and design teams to turn each episode into Instagram content, develop content strategies, calendars, and Reels scripts for the clients of a communication studio, and run social media and brand communication for a design studio. Four years at e-ducativa, a multi-tenant EdTech platform (2.5M+ users, 13 countries), give me a working knowledge of digital products, SaaS, and AI-assisted workflows. Social Communication degree; native Spanish, English C1.' },
+      competencies: { en: 'Creative & content production · Video production & editing · Social media content · Content strategy & editorial planning · Campaign & creative concepts · Scriptwriting & rundowns · Interview research & guest briefing · Brand identity & tone of voice · Client communication · Product communication (SaaS/EdTech) · Organic reach & engagement analysis · Cross-functional coordination · AI-assisted workflows' },
       sections: ['profile', 'competencies', 'experience', 'projects', 'education', 'languages', 'skills'],
       titleOverride: {
         educativa: { en: 'Digital Project Coordinator & Product Communications — e-ducativa S.A.' }
@@ -515,11 +552,18 @@
         educativa: { en: 'Multi-tenant EdTech (LMS) platform used by 2.5M+ users in 13 countries and 600+ institutional clients.' }
       },
       bulletOrder: {
+        tuestudio: ['s1', 's2', 's3', 's4'],
         ggwp: ['s1', 's2', 's3', 's4', 's5'],
         '3factor': ['s1', 's2', 's3', 's4'],
         educativa: ['s1', 's2', 's3', 's4', 's5', 's6']
       },
       bulletsOverride: {
+        tuestudio: {
+          s1: { en: 'Work on content strategy and editorial planning for the studio’s clients: monthly strategies, content calendars, and campaign and communication actions defined with the owners and the digital marketing team.' },
+          s2: { en: 'Script and conceptualize content pieces —mainly video and Reels— for brands across sectors; started out scripting Reels for an AI training program.' },
+          s3: { en: 'Took part in the content strategy of a hybrid coworking, café, events, and podcast space: monthly strategy, editorial calendar, and coworking, food, educational, event, and people-centered content.' },
+          s4: { en: 'Join weekly client meetings, turning their needs into concrete content plans and coordinating delivery with the internal team.' }
+        },
         ggwp: {
           s1: { en: 'Produce a weekly live show on gaming and digital culture (rundown, segments, topics, timing, and on-air dynamics with the hosts) and coordinate each episode’s clips and derivative pieces for Instagram with the social media and design teams.' },
           s2: { en: 'Work on broadcasts and derivative pieces feeding the project’s Instagram account, which reached 139,000+ viewers in the last 90 days (organic): 237,000+ Reel plays, 3,400+ shares, and 1,600+ saves.' },
