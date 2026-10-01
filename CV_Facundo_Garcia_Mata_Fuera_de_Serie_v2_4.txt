@@ -3,11 +3,11 @@ García Mata
 
 COMUNICACIÓN · TECNOLOGÍA · PRODUCTO · PROJECT MANAGEMENT · IA
 
-Rosario, Argentina · figarciamata@gmail.com · linkedin.com/in/facundogm · Disponibilidad full time
+Rosario, Argentina · figarciamata@gmail.com · linkedin.com/in/facundogm
 
 PERFIL
 
-Técnico en Informática y Licenciado en Comunicación Social (UNR). Trabajo entre tecnología, producto, gestión de proyectos y comunicación. En e-ducativa, un LMS con más de 2,5 millones de usuarios, coordino áreas y desarrollo funcionalidades; en paralelo produzco un programa semanal de streaming y gestiono la comunicación de un estudio de diseño. Mi proyecto final de grado, una experiencia de realidad aumentada sobre memoria local, fue seleccionado en XperienciaUNR 2025. Integro IA de forma cotidiana para investigar, construir, verificar y mejorar procesos.
+Licenciado en Comunicación Social (UNR) y Técnico en Informática. Trabajo entre tecnología, producto, gestión de proyectos y comunicación. En e-ducativa, un LMS con más de 2,5 millones de usuarios, coordino áreas y desarrollo funcionalidades; en paralelo produzco un programa semanal de streaming y gestiono la comunicación de un estudio de diseño. Mi proyecto final de grado, una experiencia de realidad aumentada sobre memoria local, fue seleccionado en XperienciaUNR 2025. Integro IA de forma cotidiana para investigar, construir, verificar y mejorar procesos.
 
 RECORRIDO
 
@@ -72,7 +72,7 @@ El cuello de botella era mi lectura
 
 Al validar especificaciones con cientos de ítems, la herramienta proponía sumar agentes. El límite real era mi capacidad de revisar los resultados con criterio. No agregué complejidad: incorporé una herramienta para releer sólo lo que cambió.
 
-Reingeniería del LMS · 2026
+e-ducativa · 2026
 
 Una historia con profundidad antes que ocho en superficie
 
@@ -81,7 +81,7 @@ Con plazo corto y fuentes escasas, propuse un prototipo con una sola biografía 
 Sie7e Memorias Desde La Sombra · 2025
 
 Facundo Ignacio García Mata
-CV · Programa de Talento Digital 2026
+Portada
 1 / 4
 
 EXPERIENCIA PROFESIONAL
@@ -106,7 +106,7 @@ Reingeniería del LMS: validación de especificaciones de un módulo legado con 
 
 Gestor de Comunicación
 
-Dic 2025 – actualidad · Rosario, Argentina
+Dic 2025 – actualidad · Rosario, Argentina · instagram.com/3factor.design
 
 Coordiné el desarrollo de la marca desde su lanzamiento, articulando identidad, tono comunicacional y presentación comercial.
 Diseño la estrategia de comunicación y el calendario editorial a partir de los objetivos comerciales del estudio.
@@ -115,7 +115,7 @@ GGWP (MargaTV)
 
 Productor de contenidos y streaming
 
-Abr 2026 – actualidad · Rosario, Argentina
+Abr 2026 – actualidad · Rosario, Argentina · instagram.com/ggwpstream
 
 Instagram (orgánico): 139.000+ espectadores · 237.000+ reproducciones de reels · 3.400+ compartidos
 
@@ -130,7 +130,7 @@ PROYECTOS QUE CRUZAN DISCIPLINAS
 Sie7e Memorias Desde La Sombra
 Feb 2025 – May 2026
 
-Narrativa transmedia y realidad aumentada · XperienciaUNR 2025 (LET-UNR)
+Narrativa transmedia y realidad aumentada · XperienciaUNR 2025 · facugm.github.io/cv/sie7e
 
 PROBLEMA
 Las historias de siete víctimas del 19 y 20 de diciembre de 2001 en Rosario quedaron a la sombra del relato institucional.
@@ -149,7 +149,7 @@ Prototipo funcional, usable desde cualquier celular y listo para presentar a esp
 24 Veces Diciembre
 2025
 
-Documental · Electiva Formación Audiovisual Tecnológica (UNR)
+Documental · Electiva Formación Audiovisual Tecnológica (UNR) · Ver en Drive
 
 ROL
 Dirección, producción, guion y edición.
