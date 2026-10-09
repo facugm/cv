@@ -6,7 +6,7 @@ Rosario, Argentina · figarciamata@gmail.com · linkedin.com/in/facundogm · fac
 
 PROFESSIONAL SUMMARY
 
-Communications professional with a technical secondary degree in IT and four years at an EdTech company, where I coordinate initiatives across Product, Technology, Design and Services and develop features on a production learning platform. Coordinated project planning, backlog tracking and stakeholder engagement, contributing to scope and technology decisions in Sie7e Memorias Desde La Sombra, an interdisciplinary augmented-reality project delivered through a university technology-lab program and graded 10/10 as my undergraduate thesis. Bachelor's degree in Social Communication (average 8.97/10). Looking to develop in technology project management. Advanced English (C1).
+Communications professional with a technical secondary degree in IT and four years at an EdTech company, where I coordinate initiatives across Product, Technology, Design and Services and develop features on a production learning platform. Coordinated project planning, backlog tracking and stakeholder engagement, contributing to scope and technology decisions in Sie7e Memorias Desde La Sombra, an interdisciplinary augmented-reality project delivered through a university technology-lab program and graded 10/10 as my undergraduate thesis. Bachelor's degree in Social Communication (average 8.97/10). Combine hands-on software development experience with cross-functional project coordination and stakeholder communication, and aim to grow in technology project management. Advanced English (C1).
 
 PROFESSIONAL EXPERIENCE
 Digital Project Coordinator · Full Stack Developer — e-ducativa S.A.
@@ -15,7 +15,7 @@ Digital Project Coordinator · Full Stack Developer — e-ducativa S.A.
 
 EdTech company; learning management system (LMS) with 2.5M+ users across 13 countries and 600+ institutional clients.
 
-Coordinate and facilitate weekly meetings with Technology, Services and the Product Owner, tracking progress, priorities, blockers and next steps.
+Coordinate and facilitate weekly meetings with Technology, Services and the Product Owner, tracking progress, priorities, blockers and next steps and following up on their resolution across teams.
 Manage workflow and task tracking in Trello (Kanban) for cross-functional teams: owners, statuses and priorities; review operational processes with each team's stakeholders.
 Bridge communication across Product, Technology, Design and Services, translating technical and business needs between teams and keeping initiatives aligned.
 Co-led the redesign and launch of the corporate website (WordPress) alongside a graphic designer, coordinating messaging, content structure and implementation.
