@@ -1,0 +1,86 @@
+Facundo Ignacio García Mata
+
+Technology Project Coordination · Cross-functional Communication · Stakeholder Management
+
+Rosario, Argentina · figarciamata@gmail.com · linkedin.com/in/facundogm · facugm.github.io/cv
+
+PROFESSIONAL SUMMARY
+
+Communications professional with a technical secondary degree in IT and four years at an EdTech company, where I coordinate initiatives across Product, Technology, Design and Services and develop features on a production learning platform. Coordinated project planning, backlog tracking and stakeholder engagement, contributing to scope and technology decisions in Sie7e Memorias Desde La Sombra, an interdisciplinary augmented-reality project delivered through a university technology-lab program and graded 10/10 as my undergraduate thesis. Bachelor's degree in Social Communication (average 8.97/10). Looking to develop in technology project management. Advanced English (C1).
+
+PROFESSIONAL EXPERIENCE
+Digital Project Coordinator · Full Stack Developer — e-ducativa S.A.
+
+09/2022 – Present | Rosario, Argentina
+
+EdTech company; learning management system (LMS) with 2.5M+ users across 13 countries and 600+ institutional clients.
+
+Coordinate and facilitate weekly meetings with Technology, Services and the Product Owner, tracking progress, priorities, blockers and next steps.
+Manage workflow and task tracking in Trello (Kanban) for cross-functional teams: owners, statuses and priorities; review operational processes with each team's stakeholders.
+Bridge communication across Product, Technology, Design and Services, translating technical and business needs between teams and keeping initiatives aligned.
+Co-led the redesign and launch of the corporate website (WordPress) alongside a graphic designer, coordinating messaging, content structure and implementation.
+Plan and coordinate the monthly product newsletter, compiling updates from Product, Technology and Services.
+Maintain functional documentation and product wikis; develop platform features with the engineering team (JavaScript, HTML/CSS, SQL, Perl) and support internal adoption of AI-assisted workflows (Claude Code).
+Communication & Content Strategist — Tu Estudio Amigo
+
+06/2026 – Present | Rosario, Argentina
+
+Hold weekly client meetings: gather communication needs and goals, translate them into actionable plans (strategies, campaigns, calendars and content) and coordinate execution with the internal team.
+Work with the studio's owners and digital marketing team on monthly planning for multiple clients, using editorial calendars and campaigns as planning tools.
+Take part in managing and tracking communication projects for different clients, bridging their needs with the internal team.
+Content & Streaming Producer — GGWP (MargaTV)
+
+04/2026 – Present | Rosario, Argentina
+
+Produce and coordinate a weekly streaming show on gaming and digital culture: build the rundown and define blocks, topics and timing with the hosting team.
+Plan each broadcast's content and coordinate follow-up of clips and derivative pieces with the social media and design teams.
+Manage interviews with developers and industry figures: background research, question design and communication logistics.
+Digital Communication Manager — 3Factor Design
+
+12/2025 – Present | Rosario, Argentina
+
+Plan the digital communication strategy of a 3D-printed lamp studio, aligning brand identity, editorial calendar and commercial goals.
+Coordinate brand development from launch (name, visual system, tone of voice, commercial presentation) and manage social media and client inquiries.
+SELECTED PROJECT MANAGEMENT EXPERIENCE
+Sie7e Memorias Desde La Sombra — Project Manager & Producer
+
+Universidad Nacional de Rosario (UNR) · XperienciaUNR 2025, Laboratorio de Experimentación Tecnológica (LET) | 2024 – 2026
+
+Immersive augmented-reality (AR) experience about the overlooked victims of the 19–20 December 2001 events in Rosario, Argentina: printed panels plus a web AR layer opened from any phone. Initial idea in August 2024; developed within XperienciaUNR (June–October 2025; selected as one of 5 teams from 10+ applications); basis of my undergraduate thesis, defended on 15 May 2026. Six-person team across Coordination, Communications, Design and Development.
+
+Planned weekly tasks, maintained the project backlog and tracked progress, allocating responsibilities across Communications, Design and Development and validating Design and Development deliverables against criteria defined jointly with both teams.
+Managed external stakeholder relationships: LET-UNR as institutional commissioner, Biblioteca Popular Pocho Lepratti as community partner (materials, local validation, planned venue) and a victim's family as primary testimonial source.
+Contributed to scope and technology decisions taken with the team: proposed an MVP with one complete biography and a reusable content architecture (shared vs. case-specific elements) so the remaining stories can be added without redesign; evaluated options with Development and chose web-based AR (MindAR on A-Frame, hosted on GitHub Pages) over a downloadable app for accessibility on ordinary phones.
+Coordinated content production: archival research, an in-depth interview, curation of text, photo and video, and a three-question narrative structure replicable for each case.
+Wrote the official program submissions and presented progress at each milestone. Outcome: functional AR prototype usable on any phone, complete visual system and replicable narrative script; thesis graded 10/10. Deployment at the library and adaptation for memory spaces remain proposals.
+24 Veces Diciembre — Documentary
+
+10/2025 – 01/2026 | Director, producer, screenwriter and editor
+
+| Director, producer, screenwriter and editor
+
+Took a documentary on memories and testimonies of December 2001 in Rosario from narrative development through production to final edit; final project for the elective Technological Audiovisual Training (UNR), graded 10/10.
+EDUCATION
+Licenciatura en Comunicación Social (Bachelor's degree in Social Communication) — Universidad Nacional de Rosario
+
+Facultad de Ciencia Política y Relaciones Internacionales | 2020 – 2026 · Graduated 15 May 2026
+
+Average: 8.97/10. Undergraduate thesis (production track, Sie7e Memorias Desde La Sombra): 10/10.
+
+Técnico en Informática Profesional y Personal (technical secondary degree in IT) — Instituto Politécnico Superior "General San Martín", Universidad Nacional de Rosario
+
+2013 – 2018
+
+Final average: 7.42/10. Programming (C, PHP, SQL, JavaScript, HTML, CSS), networks and operating systems.
+
+SKILLS
+
+Project management: project planning, backlog management, task prioritization, progress tracking, cross-functional coordination, stakeholder management, scope definition, deliverable validation, Kanban, Trello, Google Workspace.
+
+Communication: technical and non-technical communication, documentation, presentations, content strategy, newsletters.
+
+Technology: software development in a production LMS, JavaScript, HTML/CSS, SQL, Perl, Git, WordPress, Claude Code.
+
+LANGUAGES
+
+Spanish: native. English: advanced (C1). French: A2.

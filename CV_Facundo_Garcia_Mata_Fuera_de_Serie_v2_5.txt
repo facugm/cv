@@ -152,7 +152,7 @@ Las historias de siete víctimas del 19 y 20 de diciembre de 2001 en Rosario que
 SOLUCIÓN
 Un dispositivo híbrido de memoria local: paneles impresos y una capa de realidad aumentada que se activa desde cualquier celular y abre la biografía multimedia de cada víctima, con archivo y testimonios.
 MI ROL
-Autor de la obra, gestión del proyecto y producción de contenidos, en un equipo de seis personas de comunicación, diseño y desarrollo.
+Autor de la obra, gestión y producción del proyecto, en un equipo de seis personas de comunicación, diseño y desarrollo.
 Planificación semanal, responsabilidades por área y validación de los entregables de Diseño y Desarrollo.
 Vínculo con la Biblioteca Popular Pocho Lepratti, las familias de las víctimas y el LET-UNR.
 Investigación de archivo, entrevista en profundidad y edición del material.
@@ -162,7 +162,7 @@ Tecnología: junto a Desarrollo, elegimos una web abierta (MindAR / A-Frame) en 
 RESULTADO
 Prototipo funcional, usable desde cualquier celular y listo para presentar a espacios de memoria. Seleccionado en XperienciaUNR 2025 (uno de 5 equipos entre más de 10 proyectos). También fue mi proyecto final de grado: calificación 10.
 24 Veces Diciembre
-2025
+Oct 2025 – Ene 2026
 
 Documental · Electiva Formación Audiovisual Tecnológica (UNR) · Ver en Drive
 
