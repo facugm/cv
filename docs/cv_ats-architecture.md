@@ -83,6 +83,13 @@ Sin `?v` → selector. `lang` cae a `localStorage.cv_lang` y luego a `es`.
 
 El selector y el router la toman automáticamente (iteran `Object.keys(VARIANTS)`).
 
+### CVs standalone en el selector
+
+Un CV con HTML propio (fuera de `DATA`/`VARIANTS`, p. ej. `ATS_Canonical_Junior_Project_Manager_EN.html`)
+se lista en el selector agregando una entrada al array `STANDALONE` de `cv_ats.html`
+(`name`, `forRoles`, `roles`, `langs`, `html`, `pdf`). Sólo es una card con links a los archivos
+estáticos: el router no lo renderiza y sus PDFs se generan con su propio flujo (`scripts/gen_fds_pdf.js`).
+
 ## Regenerar los PDFs
 
 Los PDFs son artefactos estáticos en el root del repo (los sirve el botón "Descargar").

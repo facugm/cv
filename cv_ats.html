@@ -615,6 +615,20 @@
     }
   };
 
+  // CVs standalone (HTML propio, fuera de DATA/VARIANTS) que igual se listan en el selector.
+  // Sólo presentación: `html` y `pdf` son archivos estáticos del root; el router no los renderiza.
+  var STANDALONE = [
+    {
+      name: { es: 'Junior Project Manager (Canonical)', en: 'Junior Project Manager (Canonical)' },
+      forRoles: { es: 'CV ATS propio para Junior Project Manager en Canonical — coordinación de proyectos tecnológicos, Sie7e como caso de PM',
+                  en: 'Standalone ATS resume for the Junior Project Manager role at Canonical — technology project coordination, Sie7e as the PM case' },
+      roles: ['Junior Project Manager', 'Technology Project Coordination', 'Cross-functional Coordination', 'Stakeholder Management'],
+      langs: ['en'],
+      html: 'ATS_Canonical_Junior_Project_Manager_EN.html',
+      pdf: 'ATS_Canonical_Junior_Project_Manager_EN.pdf'
+    }
+  ];
+
   // ============================================================
   // RENDER
   // ============================================================
@@ -730,8 +744,16 @@
     var t = lang === 'es'
       ? { title: 'CV ATS — Facundo García Mata', sub: 'Elegí la versión según el tipo de puesto. Mismo contenido, distinta presentación.', view: 'Ver online', dl: 'Descargar', langLbl: 'Idioma' }
       : { title: 'ATS Resume — Facundo García Mata', sub: 'Pick the version that fits the role. Same content, different presentation.', view: 'View online', dl: 'Download', langLbl: 'Language' };
-    var cards = Object.keys(VARIANTS).map(function (vKey) {
+    var entries = Object.keys(VARIANTS).map(function (vKey) {
       var v = VARIANTS[vKey];
+      return { v: v,
+               view: function (l) { return 'cv_ats.html?v=' + vKey + '&lang=' + l; },
+               dl: function (l) { return encodeURI(pdfName(v, l)); } };
+    }).concat(STANDALONE.map(function (s) {
+      return { v: s, view: function () { return s.html; }, dl: function () { return s.pdf; } };
+    }));
+    var cards = entries.map(function (e) {
+      var v = e.v;
       var roles = v.roles.map(function (r) { return '<span>' + esc(r) + '</span>'; }).join('');
       function link(href, text, cls, dl) {
         return '<a class="btn ' + cls + '" href="' + href + '"' + (dl ? ' download' : '') + '>' + text + '</a>';
@@ -744,8 +766,8 @@
         '<p class="for">' + esc(L(v.forRoles, lang)) + '</p>' +
         '<div class="roles">' + roles + '</div>' +
         '<div class="actions">' +
-        row(t.view, function (l) { return link('cv_ats.html?v=' + vKey + '&lang=' + l, l.toUpperCase(), '', false); }) +
-        row(t.dl, function (l) { return link(encodeURI(pdfName(v, l)), l.toUpperCase(), 'dl', true); }) +
+        row(t.view, function (l) { return link(e.view(l), l.toUpperCase(), '', false); }) +
+        row(t.dl, function (l) { return link(e.dl(l), l.toUpperCase(), 'dl', true); }) +
         '</div></div>';
     }).join('');
     document.getElementById('app').innerHTML =
